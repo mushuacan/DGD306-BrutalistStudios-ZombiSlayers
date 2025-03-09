@@ -8,6 +8,8 @@ public class CharacterMovement : MonoBehaviour
     public Transform groundCheck;  // Karakterin altýndaki küçük collider
     public LayerMask groundLayer;  // Zeminin hangi layer'de olduðunu belirler
 
+    public Animator animator;
+
     private Rigidbody2D rb;
     private bool isGrounded;
 
@@ -22,13 +24,18 @@ public class CharacterMovement : MonoBehaviour
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
+        animator.SetFloat("Horizontal Speed", rb.velocity.x);
+        animator.SetFloat("Vertical Speed", rb.velocity.y);
+
         // Zeminde olup olmadýðýný kontrol et
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer); 
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        animator.SetBool("IsGrounded", isGrounded);
 
         // Zýplama iþlemi
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            animator.SetBool("Jumping", true);
         }
     }
 }
