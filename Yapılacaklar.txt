@@ -1,0 +1,30 @@
+Uzakçı elemanın ateş mekaniği yapılacak
+Sıradan Zombi mekaniği kodlanacak
+Bir level tasarımı gerçekleştirilecek
+Menü ayarlanacak
+
+Zombi görseli
+Karakter görseli ve zıplama görseli
+
+Level arkaplan görselleri
+	Kat/Zemin görselleri
+	Barikat/engel görselleri
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++
+Menü yapılacak (klavye ile seçilmesi gerek)

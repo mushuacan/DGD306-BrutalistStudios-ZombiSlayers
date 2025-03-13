@@ -394,12 +394,20 @@ PrefabInstance:
       value: 273
       objectReference: {fileID: 0}
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: startPositionX
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: moveDown_Button
       value: 274
       objectReference: {fileID: 0}
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: moveLeft_Button
       value: 276
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: startPosition.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: moveRight_Button
@@ -836,6 +844,22 @@ PrefabInstance:
     - target: {fileID: 3317986187449348885, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_Name
       value: Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: lane
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: startPositionX
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: startPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: startPosition.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -6,24 +6,31 @@ using DG.Tweening;
 
 public class Player_Movement : MonoBehaviour
 {
-    public KeyCode moveUp_Button;
-    public KeyCode moveDown_Button;
-    public KeyCode moveRight_Button;
-    public KeyCode moveLeft_Button;
-    public KeyCode attack_Button;
-    public KeyCode dodge_Button;
+    [Header("BUTTONS")]
+    [SerializeField] private KeyCode moveUp_Button;
+    [SerializeField] private KeyCode moveDown_Button;
+    [SerializeField] private KeyCode moveRight_Button;
+    [SerializeField] private KeyCode moveLeft_Button;
+    [SerializeField] private KeyCode attack_Button;
+    [SerializeField] private KeyCode dodge_Button;
 
-    public float movementSpeed;
-    public float xLeftEdge;
-    public float xRightEdge;
+    [Header("Playground Settings")]
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private float leftBoundary;
+    [SerializeField] private float rightBoundary;
 
-    public float animationSpeed;
-    public float jumpAnimationDuration;
-    public float jumpAnimationUpDistance;
-    public int lane;
-    public float[] laneYPositions;
+    [Header("Animation Settings")]
+    [SerializeField] private float animationSpeed;
+    [SerializeField] private float jumpAnimationDuration;
+    [SerializeField] private float jumpAnimationUpDistance;
 
-    public StateOC state;
+    [Header("Starting")]
+    [SerializeField] [Range(-8, 5)] private int startPositionX;
+    [SerializeField] [Range(1, 3)] private int lane;
+    private float[] laneYPositions = { -1f, -3f, -0.25f, 3.5f };
+
+    [Header("(private variables)")]
+    [SerializeField] private StateOC state;
 
 
     public enum StateOC // State of Character
@@ -40,8 +47,8 @@ public class Player_Movement : MonoBehaviour
     void Start()
     {
         state = StateOC.Running;
-        lane = 1;
-        transform.position = new Vector2(transform.position.x, laneYPositions[lane]);
+        //lane = 2;
+        transform.position = new Vector2(startPositionX, laneYPositions[lane]);
     }
 
     // Update is called once per frame
@@ -79,12 +86,12 @@ public class Player_Movement : MonoBehaviour
         }
         if (Input.GetKey(moveRight_Button) && (state == StateOC.Running || state == StateOC.Jumping))
         {
-            if (transform.position.x < xRightEdge)
+            if (transform.position.x < rightBoundary)
                 transform.position = new Vector2(transform.position.x + movementSpeed * Time.deltaTime, transform.position.y);
         }
         if (Input.GetKey(moveLeft_Button) && (state == StateOC.Running || state == StateOC.Jumping))
         {
-            if (transform.position.x > xLeftEdge)
+            if (transform.position.x > leftBoundary)
                 transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);
         }
     }

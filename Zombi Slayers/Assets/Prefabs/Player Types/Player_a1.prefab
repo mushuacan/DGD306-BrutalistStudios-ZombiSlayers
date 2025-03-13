@@ -99,20 +99,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveUp_Button: 119
   moveDown_Button: 115
-  moveLeft_Button: 97
   moveRight_Button: 100
+  moveLeft_Button: 97
   attack_Button: 0
   dodge_Button: 0
   movementSpeed: 4
-  xLeftEdge: -8
-  xRightEdge: 4
+  leftBoundary: -8
+  rightBoundary: 5
   animationSpeed: 1
   jumpAnimationDuration: 1
   jumpAnimationUpDistance: 0.2
+  startPositionX: 0
   lane: 1
-  laneYPositions:
-  - -999999
-  - -3
-  - 0.25
-  - 3.5
   state: 0
