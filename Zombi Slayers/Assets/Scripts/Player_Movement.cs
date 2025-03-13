@@ -31,7 +31,8 @@ public class Player_Movement : MonoBehaviour
         Running,
         Jumping,
         Attacking,
-        Dodgeing
+        Dodgeing,
+        EndGame
     }
 
 
@@ -97,27 +98,32 @@ public class Player_Movement : MonoBehaviour
                 // Yukarý hareket tamamlandýðýnda, asýl hedef Y pozisyonuna doðru hareket et
                 transform.DOMoveY(laneYPositions[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.InQuad).OnComplete(() =>
                 {
-                    state = StateOC.Running;
+                    if (state != StateOC.EndGame)
+                        state = StateOC.Running;
                 });
             });
         }
         if (Vertical == "Up")
         {
-            transform.DOMoveY(laneYPositions[lane], (jumpAnimationDuration /
-                animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
-            {
-                state = StateOC.Running;
-            });
-
-
             transform.DOMoveY(jumpAnimationUpDistance + laneYPositions[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
             {
                 // Yukarý hareket tamamlandýðýnda, asýl hedef Y pozisyonuna doðru hareket et
                 transform.DOMoveY(laneYPositions[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
                 {
-                    state = StateOC.Running;
+                    if (state != StateOC.EndGame)
+                        state = StateOC.Running;
                 });
             });
         }
+    }
+
+    public void EndGame(float movementSpeed, float transitionDuration, float endDuration)
+    {
+        state = StateOC.EndGame;
+        float xPosition = transform.position.x + (movementSpeed/2) * transitionDuration;
+        transform.DOMoveX(xPosition, transitionDuration).SetEase(Ease.InQuad).OnComplete(() =>
+        {
+            transform.DOMoveX(transform.position.x + movementSpeed * endDuration, endDuration).SetEase(Ease.Linear);
+        });
     }
 }
