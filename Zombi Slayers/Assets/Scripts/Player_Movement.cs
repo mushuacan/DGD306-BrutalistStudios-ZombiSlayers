@@ -27,7 +27,7 @@ public class Player_Movement : MonoBehaviour
     [Header("Starting")]
     [SerializeField] [Range(-8, 5)] private int startPositionX;
     [SerializeField] [Range(1, 3)] private int lane;
-    private float[] laneYPositions = { -1f, -3f, -0.25f, 3.5f };
+    private float[] laneYPositions = { -1f, -3f, 0.25f, 3.5f };
 
     [Header("(private variables)")]
     [SerializeField] private StateOC state;

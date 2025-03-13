@@ -5,21 +5,9 @@ En alttan üste doğru
 2. kat, -1.25 konum
 3. kat, 2 konum
 
-Karakter'in pozisyonları;
+Karakter'in pozisyonları (array olarak);
 
-1. kat,
-2. kat,
-3. kat,
-
-
-
-
-
-
-
-
-
-0. lat, -999999
+0. lat, -1
 1. kat, -3
 2. kat, 0.25
 3. kat, 3.5
