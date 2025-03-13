@@ -8,8 +8,8 @@ public class Player_Movement : MonoBehaviour
 {
     public KeyCode moveUp_Button;
     public KeyCode moveDown_Button;
-    public KeyCode moveLeft_Button;
     public KeyCode moveRight_Button;
+    public KeyCode moveLeft_Button;
     public KeyCode attack_Button;
     public KeyCode dodge_Button;
 
@@ -107,6 +107,16 @@ public class Player_Movement : MonoBehaviour
                 animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
             {
                 state = StateOC.Running;
+            });
+
+
+            transform.DOMoveY(jumpAnimationUpDistance + laneYPositions[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
+            {
+                // Yukarý hareket tamamlandýðýnda, asýl hedef Y pozisyonuna doðru hareket et
+                transform.DOMoveY(laneYPositions[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
+                {
+                    state = StateOC.Running;
+                });
             });
         }
     }
