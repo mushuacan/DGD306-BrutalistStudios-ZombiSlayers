@@ -1,0 +1,25 @@
+Harita ölçüleri:
+En alttan üste doğru
+
+1. kat, -4.5 konum
+2. kat, -1.25 konum
+3. kat, 2 konum
+
+Karakter'in pozisyonları;
+
+1. kat,
+2. kat,
+3. kat,
+
+
+
+
+
+
+
+
+
+0. lat, -999999
+1. kat, -3
+2. kat, 0.25
+3. kat, 3.5
