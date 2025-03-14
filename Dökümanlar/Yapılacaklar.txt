@@ -1,6 +1,10 @@
 Uzakçı elemanın ateş mekaniği yapılacak
-Sıradan Zombi mekaniği kodlanacak
 Bir level tasarımı gerçekleştirilecek
+Zombiler işlevsiz olarak level'a eklenecek
+Dodge'lama mekaniği kodlanacak
+
+Sıradan Zombi mekaniği kodlanacak
+
 Menü ayarlanacak
 
 Zombi görseli
