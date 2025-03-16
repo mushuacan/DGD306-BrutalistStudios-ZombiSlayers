@@ -38,16 +38,22 @@ public class Player_Movement : MonoBehaviour
 
     [Header("(private variables)")]
     [SerializeField] public StateOC state;
+    [SerializeField] public ActionOC action;
 
 
     public enum StateOC // State of Character
     {
         Running,
         Jumping,
-        Attacking,
-        Sliding,
         Dead,
         EndGame
+    }
+
+    public enum ActionOC
+    {
+        Normal,
+        Attacking,
+        Sliding
     }
 
 
@@ -67,6 +73,9 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        #region STATES
+
         if (state == StateOC.Dead)
         {
             return;
@@ -99,22 +108,23 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(attack_Button) && state == StateOC.Running)
-        {
-            state = StateOC.Attacking;
-            Attack();
-        }
-
-        if (Input.GetKey(moveRight_Button) && (state == StateOC.Running || state == StateOC.Jumping || state == StateOC.Attacking))
+        if (Input.GetKey(moveRight_Button) && (state == StateOC.Running || state == StateOC.Jumping))
         {
             if (transform.position.x < rightBoundary)
                 transform.position = new Vector2(transform.position.x + movementSpeed * Time.deltaTime, transform.position.y);
         }
 
-        if (Input.GetKey(moveLeft_Button) && (state == StateOC.Running || state == StateOC.Jumping || state == StateOC.Attacking))
+        if (Input.GetKey(moveLeft_Button) && (state == StateOC.Running || state == StateOC.Jumping))
         {
             if (transform.position.x > leftBoundary)
                 transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);
+        }
+
+        #endregion STATES
+
+        if (Input.GetKeyDown(attack_Button) && action == ActionOC.Normal)
+        {
+            Attack();
         }
     }
 

@@ -16,15 +16,15 @@ public class Player_Attack : MonoBehaviour
 
     public void StartAttack(Scriptable_Weapons weapon)
     {
-        if (canAttack)
-        {
-            canAttack = false;
-            this.gameObject.GetComponent<Player_Movement>().state = Player_Movement.StateOC.Attacking;
-            DOVirtual.DelayedCall(weapon.attackAnimationDuration, () => Attack(weapon));
-        }
         if (delay <= Time.timeSinceLevelLoad)
         {
             canAttack = true;
+        }
+        if (canAttack)
+        {
+            canAttack = false;
+            this.gameObject.GetComponent<Player_Movement>().action = Player_Movement.ActionOC.Attacking;
+            DOVirtual.DelayedCall(weapon.attackAnimationDuration, () => Attack(weapon));
         }
     }
 
@@ -34,7 +34,7 @@ public class Player_Attack : MonoBehaviour
         {
             Instantiate(weapon.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
             delay = weapon.attackDelay + Time.timeSinceLevelLoad;
-            this.gameObject.GetComponent<Player_Movement>().state = Player_Movement.StateOC.Running;
+            this.gameObject.GetComponent<Player_Movement>().action = Player_Movement.ActionOC.Normal;
         }
     }
 }

@@ -14,7 +14,7 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (isSlideable && collision.GetComponent<Player_Movement>().state == Player_Movement.StateOC.Sliding )
+            if (isSlideable && collision.GetComponent<Player_Movement>().action == Player_Movement.ActionOC.Sliding )
             { // eðer oyuncu slide yapýyorsa ve bu engel slideable ise hasar verme
                 return;
             }
