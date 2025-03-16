@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: Sledgehammer
   damage: 50
   attackDelay: 1
-  attackAnimationDuration: 0.1
+  attackAnimationDuration: 0.75
   haveBullets: 0
   reloadTime: 0
   bulletCount: 0

@@ -45,9 +45,6 @@ public class Player_Health : MonoBehaviour
                 FlashEffect();
             }
         }
-
-
-
     }
     private void FlashEffect()
     {
