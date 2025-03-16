@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1544597130899624395}
   - component: {fileID: 7107904711815955177}
   - component: {fileID: -699912929371043157}
+  - component: {fileID: 4902290981955062725}
   - component: {fileID: 888847654336524922}
   - component: {fileID: 2379561613210452848}
   m_Layer: 0
@@ -105,8 +106,9 @@ MonoBehaviour:
   moveRight_Button: 100
   moveLeft_Button: 97
   attack_Button: 0
-  dodge_Button: 0
+  second_Button: 0
   platform: {fileID: 0}
+  character: {fileID: 0}
   movementSpeed: 4
   leftBoundary: -8
   rightBoundary: 5
@@ -133,6 +135,18 @@ MonoBehaviour:
   undamageableImpulsePower: 0.225
   spriteRenderer: {fileID: 1544597130899624395}
   health: 0
+--- !u!114 &4902290981955062725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317986187449348885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c48e652c36a65d4fa2cc0ea5926b1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!70 &888847654336524922
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

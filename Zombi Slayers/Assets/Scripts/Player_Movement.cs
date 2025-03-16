@@ -12,11 +12,14 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private KeyCode moveRight_Button;
     [SerializeField] private KeyCode moveLeft_Button;
     [SerializeField] private KeyCode attack_Button;
-    [SerializeField] private KeyCode dodge_Button;
+    [SerializeField] private KeyCode second_Button;
 
     [Header("Referances")]
     [Tooltip("Haritayý hareket ettiren objeyi baðlayýnýz. (Halihazýrdaki adý KayanObje)")]
     [SerializeField] private GameObject platform;
+    [Tooltip("Burda karakterin özelliðini ayarlayabiliyoruz. Sonradan seçime göre ayarlanacak.")]
+    [SerializeField] private Scriptable_PlayerCharacter character;
+
 
     [Header("Playground Settings")]
     [SerializeField] private float movementSpeed;
@@ -95,16 +98,20 @@ public class Player_Movement : MonoBehaviour
                 JumpBetweenLanes("Down");
             }
         }
+
         if (Input.GetKeyDown(attack_Button) && state == StateOC.Running)
         {
             state = StateOC.Attacking;
+            Attack();
         }
-        if (Input.GetKey(moveRight_Button) && (state == StateOC.Running || state == StateOC.Jumping))
+
+        if (Input.GetKey(moveRight_Button) && (state == StateOC.Running || state == StateOC.Jumping || state == StateOC.Attacking))
         {
             if (transform.position.x < rightBoundary)
                 transform.position = new Vector2(transform.position.x + movementSpeed * Time.deltaTime, transform.position.y);
         }
-        if (Input.GetKey(moveLeft_Button) && (state == StateOC.Running || state == StateOC.Jumping))
+
+        if (Input.GetKey(moveLeft_Button) && (state == StateOC.Running || state == StateOC.Jumping || state == StateOC.Attacking))
         {
             if (transform.position.x > leftBoundary)
                 transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);
@@ -154,6 +161,10 @@ public class Player_Movement : MonoBehaviour
         });
     }
 
+    private void Attack()
+    {
+        this.gameObject.GetComponent<Player_Attack>().StartAttack(character.weapon);
+    }
     public void Die()
     {
         state = StateOC.Dead;

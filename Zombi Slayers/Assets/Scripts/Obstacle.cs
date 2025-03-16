@@ -21,9 +21,9 @@ public class Obstacle : MonoBehaviour
             collision.GetComponent<Player_Health>().GiveDamage();
         }
 
-        if (isBreakable && collision.CompareTag("Player_Attack"))
+        if (isBreakable && collision.CompareTag("Player_Bullet"))
         {
-            // break this obstacle
+            Destroy(this.gameObject);
         }
     }
 }

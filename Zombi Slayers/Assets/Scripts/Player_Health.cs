@@ -36,8 +36,8 @@ public class Player_Health : MonoBehaviour
 
             if (health <= 0)
             {
-                DieEffect();
                 this.gameObject.GetComponent<Player_Movement>().Die();
+                DieEffect();
             }
             else
             {
