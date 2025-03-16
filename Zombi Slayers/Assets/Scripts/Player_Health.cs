@@ -1,0 +1,72 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using DG.Tweening;
+
+
+public class Player_Health : MonoBehaviour
+{
+    [Header("Settings")]
+    [SerializeField] private int healthAtBeggining;
+    [SerializeField] private float undamageableDuration;
+    [Tooltip("0 daha görünmez yapar")]
+    [Range(0f, 1f)]
+    [SerializeField] private float undamageableImpulsePower;
+
+    [Header("Referances")]
+    [SerializeField] private SpriteRenderer spriteRenderer;  // Karakterin SpriteRenderer'ý
+
+    [Header("(private variables)")]
+    [SerializeField] private int health;
+    private float undamageableDelay;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        health = healthAtBeggining;
+        undamageableDelay = Time.timeSinceLevelLoad;
+    }
+
+    
+    public void GiveDamage()
+    {
+        if (undamageableDelay < Time.timeSinceLevelLoad)
+        {
+            health--;
+
+            if (health <= 0)
+            {
+                DieEffect();
+                this.gameObject.GetComponent<Player_Movement>().Die();
+            }
+            else
+            {
+                undamageableDelay = Time.timeSinceLevelLoad + undamageableDuration;
+                FlashEffect();
+            }
+        }
+
+
+
+    }
+    private void FlashEffect()
+    {
+        // Yanýp sönme efekti için DOTween kullanýyoruz
+        // 0.1 saniye boyunca alpha'yý 0'a düþürüp, sonra 0.1 saniyede tekrar 1 yapýyoruz
+        // Alpha'yý geri 1 yapýyoruz.
+        spriteRenderer.DOFade(undamageableImpulsePower, undamageableDuration/4).OnComplete(() =>
+        {
+            spriteRenderer.DOFade(1f - undamageableImpulsePower, undamageableDuration / 4).OnComplete(() =>
+            {
+                spriteRenderer.DOFade(undamageableImpulsePower, undamageableDuration / 4).OnComplete(() =>
+                {
+                    spriteRenderer.DOFade(1f, undamageableDuration / 4);
+                });
+            }); 
+        });
+    }
+    private void DieEffect()
+    {
+        spriteRenderer.DOFade(undamageableImpulsePower, undamageableDuration / 2);
+    }
+}

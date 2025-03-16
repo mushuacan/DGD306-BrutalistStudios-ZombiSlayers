@@ -14,6 +14,10 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private KeyCode attack_Button;
     [SerializeField] private KeyCode dodge_Button;
 
+    [Header("Referances")]
+    [Tooltip("Haritayý hareket ettiren objeyi baðlayýnýz. (Halihazýrdaki adý KayanObje)")]
+    [SerializeField] private GameObject platform;
+
     [Header("Playground Settings")]
     [SerializeField] private float movementSpeed;
     [SerializeField] private float leftBoundary;
@@ -30,7 +34,7 @@ public class Player_Movement : MonoBehaviour
     private float[] laneYPositions = { -1f, -3f, 0.25f, 3.5f };
 
     [Header("(private variables)")]
-    [SerializeField] private StateOC state;
+    [SerializeField] public StateOC state;
 
 
     public enum StateOC // State of Character
@@ -38,7 +42,8 @@ public class Player_Movement : MonoBehaviour
         Running,
         Jumping,
         Attacking,
-        Dodgeing,
+        Sliding,
+        Dead,
         EndGame
     }
 
@@ -49,11 +54,21 @@ public class Player_Movement : MonoBehaviour
         state = StateOC.Running;
         //lane = 2;
         transform.position = new Vector2(startPositionX, laneYPositions[lane]);
+
+        if (platform == null)
+        {
+            Debug.LogError(gameObject + " objesinde platform için referans ayarlanmamýþ.");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (state == StateOC.Dead)
+        {
+            return;
+        }
+
         if (Input.GetKey(moveUp_Button) && state == StateOC.Running)
         {
             if (lane == 3)
@@ -126,11 +141,22 @@ public class Player_Movement : MonoBehaviour
 
     public void EndGame(float movementSpeed, float transitionDuration, float endDuration)
     {
+        if (state == StateOC.Dead)
+        {
+            return;
+        }
+
         state = StateOC.EndGame;
         float xPosition = transform.position.x + (movementSpeed/2) * transitionDuration;
         transform.DOMoveX(xPosition, transitionDuration).SetEase(Ease.InQuad).OnComplete(() =>
         {
             transform.DOMoveX(transform.position.x + movementSpeed * endDuration, endDuration).SetEase(Ease.Linear);
         });
+    }
+
+    public void Die()
+    {
+        state = StateOC.Dead;
+        transform.SetParent(platform.transform);
     }
 }
