@@ -7,6 +7,7 @@ using UnityEngine;
 public class Player_Attack : MonoBehaviour
 {
     [SerializeField] private Player_UI player_UI;
+    [SerializeField] private Player_Movement player_movement;
 
     private float delay;
     private bool canAttack;
@@ -26,7 +27,7 @@ public class Player_Attack : MonoBehaviour
         if (canAttack)
         {
             canAttack = false;
-            this.gameObject.GetComponent<Player_Movement>().action = Player_Movement.ActionOC.Attacking;
+            player_movement.action = Player_Movement.ActionOC.Attacking;
             player_UI.StartCastTimer(weapon.attackAnimationDuration);
             DOVirtual.DelayedCall(weapon.attackAnimationDuration, () => Attack(weapon));
         }
@@ -34,12 +35,13 @@ public class Player_Attack : MonoBehaviour
 
     public void Attack(Scriptable_Weapons weapon)
     {
+        player_UI.StartCooldown(weapon.attackDelay);
         if (weapon.weaponName == "Sledgehammer")
         {
             GameObject bullet = Instantiate(weapon.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
             bullet.GetComponent<PlayerBullet>().Settings(weapon);
             delay = weapon.attackDelay + Time.timeSinceLevelLoad;
-            this.gameObject.GetComponent<Player_Movement>().action = Player_Movement.ActionOC.Normal;
+            player_movement.action = Player_Movement.ActionOC.Normal;
         }
     }
 }

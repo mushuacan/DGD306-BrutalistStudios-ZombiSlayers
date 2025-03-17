@@ -6,7 +6,11 @@ using DG.Tweening;
 
 public class Player_UI : MonoBehaviour
 {
+    [SerializeField] private float fadeDuration;
+    [SerializeField] private float fadePower;
     [SerializeField] private Slider castTimer;
+    [SerializeField] private Slider coolDown;
+    [SerializeField] private RawImage weaponImage;
     [SerializeField] private RawImage heart1;
     [SerializeField] private RawImage heart2;
     [SerializeField] private RawImage heart3;
@@ -16,6 +20,7 @@ public class Player_UI : MonoBehaviour
     void Start()
     {
         castTimer.gameObject.SetActive(false);
+        coolDown.gameObject.SetActive(false);
     }
 
     public void StartCastTimer(float time)
@@ -26,8 +31,22 @@ public class Player_UI : MonoBehaviour
         {
             castTimer.gameObject.SetActive(false);
             castTimer.value = 0;
+            weaponImage.DOFade(fadePower, fadeDuration);
         });
     }
+
+    public void StartCooldown(float time)
+    {
+        coolDown.gameObject.SetActive(true);
+        coolDown.value = 0;
+        coolDown.DOValue(1, time).SetEase(Ease.Linear).OnComplete(() =>
+        {
+            coolDown.gameObject.SetActive(false);
+            coolDown.value = 0;
+            weaponImage.DOFade(1f, fadeDuration);
+        });
+    }
+
     public void ArrangeHearts(int hearts)
     {
         if (hearts > 0)
