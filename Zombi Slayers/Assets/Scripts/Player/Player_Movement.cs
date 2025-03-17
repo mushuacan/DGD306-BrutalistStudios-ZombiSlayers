@@ -18,7 +18,7 @@ public class Player_Movement : MonoBehaviour
     [Tooltip("Haritayý hareket ettiren objeyi baðlayýnýz. (Halihazýrdaki adý KayanObje)")]
     [SerializeField] private GameObject platform;
     [Tooltip("Burda karakterin özelliðini ayarlayabiliyoruz. Sonradan seçime göre ayarlanacak.")]
-    [SerializeField] private Scriptable_PlayerCharacter character;
+    [SerializeField] public Scriptable_PlayerCharacter character;
 
 
     [Header("Playground Settings")]

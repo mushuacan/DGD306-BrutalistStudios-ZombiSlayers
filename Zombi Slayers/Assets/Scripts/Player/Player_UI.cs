@@ -6,8 +6,11 @@ using DG.Tweening;
 
 public class Player_UI : MonoBehaviour
 {
+    [Header("Variables")]
     [SerializeField] private float fadeDuration;
     [SerializeField] private float fadePower;
+
+    [Header("Referances")]
     [SerializeField] private Slider castTimer;
     [SerializeField] private Slider coolDown;
     [SerializeField] private RawImage weaponImage;
@@ -15,12 +18,14 @@ public class Player_UI : MonoBehaviour
     [SerializeField] private RawImage heart2;
     [SerializeField] private RawImage heart3;
     [SerializeField] private RawImage heart4;
+    [SerializeField] private Player_Movement player_Movement;
 
     // Start is called before the first frame update
     void Start()
     {
         castTimer.gameObject.SetActive(false);
         coolDown.gameObject.SetActive(false);
+        weaponImage.texture = player_Movement.character.weapon.icon;
     }
 
     public void StartCastTimer(float time)

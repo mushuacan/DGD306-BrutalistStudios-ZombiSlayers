@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class Player_Health : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private int healthAtBeggining;
     [SerializeField] private float undamageableDuration;
     [Tooltip("0 daha görünmez yapar")]
     [Range(0f, 1f)]
@@ -17,6 +16,7 @@ public class Player_Health : MonoBehaviour
     [Header("Referances")]
     [SerializeField] private SpriteRenderer spriteRenderer;  // Karakterin SpriteRenderer'ý
     [SerializeField] private Player_UI player_UI;
+    [SerializeField] private Player_Movement player_movement;
 
 
     [Header("(private variables)")]
@@ -26,7 +26,7 @@ public class Player_Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ArrangeHealth(healthAtBeggining, true);
+        ArrangeHealth(player_movement.character.health, true);
         undamageableDelay = Time.timeSinceLevelLoad;
     }
 
