@@ -318,6 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1759442453393457561}
   - component: {fileID: 1544597130899624395}
+  - component: {fileID: 5980480940130164564}
   - component: {fileID: 7107904711815955177}
   - component: {fileID: -699912929371043157}
   - component: {fileID: 4902290981955062725}
@@ -399,6 +400,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5980480940130164564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317986187449348885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42dad614b8767504d811d09b359ebf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
 --- !u!114 &7107904711815955177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,7 +432,8 @@ MonoBehaviour:
   attack_Button: 0
   second_Button: 0
   platform: {fileID: 0}
-  character: {fileID: 0}
+  player: {fileID: 5980480940130164564}
+  player_attack: {fileID: 4902290981955062725}
   movementSpeed: 4
   leftBoundary: -8
   rightBoundary: 5
@@ -445,7 +460,7 @@ MonoBehaviour:
   undamageableImpulsePower: 0.225
   spriteRenderer: {fileID: 1544597130899624395}
   player_UI: {fileID: 3710495823981931815}
-  player_movement: {fileID: 7107904711815955177}
+  player: {fileID: 5980480940130164564}
   health: 0
 --- !u!114 &4902290981955062725
 MonoBehaviour:
@@ -460,6 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_UI: {fileID: 3710495823981931815}
+  player: {fileID: 5980480940130164564}
   player_movement: {fileID: 7107904711815955177}
 --- !u!114 &3710495823981931815
 MonoBehaviour:
@@ -482,7 +498,7 @@ MonoBehaviour:
   heart2: {fileID: 5077606400375755555}
   heart3: {fileID: 6457714482630851726}
   heart4: {fileID: 4921505704176332786}
-  player_Movement: {fileID: 7107904711815955177}
+  player: {fileID: 5980480940130164564}
 --- !u!70 &888847654336524922
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

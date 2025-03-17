@@ -17,8 +17,8 @@ public class Player_Movement : MonoBehaviour
     [Header("Referances")]
     [Tooltip("Haritayý hareket ettiren objeyi baðlayýnýz. (Halihazýrdaki adý KayanObje)")]
     [SerializeField] private GameObject platform;
-    [Tooltip("Burda karakterin özelliðini ayarlayabiliyoruz. Sonradan seçime göre ayarlanacak.")]
-    [SerializeField] public Scriptable_PlayerCharacter character;
+    [SerializeField] private Player_Character player;
+    [SerializeField] private Player_Attack player_attack;
 
 
     [Header("Playground Settings")]
@@ -177,7 +177,7 @@ public class Player_Movement : MonoBehaviour
 
     private void Attack()
     {
-        this.gameObject.GetComponent<Player_Attack>().StartAttack(character.weapon);
+        player_attack.StartAttack(player.character.weapon);
     }
     public void Die()
     {

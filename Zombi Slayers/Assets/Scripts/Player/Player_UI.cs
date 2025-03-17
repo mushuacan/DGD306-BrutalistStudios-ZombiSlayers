@@ -18,14 +18,17 @@ public class Player_UI : MonoBehaviour
     [SerializeField] private RawImage heart2;
     [SerializeField] private RawImage heart3;
     [SerializeField] private RawImage heart4;
-    [SerializeField] private Player_Movement player_Movement;
+
+
+    [Header("Referances")]
+    [SerializeField] private Player_Character player;
 
     // Start is called before the first frame update
     void Start()
     {
         castTimer.gameObject.SetActive(false);
         coolDown.gameObject.SetActive(false);
-        weaponImage.texture = player_Movement.character.weapon.icon;
+        weaponImage.texture = player.character.weapon.icon;
     }
 
     public void StartCastTimer(float time)

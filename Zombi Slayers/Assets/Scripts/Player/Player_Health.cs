@@ -16,7 +16,7 @@ public class Player_Health : MonoBehaviour
     [Header("Referances")]
     [SerializeField] private SpriteRenderer spriteRenderer;  // Karakterin SpriteRenderer'ý
     [SerializeField] private Player_UI player_UI;
-    [SerializeField] private Player_Movement player_movement;
+    [SerializeField] private Player_Character player;
 
 
     [Header("(private variables)")]
@@ -26,7 +26,7 @@ public class Player_Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ArrangeHealth(player_movement.character.health, true);
+        ArrangeHealth(player.character.health, true);
         undamageableDelay = Time.timeSinceLevelLoad;
     }
 

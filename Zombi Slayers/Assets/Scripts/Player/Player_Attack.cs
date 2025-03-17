@@ -7,6 +7,7 @@ using UnityEngine;
 public class Player_Attack : MonoBehaviour
 {
     [SerializeField] private Player_UI player_UI;
+    [SerializeField] private Player_Character player;
     [SerializeField] private Player_Movement player_movement;
 
     private float delay;
