@@ -53,7 +53,8 @@ public class Player_Movement : MonoBehaviour
     {
         Normal,
         Attacking,
-        Sliding
+        Sliding,
+        cannot
     }
 
 
@@ -61,6 +62,7 @@ public class Player_Movement : MonoBehaviour
     void Start()
     {
         state = StateOC.Running;
+        action = ActionOC.Normal;
         //lane = 2;
         transform.position = new Vector2(startPositionX, laneYPositions[lane]);
 
@@ -78,6 +80,7 @@ public class Player_Movement : MonoBehaviour
 
         if (state == StateOC.Dead)
         {
+            action = ActionOC.cannot;
             return;
         }
 
@@ -163,6 +166,7 @@ public class Player_Movement : MonoBehaviour
             return;
         }
 
+        action = ActionOC.cannot;
         state = StateOC.EndGame;
         float xPosition = transform.position.x + (movementSpeed/2) * transitionDuration;
         transform.DOMoveX(xPosition, transitionDuration).SetEase(Ease.InQuad).OnComplete(() =>

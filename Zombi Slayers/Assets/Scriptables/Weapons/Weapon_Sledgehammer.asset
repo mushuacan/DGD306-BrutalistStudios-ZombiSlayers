@@ -16,6 +16,7 @@ MonoBehaviour:
   damage: 50
   attackDelay: 1
   attackAnimationDuration: 0.75
+  BulletDestroyTimer: 0.25
   haveBullets: 0
   reloadTime: 0
   bulletCount: 0

@@ -372,6 +372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5265736308046114385, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: lane
       value: 1
@@ -411,6 +415,14 @@ PrefabInstance:
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: moveRight_Button
       value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138159295395460147, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138159295395460147, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1623,6 +1635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5265736308046114385, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: lane
       value: 3
@@ -1650,6 +1666,14 @@ PrefabInstance:
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: startPosition.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138159295395460147, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138159295395460147, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1845,7 +1869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: envorimentMovementSpeed
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1031155693853497611, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: m_IsActive

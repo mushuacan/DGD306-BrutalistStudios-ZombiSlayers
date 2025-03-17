@@ -16,6 +16,8 @@ MonoBehaviour:
   damage: 20
   attackDelay: 0.25
   attackAnimationDuration: 0.1
+  BulletDestroyTimer: 0.5
   haveBullets: 1
   reloadTime: 1
   bulletCount: 2
+  bullet: {fileID: 0}

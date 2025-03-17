@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 
 public class Player_Health : MonoBehaviour
@@ -15,6 +16,8 @@ public class Player_Health : MonoBehaviour
 
     [Header("Referances")]
     [SerializeField] private SpriteRenderer spriteRenderer;  // Karakterin SpriteRenderer'ý
+    [SerializeField] private Player_UI player_UI;
+
 
     [Header("(private variables)")]
     [SerializeField] private int health;
@@ -23,7 +26,7 @@ public class Player_Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = healthAtBeggining;
+        ArrangeHealth(healthAtBeggining, true);
         undamageableDelay = Time.timeSinceLevelLoad;
     }
 
@@ -32,7 +35,7 @@ public class Player_Health : MonoBehaviour
     {
         if (undamageableDelay < Time.timeSinceLevelLoad)
         {
-            health--;
+            ArrangeHealth(-1);
 
             if (health <= 0)
             {
@@ -65,5 +68,18 @@ public class Player_Health : MonoBehaviour
     private void DieEffect()
     {
         spriteRenderer.DOFade(undamageableImpulsePower, undamageableDuration / 2);
+    }
+
+    private void ArrangeHealth(int value, bool set = false)
+    {
+        if (set)
+        {
+            health = value;
+        }
+        else
+        {
+            health += value;
+        }
+        player_UI.ArrangeHearts(health);
     }
 }

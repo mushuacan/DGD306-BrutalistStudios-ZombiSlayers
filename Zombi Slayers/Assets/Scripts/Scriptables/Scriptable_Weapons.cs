@@ -14,6 +14,8 @@ public class Scriptable_Weapons : ScriptableObject
     public float attackDelay;
     [Tooltip("Oyuncu attack butonuna bastýktan kaç saniye sonra attack yapacak?")]
     public float attackAnimationDuration;
+    [Tooltip("Mermi kaç saniye sonra yok olacak?")]
+    public float BulletDestroyTimer;
 
     [Header("If it has bullets")]
     public bool haveBullets;
