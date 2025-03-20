@@ -15,4 +15,5 @@ MonoBehaviour:
   characterName: Fletcher
   health: 3
   slideTimer: 1
+  slideSpeed: 3
   weapon: {fileID: 11400000, guid: a61a90d59c41807468d8dd9e161c380b, type: 2}

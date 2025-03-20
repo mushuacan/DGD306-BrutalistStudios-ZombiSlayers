@@ -116,7 +116,8 @@ public class Player_Movement : MonoBehaviour
 
         if (action == ActionOC.Sliding)
         {
-            transform.position = new Vector2(transform.position.x + player.character.slideSpeed * Time.deltaTime, transform.position.y);
+            if (transform.position.x < rightBoundary)
+                transform.position = new Vector2(transform.position.x + player.character.slideSpeed * Time.deltaTime, transform.position.y);
         }
         else
         {
