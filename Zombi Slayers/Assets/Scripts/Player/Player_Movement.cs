@@ -6,6 +6,8 @@ using DG.Tweening;
 
 public class Player_Movement : MonoBehaviour
 {
+    #region Variables
+
     [Header("BUTTONS")]
     [SerializeField] private KeyCode moveUp_Button;
     [SerializeField] private KeyCode moveDown_Button;
@@ -21,8 +23,6 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private Player_Attack player_attack;
     [SerializeField] private Player_UI player_UI;
     [SerializeField] private Player_Health player_health;
-
-
 
     [Header("Playground Settings")]
     [SerializeField] private float movementSpeed;
@@ -43,6 +43,9 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] public StateOC state;
     [SerializeField] public ActionOC action;
 
+    #endregion
+
+    #region enums
 
     public enum StateOC // State of Character
     {
@@ -51,7 +54,6 @@ public class Player_Movement : MonoBehaviour
         Dead,
         EndGame
     }
-
     public enum ActionOC
     {
         Normal,
@@ -60,39 +62,46 @@ public class Player_Movement : MonoBehaviour
         cannot
     }
 
+    #endregion
 
-    // Start is called before the first frame update
+    #region Functions
+    #region Start & Update
+
     void Start()
     {
         state = StateOC.Running;
         action = ActionOC.Normal;
-        //lane = 2;
         transform.position = new Vector2(startPositionX, laneYPositions[lane]);
 
         if (platform == null)
         {
             Debug.LogError(gameObject + " objesinde platform için referans ayarlanmamýþ.");
+            Time.timeScale = 0f;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        #region STATES
-
         if (state == StateOC.Dead)
-        {
-            action = ActionOC.cannot;
             return;
-        }
+        
+        CheckIfDead();
+        ArrangeJumping();
+        ArrangeMovement();
+        CheckButtons();
+    }
 
+    #endregion
+
+    #region Movement Functions
+
+    private void ArrangeJumping()
+    {
         if (Input.GetKey(moveUp_Button) && state == StateOC.Running)
         {
             if (lane == 3)
-            {
-                //yapamaz
-            }
+                return;
             else
             {
                 state = StateOC.Jumping;
@@ -103,9 +112,7 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKey(moveDown_Button) && state == StateOC.Running)
         {
             if (lane == 1)
-            {
-                //yapamaz
-            }
+                return;
             else
             {
                 state = StateOC.Jumping;
@@ -113,7 +120,10 @@ public class Player_Movement : MonoBehaviour
                 JumpBetweenLanes("Down");
             }
         }
+    }
 
+    private void ArrangeMovement()
+    {
         if (action == ActionOC.Sliding)
         {
             if (transform.position.x < rightBoundary)
@@ -133,9 +143,9 @@ public class Player_Movement : MonoBehaviour
                     transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);
             }
         }
-
-        #endregion STATES
-
+    }
+    private void CheckButtons()
+    {
         if (Input.GetKeyDown(attack_Button) && action == ActionOC.Normal)
         {
             Attack();
@@ -155,7 +165,6 @@ public class Player_Movement : MonoBehaviour
         {
             transform.DOMoveY(jumpAnimationUpDistance + transform.position.y, (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.OutQuad).OnComplete(() =>
             {
-                // Yukarý hareket tamamlandýðýnda, asýl hedef Y pozisyonuna doðru hareket et
                 transform.DOMoveY(laneYPositions[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.InQuad).OnComplete(() =>
                 {
                     if (state != StateOC.EndGame)
@@ -167,13 +176,34 @@ public class Player_Movement : MonoBehaviour
         {
             transform.DOMoveY(jumpAnimationUpDistance + laneYPositions[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
             {
-                // Yukarý hareket tamamlandýðýnda, asýl hedef Y pozisyonuna doðru hareket et
                 transform.DOMoveY(laneYPositions[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
                 {
                     if (state != StateOC.EndGame)
                         state = StateOC.Running;
                 });
             });
+        }
+    }
+
+    #endregion
+
+    #region Other Functions
+
+    private void Attack()
+    {
+        player_attack.StartAttack();
+    }
+
+    public void Die()
+    {
+        state = StateOC.Dead;
+        transform.SetParent(platform.transform);
+    }
+    private void CheckIfDead()
+    {
+        if (state == StateOC.Dead)
+        {
+            action = ActionOC.cannot;
         }
     }
 
@@ -186,20 +216,12 @@ public class Player_Movement : MonoBehaviour
 
         action = ActionOC.cannot;
         state = StateOC.EndGame;
-        float xPosition = transform.position.x + (movementSpeed/2) * transitionDuration;
+        float xPosition = transform.position.x + (movementSpeed / 2) * transitionDuration;
         transform.DOMoveX(xPosition, transitionDuration).SetEase(Ease.InQuad).OnComplete(() =>
         {
             transform.DOMoveX(transform.position.x + movementSpeed * endDuration, endDuration).SetEase(Ease.Linear);
         });
     }
-
-    private void Attack()
-    {
-        player_attack.StartAttack();
-    }
-    public void Die()
-    {
-        state = StateOC.Dead;
-        transform.SetParent(platform.transform);
-    }
+    #endregion
+    #endregion
 }
