@@ -382,6 +382,8 @@ MonoBehaviour:
   platform: {fileID: 0}
   player: {fileID: 5980480940130164564}
   player_attack: {fileID: 4902290981955062725}
+  player_UI: {fileID: 3710495823981931815}
+  player_health: {fileID: -699912929371043157}
   movementSpeed: 4
   leftBoundary: -8
   rightBoundary: 5
@@ -444,7 +446,6 @@ MonoBehaviour:
   fadePower: 0.4
   castTimer: {fileID: 2457012596335727034}
   coolDown: {fileID: 4347774977072739620}
-  reloadTimer: {fileID: 0}
   weaponImage: {fileID: 3830960782012184827}
   heart1: {fileID: 3408830344387554726}
   heart2: {fileID: 5077606400375755555}

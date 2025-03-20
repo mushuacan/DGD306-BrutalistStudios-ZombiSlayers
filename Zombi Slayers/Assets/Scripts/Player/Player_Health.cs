@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using static Player_Movement;
 
 
 public class Player_Health : MonoBehaviour
@@ -10,8 +11,7 @@ public class Player_Health : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float undamageableDuration;
     [Tooltip("0 daha görünmez yapar")]
-    [Range(0f, 1f)]
-    [SerializeField] private float undamageableImpulsePower;
+    [Range(0f, 1f)] [SerializeField] private float undamageableImpulsePower;
 
     [Header("Referances")]
     [SerializeField] private SpriteRenderer spriteRenderer;  // Karakterin SpriteRenderer'ý
@@ -21,7 +21,8 @@ public class Player_Health : MonoBehaviour
 
     [Header("(private variables)")]
     [SerializeField] private int health;
-    private float undamageableDelay;
+    [SerializeField] private float undamageableDelay;
+    [SerializeField] private bool isSliding;
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +32,15 @@ public class Player_Health : MonoBehaviour
     }
 
     
-    public void GiveDamage()
+    public void GiveDamage(bool slideBreaker = false)
     {
+        if (isSliding)
+        {
+            if (!slideBreaker)
+            {
+                return;
+            }
+        }
         if (undamageableDelay < Time.timeSinceLevelLoad)
         {
             ArrangeHealth(-1);
@@ -81,5 +89,11 @@ public class Player_Health : MonoBehaviour
             health += value;
         }
         player_UI.ArrangeHearts(health);
+    }
+
+    public void Sliding(float time)
+    {
+        isSliding = true;
+        DOVirtual.DelayedCall(player.character.slideTimer, () => { isSliding = false; });
     }
 }

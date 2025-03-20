@@ -19,6 +19,9 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private GameObject platform;
     [SerializeField] private Player_Character player;
     [SerializeField] private Player_Attack player_attack;
+    [SerializeField] private Player_UI player_UI;
+    [SerializeField] private Player_Health player_health;
+
 
 
     [Header("Playground Settings")]
@@ -111,16 +114,23 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(moveRight_Button) && (state == StateOC.Running || state == StateOC.Jumping))
+        if (action == ActionOC.Sliding)
         {
-            if (transform.position.x < rightBoundary)
-                transform.position = new Vector2(transform.position.x + movementSpeed * Time.deltaTime, transform.position.y);
+            transform.position = new Vector2(transform.position.x + player.character.slideSpeed * Time.deltaTime, transform.position.y);
         }
-
-        if (Input.GetKey(moveLeft_Button) && (state == StateOC.Running || state == StateOC.Jumping))
+        else
         {
-            if (transform.position.x > leftBoundary)
-                transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);
+            if (Input.GetKey(moveRight_Button) && (state == StateOC.Running || state == StateOC.Jumping))
+            {
+                if (transform.position.x < rightBoundary)
+                    transform.position = new Vector2(transform.position.x + movementSpeed * Time.deltaTime, transform.position.y);
+            }
+
+            if (Input.GetKey(moveLeft_Button) && (state == StateOC.Running || state == StateOC.Jumping))
+            {
+                if (transform.position.x > leftBoundary)
+                    transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);
+            }
         }
 
         #endregion STATES
@@ -128,6 +138,13 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown(attack_Button) && action == ActionOC.Normal)
         {
             Attack();
+        }
+        if (Input.GetKeyDown(second_Button) && action == ActionOC.Normal)
+        {
+            action = ActionOC.Sliding;
+            player_UI.StartCooldown(player.character.slideTimer);
+            player_health.Sliding(player.character.slideTimer);
+            DOVirtual.DelayedCall(player.character.slideTimer, () => { action = ActionOC.Normal; });
         }
     }
 

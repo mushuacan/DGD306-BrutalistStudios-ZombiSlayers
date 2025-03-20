@@ -16,8 +16,8 @@ public class Envoriment_Movement : MonoBehaviour
 
     [Header("Gizli deðerler")]
     [SerializeField] private float transitionDuration;
-    [SerializeField] private float endDuration;
     [SerializeField] private float FinishLinePosition;
+    [SerializeField] private float endDuration;
     private bool sessionEnded;
 
 

@@ -18,7 +18,7 @@ public class Obstacle : MonoBehaviour
             { // eðer oyuncu slide yapýyorsa ve bu engel slideable ise hasar verme
                 return;
             }
-            collision.GetComponent<Player_Health>().GiveDamage();
+            collision.GetComponent<Player_Health>().GiveDamage(!isSlideable);
         }
 
         if (isBreakable && collision.CompareTag("Player_Bullet"))
