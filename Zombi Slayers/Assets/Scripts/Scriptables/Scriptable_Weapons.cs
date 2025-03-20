@@ -22,11 +22,20 @@ public class Scriptable_Weapons : ScriptableObject
     [Tooltip("Silahýn þarjörü bitince kaç saniyede þarjör yenileyebilecek?")]
     public float reloadTime;
     [Tooltip("Bir þarjörde kaç mermi olacak?")]
-    public float bulletCount;
+    public int bulletCount;
+    [Tooltip("Ateþlenen merminin haritadaki hýzý?")]
+    public float bulletSpeed;
+    [Tooltip("Mermi hareketi nasýl olmalý?")]
+    public bulletBehaviorTypes bulletBehavior;
 
 
     [Header("Referances")]
     public GameObject bullet;
     public Texture icon;
 
+    public enum bulletBehaviorTypes
+    {
+        Nothing,
+        Moving
+    }
 }

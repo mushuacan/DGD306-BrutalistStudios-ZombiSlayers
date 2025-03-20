@@ -177,7 +177,7 @@ public class Player_Movement : MonoBehaviour
 
     private void Attack()
     {
-        player_attack.StartAttack(player.character.weapon);
+        player_attack.StartAttack();
     }
     public void Die()
     {

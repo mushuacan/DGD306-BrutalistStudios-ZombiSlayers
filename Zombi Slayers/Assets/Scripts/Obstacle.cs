@@ -23,7 +23,10 @@ public class Obstacle : MonoBehaviour
 
         if (isBreakable && collision.CompareTag("Player_Bullet"))
         {
-            Destroy(this.gameObject);
+            if (collision.GetComponent<PlayerBullet>().weaponName == "Sledgehammer")
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

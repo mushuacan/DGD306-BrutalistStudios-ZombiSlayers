@@ -15,10 +15,12 @@ MonoBehaviour:
   weaponName: Shotgun
   damage: 20
   attackDelay: 0.25
-  attackAnimationDuration: 0.1
-  BulletDestroyTimer: 0.5
+  attackAnimationDuration: 0.15
+  BulletDestroyTimer: 0.2
   haveBullets: 1
-  reloadTime: 1
-  bulletCount: 2
-  bullet: {fileID: 0}
+  reloadTime: 2
+  bulletCount: 4
+  bulletSpeed: 10
+  bulletBehavior: 1
+  bullet: {fileID: 73437196111254038, guid: 3da9639e85d07584ba46d1a2ea7b98cb, type: 3}
   icon: {fileID: 2800000, guid: 211e59cf8149f834ea0e654979843f07, type: 3}

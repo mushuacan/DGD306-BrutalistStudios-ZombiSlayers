@@ -5,21 +5,32 @@ using UnityEngine;
 
 public class Envoriment_Movement : MonoBehaviour
 {
-    private bool sessionEnded;
-    public float envorimentMovementSpeed;
-    private float transitionDuration;
-    private float endDuration;
-    private float FinishLinePosition;
+    [Header("Referanslar")]
+    [Tooltip("Bölüm sonunda ekranýn ortasýnda duracak olan obje")]
     public GameObject finishLine;
     public GameObject player1;
     public GameObject player2;
 
-    void Start()
+    [Header("Deðiþken")]
+    public float envorimentMovementSpeed;
+
+    [Header("Gizli deðerler")]
+    [SerializeField] private float transitionDuration;
+    [SerializeField] private float endDuration;
+    [SerializeField] private float FinishLinePosition;
+    private bool sessionEnded;
+
+
+    void OnValidate()
     {
-        sessionEnded = false;
         transitionDuration = envorimentMovementSpeed * 0.1f * 3f;
         FinishLinePosition = (envorimentMovementSpeed * transitionDuration * 0.5f);
         endDuration = 20 / envorimentMovementSpeed;
+    }
+
+    private void Start()
+    {
+        sessionEnded = false;
     }
 
     // Update is called once per frame
