@@ -10,6 +10,7 @@ public class Envoriment_Movement : MonoBehaviour
     public GameObject finishLine;
     public GameObject player1;
     public GameObject player2;
+    public ZombiAtTheBack_Manager zombiManager;
 
     [Header("Deðiþken")]
     public float envorimentMovementSpeed;
@@ -18,7 +19,10 @@ public class Envoriment_Movement : MonoBehaviour
     [SerializeField] private float transitionDuration;
     [SerializeField] private float FinishLinePosition;
     [SerializeField] private float endDuration;
+    [SerializeField] private float zombiStopDuration;
+    [SerializeField] private float zombiStopPosition;
     private bool sessionEnded;
+    private bool zombiSessionEnded;
 
 
     void OnValidate()
@@ -26,6 +30,8 @@ public class Envoriment_Movement : MonoBehaviour
         transitionDuration = envorimentMovementSpeed * 0.1f * 3f;
         FinishLinePosition = (envorimentMovementSpeed * transitionDuration * 0.5f);
         endDuration = 20 / envorimentMovementSpeed;
+        zombiStopDuration = envorimentMovementSpeed * 0.5f + 4;
+        zombiStopPosition = (envorimentMovementSpeed * zombiStopDuration * 0.5f) + 8;
     }
 
     private void Start()
@@ -38,6 +44,15 @@ public class Envoriment_Movement : MonoBehaviour
     {
         if (sessionEnded)
             return;
+
+        if (!zombiSessionEnded)
+        {
+            if (finishLine.transform.position.x < zombiStopPosition)
+            {
+                zombiSessionEnded = true;
+                zombiManager.EndGame(envorimentMovementSpeed, zombiStopDuration);
+            }
+        }
 
         if (finishLine.transform.position.x < FinishLinePosition)
         {

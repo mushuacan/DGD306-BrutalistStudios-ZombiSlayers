@@ -617,7 +617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: startPositionX
-      value: -8
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: moveDown_Button
@@ -2429,6 +2429,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1951390218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7416418069056727170, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+  m_PrefabInstance: {fileID: 724359588005547077}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f510317929bc2408bb6956da01d0a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2056937658
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,6 +2677,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3230454104735809029, guid: 9f4252c74935ded4b89eb3b785ab3a14, type: 3}
   m_PrefabInstance: {fileID: 2118321013}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &724359588005547077
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 181852681436982333, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.28461295
+      objectReference: {fileID: 0}
+    - target: {fileID: 181852681436982333, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9585882
+      objectReference: {fileID: 0}
+    - target: {fileID: 181852681436982333, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181852681436982333, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 181852681436982333, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181852681436982333, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181852681436982333, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181852681436982333, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181852681436982333, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181852681436982333, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416418069056727170, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: addZombiRandomly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749142269565027212, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: m_Name
+      value: ZombiATB Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
 --- !u!1001 &2082217414639205582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3014,23 +3086,35 @@ PrefabInstance:
       objectReference: {fileID: 1390250658}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: endDuration
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: edgeOfCamera
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
+      propertyPath: zombiManager
+      value: 
+      objectReference: {fileID: 1951390218}
+    - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
+      propertyPath: zombiStopDuration
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
+      propertyPath: zombiStopPosition
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: FinishLinePosition
-      value: 0.6
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: transitionDuration
-      value: 0.6
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: envorimentMovementSpeed
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1031155693853497611, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: m_IsActive
@@ -3174,6 +3258,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1396002217}
+  - {fileID: 724359588005547077}
   - {fileID: 9047465352731915169}
   - {fileID: 2082217414639205582}
   - {fileID: 746328068}

@@ -25,10 +25,5 @@ public class Zombie_Health : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-
-        if (collision.CompareTag("Player"))
-        {
-            collision.GetComponent<Player_Health>().GiveDamage();
-        }
     }
 }

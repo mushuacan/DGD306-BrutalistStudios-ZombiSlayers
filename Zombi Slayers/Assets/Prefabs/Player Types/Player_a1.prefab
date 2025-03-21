@@ -412,6 +412,8 @@ MonoBehaviour:
   player_UI: {fileID: 3710495823981931815}
   player: {fileID: 5980480940130164564}
   health: 0
+  undamageableDelay: 0
+  isSliding: 0
 --- !u!114 &4902290981955062725
 MonoBehaviour:
   m_ObjectHideFlags: 0
