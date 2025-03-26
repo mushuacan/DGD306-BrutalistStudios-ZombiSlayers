@@ -100,7 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bdf3766338fec946a89e9cf60aef87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lane: 0
+  leftCameraEdge: -10
   zombi: {fileID: 11400000, guid: 4c2526579e651a743bbac1678d20a034, type: 2}
+  zombiATBM: {fileID: 0}
 --- !u!114 &-1590478401598203509
 MonoBehaviour:
   m_ObjectHideFlags: 0

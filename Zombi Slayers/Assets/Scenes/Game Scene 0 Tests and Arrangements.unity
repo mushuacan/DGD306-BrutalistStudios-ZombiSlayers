@@ -981,8 +981,20 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 394647840}
+    m_TransformParent: {fileID: 2134014057}
     m_Modifications:
+    - target: {fileID: 324208396512592433, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
+      propertyPath: lane
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 324208396512592433, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
+      propertyPath: zombiATBM
+      value: 
+      objectReference: {fileID: 1951390218}
+    - target: {fileID: 324208396512592433, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
+      propertyPath: leftCameraEdge
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 5620566252440049201, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.610363
@@ -2090,8 +2102,20 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 394647840}
+    m_TransformParent: {fileID: 2134014057}
     m_Modifications:
+    - target: {fileID: 324208396512592433, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
+      propertyPath: lane
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 324208396512592433, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
+      propertyPath: zombiATBM
+      value: 
+      objectReference: {fileID: 1951390218}
+    - target: {fileID: 324208396512592433, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
+      propertyPath: leftCameraEdge
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 5620566252440049201, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 68.13
@@ -2677,6 +2701,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3230454104735809029, guid: 9f4252c74935ded4b89eb3b785ab3a14, type: 3}
   m_PrefabInstance: {fileID: 2118321013}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2134014056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134014057}
+  m_Layer: 0
+  m_Name: Zombies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2134014057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134014056}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1826226167}
+  - {fileID: 2769497574716776437}
+  - {fileID: 1008092926}
+  m_Father: {fileID: 394647840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &724359588005547077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2727,7 +2785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7416418069056727170, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
       propertyPath: addZombiRandomly
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7749142269565027212, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
       propertyPath: m_Name
@@ -2873,8 +2931,20 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 394647840}
+    m_TransformParent: {fileID: 2134014057}
     m_Modifications:
+    - target: {fileID: 324208396512592433, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
+      propertyPath: lane
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 324208396512592433, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
+      propertyPath: zombiATBM
+      value: 
+      objectReference: {fileID: 1951390218}
+    - target: {fileID: 324208396512592433, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
+      propertyPath: leftCameraEdge
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 5620566252440049201, guid: de46174254e6a094abd7e46e3f0a3e7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.37
@@ -2985,6 +3055,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5070089360801065802, guid: e6a4aca70b1fe6342b3fa85cb5cdc1f6, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 2134014057}
+    - targetCorrespondingSourceObject: {fileID: 5070089360801065802, guid: e6a4aca70b1fe6342b3fa85cb5cdc1f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 345967799}
     - targetCorrespondingSourceObject: {fileID: 5070089360801065802, guid: e6a4aca70b1fe6342b3fa85cb5cdc1f6, type: 3}
@@ -3049,16 +3122,7 @@ PrefabInstance:
       addedObject: {fileID: 1503597105}
     - targetCorrespondingSourceObject: {fileID: 5070089360801065802, guid: e6a4aca70b1fe6342b3fa85cb5cdc1f6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1826226167}
-    - targetCorrespondingSourceObject: {fileID: 5070089360801065802, guid: e6a4aca70b1fe6342b3fa85cb5cdc1f6, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 468514891}
-    - targetCorrespondingSourceObject: {fileID: 5070089360801065802, guid: e6a4aca70b1fe6342b3fa85cb5cdc1f6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2769497574716776437}
-    - targetCorrespondingSourceObject: {fileID: 5070089360801065802, guid: e6a4aca70b1fe6342b3fa85cb5cdc1f6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1008092926}
     - targetCorrespondingSourceObject: {fileID: 5070089360801065802, guid: e6a4aca70b1fe6342b3fa85cb5cdc1f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 689558169}
@@ -3085,8 +3149,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1390250658}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
+      propertyPath: isStopable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
+      propertyPath: stopButton
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: endDuration
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: edgeOfCamera
@@ -3098,23 +3170,23 @@ PrefabInstance:
       objectReference: {fileID: 1951390218}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: zombiStopDuration
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: zombiStopPosition
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: FinishLinePosition
-      value: 2.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: transitionDuration
-      value: 1.2
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: envorimentMovementSpeed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1031155693853497611, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: m_IsActive

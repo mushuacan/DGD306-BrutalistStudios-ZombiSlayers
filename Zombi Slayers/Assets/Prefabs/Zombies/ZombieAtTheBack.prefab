@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spaceBetweenZombis: 0.8
   leftCameraBorder: -10
-  zombiSpeedComesFromBack: 1
+  zombiSpeedComesFromBack: 2
 --- !u!114 &1739709130683786365
 MonoBehaviour:
   m_ObjectHideFlags: 0

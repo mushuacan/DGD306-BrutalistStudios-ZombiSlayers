@@ -17,8 +17,8 @@ public class ZombiAtTheBack : MonoBehaviour
     public void SetPosition(int lane, int order)
     {
         float orderPosition = order * spaceBetweenZombis + leftCameraBorder;
-        float leftEnterance = leftCameraBorder - 5;
-        float enteranceDuration = zombiSpeedComesFromBack * order + 1;
+        float leftEnterance = leftCameraBorder;
+        float enteranceDuration = (order + 1) / zombiSpeedComesFromBack;
         transform.position = new Vector3(leftEnterance, laneYPositions[lane], 0);
         myTween = transform.DOMoveX(orderPosition, enteranceDuration).SetEase(Ease.OutQuad);
     }

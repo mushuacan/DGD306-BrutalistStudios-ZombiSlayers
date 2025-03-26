@@ -15,6 +15,12 @@ public class Envoriment_Movement : MonoBehaviour
     [Header("Deðiþken")]
     public float envorimentMovementSpeed;
 
+    [Header("Testerlýk için gerekenler")]
+    [SerializeField] private KeyCode stopButton;
+    [SerializeField] private bool isStopable;
+    private bool isMoving;
+
+
     [Header("Gizli deðerler")]
     [SerializeField] private float transitionDuration;
     [SerializeField] private float FinishLinePosition;
@@ -37,6 +43,7 @@ public class Envoriment_Movement : MonoBehaviour
     private void Start()
     {
         sessionEnded = false;
+        isMoving = true;
     }
 
     // Update is called once per frame
@@ -44,6 +51,11 @@ public class Envoriment_Movement : MonoBehaviour
     {
         if (sessionEnded)
             return;
+
+        if (Input.GetKeyDown(stopButton) && isStopable)
+        {
+            isMoving = !isMoving;
+        }
 
         if (!zombiSessionEnded)
         {
@@ -64,7 +76,8 @@ public class Envoriment_Movement : MonoBehaviour
         }
         else
         {
-            transform.position = new Vector3(transform.position.x - (envorimentMovementSpeed * Time.deltaTime), transform.position.y, 5);
+            if (isMoving)
+                transform.position = new Vector3(transform.position.x - (envorimentMovementSpeed * Time.deltaTime), transform.position.y, 5);
         }
     }
 }

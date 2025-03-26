@@ -23,6 +23,7 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
         AddBackZombi(2);
         AddBackZombi(3);
         if (addZombiRandomly) AddZombiRandomly(newZombiDelay);
+
     }
 
     private void AddZombiRandomly(float time)

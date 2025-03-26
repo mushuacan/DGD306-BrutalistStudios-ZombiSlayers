@@ -5,7 +5,10 @@ using UnityEngine;
 public class Zombie_Health : MonoBehaviour
 {
     private float health;
+    [SerializeField] private int lane;
+    [SerializeField] private float leftCameraEdge;
     [SerializeField] private Scriptable_Zombies zombi;
+    [SerializeField] private ZombiAtTheBack_Manager zombiATBM;
 
 
     private void OnEnable()
@@ -24,6 +27,18 @@ public class Zombie_Health : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (transform.position.x < leftCameraEdge)
+        {
+            if (zombiATBM != null)
+            {
+                zombiATBM.AddBackZombi(lane);
+            }
+            Destroy(this.gameObject);
         }
     }
 }
