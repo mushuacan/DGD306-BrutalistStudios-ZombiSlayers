@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b141247667e1970459bb4bad9bf744ee, type: 3}
-  m_Name: Zombie_Normal
+  m_Name: "Zombi_T\xFCk\xFCren"
   m_EditorClassIdentifier: 
-  zombieName: "S\u0131radan Zombi"
-  health: 40
+  zombieName: "T\xFCk\xFCren Zombi"
+  health: 60
+  canBeZombiATB: 0
+  zombiAttidue: 1

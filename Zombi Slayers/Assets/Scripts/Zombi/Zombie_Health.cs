@@ -7,13 +7,13 @@ public class Zombie_Health : MonoBehaviour
     private float health;
     [SerializeField] private int lane;
     [SerializeField] private float leftCameraEdge;
-    [SerializeField] private Scriptable_Zombies zombi;
     [SerializeField] private ZombiAtTheBack_Manager zombiATBM;
+    [SerializeField] private ZombiCharacter zombiChar;
 
 
     private void OnEnable()
     {
-        health = zombi.health;
+        health = zombiChar.zombi.health;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
