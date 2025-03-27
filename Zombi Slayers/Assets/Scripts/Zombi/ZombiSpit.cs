@@ -8,6 +8,8 @@ public class ZombiSpit : MonoBehaviour
     [SerializeField] private ZombiCharacter zombiChar;
     [SerializeField] private float rightCameraEdge;
     private bool canSpit;
+    private Tween spitTween;
+
 
     void Start()
     {
@@ -26,13 +28,13 @@ public class ZombiSpit : MonoBehaviour
         }
         else
         {
-            DOVirtual.DelayedCall(0.3f, () => { WaitForSpit(); });
+            spitTween = DOVirtual.DelayedCall(0.3f, () => { WaitForSpit(); });
         }
     }
 
     private void SpitAnimation()
     {
-        DOVirtual.DelayedCall(zombiChar.zombi.attackDuration, () =>
+        spitTween = DOVirtual.DelayedCall(zombiChar.zombi.attackDuration, () =>
         {
             Spit();
         });
@@ -40,8 +42,6 @@ public class ZombiSpit : MonoBehaviour
 
     private void Spit()
     {
-        if (this.gameObject == null) return;
-
         GameObject projectile = Instantiate(zombiChar.zombi.projectilePrefab);
         projectile.transform.position = transform.position;
         projectile.GetComponent<ZombiBullet>().StartMoving();
@@ -50,9 +50,14 @@ public class ZombiSpit : MonoBehaviour
 
     private void SpitCooldown()
     {
-        DOVirtual.DelayedCall(zombiChar.zombi.attackCooldown, () =>
+        spitTween = DOVirtual.DelayedCall(zombiChar.zombi.attackCooldown, () =>
         {
             SpitAnimation();
         });
+    }
+
+    private void OnDestroy()
+    {
+        spitTween.Kill();
     }
 }

@@ -12,14 +12,19 @@ public class ZombiAtTheBack : MonoBehaviour
 
     private Tween myTween;
 
-    private float[] laneYPositions = { -1f, -3f, 0.25f, 3.5f };
+    private float[] laneYPoz = { -1f, -3f, 0.25f, 3.5f };
+
+    private void Start()
+    {
+        laneYPoz = LaneFinder.laneYPositions;
+    }
 
     public void SetPosition(int lane, int order)
     {
         float orderPosition = order * spaceBetweenZombis + leftCameraBorder;
         float leftEnterance = leftCameraBorder;
         float enteranceDuration = (order + 1) / zombiSpeedComesFromBack;
-        transform.position = new Vector3(leftEnterance, laneYPositions[lane], 0);
+        transform.position = new Vector3(leftEnterance, laneYPoz[lane], 0);
         myTween = transform.DOMoveX(orderPosition, enteranceDuration).SetEase(Ease.OutQuad);
     }
 

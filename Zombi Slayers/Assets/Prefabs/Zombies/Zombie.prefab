@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5620566252440049201}
   - component: {fileID: 611621827561276013}
   - component: {fileID: 2635368388138846178}
+  - component: {fileID: 8495576673804247030}
   - component: {fileID: 324208396512592433}
   - component: {fileID: -1590478401598203509}
   - component: {fileID: 4835035562384579341}
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 6729113846359408514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.78, y: 0.268, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -102,6 +103,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombi: {fileID: 11400000, guid: 4c2526579e651a743bbac1678d20a034, type: 2}
+--- !u!114 &8495576673804247030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6729113846359408514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40157ad1306e31a46b6b7d5c526b9e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snap: 0
+  lane: 2
 --- !u!114 &324208396512592433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,10 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bdf3766338fec946a89e9cf60aef87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lane: 0
   leftCameraEdge: -10
   zombiATBM: {fileID: 0}
   zombiChar: {fileID: 2635368388138846178}
+  laner: {fileID: 8495576673804247030}
 --- !u!114 &-1590478401598203509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e131df85caff38d479eae502dd4128fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnCollision: 0
+  canSlideable: 0
 --- !u!61 &4835035562384579341
 BoxCollider2D:
   m_ObjectHideFlags: 0

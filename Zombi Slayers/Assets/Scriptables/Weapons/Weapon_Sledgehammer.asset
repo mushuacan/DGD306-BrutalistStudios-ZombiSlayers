@@ -16,9 +16,11 @@ MonoBehaviour:
   damage: 50
   attackDelay: 0.75
   attackAnimationDuration: 0.5
-  BulletDestroyTimer: 0.25
+  BulletDestroyTimer: 0.5
   haveBullets: 0
   reloadTime: 0
   bulletCount: 0
+  bulletSpeed: 0
+  bulletBehavior: 0
   bullet: {fileID: 732497499613721441, guid: 38d659877cb261145b04cb722e794829, type: 3}
   icon: {fileID: 2800000, guid: b12dab6ea080737448ed7e6d234645e7, type: 3}

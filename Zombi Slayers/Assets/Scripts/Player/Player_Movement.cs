@@ -37,7 +37,7 @@ public class Player_Movement : MonoBehaviour
     [Header("Starting")]
     [SerializeField] [Range(-8, 5)] private int startPositionX;
     [SerializeField] [Range(1, 3)] private int lane;
-    private float[] laneYPositions = { -1f, -3f, 0.25f, 3.5f };
+    private float[] laneYPoz = { -1f, -3f, 0.25f, 3.5f };
 
     [Header("(private variables)")]
     [SerializeField] public StateOC state;
@@ -71,7 +71,10 @@ public class Player_Movement : MonoBehaviour
     {
         state = StateOC.Running;
         action = ActionOC.Normal;
-        transform.position = new Vector2(startPositionX, laneYPositions[lane]);
+
+        laneYPoz = LaneFinder.laneYPositions;
+
+        transform.position = new Vector2(startPositionX, laneYPoz[lane]);
 
         if (platform == null)
         {
@@ -165,7 +168,7 @@ public class Player_Movement : MonoBehaviour
         {
             transform.DOMoveY(jumpAnimationUpDistance + transform.position.y, (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.OutQuad).OnComplete(() =>
             {
-                transform.DOMoveY(laneYPositions[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.InQuad).OnComplete(() =>
+                transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.InQuad).OnComplete(() =>
                 {
                     if (state != StateOC.EndGame)
                         state = StateOC.Running;
@@ -174,9 +177,9 @@ public class Player_Movement : MonoBehaviour
         }
         if (Vertical == "Up")
         {
-            transform.DOMoveY(jumpAnimationUpDistance + laneYPositions[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
+            transform.DOMoveY(jumpAnimationUpDistance + laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
             {
-                transform.DOMoveY(laneYPositions[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
+                transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
                 {
                     if (state != StateOC.EndGame)
                         state = StateOC.Running;
