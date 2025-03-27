@@ -43,6 +43,12 @@ public class Envoriment_Movement : MonoBehaviour
     {
         sessionEnded = false;
         isMoving = true;
+
+        if (finishLine == null || player1 == null || player2 == null || zombiManager == null)
+        {
+            Debug.LogError("Kayan Obje'de gösterimsiz referanslar var.");
+            Time.timeScale = 0f;
+        } 
     }
 
     // Update is called once per frame
