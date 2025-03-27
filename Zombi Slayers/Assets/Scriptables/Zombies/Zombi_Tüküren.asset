@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombieName: "T\xFCk\xFCren Zombi"
   health: 60
-  canBeZombiATB: 0
+  canBeZombiATB: 1
   zombiAttidue: 1
+  attackDuration: 0.3
+  attackCooldown: 2
+  projectilePrefab: {fileID: 107155658010490721, guid: afaed6bc70698c24baca2d11fcdebd7b, type: 3}

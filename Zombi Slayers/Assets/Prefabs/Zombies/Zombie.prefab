@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630ec5ec8dad75c4791a9c034ce5b119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombi: {fileID: 0}
+  zombi: {fileID: 11400000, guid: 4c2526579e651a743bbac1678d20a034, type: 2}
 --- !u!114 &324208396512592433
 MonoBehaviour:
   m_ObjectHideFlags: 0

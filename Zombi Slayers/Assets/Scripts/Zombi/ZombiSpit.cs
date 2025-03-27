@@ -5,21 +5,30 @@ using UnityEngine;
 
 public class ZombiSpit : MonoBehaviour
 {
-    private ZombiCharacter zombiChar;
-    private bool canSpit;
+    [SerializeField] private ZombiCharacter zombiChar;
     [SerializeField] private float rightCameraEdge;
+    private bool canSpit;
 
     void Start()
     {
         canSpit = false;
         if (zombiChar.zombi.zombiAttidue == Scriptable_Zombies.zombiAttidues.Spitting) canSpit = true;
+        WaitForSpit();
     }
 
-    void Update()
+    private void WaitForSpit()
     {
-        if (transform.position.x < rightCameraEdge && canSpit) SpitAnimation();
-    }
+        if (!canSpit) return;
 
+        if (transform.position.x < rightCameraEdge)
+        {
+            SpitAnimation();
+        }
+        else
+        {
+            DOVirtual.DelayedCall(0.3f, () => { WaitForSpit(); });
+        }
+    }
 
     private void SpitAnimation()
     {
@@ -31,8 +40,11 @@ public class ZombiSpit : MonoBehaviour
 
     private void Spit()
     {
+        if (this.gameObject == null) return;
+
         GameObject projectile = Instantiate(zombiChar.zombi.projectilePrefab);
         projectile.transform.position = transform.position;
+        projectile.GetComponent<ZombiBullet>().StartMoving();
         SpitCooldown();
     }
 
