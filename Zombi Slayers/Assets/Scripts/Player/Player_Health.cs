@@ -57,6 +57,11 @@ public class Player_Health : MonoBehaviour
             }
         }
     }
+
+    public void TakeMedKit()
+    {
+        ArrangeHealth(+1);
+    }
     private void FlashEffect()
     {
         // Yanýp sönme efekti için DOTween kullanýyoruz
