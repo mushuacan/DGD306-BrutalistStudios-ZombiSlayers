@@ -170,8 +170,9 @@ public class Player_Movement : MonoBehaviour
             {
                 transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.InQuad).OnComplete(() =>
                 {
-                    if (state != StateOC.EndGame)
-                        state = StateOC.Running;
+                    if (state == StateOC.EndGame) return;
+                    if (state == StateOC.Dead) return;
+                    state = StateOC.Running;
                 });
             });
         }
@@ -181,8 +182,9 @@ public class Player_Movement : MonoBehaviour
             {
                 transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
                 {
-                    if (state != StateOC.EndGame)
-                        state = StateOC.Running;
+                    if (state == StateOC.EndGame) return;
+                    if (state == StateOC.Dead) return;
+                    state = StateOC.Running;
                 });
             });
         }

@@ -200,6 +200,10 @@ PrefabInstance:
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 1624147991218554521, guid: fce25ba0dd7881d48a6c72322cad0793, type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 916852764}
     - target: {fileID: 4087789420610649628, guid: fce25ba0dd7881d48a6c72322cad0793, type: 3}
       propertyPath: lane
       value: 1
@@ -2661,6 +2665,10 @@ PrefabInstance:
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 1624147991218554521, guid: fce25ba0dd7881d48a6c72322cad0793, type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 916852764}
     - target: {fileID: 4087789420610649628, guid: fce25ba0dd7881d48a6c72322cad0793, type: 3}
       propertyPath: lane
       value: 3
@@ -3416,7 +3424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: endDuration
-      value: 6.25
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: edgeOfCamera
@@ -3428,23 +3436,23 @@ PrefabInstance:
       objectReference: {fileID: 1951390218}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: zombiStopDuration
-      value: 5.6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: zombiStopPosition
-      value: 16.96
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: FinishLinePosition
-      value: 1.5360001
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: transitionDuration
-      value: 0.96000004
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: envorimentMovementSpeed
-      value: 3.2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1031155693853497611, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: m_IsActive

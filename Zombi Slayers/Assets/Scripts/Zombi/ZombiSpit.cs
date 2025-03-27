@@ -6,6 +6,7 @@ using UnityEngine;
 public class ZombiSpit : MonoBehaviour
 {
     [SerializeField] private ZombiCharacter zombiChar;
+    [SerializeField] private Transform platform;
     [SerializeField] private float rightCameraEdge;
     private bool canSpit;
     private Tween spitTween;
@@ -45,6 +46,7 @@ public class ZombiSpit : MonoBehaviour
         GameObject projectile = Instantiate(zombiChar.zombi.projectilePrefab);
         projectile.transform.position = transform.position;
         projectile.GetComponent<ZombiBullet>().StartMoving();
+        projectile.transform.SetParent(platform);
         SpitCooldown();
     }
 

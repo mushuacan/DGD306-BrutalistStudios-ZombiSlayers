@@ -7,6 +7,7 @@ public class ZombiBullet : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float leftCameraEdge;
+    private bool move;
 
     public void Arrangements(float speed, float damage)
     {
@@ -15,6 +16,13 @@ public class ZombiBullet : MonoBehaviour
 
     public void StartMoving()
     {
+        move = true;
+    }
+
+    private void Update()
+    {
+        if (!move) return;
+
         if (transform.position.x < leftCameraEdge)
         {
             DOTween.Kill(transform);
@@ -25,7 +33,8 @@ public class ZombiBullet : MonoBehaviour
         {
             return;
         }
-        transform.DOMoveX(transform.position.x - (speed * 1), 1).SetEase(Ease.Linear).OnComplete(() => { StartMoving(); });
+
+        transform.position = new Vector3(transform.position.x - (speed * Time.deltaTime), transform.position.y, transform.position.z);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
