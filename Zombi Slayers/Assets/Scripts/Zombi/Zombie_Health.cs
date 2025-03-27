@@ -17,6 +17,12 @@ public class Zombie_Health : MonoBehaviour
         health = zombiChar.zombi.health;
     }
 
+    private void Start()
+    {
+        if (zombiATBM == null) 
+            Debug.LogError("zombiATBM tanýmlý deðil -> " + this.gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player_Bullet"))
@@ -39,10 +45,6 @@ public class Zombie_Health : MonoBehaviour
             if (zombiATBM != null)
             {
                 zombiATBM.AddBackZombi(laner.lane);
-            }
-            else
-            {
-                Debug.Log("zombiATBM tanýmlý deðil -> " + this.gameObject);
             }
             DOTween.Kill(transform);
             Destroy(this.gameObject);

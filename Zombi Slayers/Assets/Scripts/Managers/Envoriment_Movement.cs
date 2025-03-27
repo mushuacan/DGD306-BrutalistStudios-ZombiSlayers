@@ -12,14 +12,13 @@ public class Envoriment_Movement : MonoBehaviour
     public GameObject player2;
     public ZombiAtTheBack_Manager zombiManager;
 
-    [Header("Deðiþken")]
-    public float envorimentMovementSpeed;
-
     [Header("Testerlýk için gerekenler")]
     [SerializeField] private KeyCode stopButton;
     [SerializeField] private bool isStopable;
     private bool isMoving;
 
+    [Header("Deðiþken")]
+    public float envorimentMovementSpeed;
 
     [Header("Gizli deðerler")]
     [SerializeField] private float transitionDuration;

@@ -13,7 +13,7 @@ public class LaneFinder : MonoBehaviour
     {
         SnapToNearestLaneY();
         snap = false;
-        if (snap) { /* Be proud*/ }
+        if (snap) { /*_*/ }
     }
 
     void SnapToNearestLaneY()
