@@ -28,6 +28,9 @@ public class Scriptable_Weapons : ScriptableObject
     [Tooltip("Mermi hareketi nasýl olmalý?")]
     public bulletBehaviorTypes bulletBehavior;
 
+    [Header("Hitbox Arrangements")]
+    public Vector2 hitboxOffset;
+    public Vector2 hitboxSize;
 
     [Header("Referances")]
     public GameObject bullet;

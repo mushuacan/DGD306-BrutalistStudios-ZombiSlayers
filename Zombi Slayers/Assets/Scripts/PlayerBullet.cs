@@ -9,6 +9,7 @@ public class PlayerBullet : MonoBehaviour
     public string weaponName;
 
     public BulletScript[] bulletsc;
+    [SerializeField] private BoxCollider2D boxCollider;
 
     public void Settings(Scriptable_Weapons weapon)
     {
@@ -20,6 +21,9 @@ public class PlayerBullet : MonoBehaviour
             BulletMaker(weapon);
         }
 
+        boxCollider.size = weapon.hitboxSize;
+        boxCollider.offset = weapon.hitboxOffset;
+
         DOVirtual.DelayedCall(weapon.BulletDestroyTimer, () => Destroy(this.gameObject));
     }
 
@@ -27,7 +31,7 @@ public class PlayerBullet : MonoBehaviour
     {
         foreach (BulletScript bullet in bulletsc)
         {
-            if (bullet != null) // Null kontrolü yapmak önemli
+            if (bullet != null) // Null kontrolï¿½ yapmak ï¿½nemli
             {
                 bullet.isBulletMove = true;
                 bullet.bulletSpeed = weapon.bulletSpeed;

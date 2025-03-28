@@ -101,6 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
+  weaponName: 
+  bulletsc: []
+  boxCollider: {fileID: 5310655652545133225}
 --- !u!61 &5310655652545133225
 BoxCollider2D:
   m_ObjectHideFlags: 0
