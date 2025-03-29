@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b02b847dd9e9334dbd365620b0c66c9, type: 3}
-  m_Name: Weapon_Sledgehammer
+  m_Name: Weapon_Sledgehammer_level1
   m_EditorClassIdentifier: 
   weaponName: Sledgehammer
   damage: 80
-  attackDelay: 0.75
-  attackAnimationDuration: 0.5
-  BulletDestroyTimer: 0.5
+  attackDelay: 0.45
+  attackAnimationDuration: 0.25
+  BulletDestroyTimer: 0.05
   haveBullets: 0
   reloadTime: 0
   bulletCount: 0
   bulletSpeed: 0
   bulletBehavior: 0
-  hitboxOffset: {x: 0.26, y: 0}
-  hitboxSize: {x: 1.5, y: 2}
+  hitboxOffset: {x: 0.5, y: 0}
+  hitboxSize: {x: 2.5, y: 2}
   bullet: {fileID: 732497499613721441, guid: 38d659877cb261145b04cb722e794829, type: 3}
   icon: {fileID: 2800000, guid: b12dab6ea080737448ed7e6d234645e7, type: 3}

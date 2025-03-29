@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3230454104735809029}
   - component: {fileID: 1288929832701480774}
   - component: {fileID: 1822636443104281034}
+  - component: {fileID: -6527639187205483804}
   - component: {fileID: 4148959638789128644}
   - component: {fileID: -5096632464704333312}
   m_Layer: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8562209942794333228}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 2.2033, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -132,6 +133,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-6527639187205483804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8562209942794333228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40157ad1306e31a46b6b7d5c526b9e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snap: 0
+  lane: 2
 --- !u!114 &4148959638789128644
 MonoBehaviour:
   m_ObjectHideFlags: 0

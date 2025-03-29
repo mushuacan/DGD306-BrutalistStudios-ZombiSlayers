@@ -21,8 +21,11 @@ public class PlayerBullet : MonoBehaviour
             BulletMaker(weapon);
         }
 
-        boxCollider.size = weapon.hitboxSize;
-        boxCollider.offset = weapon.hitboxOffset;
+        if (weapon.hitboxSize != new Vector2(0, 0))
+        {
+            boxCollider.size = weapon.hitboxSize;
+            boxCollider.offset = weapon.hitboxOffset;
+        }
 
         DOVirtual.DelayedCall(weapon.BulletDestroyTimer, () => Destroy(this.gameObject));
     }

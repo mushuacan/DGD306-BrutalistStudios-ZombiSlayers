@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Testing/Scenes/Test of Buttons Scene.unity
-    guid: d08c850f2ba017a4b858e99c4877eb54
+    path: Assets/Scenes/Level 1.unity
+    guid: 9892f8bd241558c45b60d5b6a5073206
   m_configObjects: {}

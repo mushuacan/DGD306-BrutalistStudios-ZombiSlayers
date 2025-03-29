@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4248116947213112076}
   - component: {fileID: 8814163841662552576}
   - component: {fileID: 2933205688217805988}
+  - component: {fileID: 5332011600028865957}
   - component: {fileID: 5310655652545133225}
   m_Layer: 0
   m_Name: Sledgehammer_Attack
@@ -103,6 +104,19 @@ MonoBehaviour:
   damage: 50
   weaponName: 
   bulletsc: []
+  boxCollider: {fileID: 5310655652545133225}
+--- !u!114 &5332011600028865957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732497499613721441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9575b9aebe8513640970f2b8f894ff8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   boxCollider: {fileID: 5310655652545133225}
 --- !u!61 &5310655652545133225
 BoxCollider2D:
