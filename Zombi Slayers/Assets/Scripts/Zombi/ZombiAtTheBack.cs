@@ -1,8 +1,5 @@
-using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static Player_Movement;
+using DG.Tweening;
 
 public class ZombiAtTheBack : MonoBehaviour
 {
