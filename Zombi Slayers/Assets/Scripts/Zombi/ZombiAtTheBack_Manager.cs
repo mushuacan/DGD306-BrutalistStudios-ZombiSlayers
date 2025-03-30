@@ -1,9 +1,6 @@
 using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ZombiAtTheBack_Manager : MonoBehaviour
 {
