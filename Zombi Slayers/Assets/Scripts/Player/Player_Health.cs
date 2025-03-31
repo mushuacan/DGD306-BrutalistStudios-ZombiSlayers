@@ -17,7 +17,7 @@ public class Player_Health : MonoBehaviour
 
     [Header("(private variables)")]
     [SerializeField] private int health;
-    [SerializeField] private float undamageableDelay;
+    [SerializeField] public float undamageableDelay;
     [SerializeField] private bool isSliding;
 
     // Start is called before the first frame update

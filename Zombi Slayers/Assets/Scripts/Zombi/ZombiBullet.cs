@@ -37,10 +37,6 @@ public class ZombiBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
-            collision.GetComponent<Player_Health>().GiveDamage();
-        }
         if (collision.CompareTag("Player_Bullet"))
         {
             if (collision.GetComponent<PlayerBullet>().weaponName == "Sledgehammer")

@@ -21,12 +21,17 @@ public class DamagePlayerOnCollision : MonoBehaviour
                 return;
             }
 
-            collision.GetComponent<Player_Health>().GiveDamage();
+            Player_Health player_Health = collision.GetComponent<Player_Health>();
 
-            if (destroyOnCollision)
+            if (player_Health.undamageableDelay < Time.timeSinceLevelLoad)
             {
-                DOTween.Kill(transform);
-                Destroy(gameObject); 
+                player_Health.GiveDamage();
+
+                if (destroyOnCollision)
+                {
+                    DOTween.Kill(transform);
+                    Destroy(gameObject);
+                }
             }
         }
     }
