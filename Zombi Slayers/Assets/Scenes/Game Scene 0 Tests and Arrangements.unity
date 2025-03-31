@@ -732,6 +732,14 @@ PrefabInstance:
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 6954844541871843422, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954844541871843422, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 7561359419105218933, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
       propertyPath: zombiATBM
       value: 
