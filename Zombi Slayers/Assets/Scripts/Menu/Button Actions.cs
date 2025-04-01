@@ -1,6 +1,3 @@
-using DG.Tweening.Core.Enums;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -13,11 +10,19 @@ public class ButtonActions : MonoBehaviour
     public GameObject creditsMenu;
 
     // fBO = firstButtonOf...
-    public Button fBO_MainMenu;
-    public Button fBO_Credits;
-    public Button fBO_Settings;
+    public GameObject fBO_MainMenu;
+    public GameObject fBO_Credits;
+    public GameObject fBO_Settings;
+
+    public Scrollbar scrollbar_Sounds;
+    public Scrollbar scrollbar_SoundFXs;
+    public Scrollbar scrollbar_Music; 
+    
+    public Toggle toggleComponent;
+
 
     public bool startFromMainMenu;
+
 
     private void Start()
     {
@@ -62,6 +67,42 @@ public class ButtonActions : MonoBehaviour
     public void Button_LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void Scrollbar_Sounds(float value)
+    {
+        GameSettings.Instance.settings["mainSoundsVolume"] = value;
+    }
+    public void Scrollbar_SoundFXs(float value)
+    {
+        GameSettings.Instance.settings["soundFXVolume"] = value;
+    }
+    public void Scrollbar_Musics(float value)
+    {
+        GameSettings.Instance.settings["musicVolume"] = value;
+    }
+    public void ArrangeScrollbarsAblity()
+    {
+        bool areSoundsOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
+        if (areSoundsOn)
+        {
+            scrollbar_Sounds.interactable = true;
+            scrollbar_SoundFXs.interactable = true;
+            scrollbar_Music.interactable = true;
+        }
+        else
+        {
+            scrollbar_Sounds.interactable = false;
+            scrollbar_SoundFXs.interactable = false;
+            scrollbar_Music.interactable = false;
+        }
+    }
+
+    public void ArrangeSoundsToggle(bool isOn)
+    {
+        GameSettings.Instance.settings["areVolumesOn"] = isOn;
+
+        ArrangeScrollbarsAblity();
     }
 
     public void Buttons_Exit()

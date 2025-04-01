@@ -7,6 +7,7 @@ public class GameSettings : MonoBehaviour
 
     public Dictionary<string, object> settings = new Dictionary<string, object>();
 
+
     void Awake()
     {
         if (Instance == null)
@@ -20,9 +21,9 @@ public class GameSettings : MonoBehaviour
         }
 
         // Initialize default settings
-        settings.Add("soundVolume", 1.0f);
+        settings.Add("soundFXVolume", 1.0f);
         settings.Add("musicVolume", 1.0f);
-        settings.Add("mainVolume", 1.0f);
+        settings.Add("mainSoundsVolume", 1.0f);
         settings.Add("areVolumesOn", true);
         settings.Add("difficulty", "Medium");
 
