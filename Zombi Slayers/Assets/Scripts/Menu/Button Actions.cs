@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ButtonActions : MonoBehaviour
@@ -56,6 +57,11 @@ public class ButtonActions : MonoBehaviour
         settingsMenu.SetActive(true);
 
         EventSystem.current.SetSelectedGameObject(fBO_Settings.gameObject);
+    }
+
+    public void Button_LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
     public void Buttons_Exit()
