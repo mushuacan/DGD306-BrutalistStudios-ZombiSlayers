@@ -32,6 +32,8 @@ public class ButtonActions : MonoBehaviour
         settingsMenu.SetActive(false);
         creditsMenu.SetActive(false);
 
+        toggleComponent.isOn = (bool) GameSettings.Instance.settings["areVolumesOn"];
+
         EventSystem.current.SetSelectedGameObject(fBO_MainMenu.gameObject);
     }
 
@@ -69,21 +71,21 @@ public class ButtonActions : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void Scrollbar_Sounds(float value)
+    public void Scrollbar_Sounds()
     {
-        GameSettings.Instance.settings["mainSoundsVolume"] = value;
+        GameSettings.Instance.settings["mainSoundsVolume"] = scrollbar_Sounds.value;
     }
-    public void Scrollbar_SoundFXs(float value)
+    public void Scrollbar_SoundFXs()
     {
-        GameSettings.Instance.settings["soundFXVolume"] = value;
+        GameSettings.Instance.settings["soundFXVolume"] = scrollbar_SoundFXs.value;
     }
-    public void Scrollbar_Musics(float value)
+    public void Scrollbar_Musics()
     {
-        GameSettings.Instance.settings["musicVolume"] = value;
+        GameSettings.Instance.settings["musicVolume"] = scrollbar_Music.value;
     }
     public void ArrangeScrollbarsAblity()
     {
-        bool areSoundsOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
+        bool areSoundsOn = (bool) GameSettings.Instance.settings["areVolumesOn"];
         if (areSoundsOn)
         {
             scrollbar_Sounds.interactable = true;
@@ -98,9 +100,10 @@ public class ButtonActions : MonoBehaviour
         }
     }
 
-    public void ArrangeSoundsToggle(bool isOn)
+    public void Toggle_Sounds()
     {
-        GameSettings.Instance.settings["areVolumesOn"] = isOn;
+        GameSettings.Instance.settings["areVolumesOn"] = toggleComponent.isOn;
+        Debug.Log("Toggle: " + toggleComponent.isOn + " | areVolumesOn: " + GameSettings.Instance.settings["areVolumesOn"]);
 
         ArrangeScrollbarsAblity();
     }
