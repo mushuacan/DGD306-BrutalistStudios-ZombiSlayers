@@ -22,6 +22,7 @@ public class ButtonActions : MonoBehaviour
     public GameObject mushu;
     public GameObject emrei;
     public GameObject hay;
+    public GameObject everyone;
 
     [Header("Settings")]
     public Scrollbar scrollbar_Sounds;
@@ -153,15 +154,30 @@ public class ButtonActions : MonoBehaviour
 
     public void Button_Credits_Mushu()
     {
-        mushu.SetActive(!mushu.active);
+        mushu.SetActive(!mushu.activeSelf);
+        CheckIfEveryoneActive();
     }
     public void Button_Credits_Emrei()
     {
-        emrei.SetActive(!emrei.active);
+        emrei.SetActive(!emrei.activeSelf);
+        CheckIfEveryoneActive();
     }
     public void Button_Credits_Hay()
     {
-        hay.SetActive(!hay.active);
+        hay.SetActive(!hay.activeSelf);
+        CheckIfEveryoneActive();
+    }
+
+    public void CheckIfEveryoneActive()
+    {
+        if (mushu.activeSelf && emrei.activeSelf && hay.activeSelf)
+        {
+            everyone.SetActive(true);
+        }
+        else
+        {
+            everyone.SetActive(false);
+        }
     }
 
     #endregion
