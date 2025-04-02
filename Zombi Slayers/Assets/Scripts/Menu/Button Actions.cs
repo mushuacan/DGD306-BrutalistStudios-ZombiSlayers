@@ -83,6 +83,8 @@ public class ButtonActions : MonoBehaviour
 
     public void Button_OpenSettings()
     {
+        SetValuesOfSettings();
+
         mainMenu.SetActive(false);
         settingsMenu.SetActive(true);
 
@@ -106,6 +108,15 @@ public class ButtonActions : MonoBehaviour
     #endregion
 
     #region SETTINGS
+
+    public void SetValuesOfSettings()
+    {
+        scrollbar_Music.value = (float)GameSettings.Instance.settings["musicVolume"];
+        scrollbar_SoundFXs.value = (float)GameSettings.Instance.settings["soundFXVolume"];
+        scrollbar_Sounds.value = (float)GameSettings.Instance.settings["mainSoundsVolume"];
+        toggleComponent.isOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
+    }
+
     public void Toggle_Sounds()
     {
         GameSettings.Instance.settings["areVolumesOn"] = toggleComponent.isOn;
