@@ -39,6 +39,7 @@ public class Player_Movement : MonoBehaviour
     [Header("(private variables)")]
     [SerializeField] public StateOC state;
     [SerializeField] public ActionOC action;
+    private float slideCooldown;
 
     #endregion
 
@@ -62,6 +63,7 @@ public class Player_Movement : MonoBehaviour
     #endregion
 
     #region Functions
+
     #region Start & Update
 
     void Start()
@@ -78,6 +80,8 @@ public class Player_Movement : MonoBehaviour
             Debug.LogError(gameObject + " objesinde platform için referans ayarlanmamýþ.");
             Time.timeScale = 0f;
         }
+
+        slideCooldown = 0f;
     }
 
     // Update is called once per frame
@@ -150,12 +154,16 @@ public class Player_Movement : MonoBehaviour
         {
             Attack();
         }
-        if (Input.GetKeyDown(second_Button) && action == ActionOC.Normal)
+        if (Input.GetKeyDown(second_Button) && action == ActionOC.Normal && slideCooldown < Time.timeSinceLevelLoad)
         {
             action = ActionOC.Sliding;
             player_UI.StartCooldown(player.character.slideTimer);
             player_health.Sliding(player.character.slideTimer);
-            DOVirtual.DelayedCall(player.character.slideTimer, () => { action = ActionOC.Normal; });
+            DOVirtual.DelayedCall(player.character.slideTimer, () => 
+            { 
+                action = ActionOC.Normal; 
+                slideCooldown = player.character.slideCooldown + Time.timeSinceLevelLoad; 
+            });
         }
     }
 

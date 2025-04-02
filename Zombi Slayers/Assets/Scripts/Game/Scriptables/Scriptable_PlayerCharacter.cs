@@ -7,5 +7,6 @@ public class Scriptable_PlayerCharacter : ScriptableObject
     public int health;
     public float slideTimer;
     public float slideSpeed;
+    public float slideCooldown;
     public Scriptable_Weapons weapon;
 }

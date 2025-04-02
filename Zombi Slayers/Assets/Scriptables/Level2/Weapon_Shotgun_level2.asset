@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon_Shotgun_level2
   m_EditorClassIdentifier: 
   weaponName: Shotgun
-  damage: 5
+  damage: 10
   attackDelay: 0.25
   attackAnimationDuration: 0.15
   BulletDestroyTimer: 0.2
