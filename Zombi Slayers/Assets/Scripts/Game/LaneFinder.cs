@@ -37,4 +37,9 @@ public class LaneFinder : MonoBehaviour
         if (laneYPositions[2] == transform.position.y) { lane = 2; }
         if (laneYPositions[3] == transform.position.y) { lane = 3; }
     }
+
+    public void MakeLane(int laner)
+    {
+        lane = laner;
+    }
 }

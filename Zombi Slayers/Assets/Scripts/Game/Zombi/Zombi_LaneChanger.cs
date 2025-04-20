@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Zombi_LaneChanger : MonoBehaviour
 {
+    [SerializeField] private LaneFinder _laneFinder;
     public void ChangeLane(int laneToGo, float timeForFloat, bool shouldItTab)
     {
         if (shouldItTab)
@@ -16,15 +17,16 @@ public class Zombi_LaneChanger : MonoBehaviour
                 DOVirtual.DelayedCall(timeForFloat * 0.15f, () =>
                 {
                     transform.DOMoveY(LaneFinder.laneYPositions[laneToGo], timeForFloat * 0.1f).OnComplete(() => {
-
+                        _laneFinder.MakeLane(laneToGo);
                     });
                 });
             });
         }
         else
         {
-            transform.DOMoveY(LaneFinder.laneYPositions[laneToGo], timeForFloat).OnComplete(() => {
+            transform.DOMoveY(LaneFinder.laneYPositions[laneToGo], timeForFloat).SetEase(Ease.Linear).OnComplete(() => {
                 Debug.Log("Hareket tamamlandý!");
+                _laneFinder.MakeLane(laneToGo);
             });
         }
     }

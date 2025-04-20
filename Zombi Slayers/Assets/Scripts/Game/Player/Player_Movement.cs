@@ -216,6 +216,10 @@ public class Player_Movement : MonoBehaviour
         {
             player_attack.WoodsSecondAbility();
         }
+        if (player.character.characterName == "Fao")
+        {
+            player_attack.FaoSecondAbility();
+        }
     }
 
     public void Die()

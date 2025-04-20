@@ -49,7 +49,14 @@ public class Player_Attack : MonoBehaviour
         {
         }
     }
+    public void FaoSecondAbility()
+    {
+        GameObject bullet = Instantiate(player.character.secondAbility.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
+        if (bulletCount > 0)
+        {
 
+        }
+    }
     private void CheckAttackStatu()
     {
         if (player.character.weapon.haveBullets)
