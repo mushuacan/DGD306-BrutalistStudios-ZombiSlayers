@@ -6,12 +6,12 @@ public class Player_Movement : MonoBehaviour
     #region Variables
 
     [Header("BUTTONS")]
-    [SerializeField] private KeyCode moveUp_Button;
-    [SerializeField] private KeyCode moveDown_Button;
+    [SerializeField] public KeyCode moveUp_Button;
+    [SerializeField] public KeyCode moveDown_Button;
     [SerializeField] private KeyCode moveRight_Button;
     [SerializeField] private KeyCode moveLeft_Button;
     [SerializeField] private KeyCode attack_Button;
-    [SerializeField] private KeyCode second_Button;
+    [SerializeField] public KeyCode second_Button;
 
     [Header("Referances")]
     [Tooltip("Haritayý hareket ettiren objeyi baðlayýnýz. (Halihazýrdaki adý KayanObje)")]
@@ -33,13 +33,16 @@ public class Player_Movement : MonoBehaviour
 
     [Header("Starting")]
     [SerializeField] [Range(-8, 5)] private int startPositionX;
-    [SerializeField] [Range(1, 3)] private int lane;
+    [SerializeField] [Range(1, 3)] public int lane;
     private float[] laneYPoz = { -1f, -3f, 0.25f, 3.5f };
 
     [Header("(private variables)")]
     [SerializeField] public StateOC state;
     [SerializeField] public ActionOC action;
     private float secondAbilityCooldown;
+    [SerializeField] private bool FaoWind_StopJump;
+    [SerializeField] private bool FaoWind_JumpedNew;
+    [SerializeField] private bool FaoWind_JumpedUp;
 
     #endregion
 
@@ -82,6 +85,7 @@ public class Player_Movement : MonoBehaviour
         }
 
         secondAbilityCooldown = 0f;
+        FaoWind_StopJump = false;
     }
 
     // Update is called once per frame
@@ -102,14 +106,24 @@ public class Player_Movement : MonoBehaviour
 
     private void ArrangeJumping()
     {
+        if (FaoWind_StopJump)
+        {
+            return;
+        }
+        if (FaoWind_JumpedNew)
+        {
+            if (FaoWind_JumpedUp && Input.GetKey(moveUp_Button) == false)
+                FaoWind_JumpedNew = false;
+            if (!FaoWind_JumpedUp && Input.GetKey(moveDown_Button) == false)
+                FaoWind_JumpedNew = false;
+            return;
+        }
         if (Input.GetKey(moveUp_Button) && state == StateOC.Running)
         {
             if (lane == 3)
                 return;
             else
             {
-                state = StateOC.Jumping;
-                lane = lane + 1;
                 JumpBetweenLanes("Up");
             }
         }
@@ -119,8 +133,6 @@ public class Player_Movement : MonoBehaviour
                 return;
             else
             {
-                state = StateOC.Jumping;
-                lane = lane - 1;
                 JumpBetweenLanes("Down");
             }
         }
@@ -172,30 +184,47 @@ public class Player_Movement : MonoBehaviour
     {
         if (Vertical == "Down")
         {
-            transform.DOMoveY(jumpAnimationUpDistance + transform.position.y, (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.OutQuad).OnComplete(() =>
-            {
-                transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.InQuad).OnComplete(() =>
-                {
-                    if (state == StateOC.EndGame) return;
-                    if (state == StateOC.Dead) return;
-                    state = StateOC.Running;
-                });
-            });
+            JumpDown();
         }
         if (Vertical == "Up")
         {
-            transform.DOMoveY(jumpAnimationUpDistance + laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
-            {
-                transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
-                {
-                    if (state == StateOC.EndGame) return;
-                    if (state == StateOC.Dead) return;
-                    state = StateOC.Running;
-                });
-            });
+            JumpUp();
         }
     }
-
+    public void JumpDown()
+    {
+        state = StateOC.Jumping;
+        lane = lane - 1;
+        transform.DOMoveY(jumpAnimationUpDistance + transform.position.y, (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.OutQuad).OnComplete(() =>
+        {
+            transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.InQuad).OnComplete(() =>
+            {
+                if (state == StateOC.EndGame) return;
+                if (state == StateOC.Dead) return;
+                state = StateOC.Running;
+            });
+        });
+    }
+    public void JumpUp()
+    {
+        state = StateOC.Jumping;
+        lane = lane + 1;
+        transform.DOMoveY(jumpAnimationUpDistance + laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
+        {
+            transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
+            {
+                if (state == StateOC.EndGame) return;
+                if (state == StateOC.Dead) return;
+                state = StateOC.Running;
+            });
+        });
+    }
+    public void ArrangeFaoWindStopBool(bool abool)
+    {
+        FaoWind_StopJump = abool;
+        FaoWind_JumpedNew = true;
+        FaoWind_JumpedUp = Input.GetKey(moveUp_Button);
+    }
     #endregion
 
     #region Other Functions

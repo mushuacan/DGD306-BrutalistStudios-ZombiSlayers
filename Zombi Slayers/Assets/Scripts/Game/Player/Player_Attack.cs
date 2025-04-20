@@ -52,10 +52,7 @@ public class Player_Attack : MonoBehaviour
     public void FaoSecondAbility()
     {
         GameObject bullet = Instantiate(player.character.secondAbility.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
-        if (bulletCount > 0)
-        {
-
-        }
+        bullet.GetComponent<WindEffectController>().ArrangeReferance(player_movement);
     }
     private void CheckAttackStatu()
     {

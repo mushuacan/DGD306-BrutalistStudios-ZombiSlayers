@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0461bc76ce7ac624d995f4c7aa07b3a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 15
   tagsToDestroy:
   - Obstacle
   - Zombi

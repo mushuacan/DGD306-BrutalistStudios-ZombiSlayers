@@ -16,7 +16,7 @@ MonoBehaviour:
   damage: 0
   attackDelay: 0
   attackAnimationDuration: 0
-  BulletDestroyTimer: 0
+  BulletDestroyTimer: 15
   haveBullets: 0
   reloadTime: 0
   bulletCount: 0
@@ -24,5 +24,5 @@ MonoBehaviour:
   bulletBehavior: 0
   hitboxOffset: {x: 0, y: 0}
   hitboxSize: {x: 0, y: 0}
-  bullet: {fileID: 732497499613721441, guid: 159bd6df5aca3e544a8b614bb8902fcd, type: 3}
+  bullet: {fileID: 732497499613721441, guid: 0537b28773d72d44085eda631f2e0dfa, type: 3}
   icon: {fileID: 0}

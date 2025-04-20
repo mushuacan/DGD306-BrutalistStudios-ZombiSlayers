@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class WindEffect : MonoBehaviour
 {
-    private void Start()
+    private int lane;
+    private void OnEnable()
     {
         Destroy(gameObject, 1f);
+    }
+    public void ArrangeLane(int laner)
+    {
+        lane = laner;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Zombi"))
         {
-            collision.GetComponent<Zombi_LaneChanger>().ChangeLane(3, 1, false);
+            collision.GetComponent<Zombi_LaneChanger>().ChangeLane(lane, 1, true);
         }
     }
 }

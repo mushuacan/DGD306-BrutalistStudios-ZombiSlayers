@@ -11,7 +11,7 @@ public class Zombi_LaneChanger : MonoBehaviour
     {
         if (shouldItTab)
         {
-            float tabDistance = 0.5f;
+            float tabDistance = 0.25f;
 
             transform.DOMoveY(LaneFinder.laneYPositions[laneToGo] + tabDistance, timeForFloat * 0.75f).OnComplete(() => {
                 DOVirtual.DelayedCall(timeForFloat * 0.15f, () =>
