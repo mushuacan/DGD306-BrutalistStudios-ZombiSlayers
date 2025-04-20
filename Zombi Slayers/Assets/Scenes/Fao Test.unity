@@ -1373,7 +1373,7 @@ PrefabInstance:
     - target: {fileID: 5980480940130164564, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: character
       value: 
-      objectReference: {fileID: 11400000, guid: 2f5254bd959d7004588acd6e1ed882cc, type: 2}
+      objectReference: {fileID: 11400000, guid: fd8d321df2c0cdb4bbd13d5dc6a6b52a, type: 2}
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: lane
       value: 3
