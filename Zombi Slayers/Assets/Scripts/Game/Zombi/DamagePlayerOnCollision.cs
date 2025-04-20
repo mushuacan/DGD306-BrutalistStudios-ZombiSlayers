@@ -16,7 +16,7 @@ public class DamagePlayerOnCollision : MonoBehaviour
             {
                 return;
             }
-            if (pMove.action == Player_Movement.ActionOC.Sliding && canSlideable)
+            if (pMove.action == Player_Movement.ActionOC.SecondAbility && canSlideable)
             {
                 return;
             }

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b02b847dd9e9334dbd365620b0c66c9, type: 3}
+  m_Name: Weapon_Faos_Blade
+  m_EditorClassIdentifier: 
+  weaponName: Faos Blade
+  damage: 240
+  attackDelay: 0.1
+  attackAnimationDuration: 0.1
+  BulletDestroyTimer: 0.05
+  haveBullets: 0
+  reloadTime: 0
+  bulletCount: 0
+  bulletSpeed: 0
+  bulletBehavior: 0
+  hitboxOffset: {x: 0, y: 0}
+  hitboxSize: {x: 3, y: 2}
+  bullet: {fileID: 732497499613721441, guid: 8966648c3c8f56540b10022bea99196d, type: 3}
+  icon: {fileID: 0}

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Fletcher
   health: 3
-  slideTimer: 1
-  slideSpeed: 3
+  secondAbilityTimer: 0.8
+  secondAbilitySpeed: 1
+  secondAbilityCooldown: 1
   weapon: {fileID: 11400000, guid: a61a90d59c41807468d8dd9e161c380b, type: 2}

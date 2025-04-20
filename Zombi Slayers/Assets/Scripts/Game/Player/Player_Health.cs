@@ -95,6 +95,6 @@ public class Player_Health : MonoBehaviour
     public void Sliding(float time)
     {
         isSliding = true;
-        DOVirtual.DelayedCall(player.character.slideTimer, () => { isSliding = false; });
+        DOVirtual.DelayedCall(player.character.secondAbilityTimer, () => { isSliding = false; });
     }
 }

@@ -17,6 +17,7 @@ public class Envoriment_Movement : MonoBehaviour
 
     [Header("Deðiþken")]
     public float envorimentMovementSpeed;
+    public int playerCount = 2;
 
     [Header("Gizli deðerler")]
     [SerializeField] private float transitionDuration;
@@ -42,11 +43,16 @@ public class Envoriment_Movement : MonoBehaviour
         sessionEnded = false;
         isMoving = true;
 
-        if (finishLine == null || player1 == null || player2 == null || zombiManager == null)
+        if (finishLine == null || player1 == null || zombiManager == null)
         {
             Debug.LogError("Kayan Obje'de gösterimsiz referanslar var.");
             Time.timeScale = 0f;
-        } 
+        }
+        if (playerCount == 2 && player2 == null)
+        {
+            Debug.LogError("Kayan Obje'de Oyuncu2 referansý kayýp.");
+            Time.timeScale = 0f;
+        }
     }
 
     // Update is called once per frame

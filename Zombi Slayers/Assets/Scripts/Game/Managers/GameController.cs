@@ -6,6 +6,8 @@ public class GameController : AlarmSystem
     [SerializeField] private Player_Movement player1;
     [SerializeField] private Player_Movement player2;
 
+    public int PlayerCount;
+
     private bool canDebug;
 
     // Start is called before the first frame update
@@ -15,7 +17,7 @@ public class GameController : AlarmSystem
         {
             Alarm("Oyuncu 1 Referansý Atanmadý", AlarmTypes.Important);
         }
-        if (player2 == null)
+        if (player2 == null && PlayerCount == 2)
         {
             Alarm("Oyuncu 2 Referansý Atanmadý", AlarmTypes.Important);
         }
@@ -27,11 +29,24 @@ public class GameController : AlarmSystem
     {
         if (!contuniu) return;
 
-        if (player1.state == Player_Movement.StateOC.Dead && player2.state == Player_Movement.StateOC.Dead && canDebug)
+
+        if (PlayerCount == 2)
         {
-            canDebug = false;
-            Alarm("Oyunun bitmiþ olmasý gerek", AlarmTypes.Bad);
-            ChangeCanDebug();
+            if (player1.state == Player_Movement.StateOC.Dead && player2.state == Player_Movement.StateOC.Dead && canDebug)
+            {
+                canDebug = false;
+                Alarm("Oyunun bitmiþ olmasý gerek", AlarmTypes.Bad);
+                ChangeCanDebug();
+            }
+        }
+        if (PlayerCount == 1) 
+        {
+            if (player1.state == Player_Movement.StateOC.Dead && canDebug && PlayerCount == 1)
+            {
+                canDebug = false;
+                Alarm("Oyunun bitmiþ olmasý gerek", AlarmTypes.Bad);
+                ChangeCanDebug();
+            }
         }
     }
 

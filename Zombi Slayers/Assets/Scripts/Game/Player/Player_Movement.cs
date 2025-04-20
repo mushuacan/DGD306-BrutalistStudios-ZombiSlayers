@@ -39,7 +39,7 @@ public class Player_Movement : MonoBehaviour
     [Header("(private variables)")]
     [SerializeField] public StateOC state;
     [SerializeField] public ActionOC action;
-    private float slideCooldown;
+    private float secondAbilityCooldown;
 
     #endregion
 
@@ -56,7 +56,7 @@ public class Player_Movement : MonoBehaviour
     {
         Normal,
         Attacking,
-        Sliding,
+        SecondAbility,
         cannot
     }
 
@@ -81,7 +81,7 @@ public class Player_Movement : MonoBehaviour
             Time.timeScale = 0f;
         }
 
-        slideCooldown = 0f;
+        secondAbilityCooldown = 0f;
     }
 
     // Update is called once per frame
@@ -128,10 +128,10 @@ public class Player_Movement : MonoBehaviour
 
     private void ArrangeMovement()
     {
-        if (action == ActionOC.Sliding)
+        if (action == ActionOC.SecondAbility)
         {
             if (transform.position.x < rightBoundary)
-                transform.position = new Vector2(transform.position.x + player.character.slideSpeed * Time.deltaTime, transform.position.y);
+                transform.position = new Vector2(transform.position.x + player.character.secondAbilitySpeed * Time.deltaTime, transform.position.y);
         }
         else
         {
@@ -154,15 +154,16 @@ public class Player_Movement : MonoBehaviour
         {
             Attack();
         }
-        if (Input.GetKeyDown(second_Button) && action == ActionOC.Normal && slideCooldown < Time.timeSinceLevelLoad)
+        if (Input.GetKeyDown(second_Button) && action == ActionOC.Normal && secondAbilityCooldown < Time.timeSinceLevelLoad)
         {
-            action = ActionOC.Sliding;
-            player_UI.StartCooldown(player.character.slideTimer);
-            player_health.Sliding(player.character.slideTimer);
-            DOVirtual.DelayedCall(player.character.slideTimer, () => 
+            action = ActionOC.SecondAbility;
+
+            SecondAbility();
+
+            DOVirtual.DelayedCall(player.character.secondAbilityTimer, () => 
             { 
                 action = ActionOC.Normal; 
-                slideCooldown = player.character.slideCooldown + Time.timeSinceLevelLoad; 
+                secondAbilityCooldown = player.character.secondAbilityCooldown + Time.timeSinceLevelLoad; 
             });
         }
     }
@@ -202,6 +203,19 @@ public class Player_Movement : MonoBehaviour
     private void Attack()
     {
         player_attack.StartAttack();
+    }
+
+    private void SecondAbility()
+    {
+        if (player.character.characterName == "Fletcher")
+        {
+            player_UI.StartCooldown(player.character.secondAbilityTimer);
+            player_health.Sliding(player.character.secondAbilityTimer);
+        }
+        if (player.character.characterName == "Woods")
+        {
+            player_attack.WoodsSecondAbility();
+        }
     }
 
     public void Die()

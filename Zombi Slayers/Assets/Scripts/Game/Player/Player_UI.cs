@@ -26,7 +26,8 @@ public class Player_UI : MonoBehaviour
     {
         castTimer.gameObject.SetActive(false);
         coolDown.gameObject.SetActive(false);
-        weaponImage.texture = player.character.weapon.icon;
+        if (player.character.weapon.icon != null)
+            weaponImage.texture = player.character.weapon.icon;
     }
 
     public void StartCastTimer(float time)
