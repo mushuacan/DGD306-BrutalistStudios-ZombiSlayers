@@ -925,6 +925,14 @@ PrefabInstance:
       propertyPath: platform
       value: 
       objectReference: {fileID: 916852764}
+    - target: {fileID: 1643694917771054678, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643694917771054678, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2007492134068838351, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
       propertyPath: zombiATBM
       value: 
@@ -1005,13 +1013,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 84.36
       objectReference: {fileID: 0}
+    - target: {fileID: 6950582795336935035, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
+      propertyPath: lane
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6954844541871843422, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.43
+      value: 12.65
       objectReference: {fileID: 0}
     - target: {fileID: 6954844541871843422, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.75
+      value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 7561359419105218933, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
       propertyPath: zombiATBM
@@ -1027,7 +1039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8785817785636553150, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.29
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

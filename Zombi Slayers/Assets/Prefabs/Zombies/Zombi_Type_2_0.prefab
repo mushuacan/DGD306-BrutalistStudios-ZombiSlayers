@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 2106710375775333252}
   m_Layer: 0
   m_Name: Zombi_Type_2_0
-  m_TagString: Untagged
+  m_TagString: Zombi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -44,10 +44,9 @@ public class Player_Attack : MonoBehaviour
 
     public void WoodsSecondAbility()
     {
+        GameObject bullet = Instantiate(player.character.secondAbility.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
         if (bulletCount > 0)
         {
-            GameObject bullet = Instantiate(player.character.secondAbility.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
-            bullet.GetComponent<PlayerBullet>().Settings(player.character.secondAbility);
         }
     }
 

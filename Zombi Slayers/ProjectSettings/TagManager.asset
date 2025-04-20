@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Player_Bullet
+  - Zombi
   layers:
   - Default
   - TransparentFX
