@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class Player_UI : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Player_UI : MonoBehaviour
     [SerializeField] private RawImage heart2;
     [SerializeField] private RawImage heart3;
     [SerializeField] private RawImage heart4;
+    [SerializeField] private TextMeshProUGUI ammoText;
 
 
     [Header("Referances")]
@@ -52,6 +54,21 @@ public class Player_UI : MonoBehaviour
             coolDown.value = 0;
             weaponImage.DOFade(1f, fadeDuration);
         });
+    }
+
+    public void ArrangeAmmoCounter(int currentAmmo, int totalAmmo, bool showIt, bool hasTotalAmmo)
+    {
+        if (showIt)
+        {
+            if (hasTotalAmmo)
+            {
+                ammoText.text = (currentAmmo.ToString() + "/" + totalAmmo.ToString());
+            }
+            else
+            {
+                ammoText.text = (currentAmmo.ToString());
+            }
+        }
     }
 
     public void ArrangeHearts(int hearts)

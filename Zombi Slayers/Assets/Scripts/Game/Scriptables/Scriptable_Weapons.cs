@@ -17,10 +17,16 @@ public class Scriptable_Weapons : ScriptableObject
 
     [Header("If it has bullets")]
     public bool haveBullets;
+    [Tooltip("Yerden mermi toplamasý gerekiyor mu?")]
+    public bool haveLimitedBullets;
+    [Tooltip("Silah ile reload atmak gerekiyor mu?")]
+    public bool doesItReload;
+    [Tooltip("Oyun baþýnda kaç mermi ile baþlayacak?")]
+    public int bulletCountAtStart;
     [Tooltip("Silahýn þarjörü bitince kaç saniyede þarjör yenileyebilecek?")]
     public float reloadTime;
     [Tooltip("Bir þarjörde kaç mermi olacak?")]
-    public int bulletCount;
+    public int bulletCountinOneReload;
     [Tooltip("Ateþlenen merminin haritadaki hýzý?")]
     public float bulletSpeed;
     [Tooltip("Mermi hareketi nasýl olmalý?")]
