@@ -3,6 +3,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public bool isBulletMove;
+    public bool isActive = true;
     public float bulletSpeed; 
     public Vector2 moveDirection = Vector2.right; // Hareket yönü (yukarý)
 
@@ -10,7 +11,10 @@ public class BulletScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (!isActive)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
