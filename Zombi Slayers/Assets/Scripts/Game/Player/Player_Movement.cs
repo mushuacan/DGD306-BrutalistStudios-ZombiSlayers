@@ -166,7 +166,7 @@ public class Player_Movement : MonoBehaviour
         {
             Attack();
         }
-        if (Input.GetKeyDown(second_Button) && action == ActionOC.Normal && secondAbilityCooldown < Time.timeSinceLevelLoad)
+        if (Input.GetKeyDown(second_Button) && action == ActionOC.Normal && state != StateOC.Jumping && secondAbilityCooldown < Time.timeSinceLevelLoad)
         {
             action = ActionOC.SecondAbility;
 

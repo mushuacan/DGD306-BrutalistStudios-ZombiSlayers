@@ -78,6 +78,7 @@ public class Envoriment_Movement : MonoBehaviour
         if (finishLine.transform.position.x < FinishLinePosition)
         {
             player1.GetComponent<Player_Movement>().EndGame(envorimentMovementSpeed, transitionDuration, endDuration);
+            if (playerCount == 2)
             player2.GetComponent<Player_Movement>().EndGame(envorimentMovementSpeed, transitionDuration, endDuration);
             float newXPosition = transform.position.x - (envorimentMovementSpeed * transitionDuration * 0.5f);
             transform.DOMoveX(newXPosition, transitionDuration).SetEase(Ease.OutQuad);

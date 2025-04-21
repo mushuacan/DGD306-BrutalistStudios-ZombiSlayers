@@ -34,8 +34,9 @@ public class WindEffectController : MonoBehaviour
                 pMovement.ArrangeFaoWindStopBool(false);
                 GameObject wind = CreateWind();
                 wind.GetComponent<WindEffect>().ArrangeLane(pMovement.lane - 1);
-                if (!Input.GetKey(pMovement.second_Button))
-                    pMovement.JumpDown();
+                //if (!Input.GetKey(pMovement.second_Button))
+                //    pMovement.JumpDown();
+                pMovement.JumpDown();
                 Destroy(this.gameObject);
             }
         }
@@ -53,8 +54,9 @@ public class WindEffectController : MonoBehaviour
                 pMovement.ArrangeFaoWindStopBool(false);
                 GameObject wind = CreateWind();
                 wind.GetComponent<WindEffect>().ArrangeLane(pMovement.lane + 1);
-                if (!Input.GetKey(pMovement.second_Button))
-                    pMovement.JumpUp();
+                //if (!Input.GetKey(pMovement.second_Button))
+                //    pMovement.JumpUp();
+                pMovement.JumpUp();
                 Destroy(this.gameObject);
             }
         }

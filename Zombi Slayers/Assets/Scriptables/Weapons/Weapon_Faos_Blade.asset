@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Faos Blade
   damage: 240
-  attackDelay: 0.1
-  attackAnimationDuration: 0.1
-  BulletDestroyTimer: 0.05
+  attackDelay: 0.2
+  attackAnimationDuration: 0.15
+  BulletDestroyTimer: 0.35
   haveBullets: 0
   reloadTime: 0
   bulletCount: 0
   bulletSpeed: 0
   bulletBehavior: 0
   hitboxOffset: {x: 0, y: 0}
-  hitboxSize: {x: 3, y: 2}
+  hitboxSize: {x: 0, y: 0}
   bullet: {fileID: 732497499613721441, guid: 8966648c3c8f56540b10022bea99196d, type: 3}
   icon: {fileID: 0}

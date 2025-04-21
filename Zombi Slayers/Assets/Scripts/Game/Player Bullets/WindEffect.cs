@@ -18,6 +18,7 @@ public class WindEffect : MonoBehaviour
         if (collision.CompareTag("Zombi"))
         {
             collision.GetComponent<Zombi_LaneChanger>().ChangeLane(lane, 1, true);
+            collision.GetComponent<Zombi_Push>().PushBack(true, false);
         }
     }
 }

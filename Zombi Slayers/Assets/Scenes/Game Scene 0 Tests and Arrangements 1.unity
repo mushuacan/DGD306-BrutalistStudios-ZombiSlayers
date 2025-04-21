@@ -270,6 +270,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1879536380549187296, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c98f2c8255d7a240a3d695774ec9cfc, type: 3}
     - target: {fileID: 1997493192713705007, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -848,6 +852,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1879536380549187296, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 95be01932e7971248828c0f25bbdfe52, type: 3}
     - target: {fileID: 1997493192713705007, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -987,7 +995,7 @@ PrefabInstance:
       objectReference: {fileID: 1951390218}
     - target: {fileID: 5334799463634438688, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
       propertyPath: lane
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5640179184116965118, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
       propertyPath: platform
@@ -1023,7 +1031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6954844541871843422, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.48
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7561359419105218933, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
       propertyPath: zombiATBM

@@ -8,6 +8,7 @@ public class Zombie_Health : MonoBehaviour
     [SerializeField] private ZombiAtTheBack_Manager zombiATBM;
     [SerializeField] private ZombiCharacter zombiChar;
     [SerializeField] private LaneFinder laner;
+    [SerializeField] private Zombi_Push pusher;
 
 
     private void OnEnable()
@@ -32,6 +33,10 @@ public class Zombie_Health : MonoBehaviour
             {
                 DOTween.Kill(transform);
                 Destroy(this.gameObject);
+            }
+            else
+            {
+                pusher.PushBack(true, true);
             }
         }
     }
