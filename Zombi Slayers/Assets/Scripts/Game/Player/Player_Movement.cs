@@ -15,6 +15,7 @@ public class Player_Movement : MonoBehaviour
 
     [Header("Referances")]
     [Tooltip("Haritayý hareket ettiren objeyi baðlayýnýz. (Halihazýrdaki adý KayanObje)")]
+    [SerializeField] private Player_Inputs inputs;
     [SerializeField] private GameObject platform;
     [SerializeField] private Player_Character player;
     [SerializeField] private Player_Attack player_attack;
@@ -118,7 +119,7 @@ public class Player_Movement : MonoBehaviour
                 FaoWind_JumpedNew = false;
             return;
         }
-        if (Input.GetKey(moveUp_Button) && state == StateOC.Running)
+        if ((Input.GetKey(moveUp_Button) || inputs.MovementValues.y == 1) && state == StateOC.Running)
         {
             if (lane == 3)
                 return;
@@ -127,7 +128,7 @@ public class Player_Movement : MonoBehaviour
                 JumpBetweenLanes("Up");
             }
         }
-        if (Input.GetKey(moveDown_Button) && state == StateOC.Running)
+        if ((Input.GetKey(moveDown_Button) || inputs.MovementValues.y == -1) && state == StateOC.Running)
         {
             if (lane == 1)
                 return;
@@ -147,13 +148,13 @@ public class Player_Movement : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(moveRight_Button) && (state == StateOC.Running || state == StateOC.Jumping))
+            if ((Input.GetKey(moveRight_Button) || inputs.MovementValues.x == 1) && (state == StateOC.Running || state == StateOC.Jumping))
             {
                 if (transform.position.x < rightBoundary)
                     transform.position = new Vector2(transform.position.x + movementSpeed * Time.deltaTime, transform.position.y);
             }
 
-            if (Input.GetKey(moveLeft_Button) && (state == StateOC.Running || state == StateOC.Jumping))
+            if ((Input.GetKey(moveLeft_Button) || inputs.MovementValues.x == -1) && (state == StateOC.Running || state == StateOC.Jumping))
             {
                 if (transform.position.x > leftBoundary)
                     transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);
@@ -162,11 +163,11 @@ public class Player_Movement : MonoBehaviour
     }
     private void CheckButtons()
     {
-        if (Input.GetKeyDown(attack_Button) && action == ActionOC.Normal)
+        if ((Input.GetKeyDown(attack_Button) || inputs.button0pressed ) && action == ActionOC.Normal)
         {
             Attack();
         }
-        if (Input.GetKeyDown(second_Button) && action == ActionOC.Normal && state != StateOC.Jumping && secondAbilityCooldown < Time.timeSinceLevelLoad)
+        if ((Input.GetKeyDown(second_Button) || inputs.button1pressed ) && action == ActionOC.Normal && state != StateOC.Jumping && secondAbilityCooldown < Time.timeSinceLevelLoad)
         {
             action = ActionOC.SecondAbility;
 

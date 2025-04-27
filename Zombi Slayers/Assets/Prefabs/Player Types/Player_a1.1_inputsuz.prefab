@@ -456,12 +456,10 @@ GameObject:
   - component: {fileID: -699912929371043157}
   - component: {fileID: 4902290981955062725}
   - component: {fileID: 3710495823981931815}
-  - component: {fileID: 4418687904858530347}
   - component: {fileID: 888847654336524922}
   - component: {fileID: 2379561613210452848}
-  - component: {fileID: 2087002009801936474}
   m_Layer: 0
-  m_Name: Player_a1
+  m_Name: Player_a1.1_inputsuz
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -515,7 +513,6 @@ MonoBehaviour:
   moveLeft_Button: 97
   attack_Button: 0
   second_Button: 0
-  inputs: {fileID: 4418687904858530347}
   platform: {fileID: 0}
   player: {fileID: 5980480940130164564}
   player_attack: {fileID: 4902290981955062725}
@@ -596,27 +593,6 @@ MonoBehaviour:
   heart4: {fileID: 4921505704176332786}
   ammoText: {fileID: 8162824094727240741}
   player: {fileID: 5980480940130164564}
---- !u!114 &4418687904858530347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3317986187449348885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c122e19acaae94c41bef7ca5b58d3298, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button0pressed: 0
-  button1pressed: 0
-  button2pressed: 0
-  button3pressed: 0
-  rightShoulderPressed: 0
-  leftShoulderPressed: 0
-  startPressed: 0
-  sellectPressed: 0
-  MovementValues: {x: 0, y: 0}
 --- !u!70 &888847654336524922
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -679,36 +655,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2087002009801936474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3317986187449348885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 26e6c914f58df0546b7ff2eb46d21f0a, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: COTFAM Action Map 1
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &3347725263079492968
 GameObject:
   m_ObjectHideFlags: 0

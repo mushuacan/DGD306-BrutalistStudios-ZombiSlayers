@@ -91,9 +91,9 @@ public class ButtonActions : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(fBO_Settings.gameObject);
     }
 
-    public void Button_LoadScene(string sceneName)
+    public void Button_LoadScene(int scene)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(scene);
     }
 
     public void Buttons_Exit()

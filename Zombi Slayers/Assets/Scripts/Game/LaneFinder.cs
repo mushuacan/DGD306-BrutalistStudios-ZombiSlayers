@@ -3,8 +3,8 @@ using UnityEngine;
 public class LaneFinder : MonoBehaviour
 {
     public static float[] laneYPositions =
-    //{ -24f, -3f, 0.25f, 3.5f };
-    { -24f, -3.2f, -0.3f, 2.56f };
+    { -24f, -3f, 0.25f, 3.5f };
+    //{ -24f, -3.2f, -0.3f, 2.56f };
 
     [SerializeField] private bool snap;
     public int lane;

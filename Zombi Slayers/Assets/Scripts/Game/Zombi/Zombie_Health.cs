@@ -36,7 +36,8 @@ public class Zombie_Health : MonoBehaviour
             }
             else
             {
-                pusher.PushBack(true, true);
+                if (pusher != null)
+                    pusher.PushBack(true, true);
             }
         }
     }

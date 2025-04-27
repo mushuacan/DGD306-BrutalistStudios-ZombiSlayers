@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Woods
   health: 4
-  slideTimer: 0
-  slideSpeed: 0
+  secondAbilityTimer: 0
+  secondAbilitySpeed: 0
+  secondAbilityCooldown: 0
   weapon: {fileID: 11400000, guid: f3767caa451f9624489649a62926d727, type: 2}
+  secondAbility: {fileID: 11400000, guid: 93c69c18213506d48ac167a507cbbce6, type: 2}
