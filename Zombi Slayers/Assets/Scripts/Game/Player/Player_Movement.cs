@@ -119,7 +119,7 @@ public class Player_Movement : MonoBehaviour
                 FaoWind_JumpedNew = false;
             return;
         }
-        if ((Input.GetKey(moveUp_Button) || inputs.MovementValues.y == 1) && state == StateOC.Running)
+        if ((Input.GetKey(moveUp_Button) || inputs.MovementValues.y > 0.5) && state == StateOC.Running)
         {
             if (lane == 3)
                 return;
@@ -128,7 +128,7 @@ public class Player_Movement : MonoBehaviour
                 JumpBetweenLanes("Up");
             }
         }
-        if ((Input.GetKey(moveDown_Button) || inputs.MovementValues.y == -1) && state == StateOC.Running)
+        if ((Input.GetKey(moveDown_Button) || inputs.MovementValues.y < -0.5) && state == StateOC.Running)
         {
             if (lane == 1)
                 return;
@@ -148,13 +148,13 @@ public class Player_Movement : MonoBehaviour
         }
         else
         {
-            if ((Input.GetKey(moveRight_Button) || inputs.MovementValues.x == 1) && (state == StateOC.Running || state == StateOC.Jumping))
+            if ((Input.GetKey(moveRight_Button) || inputs.MovementValues.x > 0.5) && (state == StateOC.Running || state == StateOC.Jumping))
             {
                 if (transform.position.x < rightBoundary)
                     transform.position = new Vector2(transform.position.x + movementSpeed * Time.deltaTime, transform.position.y);
             }
 
-            if ((Input.GetKey(moveLeft_Button) || inputs.MovementValues.x == -1) && (state == StateOC.Running || state == StateOC.Jumping))
+            if ((Input.GetKey(moveLeft_Button) || inputs.MovementValues.x < -0.5) && (state == StateOC.Running || state == StateOC.Jumping))
             {
                 if (transform.position.x > leftBoundary)
                     transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);

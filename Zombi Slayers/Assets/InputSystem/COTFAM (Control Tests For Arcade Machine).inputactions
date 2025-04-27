@@ -134,6 +134,17 @@
                 },
                 {
                     "name": "",
+                    "id": "51b72d08-9ce5-4e24-8fc8-2b5a457a4ee4",
+                    "path": "<HID::Logitech Logitech Dual Action>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";COTFAM - Player 1",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d3a0881f-482f-47d0-a272-ac64bc26542a",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -150,6 +161,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";COTFAM - Player 2",
+                    "action": "Button0",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c1b93b63-b95f-42f3-a08b-57694eaa7ba6",
+                    "path": "<HID::Logitech Logitech Dual Action>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";COTFAM - Player 1",
                     "action": "Button0",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -178,6 +200,17 @@
                 },
                 {
                     "name": "",
+                    "id": "878d89fe-c378-4062-97ca-216564799847",
+                    "path": "<HID::Logitech Logitech Dual Action>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";COTFAM - Player 1",
+                    "action": "Button2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8d138aa7-8d83-4734-b0ab-6b16a1b4ee95",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
@@ -194,6 +227,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";COTFAM - Player 2",
+                    "action": "Button3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f5f0f621-f98c-4aff-9f8c-da089c7cfa97",
+                    "path": "<HID::Logitech Logitech Dual Action>/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";COTFAM - Player 1",
                     "action": "Button3",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -222,6 +266,17 @@
                 },
                 {
                     "name": "",
+                    "id": "6cd45b11-781f-48a9-bba9-5caea08edf64",
+                    "path": "<HID::Logitech Logitech Dual Action>/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";COTFAM - Player 1",
+                    "action": "Button1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1de28e1f-4906-4329-865c-2099c648fc13",
                     "path": "<Gamepad>/start",
                     "interactions": "",
@@ -238,6 +293,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";COTFAM - Player 2",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51c8ad09-69a7-45e0-8fcd-cc90913a7721",
+                    "path": "<HID::Logitech Logitech Dual Action>/button10",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";COTFAM - Player 1",
                     "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -266,6 +332,17 @@
                 },
                 {
                     "name": "",
+                    "id": "c338ca39-2ccc-4679-9e95-5951a0b05f77",
+                    "path": "<HID::Logitech Logitech Dual Action>/button9",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";COTFAM - Player 1",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e2afcaea-66f7-43ff-8744-e1f0900d48cc",
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
@@ -283,6 +360,28 @@
                     "processors": "",
                     "groups": ";COTFAM - Player 2",
                     "action": "LeftShoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a32bf2a0-8f8a-40b2-94b6-a1f1a7788c94",
+                    "path": "<HID::Logitech Logitech Dual Action>/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";COTFAM - Player 1",
+                    "action": "LeftShoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bd76ff31-aa8d-4f62-9125-aef64b7b2aa5",
+                    "path": "<HID::Logitech Logitech Dual Action>/button6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";COTFAM - Player 1",
+                    "action": "RightShoulder",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -322,23 +421,7 @@
                     "isOR": false
                 },
                 {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "COTFAM - Player 2",
-            "bindingGroup": "COTFAM - Player 2",
-            "devices": [
-                {
-                    "devicePath": "<Gamepad>",
-                    "isOptional": false,
-                    "isOR": false
-                },
-                {
-                    "devicePath": "<Keyboard>",
+                    "devicePath": "<Joystick>",
                     "isOptional": false,
                     "isOR": false
                 }

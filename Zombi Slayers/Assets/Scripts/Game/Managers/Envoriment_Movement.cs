@@ -13,6 +13,7 @@ public class Envoriment_Movement : MonoBehaviour
     [Header("Testerlýk için gerekenler")]
     [SerializeField] private KeyCode stopButton;
     [SerializeField] private bool isStopable;
+    [SerializeField] private bool isStoppedAtFirst;
     private bool isMoving;
 
     [Header("Deðiþken")]
@@ -52,6 +53,9 @@ public class Envoriment_Movement : MonoBehaviour
         {
             Debug.LogError("Kayan Obje'de Oyuncu2 referansý kayýp.");
             Time.timeScale = 0f;
+        }if (isStoppedAtFirst)
+        {
+            isMoving = false;
         }
     }
 

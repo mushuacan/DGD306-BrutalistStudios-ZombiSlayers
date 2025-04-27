@@ -10,28 +10,34 @@ public class PlayerInputAssigner : MonoBehaviour
 
     private void Start()
     {
-        List<InputDevice> gamepads = new List<InputDevice>();
+        List<InputDevice> inputDevices = new List<InputDevice>();
 
         foreach (var device in InputSystem.devices)
         {
-            if (device is Gamepad)
-                gamepads.Add(device);
+            if (device is Gamepad || device is Joystick)
+            {
+                inputDevices.Add(device);
+            }
         }
 
         int assignedPlayers = 0;
 
-        foreach (var gamepad in gamepads)
+        foreach (var device in inputDevices)
         {
             if (assignedPlayers == 0)
             {
-                InputUser.PerformPairingWithDevice(gamepad, player1.user);
+                InputUser.PerformPairingWithDevice(device, player1.user);
+                player1.user.ActivateControlScheme("Gamepad"); // veya "Joystick" - scheme ismine göre
+                player1.user.AssociateActionsWithUser(player1.actions); // bu önemli
                 assignedPlayers++;
             }
             else if (assignedPlayers == 1)
             {
-                InputUser.PerformPairingWithDevice(gamepad, player2.user);
+                InputUser.PerformPairingWithDevice(device, player2.user);
+                player2.user.ActivateControlScheme("Gamepad");
+                player2.user.AssociateActionsWithUser(player2.actions);
                 assignedPlayers++;
-                break; // ikisi de doldu
+                break;
             }
         }
     }

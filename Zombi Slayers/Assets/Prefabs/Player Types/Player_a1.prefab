@@ -692,7 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 26e6c914f58df0546b7ff2eb46d21f0a, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -703,9 +703,113 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3317986187449348885}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e0bbb241-9606-43a4-918a-403072e6801f
+    m_ActionName: COTFAM Action Map 1/Movement[/DualShock3GamepadHID/dpad,/DualShock3GamepadHID/leftStick,/Logitech
+      Logitech Dual Action/stick]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4418687904858530347}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnButton0
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c82076ee-1b9f-4a8f-ae14-2d9aa030a03f
+    m_ActionName: COTFAM Action Map 1/Button0[/DualShock3GamepadHID/buttonSouth,/Logitech
+      Logitech Dual Action/button2]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4418687904858530347}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnButton1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c8dfdfb5-87a1-4678-8b7e-ae15f3cfa73e
+    m_ActionName: COTFAM Action Map 1/Button1[/DualShock3GamepadHID/buttonEast,/Logitech
+      Logitech Dual Action/button3]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4418687904858530347}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnButton2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a0c98d7b-9c59-4b8e-9b32-0e5202021f05
+    m_ActionName: COTFAM Action Map 1/Button2[/DualShock3GamepadHID/buttonWest,/Logitech
+      Logitech Dual Action/trigger]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4418687904858530347}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnButton3
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d1626596-a34d-4d11-9e1b-66265b3a9894
+    m_ActionName: COTFAM Action Map 1/Button3[/DualShock3GamepadHID/buttonNorth,/Logitech
+      Logitech Dual Action/button4]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1d2bdca9-b157-4530-a644-bc33ea951e4f
+    m_ActionName: COTFAM Action Map 1/Start[/DualShock3GamepadHID/start,/Logitech
+      Logitech Dual Action/button10]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dc018ea7-ecd5-497b-a931-c1d5fb8ff912
+    m_ActionName: COTFAM Action Map 1/Select[/DualShock3GamepadHID/select,/Logitech
+      Logitech Dual Action/button9]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1e6fa2d4-5f71-4c4f-9a79-37adfae85377
+    m_ActionName: COTFAM Action Map 1/LeftShoulder[/DualShock3GamepadHID/leftShoulder,/Logitech
+      Logitech Dual Action/button5]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4b7244d-f6d6-48d8-bf32-eda64baf4302
+    m_ActionName: COTFAM Action Map 1/RightShoulder[/Logitech Logitech Dual Action/button6,/DualShock3GamepadHID/rightShoulder]
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: COTFAM - Player 1
   m_DefaultActionMap: COTFAM Action Map 1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

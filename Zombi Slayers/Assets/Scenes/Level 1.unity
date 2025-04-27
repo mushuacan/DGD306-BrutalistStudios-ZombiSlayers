@@ -262,9 +262,93 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: e0bbb241-9606-43a4-918a-403072e6801f
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: c82076ee-1b9f-4a8f-ae14-2d9aa030a03f
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: c8dfdfb5-87a1-4678-8b7e-ae15f3cfa73e
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: a0c98d7b-9c59-4b8e-9b32-0e5202021f05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: d1626596-a34d-4d11-9e1b-66265b3a9894
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
+      value: 1d2bdca9-b157-4530-a644-bc33ea951e4f
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionId
+      value: dc018ea7-ecd5-497b-a931-c1d5fb8ff912
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
+      value: 1e6fa2d4-5f71-4c4f-9a79-37adfae85377
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionId
+      value: b4b7244d-f6d6-48d8-bf32-eda64baf4302
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: COTFAM Action Map 1/Movement[/DualShock3GamepadHID/dpad,/DualShock3GamepadHID/leftStick,/Logitech
+        Logitech Dual Action/stick]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: COTFAM Action Map 1/Button0[/DualShock3GamepadHID/buttonSouth,/Logitech
+        Logitech Dual Action/button2]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: COTFAM Action Map 1/Button1[/DualShock3GamepadHID/buttonEast,/Logitech
+        Logitech Dual Action/button3]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: COTFAM Action Map 1/Button2[/DualShock3GamepadHID/buttonWest,/Logitech
+        Logitech Dual Action/trigger]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: COTFAM Action Map 1/Button3[/DualShock3GamepadHID/buttonNorth,/Logitech
+        Logitech Dual Action/button4]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
+      value: COTFAM Action Map 1/Start[/DualShock3GamepadHID/start,/Logitech Logitech
+        Dual Action/button10]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionName
+      value: COTFAM Action Map 1/Select[/DualShock3GamepadHID/select,/Logitech Logitech
+        Dual Action/button9]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
+      value: COTFAM Action Map 1/LeftShoulder[/DualShock3GamepadHID/leftShoulder,/Logitech
+        Logitech Dual Action/button5]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087002009801936474, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionName
+      value: COTFAM Action Map 1/RightShoulder[/Logitech Logitech Dual Action/button6,/DualShock3GamepadHID/rightShoulder]
+      objectReference: {fileID: 0}
     - target: {fileID: 3317986187449348885, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_Name
       value: Player_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317986187449348885, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5980480940130164564, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: character
@@ -450,6 +534,23 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &696542949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1732267633201917060, guid: eea04271732007a49a5499d28b8b912e, type: 3}
+  m_PrefabInstance: {fileID: 1430162912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &696542955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696542949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82f8e4b3d260b3489e0c6de4119b2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1019243722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3317986187449348885, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
@@ -537,6 +638,10 @@ PrefabInstance:
     - target: {fileID: 3317986187449348885, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_Name
       value: Player_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317986187449348885, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5980480940130164564, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: character
@@ -643,6 +748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDeviceAssigner
       objectReference: {fileID: 0}
+    - target: {fileID: 1732267633201917060, guid: eea04271732007a49a5499d28b8b912e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2360907253307548723, guid: eea04271732007a49a5499d28b8b912e, type: 3}
       propertyPath: player1
       value: 
@@ -654,7 +763,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1732267633201917060, guid: eea04271732007a49a5499d28b8b912e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 696542955}
   m_SourcePrefab: {fileID: 100100000, guid: eea04271732007a49a5499d28b8b912e, type: 3}
 --- !u!1 &1686344088 stripped
 GameObject:
@@ -708,6 +820,10 @@ PrefabInstance:
       propertyPath: zombiManager
       value: 
       objectReference: {fileID: 112220893}
+    - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
+      propertyPath: isStoppedAtFirst
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: zombiStopDuration
       value: 6.5

@@ -14,15 +14,17 @@ public class Player_Inputs : MonoBehaviour
     public bool startPressed;
     public bool sellectPressed;
     public Vector2 MovementValues;
-    void OnMovement(InputValue value)
+    public void OnMovement(InputValue value)
     {
         MovementValues = value.Get<Vector2>();
+        Debug.Log("movement:" + MovementValues);
     }
-    void OnButton0(InputAction.CallbackContext context)
+    public void OnButton0(InputAction.CallbackContext context)
     {
         if (context.started)
         {
             button0pressed = true;
+            Debug.Log("OnButton0 pressed");
         }
 
         if (context.canceled)
@@ -30,11 +32,12 @@ public class Player_Inputs : MonoBehaviour
             button0pressed = false;
         }
     }
-    void OnButton1(InputAction.CallbackContext context)
+    public void OnButton1(InputAction.CallbackContext context)
     {
         if (context.started)
         {
             button1pressed = true;
+            Debug.Log("OnButton1 pressed");
         }
 
         if (context.canceled)
@@ -42,11 +45,12 @@ public class Player_Inputs : MonoBehaviour
             button1pressed = false;
         }
     }
-    void OnButton2(InputAction.CallbackContext context)
+    public void OnButton2(InputAction.CallbackContext context)
     {
         if (context.started)
         {
             button2pressed = true;
+            Debug.Log("OnButton2 pressed");
         }
 
         if (context.canceled)
@@ -54,11 +58,12 @@ public class Player_Inputs : MonoBehaviour
             button2pressed = false;
         }
     }
-    void OnButton3(InputAction.CallbackContext context)
+    public void OnButton3(InputAction.CallbackContext context)
     {
         if (context.started)
         {
             button3pressed = true;
+            Debug.Log("OnButton3 pressed");
         }
 
         if (context.canceled)
@@ -66,7 +71,7 @@ public class Player_Inputs : MonoBehaviour
             button3pressed = false;
         }
     }
-    void OnStart(InputAction.CallbackContext context)
+    public void OnStart(InputAction.CallbackContext context)
     {
         if (context.started)
         {
@@ -78,7 +83,7 @@ public class Player_Inputs : MonoBehaviour
             startPressed = false;
         }
     }
-    void OnSelect(InputAction.CallbackContext context)
+    public void OnSelect(InputAction.CallbackContext context)
     {
         if (context.started)
         {
@@ -90,7 +95,7 @@ public class Player_Inputs : MonoBehaviour
             sellectPressed = false;
         }
     }
-    void OnLeftShoulder(InputAction.CallbackContext context)
+    public void OnLeftShoulder(InputAction.CallbackContext context)
     {
         if (context.started)
         {
@@ -103,7 +108,7 @@ public class Player_Inputs : MonoBehaviour
         }
     }
 
-    void OnRightShoulder(InputAction.CallbackContext context)
+    public void OnRightShoulder(InputAction.CallbackContext context)
     {
         if (context.started)
         {
