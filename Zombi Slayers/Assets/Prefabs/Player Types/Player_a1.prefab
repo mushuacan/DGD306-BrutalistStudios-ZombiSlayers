@@ -452,6 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1759442453393457561}
   - component: {fileID: 5980480940130164564}
+  - component: {fileID: 2344846563057274394}
   - component: {fileID: 7107904711815955177}
   - component: {fileID: -699912929371043157}
   - component: {fileID: 4902290981955062725}
@@ -497,6 +498,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
+--- !u!114 &2344846563057274394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317986187449348885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d960988b0f2f90f4483fa3a4c28b392b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableCharacters:
+  - {fileID: 11400000, guid: 85df758c50635804c922e490fb3b4306, type: 2}
+  - {fileID: 11400000, guid: e168c9dec4e8e754398fe625a4c4eabc, type: 2}
 --- !u!114 &7107904711815955177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,6 +633,7 @@ MonoBehaviour:
   startPressed: 0
   sellectPressed: 0
   MovementValues: {x: 0, y: 0}
+  playerInput: {fileID: 2087002009801936474}
 --- !u!70 &888847654336524922
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -706,13 +723,13 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3317986187449348885}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 4418687904858530347}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnMovement
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

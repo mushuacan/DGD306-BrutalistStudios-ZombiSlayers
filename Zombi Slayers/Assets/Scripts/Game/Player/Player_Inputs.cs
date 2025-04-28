@@ -14,9 +14,10 @@ public class Player_Inputs : MonoBehaviour
     public bool startPressed;
     public bool sellectPressed;
     public Vector2 MovementValues;
-    public void OnMovement(InputValue value)
+    public PlayerInput playerInput;
+    public void OnMovement(InputAction.CallbackContext context)
     {
-        MovementValues = value.Get<Vector2>();
+        MovementValues = context.ReadValue<Vector2>();
         Debug.Log("movement:" + MovementValues);
     }
     public void OnButton0(InputAction.CallbackContext context)

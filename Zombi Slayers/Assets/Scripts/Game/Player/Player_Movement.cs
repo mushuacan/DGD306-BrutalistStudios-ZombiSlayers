@@ -79,11 +79,11 @@ public class Player_Movement : MonoBehaviour
 
         transform.position = new Vector2(startPositionX, laneYPoz[lane]);
 
-        if (platform == null)
-        {
-            Debug.LogError(gameObject + " objesinde platform için referans ayarlanmamýþ.");
-            Time.timeScale = 0f;
-        }
+        //if (platform == null)
+        //{
+        //    Debug.LogError(gameObject + " objesinde platform için referans ayarlanmamýþ.");
+        //    Time.timeScale = 0f;
+        //}
 
         secondAbilityCooldown = 0f;
         FaoWind_StopJump = false;
