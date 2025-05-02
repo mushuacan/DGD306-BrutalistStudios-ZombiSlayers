@@ -2,7 +2,7 @@
     "name": "COTFAM (Control Tests For Arcade Machine)",
     "maps": [
         {
-            "name": "COTFAM Action Map 1",
+            "name": "Player",
             "id": "f9e52e97-b990-4e4c-97ae-b2f4c5d522e0",
             "actions": [
                 {
@@ -322,7 +322,7 @@
             ]
         },
         {
-            "name": "COTFAM Action Map 2",
+            "name": "UI",
             "id": "3e08cfbe-2490-42d1-9b23-52e58d4be016",
             "actions": [
                 {

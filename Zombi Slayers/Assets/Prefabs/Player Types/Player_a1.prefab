@@ -452,12 +452,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1759442453393457561}
   - component: {fileID: 5980480940130164564}
-  - component: {fileID: 2344846563057274394}
   - component: {fileID: 7107904711815955177}
   - component: {fileID: -699912929371043157}
   - component: {fileID: 4902290981955062725}
   - component: {fileID: 3710495823981931815}
-  - component: {fileID: 4418687904858530347}
+  - component: {fileID: 1365290559951769061}
   - component: {fileID: 888847654336524922}
   - component: {fileID: 2379561613210452848}
   - component: {fileID: 2087002009801936474}
@@ -498,21 +497,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
---- !u!114 &2344846563057274394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3317986187449348885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d960988b0f2f90f4483fa3a4c28b392b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  availableCharacters:
-  - {fileID: 11400000, guid: 85df758c50635804c922e490fb3b4306, type: 2}
-  - {fileID: 11400000, guid: e168c9dec4e8e754398fe625a4c4eabc, type: 2}
 --- !u!114 &7107904711815955177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,12 +515,12 @@ MonoBehaviour:
   moveLeft_Button: 97
   attack_Button: 0
   second_Button: 0
-  inputs: {fileID: 4418687904858530347}
-  platform: {fileID: 0}
+  inputs: {fileID: 1365290559951769061}
   player: {fileID: 5980480940130164564}
   player_attack: {fileID: 4902290981955062725}
   player_UI: {fileID: 3710495823981931815}
   player_health: {fileID: -699912929371043157}
+  fixedPlayerCharacter: {fileID: 11400000, guid: 2f5254bd959d7004588acd6e1ed882cc, type: 2}
   movementSpeed: 4
   leftBoundary: -8
   rightBoundary: 5
@@ -612,7 +596,7 @@ MonoBehaviour:
   heart4: {fileID: 4921505704176332786}
   ammoText: {fileID: 8162824094727240741}
   player: {fileID: 5980480940130164564}
---- !u!114 &4418687904858530347
+--- !u!114 &1365290559951769061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -723,7 +707,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4418687904858530347}
+      - m_Target: {fileID: 1365290559951769061}
         m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
         m_MethodName: OnMovement
         m_Mode: 0
@@ -740,7 +724,7 @@ MonoBehaviour:
       Logitech Dual Action/stick]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4418687904858530347}
+      - m_Target: {fileID: 1365290559951769061}
         m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
         m_MethodName: OnButton0
         m_Mode: 0
@@ -757,7 +741,7 @@ MonoBehaviour:
       Logitech Dual Action/button2]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4418687904858530347}
+      - m_Target: {fileID: 1365290559951769061}
         m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
         m_MethodName: OnButton1
         m_Mode: 0
@@ -774,7 +758,7 @@ MonoBehaviour:
       Logitech Dual Action/button3]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4418687904858530347}
+      - m_Target: {fileID: 1365290559951769061}
         m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
         m_MethodName: OnButton2
         m_Mode: 0
@@ -791,7 +775,7 @@ MonoBehaviour:
       Logitech Dual Action/trigger]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4418687904858530347}
+      - m_Target: {fileID: 1365290559951769061}
         m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
         m_MethodName: OnButton3
         m_Mode: 0
@@ -807,27 +791,111 @@ MonoBehaviour:
     m_ActionName: COTFAM Action Map 1/Button3[/DualShock3GamepadHID/buttonNorth,/Logitech
       Logitech Dual Action/button4]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1365290559951769061}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnStart
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 1d2bdca9-b157-4530-a644-bc33ea951e4f
     m_ActionName: COTFAM Action Map 1/Start[/DualShock3GamepadHID/start,/Logitech
       Logitech Dual Action/button10]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1365290559951769061}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnSelect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: dc018ea7-ecd5-497b-a931-c1d5fb8ff912
     m_ActionName: COTFAM Action Map 1/Select[/DualShock3GamepadHID/select,/Logitech
       Logitech Dual Action/button9]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1365290559951769061}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnLeftShoulder
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 1e6fa2d4-5f71-4c4f-9a79-37adfae85377
     m_ActionName: COTFAM Action Map 1/LeftShoulder[/DualShock3GamepadHID/leftShoulder,/Logitech
       Logitech Dual Action/button5]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1365290559951769061}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnRightShoulder
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b4b7244d-f6d6-48d8-bf32-eda64baf4302
     m_ActionName: COTFAM Action Map 1/RightShoulder[/Logitech Logitech Dual Action/button6,/DualShock3GamepadHID/rightShoulder]
-  m_NeverAutoSwitchControlSchemes: 1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d513a9b3-a68a-44af-a718-97582e880246
+    m_ActionName: COTFAM Action Map 2/Movement
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 64ef6913-a644-46b7-a69f-a0cfa035f6d4
+    m_ActionName: COTFAM Action Map 2/Button0
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bde79516-4b8a-4b1d-b707-0ed29c13db51
+    m_ActionName: COTFAM Action Map 2/Button1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 01423c2e-5bc9-44c9-9ef5-618b9bf528a8
+    m_ActionName: COTFAM Action Map 2/Button2
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 850417ba-8e88-4a37-b83e-77dd6cf64169
+    m_ActionName: COTFAM Action Map 2/Button3
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d4d5ccaa-1b03-4ea2-b794-0e571293d16f
+    m_ActionName: COTFAM Action Map 2/Start
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1e03a416-0f1b-4e55-a149-42db05290a08
+    m_ActionName: COTFAM Action Map 2/Select
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6421a96d-8689-4a9f-80e4-6e59b2ecfe32
+    m_ActionName: COTFAM Action Map 2/LeftShoulder
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6a458516-4781-4a22-bfa9-797674672617
+    m_ActionName: COTFAM Action Map 2/RightShoulder
+  m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: COTFAM - Player 1
-  m_DefaultActionMap: COTFAM Action Map 1
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &3347725263079492968

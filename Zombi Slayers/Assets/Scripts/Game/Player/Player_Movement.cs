@@ -14,13 +14,13 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] public KeyCode second_Button;
 
     [Header("Referances")]
-    [Tooltip("Haritayý hareket ettiren objeyi baðlayýnýz. (Halihazýrdaki adý KayanObje)")]
     [SerializeField] private Player_Inputs inputs;
-    [SerializeField] private GameObject platform;
     [SerializeField] private Player_Character player;
     [SerializeField] private Player_Attack player_attack;
     [SerializeField] private Player_UI player_UI;
     [SerializeField] private Player_Health player_health;
+    [SerializeField] private Scriptable_PlayerCharacter fixedPlayerCharacter;
+    private GameObject platform;
 
     [Header("Playground Settings")]
     [SerializeField] private float movementSpeed;
@@ -79,11 +79,13 @@ public class Player_Movement : MonoBehaviour
 
         transform.position = new Vector2(startPositionX, laneYPoz[lane]);
 
-        //if (platform == null)
-        //{
-        //    Debug.LogError(gameObject + " objesinde platform için referans ayarlanmamýþ.");
-        //    Time.timeScale = 0f;
-        //}
+        platform = GameObject.FindWithTag("Platform");
+
+        if (player.character == null)
+        {
+            player.character = fixedPlayerCharacter;
+        }
+
 
         secondAbilityCooldown = 0f;
         FaoWind_StopJump = false;

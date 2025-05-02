@@ -15,6 +15,7 @@ public class Player_Inputs : MonoBehaviour
     public bool sellectPressed;
     public Vector2 MovementValues;
     public PlayerInput playerInput;
+
     public void OnMovement(InputAction.CallbackContext context)
     {
         MovementValues = context.ReadValue<Vector2>();

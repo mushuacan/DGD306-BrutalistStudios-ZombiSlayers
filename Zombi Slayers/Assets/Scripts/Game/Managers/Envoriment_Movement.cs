@@ -6,8 +6,6 @@ public class Envoriment_Movement : MonoBehaviour
     [Header("Referanslar")]
     [Tooltip("Bölüm sonunda ekranýn ortasýnda duracak olan obje")]
     public GameObject finishLine;
-    public GameObject player1;
-    public GameObject player2;
     public ZombiAtTheBack_Manager zombiManager;
 
     [Header("Testerlýk için gerekenler")]
@@ -44,16 +42,12 @@ public class Envoriment_Movement : MonoBehaviour
         sessionEnded = false;
         isMoving = true;
 
-        if (finishLine == null || player1 == null || zombiManager == null)
+        if (finishLine == null || zombiManager == null)
         {
             Debug.LogError("Kayan Obje'de gösterimsiz referanslar var.");
             Time.timeScale = 0f;
         }
-        if (playerCount == 2 && player2 == null)
-        {
-            Debug.LogError("Kayan Obje'de Oyuncu2 referansý kayýp.");
-            Time.timeScale = 0f;
-        }if (isStoppedAtFirst)
+        if (isStoppedAtFirst)
         {
             isMoving = false;
         }
@@ -81,9 +75,21 @@ public class Envoriment_Movement : MonoBehaviour
 
         if (finishLine.transform.position.x < FinishLinePosition)
         {
-            player1.GetComponent<Player_Movement>().EndGame(envorimentMovementSpeed, transitionDuration, endDuration);
-            if (playerCount == 2)
-            player2.GetComponent<Player_Movement>().EndGame(envorimentMovementSpeed, transitionDuration, endDuration);
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+            foreach (GameObject player in players)
+            {
+                Player_Movement movement = player.GetComponent<Player_Movement>();
+                if (movement != null)
+                {
+                    movement.EndGame(envorimentMovementSpeed, transitionDuration, endDuration);
+                }
+                else
+                {
+                    Debug.LogWarning($"Player_Movement component not found on {player.name}");
+                }
+            }
+
             float newXPosition = transform.position.x - (envorimentMovementSpeed * transitionDuration * 0.5f);
             transform.DOMoveX(newXPosition, transitionDuration).SetEase(Ease.OutQuad);
             sessionEnded = true;

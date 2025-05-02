@@ -38,6 +38,7 @@ public class Player_Attack : MonoBehaviour
     {
         CheckAttackStatus();
 
+
         if (canAttack)
         {
             canAttack = false;
@@ -71,6 +72,11 @@ public class Player_Attack : MonoBehaviour
     }
     private void CheckAttackStatus()
     {
+        if (weapon == null)
+        {
+            weapon = player.character.weapon;
+        }
+
         if (weapon.haveBullets)
         {
             if (currentAmmo > 0 && delay <= Time.timeSinceLevelLoad)
