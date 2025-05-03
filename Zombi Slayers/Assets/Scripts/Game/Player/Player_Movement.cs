@@ -70,6 +70,11 @@ public class Player_Movement : MonoBehaviour
 
     #region Start & Update
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start()
     {
         state = StateOC.Running;

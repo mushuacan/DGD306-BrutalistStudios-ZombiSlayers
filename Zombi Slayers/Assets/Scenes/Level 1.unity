@@ -374,7 +374,7 @@ PrefabInstance:
       objectReference: {fileID: 112220893}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: isStoppedAtFirst
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: zombiStopDuration
@@ -439,6 +439,10 @@ PrefabInstance:
     - target: {fileID: 8123333732427378377, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: m_Name
       value: Kayan Obje
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123333732427378377, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

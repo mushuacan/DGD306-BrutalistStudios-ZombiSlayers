@@ -520,7 +520,7 @@ MonoBehaviour:
   player_attack: {fileID: 4902290981955062725}
   player_UI: {fileID: 3710495823981931815}
   player_health: {fileID: -699912929371043157}
-  fixedPlayerCharacter: {fileID: 11400000, guid: 2f5254bd959d7004588acd6e1ed882cc, type: 2}
+  fixedPlayerCharacter: {fileID: 11400000, guid: 85df758c50635804c922e490fb3b4306, type: 2}
   movementSpeed: 4
   leftBoundary: -8
   rightBoundary: 5
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7890c10470b03034aaa4585d52fe9262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  undamageableDuration: 2
+  undamageableDuration: 1
   undamageableImpulsePower: 0.225
   spriteRenderer: {fileID: 1879536380549187296}
   player_UI: {fileID: 3710495823981931815}
