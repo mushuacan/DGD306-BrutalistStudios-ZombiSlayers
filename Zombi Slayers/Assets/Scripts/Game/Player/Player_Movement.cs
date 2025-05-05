@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -44,6 +45,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private bool FaoWind_StopJump;
     [SerializeField] private bool FaoWind_JumpedNew;
     [SerializeField] private bool FaoWind_JumpedUp;
+    public bool isPlayingNow;
 
     #endregion
 
@@ -77,6 +79,29 @@ public class Player_Movement : MonoBehaviour
 
     void Start()
     {
+
+        StarterPack();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (state == StateOC.Dead)
+            return;
+        
+        CheckIfDead();
+        ArrangeJumping();
+        ArrangeMovement();
+        CheckButtons();
+    }
+
+    #endregion
+
+    #region Movement Functions
+
+    private void StarterPack()
+    {
+
         state = StateOC.Running;
         action = ActionOC.Normal;
 
@@ -95,22 +120,6 @@ public class Player_Movement : MonoBehaviour
         secondAbilityCooldown = 0f;
         FaoWind_StopJump = false;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (state == StateOC.Dead)
-            return;
-        
-        CheckIfDead();
-        ArrangeJumping();
-        ArrangeMovement();
-        CheckButtons();
-    }
-
-    #endregion
-
-    #region Movement Functions
 
     private void ArrangeJumping()
     {
