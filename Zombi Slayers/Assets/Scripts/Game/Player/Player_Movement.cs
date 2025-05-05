@@ -79,7 +79,7 @@ public class Player_Movement : MonoBehaviour
 
     void Start()
     {
-
+        CheckIfGameRuns();
         StarterPack();
     }
 
@@ -100,6 +100,19 @@ public class Player_Movement : MonoBehaviour
     #endregion
 
     #region Movement Functions
+
+    private void CheckIfGameRuns()
+    {
+        ZombiAtTheBack_Manager zatbm = FindObjectOfType<ZombiAtTheBack_Manager>();
+        if (zatbm != null)
+        {
+            isPlayingNow = true;
+        }
+        else
+        {
+            isPlayingNow = false;
+        }
+    }
 
     private void StarterPack()
     {

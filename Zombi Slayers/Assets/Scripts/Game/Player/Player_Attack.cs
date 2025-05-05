@@ -126,6 +126,12 @@ public class Player_Attack : MonoBehaviour
         totalAmmo -= weapon.bulletCountinOneReload;
         AmmoUI();
     }
+
+    public void TakeMagazine(int magazines)
+    {
+        totalAmmo += magazines;
+    }
+
     private void AmmoUI()
     {
         player_UI.ArrangeAmmoCounter(currentAmmo, totalAmmo, weapon.haveBullets, weapon.haveLimitedBullets);
