@@ -10,4 +10,6 @@ public class Scriptable_PlayerCharacter : ScriptableObject
     public float secondAbilityCooldown;
     public Scriptable_Weapons weapon;
     public Scriptable_Weapons secondAbility;
+
+    public Texture imaj;
 }

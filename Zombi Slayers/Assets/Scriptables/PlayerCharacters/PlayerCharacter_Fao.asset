@@ -19,3 +19,4 @@ MonoBehaviour:
   secondAbilityCooldown: 0
   weapon: {fileID: 11400000, guid: 2eecbfba104e0ec4bb58f9792cf90908, type: 2}
   secondAbility: {fileID: 11400000, guid: c1b791911324833468d6a0125899d6c8, type: 2}
+  imaj: {fileID: 2800000, guid: 95be01932e7971248828c0f25bbdfe52, type: 3}

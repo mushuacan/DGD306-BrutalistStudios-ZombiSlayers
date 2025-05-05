@@ -40,6 +40,7 @@ public class PlayerManager : MonoBehaviour
             if (playerCount > pssb.playerCount)
             {
                 players[playerCount - 1].tag = "Untagged";
+                players[playerCount - 1].name = "Player Unneeded";
                 PlayerCounter();
             }
             pssb.ArrangePlayerUI(playerCount, this.gameObject);
