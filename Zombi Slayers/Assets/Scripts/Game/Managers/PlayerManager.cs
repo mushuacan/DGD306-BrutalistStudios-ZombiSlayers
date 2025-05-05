@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 using static UnityEditor.Progress;
 
 public class PlayerManager : MonoBehaviour
 {
+    public List<Scriptable_PlayerCharacter> all_Characters = new List<Scriptable_PlayerCharacter>();
     public List<Scriptable_PlayerCharacter> Woods_all = new List<Scriptable_PlayerCharacter>();
     public List<Scriptable_PlayerCharacter> Fletchers_all = new List<Scriptable_PlayerCharacter>();
+    private List<GameObject> players = new List<GameObject>();
 
-    private GameObject[] players;
 
     public int playerCount;
 
@@ -17,10 +22,16 @@ public class PlayerManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public void PlayerCreated()
+    public void OnPlayerJoined(PlayerInput player)
     {
-        players = GameObject.FindGameObjectsWithTag("Player"); 
-        playerCount = players.Length;
+        Debug.Log("Oyuncu eklendi: " + player.name);
+
+        PlayerCounter();
+
+        for (int i = 0; i < playerCount; i++)
+        {
+            players[i].name = "Player " + (i + 1);
+        }
 
         PlayerSelectionSceneButtons pssb = FindObjectOfType<PlayerSelectionSceneButtons>();
 
@@ -28,9 +39,17 @@ public class PlayerManager : MonoBehaviour
         {
             if (playerCount > pssb.playerCount)
             {
-                players[playerCount - 1].SetActive(false);
+                players[playerCount - 1].tag = "Untagged";
+                PlayerCounter();
             }
+            pssb.ArrangePlayerUI(playerCount, this.gameObject);
         }
+    }
+
+    private void PlayerCounter()
+    {
+        players = GameObject.FindGameObjectsWithTag("Player").ToList();
+        playerCount = players.Count;
     }
 
     public void NewLevelOpened(int level)

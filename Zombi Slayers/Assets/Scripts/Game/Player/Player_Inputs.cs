@@ -19,14 +19,14 @@ public class Player_Inputs : MonoBehaviour
     public void OnMovement(InputAction.CallbackContext context)
     {
         MovementValues = context.ReadValue<Vector2>();
-        Debug.Log("movement:" + MovementValues);
+        //Debug.Log("movement:" + MovementValues);
     }
     public void OnButton0(InputAction.CallbackContext context)
     {
         if (context.started)
         {
             button0pressed = true;
-            Debug.Log("OnButton0 pressed");
+            //Debug.Log("OnButton0 pressed");
         }
 
         if (context.canceled)
@@ -39,7 +39,7 @@ public class Player_Inputs : MonoBehaviour
         if (context.started)
         {
             button1pressed = true;
-            Debug.Log("OnButton1 pressed");
+            //Debug.Log("OnButton1 pressed");
         }
 
         if (context.canceled)
@@ -52,7 +52,7 @@ public class Player_Inputs : MonoBehaviour
         if (context.started)
         {
             button2pressed = true;
-            Debug.Log("OnButton2 pressed");
+            //Debug.Log("OnButton2 pressed");
         }
 
         if (context.canceled)
@@ -65,7 +65,7 @@ public class Player_Inputs : MonoBehaviour
         if (context.started)
         {
             button3pressed = true;
-            Debug.Log("OnButton3 pressed");
+            //Debug.Log("OnButton3 pressed");
         }
 
         if (context.canceled)
