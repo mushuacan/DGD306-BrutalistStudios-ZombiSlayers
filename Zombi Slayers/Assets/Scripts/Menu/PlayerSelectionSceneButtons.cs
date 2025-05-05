@@ -52,21 +52,11 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         {
             if (player1_inputs.MovementValues.x > 0.5)
             {
-                if (p1_changed) return;
-                ArrangeCharacter(1, player1_character);
-                p1_changed = true;
-
-                player1_image.texture = player1_character.character.imaj;
-                player1_text.text = player1_character.character.characterName;
+                CharacterArranger(1, 1);
             }
             else if (player1_inputs.MovementValues.x < -0.5)
             {
-                if (p1_changed) return;
-                ArrangeCharacter(-1, player1_character);
-                p1_changed = true;
-
-                player1_image.texture = player1_character.character.imaj;
-                player1_text.text = player1_character.character.characterName;
+                CharacterArranger(1, -1);
             }
             else
             {
@@ -77,26 +67,40 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         {
             if (player2_inputs.MovementValues.x > 0.5)
             {
-                if (p2_changed) return;
-                ArrangeCharacter(1, player2_character);
-                p2_changed = true;
-
-                player2_image.texture = player2_character.character.imaj;
-                player2_text.text = player2_character.character.characterName;
+                CharacterArranger(2, 1);
             }
             else if (player2_inputs.MovementValues.x < -0.5)
             {
-                if (p2_changed) return;
-                ArrangeCharacter(-1, player2_character);
-                p2_changed = true;
-
-                player2_image.texture = player2_character.character.imaj;
-                player2_text.text = player2_character.character.characterName;
+                CharacterArranger(2, -1);
             }
             else
             {
                 p2_changed = false;
             }
+        }
+    }
+
+    private void CharacterArranger(int p, int change)
+    {
+        if (p == 1)
+        {
+            if (p1_changed) return;
+
+            ArrangeCharacter(change, player1_character);
+            p1_changed = true;
+
+            player1_image.texture = player1_character.character.imaj;
+            player1_text.text = player1_character.character.characterName;
+        }
+        else if (p == 2)
+        {
+            if (p2_changed) return;
+
+            ArrangeCharacter(change, player2_character);
+            p2_changed = true;
+
+            player2_image.texture = player2_character.character.imaj;
+            player2_text.text = player2_character.character.characterName;
         }
     }
 
@@ -110,22 +114,15 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
 
         for (int i = 0; i < allPlayersCount; i++)
         {
-            if (playerManager.all_Characters[i] == playerCharacter)
+            if (playerManager.all_Characters[i] == playerCharacter.character)
             {
                 playerCharacterIndex = i;
+                break;
             }
         }
 
-        playerCharacterIndex += change;
-
-        if (playerCharacterIndex < 0)
-        {
-            playerCharacterIndex = allPlayersCount - 1;
-        }
-        else if (playerCharacterIndex >= allPlayersCount)
-        {
-            playerCharacterIndex = 0;
-        }
+        // Deðiþikliði uygula ve dizinin sýnýrlarý dýþýna çýkýldýðýnda sar
+        playerCharacterIndex = (playerCharacterIndex + change + allPlayersCount) % allPlayersCount;
 
         playerCharacter.character = playerManager.all_Characters[playerCharacterIndex];
 
