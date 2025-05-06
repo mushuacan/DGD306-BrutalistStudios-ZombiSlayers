@@ -14,6 +14,7 @@ public class Player_Attack : MonoBehaviour
     [SerializeField] private bool canAttack;
     [SerializeField] private int currentAmmo;
     [SerializeField] private int totalAmmo;
+    [SerializeField] private int dynamiteAmmo;
 
 
     private void Start()
@@ -28,6 +29,15 @@ public class Player_Attack : MonoBehaviour
         else
         {
             currentAmmo = weapon.bulletCountAtStart;
+        }
+
+
+        if (player.character.secondAbility != null)
+        {
+            if (player.character.secondAbility.haveLimitedBullets)
+            {
+                dynamiteAmmo = player.character.secondAbility.bulletCountAtStart;
+            }
         }
 
         if (weapon.haveLimitedBullets)
@@ -60,9 +70,12 @@ public class Player_Attack : MonoBehaviour
 
     public void WoodsSecondAbility()
     {
-        GameObject bullet = Instantiate(player.character.secondAbility.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
-        if (currentAmmo > 0)
+        if (dynamiteAmmo > 0)
         {
+            dynamiteAmmo--;
+            player_UI.StartCooldown(player.character.secondAbility.attackAnimationDuration);
+            DOVirtual.DelayedCall(player.character.secondAbility.attackAnimationDuration, () =>
+            Instantiate(player.character.secondAbility.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity));
         }
     }
     public void FaoSecondAbility()
@@ -100,8 +113,7 @@ public class Player_Attack : MonoBehaviour
             currentAmmo--;
             if (currentAmmo <= 0)
             {
-                player_UI.StartCooldown(player.character.weapon.reloadTime);
-                DOVirtual.DelayedCall(player.character.weapon.reloadTime, () => Reload());
+                Reload();
             }
             else
             {
@@ -122,14 +134,43 @@ public class Player_Attack : MonoBehaviour
 
     private void Reload()
     {
-        currentAmmo = weapon.bulletCountinOneReload;
-        totalAmmo -= weapon.bulletCountinOneReload;
+        player_UI.StartCooldown(player.character.weapon.reloadTime);
+        DOVirtual.DelayedCall(player.character.weapon.reloadTime, () => Reloaded());
+        
+    }
+    private void Reloaded()
+    {
+        int reloader = weapon.bulletCountinOneReload;
+        int currentAmmoAtFirst = currentAmmo;
+        if (totalAmmo > reloader)
+        {
+            currentAmmo = reloader;
+            totalAmmo -= reloader;
+        }
+        else if (totalAmmo > 0)
+        {
+            currentAmmo = totalAmmo;
+            totalAmmo = 0;
+        }
+        if (currentAmmoAtFirst > 0)
+        {
+            totalAmmo += currentAmmoAtFirst;
+        }
         AmmoUI();
     }
 
     public void TakeMagazine(int magazines)
     {
         totalAmmo += magazines;
+        if ( totalAmmo == magazines)
+        {
+            Reload();
+        }
+        AmmoUI();
+    }
+    public void TakeDynamite()
+    {
+        dynamiteAmmo++;
     }
 
     private void AmmoUI()

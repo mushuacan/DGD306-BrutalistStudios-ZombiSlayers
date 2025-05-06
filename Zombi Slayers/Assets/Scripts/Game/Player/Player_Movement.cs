@@ -131,7 +131,6 @@ public class Player_Movement : MonoBehaviour
             player.character = fixedPlayerCharacter;
         }
 
-
         secondAbilityCooldown = 0f;
         FaoWind_StopJump = false;
     }
@@ -172,7 +171,7 @@ public class Player_Movement : MonoBehaviour
 
     private void ArrangeMovement()
     {
-        if (action == ActionOC.SecondAbility)
+        if (action == ActionOC.SecondAbility && player.character.characterName == "Fletcher")
         {
             if (transform.position.x < rightBoundary)
                 transform.position = new Vector2(transform.position.x + player.character.secondAbilitySpeed * Time.deltaTime, transform.position.y);
@@ -204,11 +203,22 @@ public class Player_Movement : MonoBehaviour
 
             SecondAbility();
 
-            DOVirtual.DelayedCall(player.character.secondAbilityTimer, () => 
-            { 
-                action = ActionOC.Normal; 
-                secondAbilityCooldown = player.character.secondAbilityCooldown + Time.timeSinceLevelLoad; 
-            });
+            if (player.character.secondAbility == null)
+            {
+                DOVirtual.DelayedCall(player.character.secondAbilityTimer, () =>
+                {
+                    action = ActionOC.Normal;
+                    secondAbilityCooldown = player.character.secondAbilityCooldown + Time.timeSinceLevelLoad;
+                });
+            }
+            else
+            {
+                DOVirtual.DelayedCall(player.character.secondAbility.attackAnimationDuration, () =>
+                {
+                    action = ActionOC.Normal;
+                    secondAbilityCooldown = player.character.secondAbilityCooldown + Time.timeSinceLevelLoad;
+                });
+            }
         }
     }
 
