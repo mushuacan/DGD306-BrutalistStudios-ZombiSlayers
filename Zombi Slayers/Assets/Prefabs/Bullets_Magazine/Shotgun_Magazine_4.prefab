@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 33090728659558516}
   - component: {fileID: 7840189114818561971}
   m_Layer: 0
-  m_Name: Shotgun_Magazine
+  m_Name: Shotgun_Magazine_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
