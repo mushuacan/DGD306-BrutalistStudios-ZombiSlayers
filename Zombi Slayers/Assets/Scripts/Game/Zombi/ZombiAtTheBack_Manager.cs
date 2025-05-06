@@ -78,4 +78,11 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
             return -5;
         }
     }
+
+    public int GetZombiCount()
+    {
+        int zombi = 0;
+        zombi += zombiesInLane1.Count + zombiesInLane2.Count + zombiesInLane3.Count;
+        return zombi;
+    }
 }

@@ -154,6 +154,55 @@ Transform:
   - {fileID: 770132637}
   m_Father: {fileID: 1495828643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &108615462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108615464}
+  - component: {fileID: 108615463}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &108615463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108615462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73013074e11d3d748904f648446706a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorer: {fileID: 11400000, guid: 0e8ac5800a337b242b946d8022c138ca, type: 2}
+  scoreFromZombiATB: 0
+  scoreFromTime: 0
+  scoreFromKillingZombi: 0
+  scoreUnknown: 0
+--- !u!4 &108615464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108615462}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &233093603 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3097172449106179103, guid: 9d5950ec1eeabc049bbc5a8747cabbaa, type: 3}
@@ -1801,6 +1850,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798530072529606109, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 916852764}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6189447668271733086, guid: 7468cfc3d0ccebc4882f41aa600b014d, type: 3}
@@ -2189,3 +2242,4 @@ SceneRoots:
   - {fileID: 2082217414639205582}
   - {fileID: 746328068}
   - {fileID: 8938583547368877667}
+  - {fileID: 108615464}
