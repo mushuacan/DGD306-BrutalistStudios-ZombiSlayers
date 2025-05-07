@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour
     public List<Scriptable_PlayerCharacter> all_Characters = new List<Scriptable_PlayerCharacter>();
     public List<Scriptable_PlayerCharacter> Woods_all = new List<Scriptable_PlayerCharacter>();
     public List<Scriptable_PlayerCharacter> Fletchers_all = new List<Scriptable_PlayerCharacter>();
-    private List<GameObject> players = new List<GameObject>();
+    public List<GameObject> players = new List<GameObject>();
 
     private LevelMaker levelMaker;
 

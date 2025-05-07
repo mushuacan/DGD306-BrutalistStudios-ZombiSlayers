@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class GameController : AlarmSystem
 {
@@ -8,50 +9,44 @@ public class GameController : AlarmSystem
 
     public int PlayerCount;
 
-    private bool canDebug;
-
-    // Start is called before the first frame update
-    void Awake()
+    private void Start()
     {
-        if (player1 == null)
+        PlayerManager playerManager = FindObjectOfType<PlayerManager>();
+        if (playerManager != null)
         {
-            //Alarm("Oyuncu 1 Referansý Atanmadý", AlarmTypes.Important);
+            PlayerCount = playerManager.playerCount;
+            if (PlayerCount == 2)
+            {
+                player2 = playerManager.players[1].GetComponent<Player_Movement>();
+            }
+            player1 = playerManager.players[0].GetComponent<Player_Movement>();
         }
-        if (player2 == null && PlayerCount == 2)
-        {
-            //Alarm("Oyuncu 2 Referansý Atanmadý", AlarmTypes.Important);
-        }
-        canDebug = true;
     }
-
     // Update is called once per frame
     void Update()
     {
         if (!contuniu) return;
 
-
         if (PlayerCount == 2)
         {
-            if (player1.state == Player_Movement.StateOC.Dead && player2.state == Player_Movement.StateOC.Dead && canDebug)
+            if (player1.state == Player_Movement.StateOC.Dead && player2.state == Player_Movement.StateOC.Dead)
             {
-                canDebug = false;
-                Alarm("Oyunun bitmiþ olmasý gerek", AlarmTypes.Bad);
-                ChangeCanDebug();
+                StartTheGameFromScratch();
             }
         }
         if (PlayerCount == 1) 
         {
-            if (player1.state == Player_Movement.StateOC.Dead && canDebug && PlayerCount == 1)
+            if (player1.state == Player_Movement.StateOC.Dead)
             {
-                canDebug = false;
-                Alarm("Oyunun bitmiþ olmasý gerek", AlarmTypes.Bad);
-                ChangeCanDebug();
+                StartTheGameFromScratch();
             }
         }
     }
 
-    private void ChangeCanDebug()
+    private void StartTheGameFromScratch()
     {
-        DOVirtual.DelayedCall(1, () => { canDebug = true; } );
+        Debug.Log("Sahne baþtan baþlatýlýyor.");
+        DOTween.KillAll(); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

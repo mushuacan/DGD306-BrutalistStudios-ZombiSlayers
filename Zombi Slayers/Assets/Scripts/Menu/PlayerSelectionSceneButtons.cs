@@ -74,11 +74,11 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         {
             if (gameType == "EndlessRun")
             {
-                Button_LoadScene(2);
+                Button_LoadScene(3);
             }
             else
             {
-                Button_LoadScene(3);
+                Button_LoadScene(4);
             }
         }
     }

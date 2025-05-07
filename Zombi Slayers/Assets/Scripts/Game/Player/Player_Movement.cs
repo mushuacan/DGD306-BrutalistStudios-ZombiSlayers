@@ -74,6 +74,11 @@ public class Player_Movement : MonoBehaviour
 
     private void Awake()
     {
+        CarryPlayerToDDOL();
+    }
+
+    public void CarryPlayerToDDOL()
+    {
         DontDestroyOnLoad(gameObject);
     }
 
@@ -295,7 +300,7 @@ public class Player_Movement : MonoBehaviour
     public void Die()
     {
         state = StateOC.Dead;
-        transform.SetParent(platform.transform);
+        //transform.SetParent(platform.transform);
     }
     private void CheckIfDead()
     {

@@ -91,8 +91,11 @@ public class Envoriment_Movement : MonoBehaviour
             }
 
             float newXPosition = transform.position.x - (envorimentMovementSpeed * transitionDuration * 0.5f);
-            transform.DOMoveX(newXPosition, transitionDuration).SetEase(Ease.OutQuad);
-            ScoreManager.Instance.StopAutoScore();
+            transform.DOMoveX(newXPosition, transitionDuration).SetEase(Ease.OutQuad); 
+            if (ScoreManager.Instance != null && ScoreManager.Instance.gameObject.activeInHierarchy)
+            {
+                ScoreManager.Instance.StopAutoScore();
+            }
             sessionEnded = true;
         }
         else
