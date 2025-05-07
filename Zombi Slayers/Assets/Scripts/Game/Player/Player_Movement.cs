@@ -82,7 +82,6 @@ public class Player_Movement : MonoBehaviour
         CheckIfGameRuns();
         StarterPack();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -114,7 +113,7 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
-    private void StarterPack()
+    public void StarterPack()
     {
 
         state = StateOC.Running;

@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using static UnityEditor.Progress;
 
 public class PlayerManager : MonoBehaviour
@@ -14,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     public List<Scriptable_PlayerCharacter> Fletchers_all = new List<Scriptable_PlayerCharacter>();
     private List<GameObject> players = new List<GameObject>();
 
+    private LevelMaker levelMaker;
 
     public int playerCount;
 
@@ -66,6 +68,41 @@ public class PlayerManager : MonoBehaviour
             {
                 player.GetComponent<Player_Character>().character = Fletchers_all[level];
             }
+            Player_Movement player_Movement = player.GetComponent<Player_Movement>();
+            player_Movement.isPlayingNow = true;
+            player_Movement.StarterPack();
+
+        }
+    }
+    private void ClearPlayers()
+    {
+        foreach (var player in players)
+        {
+            if (player.CompareTag("Untagged"))
+            {
+                Destroy(player);
+            }
+        }
+        PlayerCounter();
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ClearPlayers();
+        levelMaker = FindObjectOfType<LevelMaker>();
+        if (levelMaker != null)
+        {
+            NewLevelOpened(levelMaker.level);
         }
     }
 }

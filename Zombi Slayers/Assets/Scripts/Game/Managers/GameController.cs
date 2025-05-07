@@ -15,11 +15,11 @@ public class GameController : AlarmSystem
     {
         if (player1 == null)
         {
-            Alarm("Oyuncu 1 Referansý Atanmadý", AlarmTypes.Important);
+            //Alarm("Oyuncu 1 Referansý Atanmadý", AlarmTypes.Important);
         }
         if (player2 == null && PlayerCount == 2)
         {
-            Alarm("Oyuncu 2 Referansý Atanmadý", AlarmTypes.Important);
+            //Alarm("Oyuncu 2 Referansý Atanmadý", AlarmTypes.Important);
         }
         canDebug = true;
     }
