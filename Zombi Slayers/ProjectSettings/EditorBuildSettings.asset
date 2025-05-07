@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu Scene.unity
     guid: 7861bbad53c12b74ba3fe797bb6df168
   - enabled: 1
+    path: Assets/Scenes/Player Selection Scene.unity
+    guid: e22b5dd157f3aad469deb8ab1699aa2f
+  - enabled: 1
+    path: Assets/Scenes/EndlessRunner.unity
+    guid: a5482b47c46017442a12fcb3cc890f9b
+  - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 9892f8bd241558c45b60d5b6a5073206
   m_configObjects:

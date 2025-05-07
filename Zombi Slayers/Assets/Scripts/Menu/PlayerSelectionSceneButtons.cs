@@ -1,6 +1,8 @@
 using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -26,9 +28,9 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     public Player_Character player1_character, player2_character;
 
     public RawImage player1_image, player2_image;
-    public TextMeshProUGUI player1_text, player2_text;
+    public TextMeshProUGUI player1_text, player2_text, p1ReadyText, p2ReadyText;
 
-    private bool p1_changed, p2_changed;
+    private bool p1_changed, p2_changed, p1ready, p2ready;
 
     private void Start()
     {
@@ -46,37 +48,94 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         p2_changed = false;
     }
 
+    public void Button_LoadScene(int scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
     private void Update()
     {
         if (player1_inputs != null)
         {
-            if (player1_inputs.MovementValues.x > 0.5)
-            {
-                CharacterArranger(1, 1);
-            }
-            else if (player1_inputs.MovementValues.x < -0.5)
-            {
-                CharacterArranger(1, -1);
-            }
-            else
-            {
-                p1_changed = false;
-            }
+            ArrangePlayer1Selection();
+            ArrangePlayer1Ready();
         }
         if (player2_inputs != null)
         {
-            if (player2_inputs.MovementValues.x > 0.5)
+            ArrangePlayer2Selection();
+            ArrangePlayer2Ready();
+        }
+        CheckIfPlayersReady();
+    }
+
+    private void CheckIfPlayersReady()
+    {
+        if ((p1ready && playerCount == 1) || (p1ready && p2ready && playerCount == 2))
+        {
+            if (gameType == "EndlessRun")
             {
-                CharacterArranger(2, 1);
-            }
-            else if (player2_inputs.MovementValues.x < -0.5)
-            {
-                CharacterArranger(2, -1);
+                Button_LoadScene(2);
             }
             else
             {
-                p2_changed = false;
+                Button_LoadScene(3);
             }
+        }
+    }
+    private void ArrangePlayer1Ready()
+    {
+        if (player1_inputs.button1pressed)
+        {
+            p1ready = true;
+            p1ReadyText.text = "Ready";
+        }
+        else
+        {
+            p1ready = false;
+            p1ReadyText.text = "Not Ready";
+        }
+    }
+    private void ArrangePlayer2Ready()
+    {
+        if (player2_inputs.button1pressed)
+        {
+            p2ready = true;
+            p2ReadyText.text = "Ready";
+        }
+        else
+        {
+            p2ready = false;
+            p2ReadyText.text = "Not Ready";
+        }
+    }
+    private void ArrangePlayer1Selection()
+    {
+        if (player1_inputs.MovementValues.x > 0.5)
+        {
+            CharacterArranger(1, 1);
+        }
+        else if (player1_inputs.MovementValues.x < -0.5)
+        {
+            CharacterArranger(1, -1);
+        }
+        else
+        {
+            p1_changed = false;
+        }
+    }
+    private void ArrangePlayer2Selection()
+    {
+        if (player2_inputs.MovementValues.x > 0.5)
+        {
+            CharacterArranger(2, 1);
+        }
+        else if (player2_inputs.MovementValues.x < -0.5)
+        {
+            CharacterArranger(2, -1);
+        }
+        else
+        {
+            p2_changed = false;
         }
     }
 
