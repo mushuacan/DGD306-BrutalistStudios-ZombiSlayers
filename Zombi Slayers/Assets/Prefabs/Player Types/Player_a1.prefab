@@ -537,6 +537,7 @@ MonoBehaviour:
   player_UI: {fileID: 3710495823981931815}
   player_health: {fileID: -699912929371043157}
   fixedPlayerCharacter: {fileID: 11400000, guid: 85df758c50635804c922e490fb3b4306, type: 2}
+  DeadLocation: {fileID: 7531642678922765294, guid: cfb9f37e3f2c042419136ea131b0b475, type: 3}
   movementSpeed: 4
   leftBoundary: -8
   rightBoundary: 5
