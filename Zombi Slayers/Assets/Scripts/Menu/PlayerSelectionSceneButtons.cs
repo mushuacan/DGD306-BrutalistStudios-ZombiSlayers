@@ -1,5 +1,4 @@
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -230,7 +229,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
             Player2_Arrived.SetActive(true);
             player2 = GameObject.Find("Player 2");
             player2_character = player2.GetComponent<Player_Character>();
-            player2_character.character = playerManager.all_Characters[1];
+            player2_character.character = playerManager.all_Characters[0];
             player2_inputs = player2.GetComponent<Player_Inputs>();
         }
     }
