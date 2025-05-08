@@ -17,6 +17,7 @@ public class Player_Movement : MonoBehaviour
     [Header("Referances")]
     [SerializeField] private Player_Inputs inputs;
     [SerializeField] private Player_Character player;
+    [SerializeField] private Player_Animation player_animation;
     [SerializeField] private Player_Attack player_attack;
     [SerializeField] private Player_UI player_UI;
     [SerializeField] private Player_Health player_health;
@@ -140,6 +141,7 @@ public class Player_Movement : MonoBehaviour
         player_health.StarterPack();
         player_attack.StarterPack();
         player_UI.StarterPack();
+        player_animation.StarterPack();
     }
 
     private void ArrangeJumping()

@@ -16,7 +16,7 @@ public class DamagePlayerOnCollision : MonoBehaviour
             {
                 return;
             }
-            if (pMove.action == Player_Movement.ActionOC.SecondAbility && canSlideable)
+            if (pMove.action == Player_Movement.ActionOC.SecondAbility && canSlideable && collision.GetComponent<Player_Character>().character.characterName == "Fletcher")
             {
                 return;
             }

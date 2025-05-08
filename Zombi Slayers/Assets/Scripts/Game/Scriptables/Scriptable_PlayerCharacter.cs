@@ -12,4 +12,5 @@ public class Scriptable_PlayerCharacter : ScriptableObject
     public Scriptable_Weapons secondAbility;
 
     public Texture imaj;
+    public Sprite spriter;
 }

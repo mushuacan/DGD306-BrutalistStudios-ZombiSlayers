@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9de3d912d51682e45ba69d8e9cfe67ee, type: 3}
   m_Color: {r: 0.038269877, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e2dbd3fea08654c8213c3dc1be0085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spaceBetweenZombis: 0.8
+  spaceBetweenZombis: 0.4
   leftCameraBorder: -10
   zombiSpeedComesFromBack: 2
 --- !u!114 &1739709130683786365
@@ -115,6 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e131df85caff38d479eae502dd4128fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnCollision: 0
+  canSlideable: 0
 --- !u!61 &8261891006977060846
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,18 +149,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.21}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 1.92, y: 1.92}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.64, y: 1.46}
   m_EdgeRadius: 0
 --- !u!50 &1408669237337533695
 Rigidbody2D:

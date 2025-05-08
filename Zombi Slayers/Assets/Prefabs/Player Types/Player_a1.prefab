@@ -452,6 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1759442453393457561}
   - component: {fileID: 5980480940130164564}
+  - component: {fileID: -7220510021390481695}
   - component: {fileID: 7107904711815955177}
   - component: {fileID: -699912929371043157}
   - component: {fileID: 4902290981955062725}
@@ -497,6 +498,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
+--- !u!114 &-7220510021390481695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317986187449348885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf041b7228fcde4ab3dd00e1c3d082d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 1879536380549187296}
+  player: {fileID: 5980480940130164564}
 --- !u!114 &7107904711815955177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,6 +532,7 @@ MonoBehaviour:
   second_Button: 0
   inputs: {fileID: 1365290559951769061}
   player: {fileID: 5980480940130164564}
+  player_animation: {fileID: -7220510021390481695}
   player_attack: {fileID: 4902290981955062725}
   player_UI: {fileID: 3710495823981931815}
   player_health: {fileID: -699912929371043157}
@@ -1608,7 +1624,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f2267c0a5095672489652613a84ae5d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be4027b27570fbd4097a3360153da257, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
