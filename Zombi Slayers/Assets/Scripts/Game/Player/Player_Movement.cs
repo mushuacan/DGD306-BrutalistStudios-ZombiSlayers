@@ -96,7 +96,7 @@ public class Player_Movement : MonoBehaviour
             return;
         if (state == StateOC.Dead)
         {
-            transform.position = DeadLocationer.transform.position;
+            if (DeadLocationer != null) { transform.position = DeadLocationer.transform.position; }
             return;
         }
         

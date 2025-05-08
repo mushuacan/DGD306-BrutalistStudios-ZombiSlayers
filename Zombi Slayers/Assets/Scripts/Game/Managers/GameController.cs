@@ -11,8 +11,6 @@ public class GameController : MonoBehaviour
 
     public int PlayerCount;
 
-    private bool Starting;
-
     private void Start()
     {
         PlayerManager playerManager = FindObjectOfType<PlayerManager>();
@@ -45,7 +43,6 @@ public class GameController : MonoBehaviour
         {
             if (player1.state == Player_Movement.StateOC.Dead && player2.state == Player_Movement.StateOC.Dead)
             {
-                Starting = true;
                 StartTheGameFromScratch();
             }
         }
@@ -53,7 +50,6 @@ public class GameController : MonoBehaviour
         {
             if (player1.state == Player_Movement.StateOC.Dead)
             {
-                Starting = true;
                 StartTheGameFromScratch();
             }
         }
@@ -62,8 +58,11 @@ public class GameController : MonoBehaviour
     private void StartTheGameFromScratch()
     {
         Debug.Log("Sahne baþtan baþlatýlýyor.");
-        Debug.Log(Starting);
-        DOTween.KillAll(); 
+        DOVirtual.DelayedCall(2f, () => { TheReStart(); });
+    }
+    private void TheReStart()
+    {
+        DOTween.KillAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
