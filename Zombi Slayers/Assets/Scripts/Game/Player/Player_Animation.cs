@@ -9,6 +9,7 @@ public class Player_Animation : MonoBehaviour
 
     public void StarterPack()
     {
-        _spriteRenderer.sprite = player.character.spriter;
+        if (player.character.spriter != null)
+            _spriteRenderer.sprite = player.character.spriter;
     }
 }

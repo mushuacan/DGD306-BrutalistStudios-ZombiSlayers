@@ -22,6 +22,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private Player_UI player_UI;
     [SerializeField] private Player_Health player_health;
     [SerializeField] private Scriptable_PlayerCharacter fixedPlayerCharacter;
+    [SerializeField] private GameObject DeadLocation;
     private GameObject platform;
 
     [Header("Playground Settings")]
@@ -47,6 +48,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private bool FaoWind_JumpedNew;
     [SerializeField] private bool FaoWind_JumpedUp;
     public bool isPlayingNow;
+    private GameObject DeadLocationer;
 
     #endregion
 
@@ -93,7 +95,10 @@ public class Player_Movement : MonoBehaviour
         if (!isPlayingNow)
             return;
         if (state == StateOC.Dead)
+        {
+            transform.position = DeadLocationer.transform.position;
             return;
+        }
         
         CheckIfDead();
         ArrangeJumping();
@@ -316,7 +321,8 @@ public class Player_Movement : MonoBehaviour
     public void Die()
     {
         state = StateOC.Dead;
-        //transform.SetParent(platform.transform);
+        DeadLocationer = Instantiate(DeadLocation, transform.position, Quaternion.identity);
+        DeadLocationer.transform.SetParent(platform.transform);
     }
     private void CheckIfDead()
     {

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e2dbd3fea08654c8213c3dc1be0085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spaceBetweenZombis: 0.4
+  spaceBetweenZombis: 0.628
   leftCameraBorder: -10
   zombiSpeedComesFromBack: 2
 --- !u!114 &1739709130683786365

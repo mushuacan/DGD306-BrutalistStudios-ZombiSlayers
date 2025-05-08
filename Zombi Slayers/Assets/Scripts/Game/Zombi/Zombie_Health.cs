@@ -18,8 +18,11 @@ public class Zombie_Health : MonoBehaviour
 
     private void Start()
     {
-        if (zombiATBM == null) 
-            Debug.LogError("zombiATBM tanýmlý deðil -> " + this.gameObject);
+        if (zombiATBM == null)
+        {
+            //Debug.LogError("zombiATBM tanýmlý deðil -> " + this.gameObject);
+            zombiATBM = FindObjectOfType<ZombiAtTheBack_Manager>();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
