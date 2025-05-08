@@ -730,17 +730,87 @@ MonoBehaviour:
     m_ActionName: Player/Button2[/DualShock3GamepadHID1/buttonWest,/Logitech Logitech
       Dual Action/trigger]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1365290559951769061}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnButton3
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 74fae37b-d217-414d-832b-6d015b4160bb
     m_ActionName: Player/Button3
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1365290559951769061}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnStart
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c83d6a86-6ba0-4de0-8e88-1ca9637a5a86
     m_ActionName: Player/Start
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1365290559951769061}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnSelect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 9094ccac-c4d3-4406-83f2-a259b168a59f
     m_ActionName: Player/Select
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1365290559951769061}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnLeftShoulder
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a2acfd4a-537b-44fc-9b41-96fde422649c
+    m_ActionName: Player/LeftShoulder[/DualShock3GamepadHID/leftShoulder,/Logitech
+      Logitech Dual Action/button5]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1365290559951769061}
+        m_TargetAssemblyTypeName: Player_Inputs, Assembly-CSharp
+        m_MethodName: OnRightShoulder
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5f134dab-3b70-462e-a3e7-ee02cf03716e
+    m_ActionName: Player/RightShoulder[/DualShock3GamepadHID/rightShoulder,/Logitech
+      Logitech Dual Action/button6]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

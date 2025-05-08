@@ -99,12 +99,23 @@ public class Player_Movement : MonoBehaviour
         ArrangeJumping();
         ArrangeMovement();
         CheckButtons();
+        CheckExit();
     }
 
     #endregion
 
     #region Movement Functions
-
+    private void CheckExit()
+    {
+        if (inputs.startPressed && inputs.sellectPressed)
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
+    }
     private void CheckIfGameRuns()
     {
         ZombiAtTheBack_Manager zatbm = FindObjectOfType<ZombiAtTheBack_Manager>();

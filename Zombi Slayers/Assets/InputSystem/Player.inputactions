@@ -67,6 +67,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "LeftShoulder",
+                    "type": "Button",
+                    "id": "a2acfd4a-537b-44fc-9b41-96fde422649c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightShoulder",
+                    "type": "Button",
+                    "id": "5f134dab-3b70-462e-a3e7-ee02cf03716e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -172,7 +190,7 @@
                 {
                     "name": "",
                     "id": "2e78e0d8-7477-40d1-a67e-2303be5fe216",
-                    "path": "<Joystick>/trigger",
+                    "path": "<HID::Logitech Logitech Dual Action>/trigger",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Logitech Dual",
@@ -243,6 +261,50 @@
                     "processors": "",
                     "groups": ";Logitech Dual",
                     "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4fddb3f4-36a3-46f4-b466-0d3daa45ed55",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "LeftShoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "db62cb61-2533-4a92-96fe-512b69b78bd6",
+                    "path": "<HID::Logitech Logitech Dual Action>/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Logitech Dual",
+                    "action": "LeftShoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c903a226-bbf6-428a-858a-cef083e49e2b",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "RightShoulder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "807a8935-6fa4-4553-addc-b61153eb60a5",
+                    "path": "<HID::Logitech Logitech Dual Action>/button6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Logitech Dual",
+                    "action": "RightShoulder",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
