@@ -24,7 +24,7 @@ public class Player_UI : MonoBehaviour
     [SerializeField] private Player_Character player;
 
     // Start is called before the first frame update
-    void Start()
+    public void StarterPack()
     {
         castTimer.gameObject.SetActive(false);
         coolDown.gameObject.SetActive(false);

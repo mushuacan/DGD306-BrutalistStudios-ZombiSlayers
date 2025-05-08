@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,10 +69,16 @@ public class PlayerManager : MonoBehaviour
             {
                 player.GetComponent<Player_Character>().character = Fletchers_all[level];
             }
+        }
+        DOVirtual.DelayedCall(0.25f, ArrangeStarterPacks);
+    }
+    private void ArrangeStarterPacks()
+    {
+        foreach (var player in players)
+        {
             Player_Movement player_Movement = player.GetComponent<Player_Movement>();
             player_Movement.isPlayingNow = true;
             player_Movement.StarterPack();
-
         }
     }
     private void ClearPlayers()

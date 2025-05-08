@@ -17,7 +17,7 @@ public class Player_Attack : MonoBehaviour
     [SerializeField] private int dynamiteAmmo;
 
 
-    private void Start()
+    public void StarterPack()
     {
         canAttack = true;
         weapon = player.character.weapon;
@@ -41,7 +41,7 @@ public class Player_Attack : MonoBehaviour
         }
 
         if (weapon.haveLimitedBullets)
-        totalAmmo = weapon.bulletCountAtStart;
+            totalAmmo = weapon.bulletCountAtStart;
     }
 
     public void StartAttack()

@@ -1,9 +1,12 @@
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 
 public class Player_Health : MonoBehaviour
 {
+    public event Action OnPlayerDied;
+
     [Header("Settings")]
     [SerializeField] private float undamageableDuration;
     [Tooltip("0 daha görünmez yapar")]
@@ -20,13 +23,12 @@ public class Player_Health : MonoBehaviour
     [SerializeField] public float undamageableDelay;
     [SerializeField] private bool isSliding;
 
-    // Start is called before the first frame update
-    void Start()
+    public void StarterPack()
     {
         ArrangeHealth(player.character.health, true);
-        undamageableDelay = Time.timeSinceLevelLoad;
+        undamageableDelay = Time.timeSinceLevelLoad + undamageableDuration;
+        FlashEffect();
     }
-
     
     public void GiveDamage(bool slideBreaker = false)
     {
@@ -76,6 +78,8 @@ public class Player_Health : MonoBehaviour
     }
     private void DieEffect()
     {
+
+        OnPlayerDied?.Invoke(); // Event'i çaðýr
         spriteRenderer.DOFade(undamageableImpulsePower, undamageableDuration / 2);
     }
 

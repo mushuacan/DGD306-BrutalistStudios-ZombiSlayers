@@ -84,7 +84,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     }
     private void ArrangePlayer1Ready()
     {
-        if (player1_inputs.button1pressed)
+        if (player1_inputs.button0pressed)
         {
             p1ready = true;
             p1ReadyText.text = "Ready";
@@ -97,7 +97,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     }
     private void ArrangePlayer2Ready()
     {
-        if (player2_inputs.button1pressed)
+        if (player2_inputs.button0pressed)
         {
             p2ready = true;
             p2ReadyText.text = "Ready";

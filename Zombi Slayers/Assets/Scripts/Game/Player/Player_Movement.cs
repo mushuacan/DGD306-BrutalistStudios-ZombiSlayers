@@ -85,7 +85,6 @@ public class Player_Movement : MonoBehaviour
     void Start()
     {
         CheckIfGameRuns();
-        StarterPack();
     }
     // Update is called once per frame
     void Update()
@@ -111,6 +110,7 @@ public class Player_Movement : MonoBehaviour
         if (zatbm != null)
         {
             isPlayingNow = true;
+            StarterPack();
         }
         else
         {
@@ -120,7 +120,6 @@ public class Player_Movement : MonoBehaviour
 
     public void StarterPack()
     {
-
         state = StateOC.Running;
         action = ActionOC.Normal;
 
@@ -137,6 +136,10 @@ public class Player_Movement : MonoBehaviour
 
         secondAbilityCooldown = 0f;
         FaoWind_StopJump = false;
+
+        player_health.StarterPack();
+        player_attack.StarterPack();
+        player_UI.StarterPack();
     }
 
     private void ArrangeJumping()
