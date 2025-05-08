@@ -18,7 +18,7 @@ MonoBehaviour:
   attackAnimationDuration: 0.075
   BulletDestroyTimer: 0.3
   haveBullets: 1
-  haveLimitedBullets: 0
+  haveLimitedBullets: 1
   doesItReload: 1
   bulletCountAtStart: 0
   reloadTime: 0.5

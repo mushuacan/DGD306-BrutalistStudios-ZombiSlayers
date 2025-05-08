@@ -26,9 +26,7 @@ public class Zombie_Health : MonoBehaviour
     {
         if (collision.CompareTag("Player_Bullet"))
         {
-            Debug.Log(health);
             health -= collision.GetComponent<PlayerBullet>().damage;
-            Debug.Log("After: " + health);
             if (health <= 0)
             {
                 DOTween.Kill(transform);
