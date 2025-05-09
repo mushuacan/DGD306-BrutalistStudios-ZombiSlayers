@@ -4,7 +4,8 @@ public class LaneFinder : MonoBehaviour
 {
     public static float[] laneYPositions =
     //{ -24f, -3f, 0.25f, 3.5f };
-    { -24f, -3.2f, -0.3f, 2.56f };
+    //{ -24f, -3.2f, -0.3f, 2.56f };
+    { -24f, -4.12f, -1.08f, 1.96f };
 
     [SerializeField] private bool snap;
     public int lane;

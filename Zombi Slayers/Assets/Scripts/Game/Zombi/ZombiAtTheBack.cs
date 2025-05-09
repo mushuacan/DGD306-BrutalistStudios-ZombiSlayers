@@ -9,7 +9,7 @@ public class ZombiAtTheBack : MonoBehaviour
 
     private Tween myTween;
 
-    private float[] laneYPoz = { -24f, -3.2f, -0.3f, 2.56f };
+    private float[] laneYPoz = { -24f, -4.12f, -1.08f, 1.96f };
 
     public void SetPosition(int lane, int order)
     {
