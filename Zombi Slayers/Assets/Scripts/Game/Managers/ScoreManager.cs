@@ -1,12 +1,14 @@
 using DG.Tweening;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
-
     public Scriptable_Scoring scorer;
-
+    public TextMeshProUGUI scoreText;
+    
     private ZombiAtTheBack_Manager zombiATBM;
 
     private Tween scoreLoopTween;
@@ -36,7 +38,18 @@ public class ScoreManager : MonoBehaviour
     {
         StartAutoScore(scorer.scoreEarnedPerSecond, 1f);
 
-        zombiATBM = FindAnyObjectByType<ZombiAtTheBack_Manager>(); 
+        zombiATBM = FindAnyObjectByType<ZombiAtTheBack_Manager>();
+
+        scoreText.fontSizeMax = 79;
+    }
+
+    private void RewriteScore(bool hype = false)
+    {
+        scoreText.text = "Score: " + score;
+        scoreText.fontSize = 36 + (score * 0.005f);
+        scoreText.transform.DOKill(); // Eski animasyonu iptal et
+        scoreText.transform.localScale = Vector3.one; // Ölçeði sýfýrla
+        scoreText.transform.DOPunchScale(Vector3.one * 0.2f, 0.3f, 10, 1);
     }
 
     public void AddScore(int amount, string scoreType = "Kill")
@@ -59,6 +72,14 @@ public class ScoreManager : MonoBehaviour
         else
         {
             scoreUnknown += amount;
+        }
+        if (amount < 49)
+        {
+            RewriteScore();
+        }
+        else
+        {
+            RewriteScore(true);
         }
     }
 

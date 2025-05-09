@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Score_Level_0_Test
   m_EditorClassIdentifier: 
   scoreMultiplier: 1
-  scoreEarnedPerSecond: 20
-  scoreEarnedPerZombie: 5
+  scoreEarnedPerSecond: 5
+  scoreEarnedPerZombie: 1

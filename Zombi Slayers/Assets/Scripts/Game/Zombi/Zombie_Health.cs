@@ -5,6 +5,7 @@ public class Zombie_Health : MonoBehaviour
 {
     private float health;
     [SerializeField] private float leftCameraEdge;
+    [SerializeField] private int killScore;
     [SerializeField] private ZombiAtTheBack_Manager zombiATBM;
     [SerializeField] private ZombiCharacter zombiChar;
     [SerializeField] private LaneFinder laner;
@@ -33,6 +34,7 @@ public class Zombie_Health : MonoBehaviour
             if (health <= 0)
             {
                 DOTween.Kill(transform);
+                ScoreManager.Instance.AddScore(killScore, "Zombi");
                 Destroy(this.gameObject);
             }
             else
