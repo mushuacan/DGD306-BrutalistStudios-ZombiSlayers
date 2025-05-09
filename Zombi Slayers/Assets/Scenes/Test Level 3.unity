@@ -573,7 +573,7 @@ Transform:
   m_GameObject: {fileID: 1396002214}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.3, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -840,26 +840,98 @@ PrefabInstance:
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 92594018409104424, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 97663976045143025, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 110446412796968641, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
     - target: {fileID: 412947960198134294, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 521961774373160270, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 785062098414822554, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 922254319877750237, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
     - target: {fileID: 942999140801851346, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 1014281446139662631, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090251203421795947, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098550040175701704, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1119554938677195565, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 1195762450728770707, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1243294622773380369, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1244687061208259246, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316974367578035752, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367276597133667218, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
     - target: {fileID: 1433037860636401074, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 1440217328835411794, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524204667970595638, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
     - target: {fileID: 1607594641245162262, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 1678701476700071569, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763039389345537013, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
     - target: {fileID: 1768086018020775738, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
@@ -868,6 +940,10 @@ PrefabInstance:
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 1854313775532165014, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
     - target: {fileID: 1897427065044200564, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
@@ -876,13 +952,73 @@ PrefabInstance:
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 1945022777398098060, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962596768481491697, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074245012488875052, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112728638184301095, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197844970499837784, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2262435694829478653, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317592119451865902, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404372043353647403, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435969965473483052, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2476611631136347086, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2556442602314664118, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570521728136980541, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594849817781855264, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623143146687409348, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630334823701021168, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
     - target: {fileID: 2630691796317802313, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2630691796317802313, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2630691796317802313, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -916,6 +1052,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2672401003699128209, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
     - target: {fileID: 2697024060718111833, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
@@ -924,10 +1064,66 @@ PrefabInstance:
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 2908937715587450483, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009205228743006552, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
     - target: {fileID: 3035454288329023041, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 3074219996168472584, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172403708139324154, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349588726446923581, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531399334619583791, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3538094617563667803, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684629535608413869, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779285616569408355, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874128045889109455, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991103565787842944, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044324901507479443, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078704484409949393, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092146483810792582, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
     - target: {fileID: 4170161906827264272, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: m_Name
       value: Test Episode 2
@@ -936,18 +1132,46 @@ PrefabInstance:
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 4592132440610946191, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607441330099033725, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4918399623176247736, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4930563572091929895, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 4939683262970708470, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
     - target: {fileID: 4998656226210095723, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 5041471520556885805, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
     - target: {fileID: 5094437048434567645, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 5145826924804176850, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379300099604628369, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
     - target: {fileID: 5414850905095550961, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
@@ -960,14 +1184,62 @@ PrefabInstance:
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 5556117663766900408, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747867530378948118, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764930709185548360, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776589138358843508, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
     - target: {fileID: 5801068440147111052, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 5840571268878104336, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842038417863328480, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900950048862279392, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5961747686186121569, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977985580634424122, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023090160695330638, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6036031202645545878, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 6269031769948878499, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272331411923020265, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
     - target: {fileID: 6282092032100726311, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
@@ -976,6 +1248,10 @@ PrefabInstance:
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 6457245682997840306, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
     - target: {fileID: 6550381715189762195, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
@@ -984,14 +1260,102 @@ PrefabInstance:
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 6597441590414215444, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643020715187805974, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680857292612841513, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693654619130771309, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768768676912511435, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823452493167990037, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944422516624476737, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6947067008064376117, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7018433862300658056, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244159627713384388, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356732656826059826, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575835161449433668, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619756333380272759, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865752620377287416, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926353535148547489, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7967815860664365704, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003551794751932505, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549973335393398814, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8681179888625120540, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764185755017444424, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
+      objectReference: {fileID: 0}
     - target: {fileID: 8898442264509202735, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 8970766062580912231, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
     - target: {fileID: 9082963119037550435, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 
       objectReference: {fileID: 1951390218}
+    - target: {fileID: 9083279296150530061, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
     - target: {fileID: 9204293334308284879, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: zombiATBM
       value: 

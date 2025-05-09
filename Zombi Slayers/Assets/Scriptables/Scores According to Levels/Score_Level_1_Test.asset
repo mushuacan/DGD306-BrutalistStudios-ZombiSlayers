@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d72faae7a395e840b920f2f26c9421f, type: 3}
-  m_Name: Score_Level_0_Test
+  m_Name: Score_Level_1_Test
   m_EditorClassIdentifier: 
   scoreMultiplier: 1
   scoreEarnedPerSecond: 5
-  scoreEarnedPerZombie: 1
+  scoreEarnedPerZombie: 5
