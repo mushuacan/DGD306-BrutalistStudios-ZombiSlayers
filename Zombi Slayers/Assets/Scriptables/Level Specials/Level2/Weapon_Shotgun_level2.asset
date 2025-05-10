@@ -18,8 +18,11 @@ MonoBehaviour:
   attackAnimationDuration: 0.15
   BulletDestroyTimer: 0.2
   haveBullets: 1
+  haveLimitedBullets: 0
+  doesItReload: 0
+  bulletCountAtStart: 12
   reloadTime: 0.8
-  bulletCount: 2
+  bulletCountinOneReload: 0
   bulletSpeed: 14
   bulletBehavior: 1
   hitboxOffset: {x: 0, y: 0}
