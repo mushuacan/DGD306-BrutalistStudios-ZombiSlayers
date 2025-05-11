@@ -73,6 +73,7 @@ public class Player_Attack : MonoBehaviour
     {
         if (dynamiteAmmo > 0)
         {
+            if (player_movement.animations) player_movement.player_animation.SecondAbility();
             dynamiteAmmo--;
             player_UI.StartCooldown(player.character.secondAbility.attackAnimationDuration);
             DOVirtual.DelayedCall(player.character.secondAbility.attackAnimationDuration, () =>
