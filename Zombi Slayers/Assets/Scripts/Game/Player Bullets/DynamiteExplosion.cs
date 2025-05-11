@@ -12,6 +12,15 @@ public class ExplosionZone : MonoBehaviour
 
     private void Start()
     {
+        CameraShaker cameraShaker = Camera.main.GetComponent<CameraShaker>();
+        if (cameraShaker != null )
+        {
+            cameraShaker.Shake();
+        }
+        else
+        {
+            Debug.LogWarning("Dinamit Patlamasý için gereken CameraShaker script'i halihazýrdaki sahnede bulunmamakta.");
+        }
         Instantiate(ExplosionAnimationPrefab, new Vector3(transform.position.x + 2, transform.position.y, transform.position.z ), Quaternion.identity);
         // Belirli süre sonra patlat
         DOVirtual.DelayedCall(delayBeforeExplode, () =>
