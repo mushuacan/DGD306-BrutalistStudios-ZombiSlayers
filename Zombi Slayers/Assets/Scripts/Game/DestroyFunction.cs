@@ -5,4 +5,5 @@ using UnityEngine;
 public class DestroyFunction : MonoBehaviour
 {
     public void DestroyThis() {  Destroy(gameObject); }
+    public void DestroyWithParent() { Destroy(transform.parent.gameObject); }
 }

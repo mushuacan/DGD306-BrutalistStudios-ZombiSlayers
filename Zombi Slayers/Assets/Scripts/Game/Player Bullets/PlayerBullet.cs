@@ -8,6 +8,7 @@ public class PlayerBullet : MonoBehaviour
 
     public BulletScript[] bulletsc;
     [SerializeField] private BoxCollider2D boxCollider;
+    [SerializeField] private GameObject WoodsAttackExplosion;
 
     public void Settings(Scriptable_Weapons weapon)
     {
@@ -23,6 +24,11 @@ public class PlayerBullet : MonoBehaviour
         {
             boxCollider.size = weapon.hitboxSize;
             boxCollider.offset = weapon.hitboxOffset;
+        }
+
+        if (weaponName == "Sledgehammer")
+        {
+            Instantiate(WoodsAttackExplosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         }
 
         DOVirtual.DelayedCall(weapon.BulletDestroyTimer, () => Destroy(this.gameObject));
