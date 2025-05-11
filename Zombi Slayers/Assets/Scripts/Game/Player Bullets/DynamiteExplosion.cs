@@ -3,6 +3,7 @@ using DG.Tweening;
 
 public class ExplosionZone : MonoBehaviour
 {
+    public GameObject ExplosionAnimationPrefab;
     public BoxCollider2D colliderComp;
     public float delayBeforeExplode = 0.05f;
     public float lifetime = 0.5f;
@@ -11,6 +12,7 @@ public class ExplosionZone : MonoBehaviour
 
     private void Start()
     {
+        Instantiate(ExplosionAnimationPrefab, new Vector3(transform.position.x + 2, transform.position.y, transform.position.z ), Quaternion.identity);
         // Belirli süre sonra patlat
         DOVirtual.DelayedCall(delayBeforeExplode, () =>
         {
