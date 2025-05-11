@@ -7,6 +7,7 @@ public class Envoriment_Movement : MonoBehaviour
     [Tooltip("Bölüm sonunda ekranýn ortasýnda duracak olan obje")]
     public GameObject finishLine;
     public ZombiAtTheBack_Manager zombiManager;
+    public MiniMapUI MiniMapUI;
 
     [Header("Testerlýk için gerekenler")]
     [SerializeField] private KeyCode stopButton;
@@ -26,6 +27,7 @@ public class Envoriment_Movement : MonoBehaviour
     [SerializeField] private float zombiStopPosition;
     private bool sessionEnded;
     private bool zombiSessionEnded;
+    private float finishLinePositionAtBeggining;
 
 
     void OnValidate()
@@ -51,6 +53,8 @@ public class Envoriment_Movement : MonoBehaviour
         {
             isMoving = false;
         }
+        finishLinePositionAtBeggining = finishLine.transform.position.x;
+        MiniMapUI = FindAnyObjectByType<MiniMapUI>();
     }
 
     // Update is called once per frame
@@ -103,5 +107,6 @@ public class Envoriment_Movement : MonoBehaviour
             if (isMoving)
                 transform.position = new Vector3(transform.position.x - (envorimentMovementSpeed * Time.deltaTime), transform.position.y, 5);
         }
+        MiniMapUI.UpdateSlider(finishLine.transform.position.x / finishLinePositionAtBeggining);
     }
 }

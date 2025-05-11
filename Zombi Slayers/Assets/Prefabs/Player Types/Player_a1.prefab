@@ -512,6 +512,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 1879536380549187296}
   player: {fileID: 5980480940130164564}
+  animationer: {fileID: 0}
+  WoodsAnimator: {fileID: 9100000, guid: 4d99e4e235cf90848aba3f1bd3d494d0, type: 2}
+  FletcherAnimator: {fileID: 0}
 --- !u!114 &7107904711815955177
 MonoBehaviour:
   m_ObjectHideFlags: 0

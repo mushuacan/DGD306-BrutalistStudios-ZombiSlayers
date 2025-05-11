@@ -44,7 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6fe62ea9e8505d41a0e0eb09dd12f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  envorimentMovementSpeed: 6
   finishLine: {fileID: 0}
-  player1: {fileID: 0}
-  player2: {fileID: 0}
+  zombiManager: {fileID: 0}
+  MiniMapUI: {fileID: 0}
+  stopButton: 113
+  isStopable: 1
+  isStoppedAtFirst: 0
+  envorimentMovementSpeed: 3.2
+  playerCount: 2
+  transitionDuration: 0.96000004
+  FinishLinePosition: 1.5360001
+  endDuration: 6.25
+  zombiStopDuration: 5.6
+  zombiStopPosition: 16.96
