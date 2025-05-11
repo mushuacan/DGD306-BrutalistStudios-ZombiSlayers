@@ -181,6 +181,7 @@ public class Player_Movement : MonoBehaviour
             else
             {
                 JumpBetweenLanes("Up");
+                player_animation.Jump();
             }
         }
         if ((Input.GetKey(moveDown_Button) || inputs.MovementValues.y < -0.5) && state == StateOC.Running)
@@ -190,6 +191,7 @@ public class Player_Movement : MonoBehaviour
             else
             {
                 JumpBetweenLanes("Down");
+                player_animation.Jump();
             }
         }
     }
@@ -206,13 +208,23 @@ public class Player_Movement : MonoBehaviour
             if ((Input.GetKey(moveRight_Button) || inputs.MovementValues.x > 0.5) && (state == StateOC.Running || state == StateOC.Jumping))
             {
                 if (transform.position.x < rightBoundary)
+                {
                     transform.position = new Vector2(transform.position.x + movementSpeed * Time.deltaTime, transform.position.y);
+                    player_animation.Run();
+                }
             }
 
-            if ((Input.GetKey(moveLeft_Button) || inputs.MovementValues.x < -0.5) && (state == StateOC.Running || state == StateOC.Jumping))
+            else if ((Input.GetKey(moveLeft_Button) || inputs.MovementValues.x < -0.5) && (state == StateOC.Running || state == StateOC.Jumping))
             {
                 if (transform.position.x > leftBoundary)
+                {
                     transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);
+                    player_animation.Walk();
+                }
+            }
+            else
+            {
+                player_animation.Run();
             }
         }
     }
@@ -220,12 +232,14 @@ public class Player_Movement : MonoBehaviour
     {
         if ((Input.GetKeyDown(attack_Button) || inputs.button0pressed ) && action == ActionOC.Normal)
         {
+            player_animation.Attack();
             Attack();
         }
         if ((Input.GetKeyDown(second_Button) || inputs.button1pressed ) && action == ActionOC.Normal && state != StateOC.Jumping && secondAbilityCooldown < Time.timeSinceLevelLoad)
         {
             action = ActionOC.SecondAbility;
 
+            player_animation.SecondAbility();
             SecondAbility();
 
             if (player.character.secondAbility == null)
@@ -320,6 +334,7 @@ public class Player_Movement : MonoBehaviour
 
     public void Die()
     {
+        player_animation.Death();
         state = StateOC.Dead;
         DeadLocationer = Instantiate(DeadLocation, transform.position, Quaternion.identity);
         DeadLocationer.transform.SetParent(platform.transform);
