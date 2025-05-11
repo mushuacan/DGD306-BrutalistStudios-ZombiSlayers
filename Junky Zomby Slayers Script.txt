@@ -1,0 +1,174 @@
+Level 1, Sahne 1, 1 zombi görseli gelir.
+
+Worker: Boss, boss! Zombies everywhere exists.
+Boss: Oh no! Run, run for your lives.
+Worker: Boss look, I shotgun find.
+Boss: Good, shotgun me give.
+Worker: What gun me should war with?
+Boss: Your sledgehammer have!
+
+ - - - - - - 
+
+İşçi: Patron, patron! Zombiler her yerde var.
+Patron: Aman Tanrım! Kaçın, canınız için kaçın.
+İşçi: Patron bak, av tüfeği buldum.
+Patron: Av tüfeğini bana ver.
+İşçi: Hangi silahla savaşayım?
+Patron: Balyozun var!
+
+_____________________________________________________________
+Level 1, Sahne 2, Bir sığınağa varırlar.
+
+Boss: We runned to the shelter safely.
+Worker: Good job we did.
+Boss: Lets rest.
+
+ - - - - - - 
+
+Patron: Sığınağa güvenli bir şekilde koştuk.
+İşçi: İyi iş çıkardık.
+Patron: Hadi dinlenelim.
+
+_____________________________________________________________
+Level 2, sahne 1, Sığınağa zomby girer
+
+Woods: Fletcher be care!
+Fletcher: Oh God! Cheap dodged we did.
+Woods: Lets get out.
+...
+Fletcher: Me Fletcher say do not. I am yours boss.
+Woods: Zomby doom in we are. You no my boss now.
+Fletcher: You !%>£$&.
+
+ - - - - - - 
+
+Woods: Fletcher dikkat et!
+Fletcher: Aman Tanrım! Ucuz bir şekilde kaçtık.
+Woods: Hadi dışarı çıkalım.
+...
+Fletcher: Bana Fletcher deme. Ben senin patronunum.
+Woods: Zombi kıyametindeyiz. Artık patronum değilsin.
+Fletcher: Sen !%>£$&.
+
+_____________________________________________________________
+Level 2, sahne 2, Bir yere girerler
+
+Woods: Good, we safe.
+Fletcher: No, you don't safe, I here am. Who will safe you from me?
+Woods: Come on Fletcher, do ego not. We equal are.
+Fletcher: Really? That what you think is?
+
+ - - - - - - 
+
+Woods: İyi, güvendeyiz.
+Fletcher: Hayır, sen güvende değilsin, ben buradayım. Seni benden kim kurtaracak?
+Woods: Hadi ama Fletcher, ego yapma. Eşitiz.
+Fletcher: Gerçekten mi? Sen öyle mi düşünüyorsun?
+
+_____________________________________________________________
+Level 3, sahne 1, Fletcher shotgun'ı Woods'a doğrultmuştur.
+
+Fletcher: Last prayer you did!
+Derrick: Who the hell are there?
+Woods: We humans. I Woods, this Fletcher.
+Fletcher: Who you are?
+Zomby: Whaaaaaaar!
+Derrick shots the zomby.
+Derrick: You leave door open?
+Woods: Dame it, Fletcher! Your ego will make us dead.
+Derrick: You idiots. Run must we.
+
+ - - - - - - 
+
+Fletcher: Son duanı ettin!
+Derrick: Orada kim var?
+Woods: Biz insanlar. Ben Woods, bu Fletcher.
+Fletcher: Sen kimsin?
+Zomby: Vaaaaaaar!
+Derrick zombiyi vuruyor.
+Derrick: Kapıyı açık mı bıraktın?
+Woods: Kahretsin, Fletcher! Egonuz bizi öldürecek.
+Derrick: Siz aptallar. Kaçmalıyız.
+
+_____________________________________________________________
+Level 3, sahne 2, Bir sığınağa kaçarlar.
+
+Woods: Come on in, come on in.
+Fletcher: Get off me.
+Derrick: I do thank.
+Woods: Door I closed.
+Derrick: Is there any open holl?
+Woods: I think not.
+Derrick hits fletchers shotgun, shotgun falls, derrick aims fletcher
+Derrick: You who you are think you are?
+Fletcher: I am human, not zomby, they did not byte me.
+Derrick: You think you human? You idiot are. You almost made us dead! Woods tell me, him should I kill?
+Fletcher: No, man.
+Woods: Hmm, we against zombies need to unite, not divide
+Derrick: Okay than but shotgun I will take.
+
+ - - - - - - 
+
+Woods: İçeri gel, içeri gel.
+Fletcher: Üzerimden kalk.
+Derrick: Teşekkür ederim.
+Woods: Kapıyı kapattım.
+Derrick: Açık bir yer var mı?
+Woods: Sanmıyorum.
+Derrick, fletcher'ın tüfeğine vurur, tüfek düşer, derrick fletcher'ı hedef alır
+Derrick: Sen kim olduğunu sanıyorsun?
+Fletcher: Ben insanım, zombi değilim, beni ısırmadılar.
+Derrick: Kendini insan mı sanıyorsun? Salaksın. Neredeyse bizi öldürüyordun! Woods söyle bana, onu öldürmeli miyim?
+Fletcher: Hayır dostum.
+Woods: Hmm, zombilere karşı birleşmemiz gerek, bölünmememiz gerek
+Derrick: Tamam ama tüfeği alırım.
+
+_____________________________________________________________
+Level 4, sahne 1, 3 gün sonra
+
+Derrick: We have no food.
+Fletcher: I starveing am.
+Woods: We another place should find.
+Derrick: I agree I am.
+Woods: But where?
+Derrick: I somewhere know, we can go. An old ?????
+Woods: Okey, lets go.
+Fletcher: Wait guys, if out we go I shotgun should take.
+Derrick grumbles and gives shotgun to Fletcher.
+
+ - - - - - - 
+
+Derrick: Yiyeceğimiz yok.
+Fletcher: Açlıktan ölüyorum.
+Woods: Başka bir yer bulmalıyız.
+Derrick: Katılıyorum, açım.
+Woods: Ama nereye?
+Derrick: Bir yer biliyorum, gidebiliriz. Eski bir ?????
+Woods: Tamam, gidelim.
+Fletcher: Bekleyin çocuklar, eğer dışarı çıkarsak tüfeği almalıyım.
+Derrick homurdanır ve tüfeği Fletcher'a verir.
+
+_____________________________________________________________
+Level 4, sahne 2, koşu biter
+
+Fletcher: Look guys, many food here exist.
+Woods: Lets eat some.
+Derrick: You guys eat, I go check if any holes.
+Fletcher: You should
+Woods: This meal great
+Fletcher: Indeed.
+
+ - - - - - - 
+
+Fletcher: Bakın çocuklar, burada birçok yiyecek var.
+Woods: Hadi biraz yiyelim.
+Derrick: Siz yiyin, ben gidip delik var mı diye bakayım.
+Fletcher: Siz yapmalısınız.
+Woods: Bu yemek harika.
+Fletcher: Gerçekten.
+
+
+
+
+
+
