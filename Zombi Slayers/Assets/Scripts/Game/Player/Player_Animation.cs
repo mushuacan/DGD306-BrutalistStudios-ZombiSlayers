@@ -8,6 +8,7 @@ public class Player_Animation : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Player_Character player;
+    [SerializeField] private Player_Movement player_movement;
     [SerializeField] private Animator animationer;
     [SerializeField] private RuntimeAnimatorController WoodsAnimator;
     [SerializeField] private RuntimeAnimatorController FletcherAnimator;
@@ -16,8 +17,15 @@ public class Player_Animation : MonoBehaviour
     public void StarterPack()
     {
         if (player.character.spriter != null)
+        {
             _spriteRenderer.sprite = player.character.spriter;
-        CheckCharacter();
+            Debug.Log("Spriter gözüküyor ve karakter " + player.character + "\nAyrýca " + player.character.characterName);
+        }
+        else
+        {
+            Debug.LogError("Spriter gözükmüyor");
+        }
+        if (player_movement.animations) CheckCharacter();
     }
     private void CheckCharacter()
     {

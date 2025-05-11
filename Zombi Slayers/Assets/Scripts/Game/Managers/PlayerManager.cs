@@ -111,4 +111,17 @@ public class PlayerManager : MonoBehaviour
             NewLevelOpened(levelMaker.level);
         }
     }
+    //public void NewSceneLoaded()
+    //{
+    //    ClearPlayers();
+    //    levelMaker = FindObjectOfType<LevelMaker>();
+    //    if (levelMaker != null)
+    //    {
+    //        NewLevelOpened(levelMaker.level);
+    //    }
+    //    else
+    //    {
+    //        Debug.LogWarning("LevelMaker bulunamadý.");
+    //    }
+    //}
 }

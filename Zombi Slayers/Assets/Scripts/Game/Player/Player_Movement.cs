@@ -7,6 +7,7 @@ public class Player_Movement : MonoBehaviour
     #region Variables
 
     [Header("BUTTONS")]
+    public bool openButtons;
     [SerializeField] public KeyCode moveUp_Button;
     [SerializeField] public KeyCode moveDown_Button;
     [SerializeField] private KeyCode moveRight_Button;
@@ -147,10 +148,10 @@ public class Player_Movement : MonoBehaviour
 
         platform = GameObject.FindWithTag("Platform");
 
-        if (player.character == null)
-        {
-            player.character = fixedPlayerCharacter;
-        }
+        //if (player.character == null)
+        //{
+        //    player.character = fixedPlayerCharacter;
+        //}
 
         secondAbilityCooldown = 0f;
         FaoWind_StopJump = false;
@@ -158,7 +159,7 @@ public class Player_Movement : MonoBehaviour
         player_health.StarterPack();
         player_attack.StarterPack();
         player_UI.StarterPack();
-        if (animations) player_animation.StarterPack();
+        player_animation.StarterPack();
     }
 
     private void ArrangeJumping()
@@ -175,7 +176,7 @@ public class Player_Movement : MonoBehaviour
                 FaoWind_JumpedNew = false;
             return;
         }
-        if ((Input.GetKey(moveUp_Button) || inputs.MovementValues.y > 0.5) && state == StateOC.Running)
+        if (((Input.GetKey(moveUp_Button) && openButtons) || inputs.MovementValues.y > 0.5) && state == StateOC.Running)
         {
             if (lane == 3)
                 return;
@@ -185,7 +186,7 @@ public class Player_Movement : MonoBehaviour
                 if (animations) player_animation.Jump();
             }
         }
-        if ((Input.GetKey(moveDown_Button) || inputs.MovementValues.y < -0.5) && state == StateOC.Running)
+        if (((Input.GetKey(moveDown_Button) && openButtons) || inputs.MovementValues.y < -0.5) && state == StateOC.Running)
         {
             if (lane == 1)
                 return;
@@ -206,7 +207,7 @@ public class Player_Movement : MonoBehaviour
         }
         else
         {
-            if ((Input.GetKey(moveRight_Button) || inputs.MovementValues.x > 0.5) && (state == StateOC.Running || state == StateOC.Jumping))
+            if (((Input.GetKey(moveRight_Button) && openButtons) || inputs.MovementValues.x > 0.5) && (state == StateOC.Running || state == StateOC.Jumping))
             {
                 if (transform.position.x < rightBoundary)
                 {
@@ -215,7 +216,7 @@ public class Player_Movement : MonoBehaviour
                 }
             }
 
-            else if ((Input.GetKey(moveLeft_Button) || inputs.MovementValues.x < -0.5) && (state == StateOC.Running || state == StateOC.Jumping))
+            else if (((Input.GetKey(moveLeft_Button) && openButtons) || inputs.MovementValues.x < -0.5) && (state == StateOC.Running || state == StateOC.Jumping))
             {
                 if (transform.position.x > leftBoundary)
                 {
@@ -231,11 +232,11 @@ public class Player_Movement : MonoBehaviour
     }
     private void CheckButtons()
     {
-        if ((Input.GetKeyDown(attack_Button) || inputs.button0pressed ) && action == ActionOC.Normal)
+        if (((Input.GetKeyDown(attack_Button) && openButtons) || inputs.button0pressed ) && action == ActionOC.Normal)
         {
             Attack();
         }
-        if ((Input.GetKeyDown(second_Button) || inputs.button1pressed ) && action == ActionOC.Normal && state != StateOC.Jumping && secondAbilityCooldown < Time.timeSinceLevelLoad)
+        if (((Input.GetKeyDown(second_Button) && openButtons) || inputs.button1pressed ) && action == ActionOC.Normal && state != StateOC.Jumping && secondAbilityCooldown < Time.timeSinceLevelLoad)
         {
             action = ActionOC.SecondAbility;
 

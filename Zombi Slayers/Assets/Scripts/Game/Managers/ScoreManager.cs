@@ -8,7 +8,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance { get; private set; }
     public Scriptable_Scoring scorer;
     public TextMeshProUGUI scoreText;
-    
+    public bool debug;
+
     private ZombiAtTheBack_Manager zombiATBM;
 
     private Tween scoreLoopTween;
@@ -31,7 +32,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         Instance = this; 
-        DontDestroyOnLoad(gameObject); // Ýsteðe baðlý: sahneler arasý korumak için
+        //DontDestroyOnLoad(gameObject); // Ýsteðe baðlý: sahneler arasý korumak için
     }
 
     private void Start()
@@ -51,11 +52,16 @@ public class ScoreManager : MonoBehaviour
         scoreText.transform.localScale = Vector3.one; // Ölçeði sýfýrla
         scoreText.transform.DOPunchScale(Vector3.one * 0.2f, 0.3f, 10, 1);
     }
+    public void AllPlayersDied()
+    {
+        scoreText.transform.DOKill(); // Eski animasyonu iptal et
+        scoreText.transform.localScale = Vector3.one; // Ölçeði sýfýrla
+    }
 
     public void AddScore(int amount, string scoreType = "Kill")
     {
         score += (int)(amount * scorer.scoreMultiplier);
-        Debug.Log(score);
+        if (debug) Debug.Log(score);
 
         if (scoreType == "Kill")
         {
