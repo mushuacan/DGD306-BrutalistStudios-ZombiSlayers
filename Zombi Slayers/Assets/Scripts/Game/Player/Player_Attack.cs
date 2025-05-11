@@ -51,6 +51,7 @@ public class Player_Attack : MonoBehaviour
 
         if (canAttack)
         {
+            if (player_movement.animations) player_movement.player_animation.Attack();
             canAttack = false;
             player_movement.action = Player_Movement.ActionOC.Attacking;
             player_UI.StartCastTimer(weapon.attackAnimationDuration);

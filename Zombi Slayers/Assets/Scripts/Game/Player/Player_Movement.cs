@@ -17,7 +17,7 @@ public class Player_Movement : MonoBehaviour
     [Header("Referances")]
     [SerializeField] private Player_Inputs inputs;
     [SerializeField] private Player_Character player;
-    [SerializeField] private Player_Animation player_animation;
+    [SerializeField] public Player_Animation player_animation;
     [SerializeField] private Player_Attack player_attack;
     [SerializeField] private Player_UI player_UI;
     [SerializeField] private Player_Health player_health;
@@ -31,6 +31,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private float rightBoundary;
 
     [Header("Animation Settings")]
+    [SerializeField] public bool animations;
     [SerializeField] private float animationSpeed;
     [SerializeField] private float jumpAnimationDuration;
     [SerializeField] private float jumpAnimationUpDistance;
@@ -157,7 +158,7 @@ public class Player_Movement : MonoBehaviour
         player_health.StarterPack();
         player_attack.StarterPack();
         player_UI.StarterPack();
-        player_animation.StarterPack();
+        if (animations) player_animation.StarterPack();
     }
 
     private void ArrangeJumping()
@@ -181,7 +182,7 @@ public class Player_Movement : MonoBehaviour
             else
             {
                 JumpBetweenLanes("Up");
-                player_animation.Jump();
+                if (animations) player_animation.Jump();
             }
         }
         if ((Input.GetKey(moveDown_Button) || inputs.MovementValues.y < -0.5) && state == StateOC.Running)
@@ -191,7 +192,7 @@ public class Player_Movement : MonoBehaviour
             else
             {
                 JumpBetweenLanes("Down");
-                player_animation.Jump();
+                if (animations) player_animation.Jump();
             }
         }
     }
@@ -210,7 +211,7 @@ public class Player_Movement : MonoBehaviour
                 if (transform.position.x < rightBoundary)
                 {
                     transform.position = new Vector2(transform.position.x + movementSpeed * Time.deltaTime, transform.position.y);
-                    player_animation.Run();
+                    if (animations) player_animation.Run();
                 }
             }
 
@@ -219,12 +220,12 @@ public class Player_Movement : MonoBehaviour
                 if (transform.position.x > leftBoundary)
                 {
                     transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);
-                    player_animation.Walk();
+                    if (animations) player_animation.Walk();
                 }
             }
             else
             {
-                player_animation.Run();
+                if (animations) player_animation.Run();
             }
         }
     }
@@ -232,14 +233,13 @@ public class Player_Movement : MonoBehaviour
     {
         if ((Input.GetKeyDown(attack_Button) || inputs.button0pressed ) && action == ActionOC.Normal)
         {
-            player_animation.Attack();
             Attack();
         }
         if ((Input.GetKeyDown(second_Button) || inputs.button1pressed ) && action == ActionOC.Normal && state != StateOC.Jumping && secondAbilityCooldown < Time.timeSinceLevelLoad)
         {
             action = ActionOC.SecondAbility;
 
-            player_animation.SecondAbility();
+            if (animations) player_animation.SecondAbility();
             SecondAbility();
 
             if (player.character.secondAbility == null)
@@ -334,7 +334,7 @@ public class Player_Movement : MonoBehaviour
 
     public void Die()
     {
-        player_animation.Death();
+        if (animations) player_animation.Death();
         state = StateOC.Dead;
         DeadLocationer = Instantiate(DeadLocation, transform.position, Quaternion.identity);
         DeadLocationer.transform.SetParent(platform.transform);

@@ -116,7 +116,7 @@
                     "path": "<Gamepad>/dpad",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -127,10 +127,65 @@
                     "path": "<HID::Logitech Logitech Dual Action>/hat",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Logitech Dual",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "3bac669e-389c-463e-96db-9961775162e0",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "ed4cdb19-fdc6-4a64-b91d-0933d16d0c2a",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "d234162c-86c4-4eb6-a156-70661cb6fd8e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "42d245b0-31e8-47be-9d49-cdac6e515446",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "f2bd7192-b856-4ace-a825-0a63d1532ec3",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -156,6 +211,17 @@
                 },
                 {
                     "name": "",
+                    "id": "6b3ea28c-0d96-4efe-8693-02ddf610c574",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Button0",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a39a5e53-8747-4a70-a6a0-97dbf725dc6a",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -172,6 +238,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Logitech Dual",
+                    "action": "Button1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91445700-3386-4e51-9e48-5876bcd5e5bf",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Button1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -329,6 +406,17 @@
             "devices": [
                 {
                     "devicePath": "<HID::Logitech Logitech Dual Action>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
                     "isOptional": false,
                     "isOR": false
                 }

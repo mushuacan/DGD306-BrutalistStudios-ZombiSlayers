@@ -22,7 +22,7 @@ MonoBehaviour:
   doesItReload: 0
   bulletCountAtStart: 12
   reloadTime: 0.8
-  bulletCountinOneReload: 0
+  bulletCountinOneReload: 2
   bulletSpeed: 14
   bulletBehavior: 1
   hitboxOffset: {x: 0, y: 0}

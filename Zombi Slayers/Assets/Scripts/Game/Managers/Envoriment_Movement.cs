@@ -107,6 +107,7 @@ public class Envoriment_Movement : MonoBehaviour
             if (isMoving)
                 transform.position = new Vector3(transform.position.x - (envorimentMovementSpeed * Time.deltaTime), transform.position.y, 5);
         }
-        MiniMapUI.UpdateSlider(finishLine.transform.position.x / finishLinePositionAtBeggining);
+        if (MiniMapUI != null)
+            MiniMapUI.UpdateSlider(finishLine.transform.position.x / finishLinePositionAtBeggining);
     }
 }

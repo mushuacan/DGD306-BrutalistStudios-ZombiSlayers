@@ -6,8 +6,15 @@ public class MedKit : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Player_Health>().TakeMedKit();
-            Destroy(gameObject);
+            Player_Health playerHealth = collision.GetComponent<Player_Health>();
+            if (playerHealth != null )
+            {
+                if (playerHealth.health < 4)
+                {
+                    playerHealth.TakeMedKit();
+                    Destroy(gameObject);
+                }
+            }
         }
     }
 }

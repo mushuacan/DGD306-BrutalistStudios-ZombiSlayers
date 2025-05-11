@@ -208,10 +208,6 @@ PrefabInstance:
       propertyPath: animationer
       value: 
       objectReference: {fileID: 445856720}
-    - target: {fileID: -7220510021390481695, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
-      propertyPath: WoodsAnimator
-      value: 
-      objectReference: {fileID: 9100000, guid: 4d99e4e235cf90848aba3f1bd3d494d0, type: 2}
     - target: {fileID: 203106148916079415, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -275,7 +271,7 @@ PrefabInstance:
     - target: {fileID: 1879536380549187296, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1321888982, guid: 5075e48ea7dd4ac46b2a9ae1686c0085, type: 3}
+      objectReference: {fileID: 21300000, guid: a59426a83e3a9a0468806bc0f75d2f9d, type: 3}
     - target: {fileID: 1879536380549187296, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -288,6 +284,10 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 11400000, guid: 85df758c50635804c922e490fb3b4306, type: 2}
+    - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: animations
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: attack_Button
       value: 118
@@ -327,7 +327,7 @@ Animator:
   m_GameObject: {fileID: 445856719}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4d99e4e235cf90848aba3f1bd3d494d0, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
