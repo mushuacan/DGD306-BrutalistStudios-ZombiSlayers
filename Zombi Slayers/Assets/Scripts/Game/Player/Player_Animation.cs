@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class Player_Animation : MonoBehaviour
@@ -69,11 +68,18 @@ public class Player_Animation : MonoBehaviour
 
         if (debugger) { Debug.Log("Death"); }
     }
-    public void SecondAbility()
+    public void SecondAbility(bool boolean = false)
     {
         if (CheckIfControllerNull()) return;
         if (debugger) { Debug.Log("ThrowDynamite"); }
-        animationer.Play("ThrowDynamite", 0, 0f);
+        if(player.character.characterName == "Fletcher")
+        {
+            animationer.SetBool("IsSliding", boolean);
+        }
+        else if (player.character.characterName == "Woods")
+        {
+            animationer.Play("ThrowDynamite", 0, 0f);
+        }
     }
     public void Attack()
     {

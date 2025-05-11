@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ee1a73433d4220541a2a907bb6c32a50
+guid: b43d832937cf0a44698d65bb2214300a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,264 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animasyon Test 2_0
+      name: Fletcher Animation Test 1_0
       rect:
         serializedVersion: 2
-        x: 485
-        y: 791
-        width: 63
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de80d16212831a84c961db987330528f
-      internalID: 711761715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_1
-      rect:
-        serializedVersion: 2
-        x: 633
-        y: 791
-        width: 62
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b55740e62e05294fb47c465f38783f8
-      internalID: -1506013102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_2
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 791
-        width: 68
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 352a3e114020aa7458630d3151032493
-      internalID: 633932543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_3
-      rect:
-        serializedVersion: 2
-        x: 906
-        y: 791
-        width: 92
-        height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb4cbcb490dcd574ab288b577d5098fa
-      internalID: -1262621358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_4
-      rect:
-        serializedVersion: 2
-        x: 1050
-        y: 791
-        width: 119
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed82ef98a2aecd543ba927592000520b
-      internalID: -236955647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_5
-      rect:
-        serializedVersion: 2
-        x: 1194
-        y: 791
-        width: 122
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f220179cf71218a4585557d6b193c5fa
-      internalID: -1983417650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_6
-      rect:
-        serializedVersion: 2
-        x: 495
-        y: 647
-        width: 53
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0efaf69db9560f94280591c4f4155572
-      internalID: 499341398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_7
-      rect:
-        serializedVersion: 2
-        x: 633
-        y: 647
-        width: 59
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9cbc5126d2ae8c74a9b4d1e1274b6290
-      internalID: 1957840072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_8
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 647
-        width: 59
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e083d9067235081428b5c5de3f18b1ba
-      internalID: 1305398688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_9
-      rect:
-        serializedVersion: 2
-        x: 927
-        y: 647
-        width: 53
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f8a6414cbe728b48ac15e7a93815b97
-      internalID: -615907038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_10
-      rect:
-        serializedVersion: 2
-        x: 1071
-        y: 647
-        width: 53
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88b1a2f1fb3e2a142a07643e724a7c2c
-      internalID: -140077806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_11
-      rect:
-        serializedVersion: 2
-        x: 1212
-        y: 647
-        width: 59
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4066227c90ec98842bb5750a2294cdb8
-      internalID: 1026480269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_12
-      rect:
-        serializedVersion: 2
-        x: 492
-        y: 503
-        width: 65
+        x: 235
+        y: 796
+        width: 71
         height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -363,61 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aff80fb32bf04474b8aa5a4a5b10338a
-      internalID: -1465160902
+      spriteID: e9863f8eb0129aa4f804d51b07ef7acb
+      internalID: 2038382366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_13
+      name: Fletcher Animation Test 1_1
       rect:
         serializedVersion: 2
-        x: 636
-        y: 506
-        width: 65
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0a74864110dde14e9ce6d2d918d6301
-      internalID: -1514879171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_14
-      rect:
-        serializedVersion: 2
-        x: 780
-        y: 506
-        width: 65
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba99e7795bc05754786396ee5fd805f8
-      internalID: -2025036764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_15
-      rect:
-        serializedVersion: 2
-        x: 924
-        y: 503
-        width: 65
+        x: 388
+        y: 796
+        width: 71
         height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -426,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c00b40afb512e14eaf14c6b0b7d28b8
-      internalID: -860935132
+      spriteID: a170f6a65d958c24490df0fe0dc7f97b
+      internalID: -1629969197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_16
+      name: Fletcher Animation Test 1_2
       rect:
         serializedVersion: 2
-        x: 1068
-        y: 506
-        width: 65
-        height: 110
+        x: 541
+        y: 796
+        width: 71
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c008d7aef26ff545abc9b7663453b7b
-      internalID: -920824062
+      spriteID: d144b48386a2e444591d39936b3e33ac
+      internalID: -841390818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_17
+      name: Fletcher Animation Test 1_3
       rect:
         serializedVersion: 2
-        x: 1212
-        y: 506
-        width: 65
-        height: 110
+        x: 696
+        y: 796
+        width: 71
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -468,61 +174,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70b88445b9d3c1f42b6423be296ff9d4
-      internalID: -354565416
+      spriteID: eea6d2c3dd75a6c45b2c777a284f2d77
+      internalID: -1366291024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_18
+      name: Fletcher Animation Test 1_4
       rect:
         serializedVersion: 2
-        x: 495
-        y: 359
-        width: 53
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db3e8041a0da7fc429d73f373a9f2925
-      internalID: 1561573250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_19
-      rect:
-        serializedVersion: 2
-        x: 639
-        y: 359
-        width: 53
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e644694288a7ea34f917a570312c0d5f
-      internalID: -774438954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_20
-      rect:
-        serializedVersion: 2
-        x: 780
-        y: 359
-        width: 59
+        x: 849
+        y: 796
+        width: 72
         height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -531,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99aa87474428c0241a3444d8f4e47b3e
-      internalID: 739268467
+      spriteID: 314a43833311815468b5acf52623b1b8
+      internalID: -1826794712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_21
+      name: Fletcher Animation Test 1_5
       rect:
         serializedVersion: 2
-        x: 927
-        y: 359
-        width: 80
-        height: 101
+        x: 1004
+        y: 796
+        width: 71
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -552,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 824b3bbf905b62840a29ff14a904d940
-      internalID: 1381067603
+      spriteID: 68610362f813e4b4b843d88e160cc736
+      internalID: 2011562223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_22
+      name: Fletcher Animation Test 1_6
       rect:
         serializedVersion: 2
-        x: 1071
-        y: 359
-        width: 77
-        height: 95
+        x: 240
+        y: 611
+        width: 69
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -573,20 +237,461 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbcf9b5f6bbb4154286ea01153162404
-      internalID: -786196398
+      spriteID: d523b953abd4b7b4f97686ebadc8e6e9
+      internalID: 2063644290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_23
+      name: Fletcher Animation Test 1_7
       rect:
         serializedVersion: 2
-        x: 1215
-        y: 359
+        x: 393
+        y: 611
+        width: 42
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241ffb9b38666b044b47fc05d2d077fa
+      internalID: -1604410928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_8
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 611
+        width: 46
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4325c913c6cf3f146ab83f3402db55e1
+      internalID: -716889578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_9
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 611
+        width: 46
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96bf63e43d35af642a7165f2d1da80a6
+      internalID: -1604186911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_10
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 611
+        width: 46
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5166a48c0b11b204a9fc78493b3c3338
+      internalID: 2065732472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_11
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 611
+        width: 45
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10207d33a3abde458d8d351fd77028e
+      internalID: -1724091375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_12
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 611
+        width: 46
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b653cadcef801459a4bc24c973bcde
+      internalID: -979146886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_13
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 611
+        width: 45
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f541fc82dbf9c134998191d33e410728
+      internalID: -1757528544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_14
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 435
+        width: 55
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5a23743b51c0543a98aa18a769c5d0
+      internalID: 439520962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_15
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 435
+        width: 62
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348820f36c2fc1c4989e22d04fff98a4
+      internalID: -1052172128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_16
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 435
+        width: 58
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508cf3e442f940445b3a8351130b3246
+      internalID: -685791819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_17
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 435
+        width: 50
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79cb6dd95ba5b264ea1121f7d132452c
+      internalID: 873367445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_18
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 435
+        width: 51
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5171c96886178534985d4d77b400d18d
+      internalID: -1624164361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_19
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 435
+        width: 58
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09554a8ad00e24141b0b4d15e13517f3
+      internalID: -1298468362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_20
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 435
+        width: 61
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8656c33dc6ef5439d07bd21288de58
+      internalID: -395003789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_21
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 435
+        width: 58
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0027309ea681624291f19f3003f7d69
+      internalID: -1355819464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_22
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 265
+        width: 49
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76474e6c17618ab4d956e3ece044cbdc
+      internalID: -2047575843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_23
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 265
+        width: 52
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4e456ffa9f0274092b31a12865a019
+      internalID: 1849976106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_24
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 273
+        width: 84
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6e41addaa50ce4cbbf3fbeb825bd09
+      internalID: -2130489095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_25
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 265
+        width: 78
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbce607cb2a6784ea1276e532b7447d
+      internalID: 986999909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_26
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 265
+        width: 61
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a62c89d547d0694e989e693c3c4ed11
+      internalID: -1963657381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_27
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 265
+        width: 45
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efce1ac0843678a4eb6610eaa539d8e5
+      internalID: 945146130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fletcher Animation Test 1_28
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 265
         width: 53
-        height: 104
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -594,20 +699,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31662548ef2dd4e42b988fe05529d235
-      internalID: -278522162
+      spriteID: c5d2cc86c1985bf48a4c878e97546e96
+      internalID: 1154004737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_24
+      name: Fletcher Animation Test 1_29
       rect:
         serializedVersion: 2
-        x: 495
-        y: 215
-        width: 53
-        height: 110
+        x: 1295
+        y: 275
+        width: 84
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -615,20 +720,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 200dc5b95c4e3f449a0b19ae71cba783
-      internalID: -1347371739
+      spriteID: 797b612f7c9649c42848f45eae371c57
+      internalID: 1802882956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_25
+      name: Fletcher Animation Test 1_30
       rect:
         serializedVersion: 2
-        x: 639
-        y: 215
-        width: 53
-        height: 110
+        x: 225
+        y: 96
+        width: 58
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -636,20 +741,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cecf80867c58e2c40b84310192b33091
-      internalID: 1833017130
+      spriteID: ce5272c195675b447ae03fb28543b029
+      internalID: -602389034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_26
+      name: Fletcher Animation Test 1_31
       rect:
         serializedVersion: 2
-        x: 762
-        y: 215
-        width: 77
-        height: 110
+        x: 376
+        y: 96
+        width: 62
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -657,82 +762,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f71c929e40b3f314f881c7141ccaa914
-      internalID: -2013717131
+      spriteID: ab8d1c7e35df91b40b6e03bfd3e2005e
+      internalID: 529519428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_27
+      name: Fletcher Animation Test 1_32
       rect:
         serializedVersion: 2
-        x: 927
-        y: 215
-        width: 65
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 172c0591da7eade47a9f36c8c63c12de
-      internalID: -398829465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_28
-      rect:
-        serializedVersion: 2
-        x: 1071
-        y: 215
-        width: 98
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d8b2e5da1dc4a245b964526a8c38fd9
-      internalID: 1115675741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_29
-      rect:
-        serializedVersion: 2
-        x: 1215
-        y: 215
-        width: 68
-        height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c310230e5d29334fb973b6877bc0cda
-      internalID: 244128632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon Test 2_30
-      rect:
-        serializedVersion: 2
-        x: 501
-        y: 71
-        width: 47
+        x: 541
+        y: 96
+        width: 70
         height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -741,20 +783,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8039d1f5340e8e14da22807c8ab1b6fc
-      internalID: 1736567218
+      spriteID: e4bf9dae976dd544fa867e9997e4c832
+      internalID: 1364864773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_31
+      name: Fletcher Animation Test 1_33
       rect:
         serializedVersion: 2
-        x: 642
-        y: 71
-        width: 50
-        height: 113
+        x: 681
+        y: 97
+        width: 75
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -762,20 +804,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3f55d8a4c323a7429e95adb40874a62
-      internalID: 1169188139
+      spriteID: 360e54df82e7e654a96df22bf8cd7f3d
+      internalID: 747360938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_32
+      name: Fletcher Animation Test 1_34
       rect:
         serializedVersion: 2
-        x: 768
-        y: 71
-        width: 77
-        height: 116
+        x: 838
+        y: 109
+        width: 71
+        height: 133
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -783,20 +825,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3cd5f60b85fea1459eb86b5769ccce8
-      internalID: -404107762
+      spriteID: 16d33dcc4da87e747829c8f5b2f6ed3d
+      internalID: 569954257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_33
+      name: Fletcher Animation Test 1_35
       rect:
         serializedVersion: 2
-        x: 925
-        y: 71
-        width: 64
-        height: 113
+        x: 985
+        y: 112
+        width: 73
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -804,20 +846,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10269d2549471e440a7e8c5128edbb9c
-      internalID: -683176925
+      spriteID: ebe1d3e31facbce4ba5ad9aed08dfcd1
+      internalID: -2049107891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_34
+      name: Fletcher Animation Test 1_36
       rect:
         serializedVersion: 2
-        x: 1071
-        y: 71
-        width: 92
-        height: 110
+        x: 1140
+        y: 100
+        width: 84
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -825,20 +867,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2286a16889b3dc47b016fd319f8c998
-      internalID: 1025693859
+      spriteID: 704e2dff1b945ee4fa78965455e0783b
+      internalID: -1199952964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon Test 2_35
+      name: Fletcher Animation Test 1_37
       rect:
         serializedVersion: 2
-        x: 1218
-        y: 71
-        width: 65
-        height: 113
+        x: 1292
+        y: 96
+        width: 84
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -846,8 +888,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 268aabce0415efe41b301e2e86a3453b
-      internalID: 1501791503
+      spriteID: ffb6cada78a57354980083590947c1d1
+      internalID: 565228825
       vertices: []
       indices: 
       edges: []
@@ -863,42 +905,44 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Animasyon Test 2_0: 711761715
-      Animasyon Test 2_1: -1506013102
-      Animasyon Test 2_10: -140077806
-      Animasyon Test 2_11: 1026480269
-      Animasyon Test 2_12: -1465160902
-      Animasyon Test 2_13: -1514879171
-      Animasyon Test 2_14: -2025036764
-      Animasyon Test 2_15: -860935132
-      Animasyon Test 2_16: -920824062
-      Animasyon Test 2_17: -354565416
-      Animasyon Test 2_18: 1561573250
-      Animasyon Test 2_19: -774438954
-      Animasyon Test 2_2: 633932543
-      Animasyon Test 2_20: 739268467
-      Animasyon Test 2_21: 1381067603
-      Animasyon Test 2_22: -786196398
-      Animasyon Test 2_23: -278522162
-      Animasyon Test 2_24: -1347371739
-      Animasyon Test 2_25: 1833017130
-      Animasyon Test 2_26: -2013717131
-      Animasyon Test 2_27: -398829465
-      Animasyon Test 2_28: 1115675741
-      Animasyon Test 2_29: 244128632
-      Animasyon Test 2_3: -1262621358
-      Animasyon Test 2_30: 1736567218
-      Animasyon Test 2_31: 1169188139
-      Animasyon Test 2_32: -404107762
-      Animasyon Test 2_33: -683176925
-      Animasyon Test 2_34: 1025693859
-      Animasyon Test 2_35: 1501791503
-      Animasyon Test 2_4: -236955647
-      Animasyon Test 2_5: -1983417650
-      Animasyon Test 2_6: 499341398
-      Animasyon Test 2_7: 1957840072
-      Animasyon Test 2_8: 1305398688
-      Animasyon Test 2_9: -615907038
+      Fletcher Animation Test 1_0: 2038382366
+      Fletcher Animation Test 1_1: -1629969197
+      Fletcher Animation Test 1_10: 2065732472
+      Fletcher Animation Test 1_11: -1724091375
+      Fletcher Animation Test 1_12: -979146886
+      Fletcher Animation Test 1_13: -1757528544
+      Fletcher Animation Test 1_14: 439520962
+      Fletcher Animation Test 1_15: -1052172128
+      Fletcher Animation Test 1_16: -685791819
+      Fletcher Animation Test 1_17: 873367445
+      Fletcher Animation Test 1_18: -1624164361
+      Fletcher Animation Test 1_19: -1298468362
+      Fletcher Animation Test 1_2: -841390818
+      Fletcher Animation Test 1_20: -395003789
+      Fletcher Animation Test 1_21: -1355819464
+      Fletcher Animation Test 1_22: -2047575843
+      Fletcher Animation Test 1_23: 1849976106
+      Fletcher Animation Test 1_24: -2130489095
+      Fletcher Animation Test 1_25: 986999909
+      Fletcher Animation Test 1_26: -1963657381
+      Fletcher Animation Test 1_27: 945146130
+      Fletcher Animation Test 1_28: 1154004737
+      Fletcher Animation Test 1_29: 1802882956
+      Fletcher Animation Test 1_3: -1366291024
+      Fletcher Animation Test 1_30: -602389034
+      Fletcher Animation Test 1_31: 529519428
+      Fletcher Animation Test 1_32: 1364864773
+      Fletcher Animation Test 1_33: 747360938
+      Fletcher Animation Test 1_34: 569954257
+      Fletcher Animation Test 1_35: -2049107891
+      Fletcher Animation Test 1_36: -1199952964
+      Fletcher Animation Test 1_37: 565228825
+      Fletcher Animation Test 1_4: -1826794712
+      Fletcher Animation Test 1_5: 2011562223
+      Fletcher Animation Test 1_6: 2063644290
+      Fletcher Animation Test 1_7: -1604410928
+      Fletcher Animation Test 1_8: -716889578
+      Fletcher Animation Test 1_9: -1604186911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -16,6 +16,7 @@ public class Player_Health : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;  // Karakterin SpriteRenderer'ý
     [SerializeField] private Player_UI player_UI;
     [SerializeField] private Player_Character player;
+    [SerializeField] private Player_Movement player_movement;
 
 
     [Header("(private variables)")]
@@ -99,6 +100,9 @@ public class Player_Health : MonoBehaviour
     public void Sliding(float time)
     {
         isSliding = true;
-        DOVirtual.DelayedCall(player.character.secondAbilityTimer, () => { isSliding = false; });
+        player_movement.player_animation.SecondAbility(true);
+        DOVirtual.DelayedCall(player.character.secondAbilityTimer, () => { isSliding = false;
+            player_movement.player_animation.SecondAbility(false);
+        });
     }
 }

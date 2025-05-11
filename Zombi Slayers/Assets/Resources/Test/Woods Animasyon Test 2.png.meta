@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5075e48ea7dd4ac46b2a9ae1686c0085
+guid: ee1a73433d4220541a2a907bb6c32a50
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,652 +97,757 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animasyon testi 1_0
+      name: Animasyon Test 2_0
       rect:
         serializedVersion: 2
-        x: 394
-        y: 792
-        width: 81
-        height: 97
+        x: 485
+        y: 791
+        width: 63
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b055a505b090cc4687f79409cef636c
-      internalID: 1207104650
+      spriteID: de80d16212831a84c961db987330528f
+      internalID: 711761715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_1
+      name: Animasyon Test 2_1
       rect:
         serializedVersion: 2
-        x: 538
-        y: 792
-        width: 81
+        x: 633
+        y: 791
+        width: 62
         height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.500001, y: 0.5359665}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9246f24c556a2674b98a170d68c59d5a
-      internalID: -2028614759
+      spriteID: 0b55740e62e05294fb47c465f38783f8
+      internalID: -1506013102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_2
+      name: Animasyon Test 2_2
       rect:
         serializedVersion: 2
-        x: 680
-        y: 792
-        width: 79
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 775
+        y: 791
+        width: 68
+        height: 86
+      alignment: 9
+      pivot: {x: 0.4740834, y: 0.6434468}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a0e0ca469b1df447a4ec8a38693af1f
-      internalID: 351962843
+      spriteID: 352a3e114020aa7458630d3151032493
+      internalID: 633932543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_3
+      name: Animasyon Test 2_3
       rect:
         serializedVersion: 2
-        x: 824
-        y: 792
-        width: 79
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 906
+        y: 791
+        width: 92
+        height: 71
+      alignment: 9
+      pivot: {x: 0.48084491, y: 0.7606287}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8bc28cc66b31154f998785168f48c7b
-      internalID: 1958594016
+      spriteID: eb4cbcb490dcd574ab288b577d5098fa
+      internalID: -1262621358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_4
+      name: Animasyon Test 2_4
       rect:
         serializedVersion: 2
-        x: 413
-        y: 648
+        x: 1050
+        y: 791
+        width: 119
+        height: 36
+      alignment: 9
+      pivot: {x: 0.47778627, y: 1.5035553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed82ef98a2aecd543ba927592000520b
+      internalID: -236955647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_5
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 791
+        width: 122
+        height: 32
+      alignment: 9
+      pivot: {x: 0.500001, y: 1.7116089}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f220179cf71218a4585557d6b193c5fa
+      internalID: -1983417650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_6
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 647
         width: 53
-        height: 98
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9d8dc865a795634fa04b3ef203a4d0d
-      internalID: 1321888982
+      spriteID: 0efaf69db9560f94280591c4f4155572
+      internalID: 499341398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_5
+      name: Animasyon Test 2_7
       rect:
         serializedVersion: 2
-        x: 560
-        y: 648
-        width: 47
-        height: 104
+        x: 633
+        y: 647
+        width: 59
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f82949d25a850c045951699093528d7d
-      internalID: 1589661894
+      spriteID: 9cbc5126d2ae8c74a9b4d1e1274b6290
+      internalID: 1957840072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_6
+      name: Animasyon Test 2_8
       rect:
         serializedVersion: 2
-        x: 713
-        y: 648
-        width: 43
-        height: 104
+        x: 777
+        y: 647
+        width: 59
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2ff64b24c190104f9d08c43ddef0cda
-      internalID: 387280749
+      spriteID: e083d9067235081428b5c5de3f18b1ba
+      internalID: 1305398688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_7
+      name: Animasyon Test 2_9
       rect:
         serializedVersion: 2
-        x: 826
-        y: 648
-        width: 81
-        height: 98
+        x: 927
+        y: 647
+        width: 53
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36a7ce6206eeb004c81c88a774a0cd88
-      internalID: 1723491212
+      spriteID: 3f8a6414cbe728b48ac15e7a93815b97
+      internalID: -615907038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_8
+      name: Animasyon Test 2_10
       rect:
         serializedVersion: 2
-        x: 992
-        y: 648
-        width: 50
-        height: 104
+        x: 1071
+        y: 647
+        width: 53
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f03f38d8d84828445b229d0d14cb799f
-      internalID: -646911706
+      spriteID: 88b1a2f1fb3e2a142a07643e724a7c2c
+      internalID: -140077806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_9
+      name: Animasyon Test 2_11
       rect:
         serializedVersion: 2
-        x: 1146
-        y: 648
-        width: 39
-        height: 104
+        x: 1212
+        y: 647
+        width: 59
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: befbc96030523b4409e29fe1ecbeda8c
-      internalID: -1191619790
+      spriteID: 4066227c90ec98842bb5750a2294cdb8
+      internalID: 1026480269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_10
+      name: Animasyon Test 2_12
       rect:
         serializedVersion: 2
-        x: 402
-        y: 504
-        width: 88
-        height: 92
+        x: 492
+        y: 503
+        width: 65
+        height: 113
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76b087528cfed6a4fba1e6a9bc0a783d
-      internalID: -605116413
+      spriteID: aff80fb32bf04474b8aa5a4a5b10338a
+      internalID: -1465160902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_11
+      name: Animasyon Test 2_13
       rect:
         serializedVersion: 2
-        x: 561
-        y: 504
-        width: 51
-        height: 88
+        x: 636
+        y: 506
+        width: 65
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e7078b73588dce42b931edc2c6fb0e3
-      internalID: -2023737171
+      spriteID: f0a74864110dde14e9ce6d2d918d6301
+      internalID: -1514879171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_12
+      name: Animasyon Test 2_14
       rect:
         serializedVersion: 2
-        x: 684
-        y: 504
-        width: 90
-        height: 88
+        x: 780
+        y: 506
+        width: 65
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c11bbd82176c36147a443ed91d777323
-      internalID: 1689004055
+      spriteID: ba99e7795bc05754786396ee5fd805f8
+      internalID: -2025036764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_13
+      name: Animasyon Test 2_15
       rect:
         serializedVersion: 2
-        x: 834
-        y: 504
-        width: 84
-        height: 92
+        x: 924
+        y: 503
+        width: 65
+        height: 113
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a6d4583eb6028e4dba4075d5d44e7fb
-      internalID: -1527445134
+      spriteID: 1c00b40afb512e14eaf14c6b0b7d28b8
+      internalID: -860935132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_14
+      name: Animasyon Test 2_16
       rect:
         serializedVersion: 2
-        x: 993
-        y: 504
-        width: 51
-        height: 88
+        x: 1068
+        y: 506
+        width: 65
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee15ec3fde28162439474ec6e4277db0
-      internalID: -1536546318
+      spriteID: 7c008d7aef26ff545abc9b7663453b7b
+      internalID: -920824062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_15
+      name: Animasyon Test 2_17
       rect:
         serializedVersion: 2
-        x: 1116
-        y: 504
-        width: 96
-        height: 88
+        x: 1212
+        y: 506
+        width: 65
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee4ae2170a961a049bd27eb31f1db4a0
-      internalID: 1696973226
+      spriteID: 70b88445b9d3c1f42b6423be296ff9d4
+      internalID: -354565416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_16
+      name: Animasyon Test 2_18
       rect:
         serializedVersion: 2
-        x: 413
-        y: 360
-        width: 79
-        height: 96
+        x: 495
+        y: 359
+        width: 53
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90306fa57eed0954bbe265e038bff137
-      internalID: -1402548450
+      spriteID: db3e8041a0da7fc429d73f373a9f2925
+      internalID: 1561573250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_17
+      name: Animasyon Test 2_19
       rect:
         serializedVersion: 2
-        x: 560
-        y: 360
-        width: 74
-        height: 98
+        x: 639
+        y: 359
+        width: 53
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c2fdeb0870e9cb4b8f5d40d579afa1f
-      internalID: -1340457150
+      spriteID: e644694288a7ea34f917a570312c0d5f
+      internalID: -774438954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_18
+      name: Animasyon Test 2_20
       rect:
         serializedVersion: 2
-        x: 720
-        y: 360
-        width: 61
-        height: 104
+        x: 780
+        y: 359
+        width: 59
+        height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cbcf9c60795eab4c811a567270970d6
-      internalID: 1040299355
+      spriteID: 99aa87474428c0241a3444d8f4e47b3e
+      internalID: 739268467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_19
+      name: Animasyon Test 2_21
       rect:
         serializedVersion: 2
-        x: 845
-        y: 360
-        width: 83
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d239480b54a3e541809bacafbd3570a
-      internalID: -2011673114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon testi 1_20
-      rect:
-        serializedVersion: 2
-        x: 992
-        y: 360
+        x: 927
+        y: 359
         width: 80
-        height: 98
+        height: 101
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bbafc0de11a8e642998be4dc4782447
-      internalID: -861522569
+      spriteID: 824b3bbf905b62840a29ff14a904d940
+      internalID: 1381067603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_21
+      name: Animasyon Test 2_22
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 360
-        width: 61
-        height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddc4fbf83da61c747b82d05d852082cb
-      internalID: 1022028809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon testi 1_22
-      rect:
-        serializedVersion: 2
-        x: 405
-        y: 216
-        width: 78
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f594725ba0b277a4c9c94e3a2dfb4afd
-      internalID: -812602985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon testi 1_23
-      rect:
-        serializedVersion: 2
-        x: 548
-        y: 216
-        width: 80
-        height: 88
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44c7f19652dba0e4db50d49306949232
-      internalID: -407971648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon testi 1_24
-      rect:
-        serializedVersion: 2
-        x: 699
-        y: 216
-        width: 79
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64d513aa6497a1d41bbd047dcf35098f
-      internalID: 905740729
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon testi 1_25
-      rect:
-        serializedVersion: 2
-        x: 836
-        y: 228
-        width: 79
+        x: 1071
+        y: 359
+        width: 77
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d93ffd8f0b2abe642bd3f3ca549c6ea6
-      internalID: 1497804190
+      spriteID: fbcf9b5f6bbb4154286ea01153162404
+      internalID: -786196398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_26
+      name: Animasyon Test 2_23
       rect:
         serializedVersion: 2
-        x: 976
-        y: 225
-        width: 80
-        height: 88
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cda6920508cf09b44938392f31d7bb64
-      internalID: 431828251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon testi 1_27
-      rect:
-        serializedVersion: 2
-        x: 1128
-        y: 216
-        width: 81
-        height: 88
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0cffad6b8c1509943ba682be2df899d3
-      internalID: 1208969549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon testi 1_28
-      rect:
-        serializedVersion: 2
-        x: 394
-        y: 72
-        width: 81
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6c8dbda7628a9444bd3b2513a061151
-      internalID: -1469962397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animasyon testi 1_29
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 72
-        width: 80
+        x: 1215
+        y: 359
+        width: 53
         height: 104
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a6836d827493764db2a8a5b67a92201
-      internalID: 87856747
+      spriteID: 31662548ef2dd4e42b988fe05529d235
+      internalID: -278522162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animasyon testi 1_30
+      name: Animasyon Test 2_24
       rect:
         serializedVersion: 2
-        x: 686
-        y: 72
-        width: 79
-        height: 97
+        x: 495
+        y: 215
+        width: 53
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0240b7d1230c78a41b841e98562a8134
-      internalID: 349126906
+      spriteID: 200dc5b95c4e3f449a0b19ae71cba783
+      internalID: -1347371739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_25
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 215
+        width: 53
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecf80867c58e2c40b84310192b33091
+      internalID: 1833017130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_26
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 215
+        width: 77
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71c929e40b3f314f881c7141ccaa914
+      internalID: -2013717131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_27
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 215
+        width: 65
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172c0591da7eade47a9f36c8c63c12de
+      internalID: -398829465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_28
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 215
+        width: 98
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8b2e5da1dc4a245b964526a8c38fd9
+      internalID: 1115675741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_29
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 215
+        width: 68
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c310230e5d29334fb973b6877bc0cda
+      internalID: 244128632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_30
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 71
+        width: 47
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8039d1f5340e8e14da22807c8ab1b6fc
+      internalID: 1736567218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_31
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 71
+        width: 50
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f55d8a4c323a7429e95adb40874a62
+      internalID: 1169188139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_32
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 71
+        width: 77
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cd5f60b85fea1459eb86b5769ccce8
+      internalID: -404107762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_33
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 71
+        width: 64
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10269d2549471e440a7e8c5128edbb9c
+      internalID: -683176925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_34
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 71
+        width: 92
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2286a16889b3dc47b016fd319f8c998
+      internalID: 1025693859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animasyon Test 2_35
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 71
+        width: 65
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268aabce0415efe41b301e2e86a3453b
+      internalID: 1501791503
       vertices: []
       indices: 
       edges: []
@@ -758,37 +863,42 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Animasyon testi 1_0: 1207104650
-      Animasyon testi 1_1: -2028614759
-      Animasyon testi 1_10: -605116413
-      Animasyon testi 1_11: -2023737171
-      Animasyon testi 1_12: 1689004055
-      Animasyon testi 1_13: -1527445134
-      Animasyon testi 1_14: -1536546318
-      Animasyon testi 1_15: 1696973226
-      Animasyon testi 1_16: -1402548450
-      Animasyon testi 1_17: -1340457150
-      Animasyon testi 1_18: 1040299355
-      Animasyon testi 1_19: -2011673114
-      Animasyon testi 1_2: 351962843
-      Animasyon testi 1_20: -861522569
-      Animasyon testi 1_21: 1022028809
-      Animasyon testi 1_22: -812602985
-      Animasyon testi 1_23: -407971648
-      Animasyon testi 1_24: 905740729
-      Animasyon testi 1_25: 1497804190
-      Animasyon testi 1_26: 431828251
-      Animasyon testi 1_27: 1208969549
-      Animasyon testi 1_28: -1469962397
-      Animasyon testi 1_29: 87856747
-      Animasyon testi 1_3: 1958594016
-      Animasyon testi 1_30: 349126906
-      Animasyon testi 1_4: 1321888982
-      Animasyon testi 1_5: 1589661894
-      Animasyon testi 1_6: 387280749
-      Animasyon testi 1_7: 1723491212
-      Animasyon testi 1_8: -646911706
-      Animasyon testi 1_9: -1191619790
+      Animasyon Test 2_0: 711761715
+      Animasyon Test 2_1: -1506013102
+      Animasyon Test 2_10: -140077806
+      Animasyon Test 2_11: 1026480269
+      Animasyon Test 2_12: -1465160902
+      Animasyon Test 2_13: -1514879171
+      Animasyon Test 2_14: -2025036764
+      Animasyon Test 2_15: -860935132
+      Animasyon Test 2_16: -920824062
+      Animasyon Test 2_17: -354565416
+      Animasyon Test 2_18: 1561573250
+      Animasyon Test 2_19: -774438954
+      Animasyon Test 2_2: 633932543
+      Animasyon Test 2_20: 739268467
+      Animasyon Test 2_21: 1381067603
+      Animasyon Test 2_22: -786196398
+      Animasyon Test 2_23: -278522162
+      Animasyon Test 2_24: -1347371739
+      Animasyon Test 2_25: 1833017130
+      Animasyon Test 2_26: -2013717131
+      Animasyon Test 2_27: -398829465
+      Animasyon Test 2_28: 1115675741
+      Animasyon Test 2_29: 244128632
+      Animasyon Test 2_3: -1262621358
+      Animasyon Test 2_30: 1736567218
+      Animasyon Test 2_31: 1169188139
+      Animasyon Test 2_32: -404107762
+      Animasyon Test 2_33: -683176925
+      Animasyon Test 2_34: 1025693859
+      Animasyon Test 2_35: 1501791503
+      Animasyon Test 2_4: -236955647
+      Animasyon Test 2_5: -1983417650
+      Animasyon Test 2_6: 499341398
+      Animasyon Test 2_7: 1957840072
+      Animasyon Test 2_8: 1305398688
+      Animasyon Test 2_9: -615907038
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

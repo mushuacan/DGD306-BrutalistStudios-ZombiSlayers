@@ -515,7 +515,7 @@ MonoBehaviour:
   player_movement: {fileID: 7107904711815955177}
   animationer: {fileID: 707481971448680843}
   WoodsAnimator: {fileID: 9100000, guid: 4d99e4e235cf90848aba3f1bd3d494d0, type: 2}
-  FletcherAnimator: {fileID: 9100000, guid: 4d99e4e235cf90848aba3f1bd3d494d0, type: 2}
+  FletcherAnimator: {fileID: 9100000, guid: 7e9809ed5d17f134b9e4b07ab9135eda, type: 2}
 --- !u!114 &7107904711815955177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
   movementSpeed: 4
   leftBoundary: -8
   rightBoundary: 5
-  animations: 0
+  animations: 1
   animationSpeed: 1
   jumpAnimationDuration: 0.75
   jumpAnimationUpDistance: 0.2
@@ -575,6 +575,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1879536380549187296}
   player_UI: {fileID: 3710495823981931815}
   player: {fileID: 5980480940130164564}
+  player_movement: {fileID: 7107904711815955177}
   health: 0
   undamageableDelay: 0
   isSliding: 0
@@ -1655,9 +1656,9 @@ Transform:
   m_GameObject: {fileID: 7448288215228003609}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.62, y: 1.62, z: 1.62}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1759442453393457561}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
