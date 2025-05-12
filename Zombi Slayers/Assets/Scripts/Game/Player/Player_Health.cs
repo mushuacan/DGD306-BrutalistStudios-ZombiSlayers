@@ -22,7 +22,7 @@ public class Player_Health : MonoBehaviour
     [Header("(private variables)")]
     [SerializeField] public int health;
     [SerializeField] public float undamageableDelay;
-    [SerializeField] private bool isSliding;
+    [SerializeField] public bool isSliding;
 
     public void StarterPack()
     {

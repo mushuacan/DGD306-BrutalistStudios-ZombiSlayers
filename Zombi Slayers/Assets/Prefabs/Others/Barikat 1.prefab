@@ -331,7 +331,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBreakable: 1
   isSlideable: 1
-  audioClips:
+  clipsForPlayerDamaj:
+  - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
+  - {fileID: 8300000, guid: 4aa91225428d7014a87d4d00803f0704, type: 3}
+  clipsForObstacleDestr:
   - {fileID: 8300000, guid: 0b3d39e197f4bf84087e797e40584941, type: 3}
   - {fileID: 8300000, guid: 5a62943a17d05e34ab60968c83366d65, type: 3}
 --- !u!50 &7765331287207966984

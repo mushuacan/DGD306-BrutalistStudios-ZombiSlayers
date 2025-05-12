@@ -6,7 +6,8 @@ public class Obstacle : MonoBehaviour
     public bool isBreakable;
     public bool isSlideable;
 
-    [SerializeField] private AudioClip[] audioClips;
+    [SerializeField] private AudioClip[] clipsForPlayerDamaj;
+    [SerializeField] private AudioClip[] clipsForObstacleDestr;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,6 +17,10 @@ public class Obstacle : MonoBehaviour
             { // eðer oyuncu slide yapýyorsa ve bu engel slideable ise hasar verme
                 return;
             }
+            if (All_Sounder.Instance != null && clipsForPlayerDamaj != null && clipsForPlayerDamaj.Length != 0 && collision.GetComponent<Player_Health>().health > 1)
+            {
+                All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForPlayerDamaj);
+            }
             collision.GetComponent<Player_Health>().GiveDamage(!isSlideable);
         }
 
@@ -23,9 +28,9 @@ public class Obstacle : MonoBehaviour
         {
             if (collision.GetComponent<PlayerBullet>().weaponName == "Sledgehammer")
             {
-                if (All_Sounder.Instance != null && audioClips != null)
+                if (All_Sounder.Instance != null && clipsForObstacleDestr != null && clipsForObstacleDestr.Length != 0)
                 {
-                    All_Sounder.Instance.ChooseAndPlaySoundOf(audioClips);
+                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForObstacleDestr);
                 }
                 Destroy(this.gameObject);
             }

@@ -24,7 +24,14 @@ public class All_Sounder : MonoBehaviour
 
     public void ChooseAndPlaySoundOf(AudioClip[] clip)
     {
-        if (clip == null) Debug.LogWarning("Clip'te hata var");
-        audioSource.PlayOneShot(clip[Random.Range(0, clip.Length)]);
+        if (clip == null || clip.Length == 0)
+        {
+            Debug.LogWarning("Clip boþ ya da null.");
+            return;
+        }
+
+        int index = Random.Range(0, clip.Length);
+        audioSource.PlayOneShot(clip[index]);
     }
+
 }

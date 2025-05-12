@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 6729113846359408514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0, y: -1.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -267,6 +267,8 @@ MonoBehaviour:
   zombiChar: {fileID: 5905445915708681430}
   laner: {fileID: 4087789420610649628}
   pusher: {fileID: 0}
+  clipsLowDamaj: []
+  clipsHighDamaj: []
 --- !u!114 &1624147991218554521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +298,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyOnCollision: 0
   canSlideable: 1
+  clipsForDamagingPlayer:
+  - {fileID: 8300000, guid: c67e03e0a3426a641895d2d0690c3b9b, type: 3}
+  - {fileID: 8300000, guid: 7c56891479d26054e93e3399a976fc23, type: 3}
 --- !u!61 &4835035562384579341
 BoxCollider2D:
   m_ObjectHideFlags: 0

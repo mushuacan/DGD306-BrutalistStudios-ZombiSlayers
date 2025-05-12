@@ -247,6 +247,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBreakable: 0
   isSlideable: 1
+  clipsForPlayerDamaj:
+  - {fileID: 8300000, guid: c67e03e0a3426a641895d2d0690c3b9b, type: 3}
+  - {fileID: 8300000, guid: 7c56891479d26054e93e3399a976fc23, type: 3}
+  - {fileID: 8300000, guid: eff6fe446628e2240bb839fb3124d24a, type: 3}
+  clipsForObstacleDestr: []
 --- !u!50 &-1026831382029611420
 Rigidbody2D:
   serializedVersion: 4

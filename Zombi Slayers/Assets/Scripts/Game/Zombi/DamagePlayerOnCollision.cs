@@ -26,7 +26,8 @@ public class DamagePlayerOnCollision : MonoBehaviour
 
             if (player_Health.undamageableDelay < Time.timeSinceLevelLoad)
             {
-                if (All_Sounder.Instance != null && clipsForDamagingPlayer != null) All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForDamagingPlayer);
+                if (All_Sounder.Instance != null && clipsForDamagingPlayer != null && clipsForDamagingPlayer.Length != 0 && !player_Health.isSliding) 
+                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForDamagingPlayer);
                 player_Health.GiveDamage();
 
                 if (destroyOnCollision)
