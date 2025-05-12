@@ -22,6 +22,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private Player_Attack player_attack;
     [SerializeField] private Player_UI player_UI;
     [SerializeField] private Player_Health player_health;
+    [SerializeField] private Player_Sounder player_sounder;
     [SerializeField] private Scriptable_PlayerCharacter fixedPlayerCharacter;
     [SerializeField] private GameObject DeadLocation;
     private GameObject platform;

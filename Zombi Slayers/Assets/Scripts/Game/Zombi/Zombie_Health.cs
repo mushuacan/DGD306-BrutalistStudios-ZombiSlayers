@@ -10,6 +10,7 @@ public class Zombie_Health : MonoBehaviour
     [SerializeField] private ZombiCharacter zombiChar;
     [SerializeField] private LaneFinder laner;
     [SerializeField] private Zombi_Push pusher;
+    [SerializeField] private AudioPlayer audioPlayer;
 
 
     private void OnEnable()
@@ -35,6 +36,7 @@ public class Zombie_Health : MonoBehaviour
             {
                 DOTween.Kill(transform);
                 ScoreManager.Instance.AddScore(killScore, "Zombi");
+                audioPlayer.PlaySound();
                 Destroy(this.gameObject);
             }
             else
