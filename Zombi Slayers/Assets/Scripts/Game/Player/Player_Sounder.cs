@@ -13,32 +13,60 @@ public class Player_Sounder : MonoBehaviour
     [SerializeField] private AudioClip[] playerDeath;
     [SerializeField] private AudioClip[] playerHurt;
     [SerializeField] private AudioClip[] playerHeal;
+    [SerializeField] private AudioClip[] playerSlide;
+    [SerializeField] private AudioClip[] playerJump;
+    [SerializeField] private AudioClip[] playerLand;
+    [SerializeField] private AudioClip[] dynamiteIgnite;
+
+
+    private void PlayFrom(AudioClip[] clips)
+    {
+        int index = Random.Range(0, clips.Length);
+        audioSource.PlayOneShot(clips[index]);
+    }
+
 
     public void PlayAttackSound()
     {
         if (player.character.characterName == "Woods")
         {
-            audioSource.PlayOneShot(woodsAttack[Random.Range(0, woodsAttack.Length)]);
+            PlayFrom(woodsAttack);
         }
         if (player.character.characterName == "Fletcher")
         {
-            audioSource.PlayOneShot(fletchersAttack[Random.Range(0, fletchersAttack.Length)]);
+            PlayFrom(fletchersAttack);
         }
     }
     public void PlayFletchersReload()
     {
-        audioSource.PlayOneShot(fletchersReloads[Random.Range(0, fletchersReloads.Length)]);
+        PlayFrom(fletchersReloads);
     }
     public void PlayDeathSound()
     {
-        audioSource.PlayOneShot(playerDeath[Random.Range(0, playerDeath.Length)]);
+        PlayFrom(playerDeath);
     }
     public void PlayHurtSound()
     {
-        audioSource.PlayOneShot(playerHurt[Random.Range(0, playerHurt.Length)]);
+        PlayFrom(playerHurt);
     }
     public void PlayHealSound()
     {
-        audioSource.PlayOneShot(playerHeal[Random.Range(0, playerHeal.Length)]);
+        PlayFrom(playerHeal);
+    }
+    public void PlaySlideSound()
+    {
+        PlayFrom(playerSlide);
+    }
+    public void PlayIgniteSound()
+    {
+        PlayFrom(dynamiteIgnite);
+    }
+    public void PlayJumpSound()
+    {
+        PlayFrom(playerJump);
+    }
+    public void PlayLandSound()
+    {
+        PlayFrom(playerLand);
     }
 }

@@ -63,6 +63,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magazineBulletCount: 1
   magazineType: 0
+  clips:
+  - {fileID: 8300000, guid: f1c15a7e8b8deff45b76274071cadf4e, type: 3}
+  - {fileID: 8300000, guid: 2f8bcd914c479e14489d1bc4279441ad, type: 3}
 --- !u!61 &1088626550032691457
 BoxCollider2D:
   m_ObjectHideFlags: 0

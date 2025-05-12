@@ -7,22 +7,26 @@ public class DamagePlayerOnCollision : MonoBehaviour
     [Tooltip("For only bullets")]
     [SerializeField] private bool canSlideable;
     [SerializeField] private AudioClip[] clipsForDamagingPlayer;
+    [SerializeField] private bool isThisZombiBullet = false;
+    [SerializeField] private AudioClip[] clipsForDodgedPlayer;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             Player_Movement pMove = collision.GetComponent<Player_Movement>();
+            Player_Health player_Health = collision.GetComponent<Player_Health>();
 
             if (pMove.state == Player_Movement.StateOC.Dead)
             {
                 return;
             }
-            if (pMove.action == Player_Movement.ActionOC.SecondAbility && canSlideable && collision.GetComponent<Player_Character>().character.characterName == "Fletcher")
+            if (player_Health.isSliding)
             {
+                if (All_Sounder.Instance != null && clipsForDodgedPlayer != null && clipsForDodgedPlayer.Length != 0)
+                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForDodgedPlayer);
                 return;
             }
 
-            Player_Health player_Health = collision.GetComponent<Player_Health>();
 
             if (player_Health.undamageableDelay < Time.timeSinceLevelLoad)
             {

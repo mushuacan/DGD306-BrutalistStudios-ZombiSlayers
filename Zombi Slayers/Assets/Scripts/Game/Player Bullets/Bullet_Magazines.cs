@@ -6,6 +6,7 @@ public class Bullet_Magazines : MonoBehaviour
 {
     [SerializeField] private int magazineBulletCount;
     [SerializeField] private MagazineTypes magazineType;
+    [SerializeField] private AudioClip[] clips;
     private enum MagazineTypes
     {
         Dynamite,
@@ -26,6 +27,7 @@ public class Bullet_Magazines : MonoBehaviour
                 }
                 if (magazineType == MagazineTypes.Shotgun && collision.GetComponent<Player_Character>().character.characterName == "Fletcher")
                 {
+                    if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
                     player_Attack.TakeMagazine(magazineBulletCount);
                     Destroy(this.gameObject);
                 }

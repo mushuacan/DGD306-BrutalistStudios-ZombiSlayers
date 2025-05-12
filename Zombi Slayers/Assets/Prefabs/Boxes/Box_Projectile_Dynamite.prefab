@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5153640325359556647}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0, y: -1.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -63,6 +63,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insider: {fileID: 11400000, guid: 0621babe9c764804b830b5b5a01c6a8d, type: 2}
+  clips:
+  - {fileID: 8300000, guid: 16540651f8aae6c47a02ec7e7a08ee10, type: 3}
+  - {fileID: 8300000, guid: 35c297700b3771c4c80beac47826b624, type: 3}
 --- !u!61 &3375778475196079147
 BoxCollider2D:
   m_ObjectHideFlags: 0
