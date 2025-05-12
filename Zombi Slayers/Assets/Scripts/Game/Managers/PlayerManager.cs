@@ -59,6 +59,19 @@ public class PlayerManager : MonoBehaviour
 
     public void NewLevelOpened(int level)
     {
+        // Player_Movement bileþenine sahip tüm objeleri bul
+        Player_Movement[] movementComponents = FindObjectsOfType<Player_Movement>();
+
+        foreach (Player_Movement pm in movementComponents)
+        {
+            GameObject obj = pm.gameObject;
+
+            if (obj.name == "Player_a1")
+            {
+                Destroy(obj);
+                Debug.Log("Destroyed object: " + obj.name);
+            }
+        }
         foreach (var player in players)
         {
             string charName = player.GetComponent<Player_Character>().character.characterName;

@@ -137,18 +137,22 @@ public class ButtonActions : MonoBehaviour
     public void Scrollbar_Sounds()
     {
         GameSettings.Instance.settings["mainSoundsVolume"] = scrollbar_Sounds.value;
+        GameSettings.Instance.ApplySettings();
     }
     public void Scrollbar_SoundFXs()
     {
         GameSettings.Instance.settings["soundFXVolume"] = scrollbar_SoundFXs.value;
+        GameSettings.Instance.ApplySettings();
     }
     public void Scrollbar_Musics()
     {
         GameSettings.Instance.settings["musicVolume"] = scrollbar_Music.value;
+        GameSettings.Instance.ApplySettings();
     }
     public void ArrangeScrollbarsAblity()
     {
         bool areSoundsOn = (bool) GameSettings.Instance.settings["areVolumesOn"];
+        GameSettings.Instance.ApplySounds();
         if (areSoundsOn)
         {
             scrollbar_Sounds.interactable = true;

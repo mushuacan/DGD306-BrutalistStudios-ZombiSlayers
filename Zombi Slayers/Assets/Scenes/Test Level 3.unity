@@ -253,42 +253,6 @@ PrefabInstance:
       value: Player_a1
       objectReference: {fileID: 0}
     - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
-      propertyPath: playerHurt.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
-    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
-      propertyPath: playerHurt.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 4aa91225428d7014a87d4d00803f0704, type: 3}
-    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
-      propertyPath: playerHurt.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: eff6fe446628e2240bb839fb3124d24a, type: 3}
-    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
-      propertyPath: playerHurt.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 7c56891479d26054e93e3399a976fc23, type: 3}
-    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
-      propertyPath: playerHurt.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: c67e03e0a3426a641895d2d0690c3b9b, type: 3}
-    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
-      propertyPath: fletchersReloads.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
-      propertyPath: fletchersAttack.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 301dd8b2aa519284fbd7a7bfff8d700a, type: 3}
-    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
-      propertyPath: fletchersAttack.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 34f09246e3637194583911eee35cb619, type: 3}
-    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
-      propertyPath: fletchersReloads.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: cacd88a1439cdf7468930c66fa2fd939, type: 3}
-    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: fletchersReloads.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: f4fab34f24e133b498225710c746778d, type: 3}

@@ -580,12 +580,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bb85ec909ca57074e8c01dd52048949a, type: 3}
   - {fileID: 8300000, guid: af331cabc3cbe8f49a0142dcfe21e7f2, type: 3}
   fletchersAttack:
-  - {fileID: 8300000, guid: 20076e950319eaf498562a163f6cd8d1, type: 3}
-  - {fileID: 8300000, guid: ef3728b0b8d0a8e48a452bd0a0491ada, type: 3}
+  - {fileID: 8300000, guid: 301dd8b2aa519284fbd7a7bfff8d700a, type: 3}
+  - {fileID: 8300000, guid: 34f09246e3637194583911eee35cb619, type: 3}
   fletchersReloads:
-  - {fileID: 8300000, guid: c6a4ceb8dba42a3448573141ad59d1e0, type: 3}
-  - {fileID: 8300000, guid: afaceaca56893e446af1da02aa45daa8, type: 3}
-  - {fileID: 8300000, guid: f4fab34f24e133b498225710c746778d, type: 3}
+  - {fileID: 8300000, guid: cacd88a1439cdf7468930c66fa2fd939, type: 3}
   playerDeath:
   - {fileID: 8300000, guid: 77838a2d72256c54e8e07e6874d6aaa4, type: 3}
   - {fileID: 8300000, guid: 3c6cc8072d5e91a45831b82689c08a43, type: 3}
@@ -594,11 +592,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c69e4580030146b49979762205f41498, type: 3}
   - {fileID: 8300000, guid: 17158b651598a78429078722c48ca706, type: 3}
   playerHurt:
-  - {fileID: 8300000, guid: 07982b5f56e0ba74fb57ea7ae8d2db4f, type: 3}
-  - {fileID: 8300000, guid: 1edb0d71bbccbf4459705b32ba9bd68a, type: 3}
-  - {fileID: 8300000, guid: 82371473c65233d40b2b486e7e2d603b, type: 3}
-  - {fileID: 8300000, guid: 14c1035c7c9587540a0fc18dd6f79720, type: 3}
-  - {fileID: 8300000, guid: 8ed314a6288f78b4896e8e7386d898d9, type: 3}
+  - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
+  - {fileID: 8300000, guid: 4aa91225428d7014a87d4d00803f0704, type: 3}
+  - {fileID: 8300000, guid: eff6fe446628e2240bb839fb3124d24a, type: 3}
+  - {fileID: 8300000, guid: 7c56891479d26054e93e3399a976fc23, type: 3}
+  - {fileID: 8300000, guid: c67e03e0a3426a641895d2d0690c3b9b, type: 3}
+  playerHeal:
+  - {fileID: 8300000, guid: 1a1b088af49399146b098ad9ff623b50, type: 3}
+  - {fileID: 8300000, guid: 1266e548045f7c646923d67fabfa6121, type: 3}
 --- !u!114 &-699912929371043157
 MonoBehaviour:
   m_ObjectHideFlags: 0

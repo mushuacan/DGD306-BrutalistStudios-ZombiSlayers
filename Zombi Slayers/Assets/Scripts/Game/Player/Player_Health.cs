@@ -61,6 +61,7 @@ public class Player_Health : MonoBehaviour
 
     public void TakeMedKit()
     {
+        player_movement.player_sounder.PlayHealSound();
         ArrangeHealth(+1);
     }
     private void FlashEffect()

@@ -7,6 +7,8 @@ public class GameSettings : MonoBehaviour
 
     public Dictionary<string, object> settings = new Dictionary<string, object>();
 
+    [SerializeField] private AudioMixerManager mixerManager;
+
 
     void Awake()
     {
@@ -27,6 +29,15 @@ public class GameSettings : MonoBehaviour
         settings.Add("areVolumesOn", true);
         settings.Add("animations", true);
         settings.Add("difficulty", "Medium");
+    }
 
+    public void ApplySettings()
+    {
+        mixerManager.ApplySettingsToMixer();
+    }
+
+    public void ApplySounds()
+    {
+        mixerManager.SetMasterVolume();
     }
 }

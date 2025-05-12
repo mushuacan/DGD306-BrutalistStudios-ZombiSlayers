@@ -12,6 +12,7 @@ public class Player_Sounder : MonoBehaviour
     [SerializeField] private AudioClip[] fletchersReloads;
     [SerializeField] private AudioClip[] playerDeath;
     [SerializeField] private AudioClip[] playerHurt;
+    [SerializeField] private AudioClip[] playerHeal;
 
     public void PlayAttackSound()
     {
@@ -35,5 +36,9 @@ public class Player_Sounder : MonoBehaviour
     public void PlayHurtSound()
     {
         audioSource.PlayOneShot(playerHurt[Random.Range(0, playerHurt.Length)]);
+    }
+    public void PlayHealSound()
+    {
+        audioSource.PlayOneShot(playerHeal[Random.Range(0, playerHeal.Length)]);
     }
 }
