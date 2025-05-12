@@ -16,13 +16,13 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] public KeyCode second_Button;
 
     [Header("Referances")]
+    [SerializeField] public Player_Animation player_animation;
+    [SerializeField] public Player_Sounder player_sounder;
     [SerializeField] private Player_Inputs inputs;
     [SerializeField] private Player_Character player;
-    [SerializeField] public Player_Animation player_animation;
     [SerializeField] private Player_Attack player_attack;
     [SerializeField] private Player_UI player_UI;
     [SerializeField] private Player_Health player_health;
-    [SerializeField] private Player_Sounder player_sounder;
     [SerializeField] private Scriptable_PlayerCharacter fixedPlayerCharacter;
     [SerializeField] private GameObject DeadLocation;
     private GameObject platform;

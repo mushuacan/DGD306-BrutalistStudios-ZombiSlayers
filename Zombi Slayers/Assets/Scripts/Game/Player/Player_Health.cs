@@ -46,11 +46,13 @@ public class Player_Health : MonoBehaviour
 
             if (health <= 0)
             {
+                player_movement.player_sounder.PlayDeathSound();
                 this.gameObject.GetComponent<Player_Movement>().Die();
                 DieEffect();
             }
             else
             {
+                player_movement.player_sounder.PlayHurtSound();
                 undamageableDelay = Time.timeSinceLevelLoad + undamageableDuration;
                 FlashEffect();
             }

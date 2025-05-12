@@ -52,6 +52,7 @@ public class Player_Attack : MonoBehaviour
         if (canAttack)
         {
             if (player_movement.animations) player_movement.player_animation.Attack();
+            player_movement.player_sounder.PlayAttackSound();
             canAttack = false;
             player_movement.action = Player_Movement.ActionOC.Attacking;
             player_UI.StartCastTimer(weapon.attackAnimationDuration);
@@ -146,11 +147,13 @@ public class Player_Attack : MonoBehaviour
         int currentAmmoAtFirst = currentAmmo;
         if (totalAmmo > reloader)
         {
+            player_movement.player_sounder.PlayFletchersReload();
             currentAmmo = reloader;
             totalAmmo -= reloader;
         }
         else if (totalAmmo > 0)
         {
+            player_movement.player_sounder.PlayFletchersReload();
             currentAmmo = totalAmmo;
             totalAmmo = 0;
         }
