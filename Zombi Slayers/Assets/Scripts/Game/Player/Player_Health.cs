@@ -52,7 +52,6 @@ public class Player_Health : MonoBehaviour
             }
             else
             {
-                player_movement.player_sounder.PlayHurtSound();
                 undamageableDelay = Time.timeSinceLevelLoad + undamageableDuration;
                 FlashEffect();
             }

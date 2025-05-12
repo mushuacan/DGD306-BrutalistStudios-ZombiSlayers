@@ -194,6 +194,8 @@ MonoBehaviour:
   zombiChar: {fileID: 2635368388138846178}
   laner: {fileID: 8495576673804247030}
   pusher: {fileID: 4584445579691408264}
+  clipsLowDamaj: []
+  clipsHighDamaj: []
 --- !u!114 &-1590478401598203509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +210,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyOnCollision: 0
   canSlideable: 0
+  clipsForDamagingPlayer:
+  - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
 --- !u!61 &4835035562384579341
 BoxCollider2D:
   m_ObjectHideFlags: 0

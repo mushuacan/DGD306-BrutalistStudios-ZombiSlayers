@@ -6,7 +6,7 @@ public class Obstacle : MonoBehaviour
     public bool isBreakable;
     public bool isSlideable;
 
-
+    [SerializeField] private AudioClip[] audioClips;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,6 +23,10 @@ public class Obstacle : MonoBehaviour
         {
             if (collision.GetComponent<PlayerBullet>().weaponName == "Sledgehammer")
             {
+                if (All_Sounder.Instance != null && audioClips != null)
+                {
+                    All_Sounder.Instance.ChooseAndPlaySoundOf(audioClips);
+                }
                 Destroy(this.gameObject);
             }
         }

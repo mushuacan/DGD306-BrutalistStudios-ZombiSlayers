@@ -6,6 +6,7 @@ public class DamagePlayerOnCollision : MonoBehaviour
     [SerializeField] private bool destroyOnCollision;
     [Tooltip("For only bullets")]
     [SerializeField] private bool canSlideable;
+    [SerializeField] private AudioClip[] clipsForDamagingPlayer;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -25,6 +26,7 @@ public class DamagePlayerOnCollision : MonoBehaviour
 
             if (player_Health.undamageableDelay < Time.timeSinceLevelLoad)
             {
+                if (All_Sounder.Instance != null && clipsForDamagingPlayer != null) All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForDamagingPlayer);
                 player_Health.GiveDamage();
 
                 if (destroyOnCollision)

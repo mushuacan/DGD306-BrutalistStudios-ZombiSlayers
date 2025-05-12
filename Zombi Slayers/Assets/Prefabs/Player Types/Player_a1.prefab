@@ -576,9 +576,7 @@ MonoBehaviour:
   player: {fileID: 5980480940130164564}
   audioSource: {fileID: 1907199552892290453}
   woodsAttack:
-  - {fileID: 8300000, guid: 66d536f87b9b0304b9bc4612829b6bd8, type: 3}
-  - {fileID: 8300000, guid: bb85ec909ca57074e8c01dd52048949a, type: 3}
-  - {fileID: 8300000, guid: af331cabc3cbe8f49a0142dcfe21e7f2, type: 3}
+  - {fileID: 8300000, guid: afd0300f2af38ca4fba86c1851967993, type: 3}
   fletchersAttack:
   - {fileID: 8300000, guid: 301dd8b2aa519284fbd7a7bfff8d700a, type: 3}
   - {fileID: 8300000, guid: 34f09246e3637194583911eee35cb619, type: 3}
@@ -588,9 +586,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 77838a2d72256c54e8e07e6874d6aaa4, type: 3}
   - {fileID: 8300000, guid: 3c6cc8072d5e91a45831b82689c08a43, type: 3}
   - {fileID: 8300000, guid: 487ac83c6f8e2174d87085c0feceac1d, type: 3}
-  - {fileID: 8300000, guid: 9b061cf3bf206ba44816b2320d3fd37d, type: 3}
-  - {fileID: 8300000, guid: c69e4580030146b49979762205f41498, type: 3}
-  - {fileID: 8300000, guid: 17158b651598a78429078722c48ca706, type: 3}
   playerHurt:
   - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
   - {fileID: 8300000, guid: 4aa91225428d7014a87d4d00803f0704, type: 3}

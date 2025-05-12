@@ -10,6 +10,8 @@ public class Zombie_Health : MonoBehaviour
     [SerializeField] private ZombiCharacter zombiChar;
     [SerializeField] private LaneFinder laner;
     [SerializeField] private Zombi_Push pusher;
+    [SerializeField] private AudioClip[] clipsLowDamaj;
+    [SerializeField] private AudioClip[] clipsHighDamaj;
 
     private void OnEnable()
     {
@@ -29,7 +31,19 @@ public class Zombie_Health : MonoBehaviour
     {
         if (collision.CompareTag("Player_Bullet"))
         {
-            health -= collision.GetComponent<PlayerBullet>().damage;
+            float damaj = collision.GetComponent<PlayerBullet>().damage;
+            health -= damaj;
+            if (All_Sounder.Instance != null)
+            {
+                if (damaj < 24)
+                {
+                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsLowDamaj);
+                }
+                else
+                {
+                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsHighDamaj);
+                }
+            }
             if (health <= 0)
             {
                 DOTween.Kill(transform);

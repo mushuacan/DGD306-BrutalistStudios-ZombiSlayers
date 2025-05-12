@@ -64,6 +64,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyOnCollision: 1
   canSlideable: 1
+  clipsForDamagingPlayer:
+  - {fileID: 8300000, guid: 2e33f37060fd4744c8b16683ff3c49e0, type: 3}
+  - {fileID: 8300000, guid: af568180de79fd14aba6ddf806145b8b, type: 3}
+  - {fileID: 8300000, guid: 68da28abfc84e3146bab9d7a75c4a093, type: 3}
+  - {fileID: 8300000, guid: 0d4ec578f5129e54ea7178558d6bc918, type: 3}
 --- !u!58 &8435732557194212507
 CircleCollider2D:
   m_ObjectHideFlags: 0

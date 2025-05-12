@@ -9,6 +9,7 @@ public class ExplosionZone : MonoBehaviour
     public float lifetime = 0.5f;
     public LayerMask targetLayer;
     public string[] tagsToDestroy;
+    [SerializeField] private AudioClip[] audioClips;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class ExplosionZone : MonoBehaviour
         {
             Debug.LogWarning("Dinamit Patlamasý için gereken CameraShaker script'i halihazýrdaki sahnede bulunmamakta.");
         }
+        if (All_Sounder.Instance != null) All_Sounder.Instance.ChooseAndPlaySoundOf(audioClips);
         Instantiate(ExplosionAnimationPrefab, new Vector3(transform.position.x + 2, transform.position.y, transform.position.z ), Quaternion.identity);
         // Belirli süre sonra patlat
         DOVirtual.DelayedCall(delayBeforeExplode, () =>

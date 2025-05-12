@@ -246,6 +246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBreakable: 1
   isSlideable: 0
+  audioClips:
+  - {fileID: 8300000, guid: 6bf1a1a42d5547347b8b9bbe4025de8c, type: 3}
 --- !u!50 &2190511746759159866
 Rigidbody2D:
   serializedVersion: 4
