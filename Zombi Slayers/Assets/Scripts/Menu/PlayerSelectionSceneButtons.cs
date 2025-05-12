@@ -7,16 +7,19 @@ using UnityEngine.UIElements;
 
 public class PlayerSelectionSceneButtons : MonoBehaviour
 {
+    [Header("Deðiþkenler")]
     public int playerCount;
     public string gameType;
+
+    [Header("Menüler")]
     public GameObject menu1;
     public GameObject menu2;
 
+    [Header("Referanslar")]
     public GameObject Player1_Waiting;
     public GameObject Player1_Arrived;
     public GameObject Player2_Waiting;
     public GameObject Player2_Arrived;
-
     public GameObject FirstSelectedButton;
     public GameObject PlayerInputManagerPrefab;
 
@@ -29,6 +32,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     public RawImage player1_image, player2_image;
     public TextMeshProUGUI player1_text, player2_text, p1ReadyText, p2ReadyText;
 
+    [Header("Booleanlar")]
     private bool p1_changed, p2_changed, p1ready, p2ready;
 
     private void Start()

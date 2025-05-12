@@ -18,7 +18,6 @@ public class Player_Animation : MonoBehaviour
         if (player.character.spriter != null)
         {
             _spriteRenderer.sprite = player.character.spriter;
-            Debug.Log("Spriter gözüküyor ve karakter " + player.character + "\nAyrýca " + player.character.characterName);
         }
         else
         {

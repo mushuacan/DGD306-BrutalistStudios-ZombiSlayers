@@ -47,6 +47,8 @@ public class PlayerManager : MonoBehaviour
             }
             pssb.ArrangePlayerUI(playerCount, this.gameObject);
         }
+
+        player.GetComponent<Player_Movement>().animations = (bool)GameSettings.Instance.settings["animations"];
     }
 
     private void PlayerCounter()

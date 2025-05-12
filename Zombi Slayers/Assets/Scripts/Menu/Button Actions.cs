@@ -28,7 +28,8 @@ public class ButtonActions : MonoBehaviour
     public Scrollbar scrollbar_Sounds;
     public Scrollbar scrollbar_SoundFXs;
     public Scrollbar scrollbar_Music; 
-    public Toggle toggleComponent;
+    public Toggle toggleComponentSound;
+    public Toggle toggleComponentAnimation;
 
     [Header("Other")]
     public bool startFromMainMenu;
@@ -52,7 +53,7 @@ public class ButtonActions : MonoBehaviour
         #endregion
 
         #region Settings
-        toggleComponent.isOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
+        toggleComponentSound.isOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
         #endregion
 
         EventSystem.current.SetSelectedGameObject(fBO_MainMenu.gameObject);
@@ -114,13 +115,21 @@ public class ButtonActions : MonoBehaviour
         scrollbar_Music.value = (float)GameSettings.Instance.settings["musicVolume"];
         scrollbar_SoundFXs.value = (float)GameSettings.Instance.settings["soundFXVolume"];
         scrollbar_Sounds.value = (float)GameSettings.Instance.settings["mainSoundsVolume"];
-        toggleComponent.isOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
+        toggleComponentSound.isOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
     }
 
     public void Toggle_Sounds()
     {
-        GameSettings.Instance.settings["areVolumesOn"] = toggleComponent.isOn;
-        Debug.Log("Toggle: " + toggleComponent.isOn + " | areVolumesOn: " + GameSettings.Instance.settings["areVolumesOn"]);
+        GameSettings.Instance.settings["areVolumesOn"] = toggleComponentSound.isOn;
+        Debug.Log("Toggle: " + toggleComponentSound.isOn + " | areVolumesOn: " + GameSettings.Instance.settings["areVolumesOn"]);
+
+        ArrangeScrollbarsAblity();
+    }
+
+    public void Toggle_AnimationSetting()
+    {
+        GameSettings.Instance.settings["animations"] = toggleComponentAnimation.isOn;
+        Debug.Log("Toggle: " + toggleComponentAnimation.isOn + " | animations: " + GameSettings.Instance.settings["animations"]);
 
         ArrangeScrollbarsAblity();
     }

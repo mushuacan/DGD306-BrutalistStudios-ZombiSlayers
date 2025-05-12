@@ -25,6 +25,7 @@ public class GameSettings : MonoBehaviour
         settings.Add("musicVolume", 1.0f);
         settings.Add("mainSoundsVolume", 1.0f);
         settings.Add("areVolumesOn", true);
+        settings.Add("animations", true);
         settings.Add("difficulty", "Medium");
 
     }

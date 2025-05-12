@@ -148,10 +148,10 @@ public class Player_Movement : MonoBehaviour
 
         platform = GameObject.FindWithTag("Platform");
 
-        //if (player.character == null)
-        //{
-        //    player.character = fixedPlayerCharacter;
-        //}
+        if (player.character == null)
+        {
+            player.character = fixedPlayerCharacter;
+        }
 
         secondAbilityCooldown = 0f;
         FaoWind_StopJump = false;
@@ -336,7 +336,7 @@ public class Player_Movement : MonoBehaviour
     {
         if (animations) player_animation.Death();
         state = StateOC.Dead;
-        DeadLocationer = Instantiate(DeadLocation, transform.position, Quaternion.identity);
+        DeadLocationer = Instantiate(DeadLocation, new Vector3(transform.position.x, laneYPoz[lane], transform.position.z) , Quaternion.identity);
         DeadLocationer.transform.SetParent(platform.transform);
     }
     private void CheckIfDead()
