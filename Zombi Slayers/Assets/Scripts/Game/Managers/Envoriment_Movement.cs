@@ -6,6 +6,7 @@ public class Envoriment_Movement : MonoBehaviour
     [Header("Referanslar")]
     [Tooltip("Bölüm sonunda ekranýn ortasýnda duracak olan obje")]
     public GameObject finishLine;
+    public GameObject background;
     public ZombiAtTheBack_Manager zombiManager;
     public MiniMapUI MiniMapUI;
 
@@ -77,6 +78,7 @@ public class Envoriment_Movement : MonoBehaviour
             }
         }
 
+        // If Game Ends
         if (finishLine.transform.position.x < FinishLinePosition)
         {
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
@@ -105,7 +107,10 @@ public class Envoriment_Movement : MonoBehaviour
         else
         {
             if (isMoving)
+            {
                 transform.position = new Vector3(transform.position.x - (envorimentMovementSpeed * Time.deltaTime), transform.position.y, 5);
+                background.transform.position = (transform.position * 0.2f);
+            }
         }
         if (MiniMapUI != null)
             MiniMapUI.UpdateSlider(finishLine.transform.position.x / finishLinePositionAtBeggining);

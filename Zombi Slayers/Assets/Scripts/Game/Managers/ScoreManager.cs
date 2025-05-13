@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
     public Scriptable_Scoring scorer;
     public TextMeshProUGUI scoreText;
     public bool debug;
+    public bool IncreaseEverySecond;
 
     private ZombiAtTheBack_Manager zombiATBM;
 
@@ -97,6 +98,8 @@ public class ScoreManager : MonoBehaviour
 
     public void StartAutoScore(int amount, float interval)
     {
+        if (!IncreaseEverySecond) { return; }
+
         StopAutoScore(); // Önce varsa iptal et
 
         scoreLoopTween = DOVirtual.DelayedCall(interval, () =>
