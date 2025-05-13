@@ -107,12 +107,21 @@ public class Player_Movement : MonoBehaviour
         ArrangeJumping();
         ArrangeMovement();
         CheckButtons();
+        CheckESCMenu();
         CheckExit();
     }
 
     #endregion
 
     #region Movement Functions
+    private void CheckESCMenu()
+    {
+        if (inputs.startPressed)
+        {
+            Debug.Log("Started basýldý");
+            FindAnyObjectByType<EscapeMenuManagerInGame>().OpenESCMenu();
+        }
+    }
     private void CheckExit()
     {
         if (inputs.startPressed && inputs.sellectPressed)
@@ -330,6 +339,7 @@ public class Player_Movement : MonoBehaviour
         }
         if (player.character.characterName == "Woods")
         {
+            player_sounder.PlayIgniteSound();
             player_attack.WoodsSecondAbility();
         }
         if (player.character.characterName == "Fao")

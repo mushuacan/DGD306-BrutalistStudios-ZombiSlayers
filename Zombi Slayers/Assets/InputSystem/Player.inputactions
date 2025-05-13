@@ -215,7 +215,7 @@
                     "path": "<Keyboard>/v",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard",
                     "action": "Button0",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -248,7 +248,7 @@
                     "path": "<Keyboard>/b",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard",
                     "action": "Button1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -321,6 +321,28 @@
                 },
                 {
                     "name": "",
+                    "id": "0d1596fc-3e1d-4795-8f23-c758d30c8095",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a1e53977-e921-41e2-9ea9-7a002fd9781d",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c95f4955-04af-4343-b68b-4360565970ac",
                     "path": "<Gamepad>/select",
                     "interactions": "",
@@ -337,6 +359,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Logitech Dual",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eae45906-340b-46e2-ac93-ced846c59e11",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4877ffc1-3cfb-448b-9b4d-393112eec9c3",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
                     "action": "Select",
                     "isComposite": false,
                     "isPartOfComposite": false
