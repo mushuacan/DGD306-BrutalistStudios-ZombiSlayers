@@ -155,6 +155,7 @@ MonoBehaviour:
   scorer: {fileID: 11400000, guid: 0e8ac5800a337b242b946d8022c138ca, type: 2}
   scoreText: {fileID: 1494312048}
   debug: 0
+  IncreaseEverySecond: 0
   scoreFromZombiATB: 0
   scoreFromTime: 0
   scoreFromKillingZombi: 0
@@ -314,6 +315,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: woodsAttack.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: dynamiteIgnite.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -321,6 +326,18 @@ PrefabInstance:
       propertyPath: playerSlide.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: cfb671088a54b8141a6b50dc25fcac3b, type: 3}
+    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: woodsAttack.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b182ce75c8e2d6e479d822fb7eda69bd, type: 3}
+    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: woodsAttack.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 59ef7ffcccfe21b4dbac487e239df9ff, type: 3}
+    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: woodsAttack.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 30f8d6e74a2aa4848b5a1e24d8965176, type: 3}
     - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: fletchersReloads.Array.data[1]
       value: 

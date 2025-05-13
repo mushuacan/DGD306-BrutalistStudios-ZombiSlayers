@@ -194,8 +194,16 @@ MonoBehaviour:
   zombiChar: {fileID: 2635368388138846178}
   laner: {fileID: 8495576673804247030}
   pusher: {fileID: 4584445579691408264}
-  clipsLowDamaj: []
-  clipsHighDamaj: []
+  clipsLowDamaj:
+  - {fileID: 8300000, guid: 830fc9b87bd647b41a60cd0b34156909, type: 3}
+  - {fileID: 8300000, guid: 59408ec7c6f57e24dadf4d62d10e5ca6, type: 3}
+  - {fileID: 8300000, guid: 184c283f810939844a5411790395edad, type: 3}
+  - {fileID: 8300000, guid: 76c56fb65814dc347b14cc484dcfb26e, type: 3}
+  - {fileID: 8300000, guid: cb05b80d58c1fd44a8f3988b845babbd, type: 3}
+  clipsHighDamaj:
+  - {fileID: 8300000, guid: 66d536f87b9b0304b9bc4612829b6bd8, type: 3}
+  - {fileID: 8300000, guid: bb85ec909ca57074e8c01dd52048949a, type: 3}
+  - {fileID: 8300000, guid: af331cabc3cbe8f49a0142dcfe21e7f2, type: 3}
 --- !u!114 &-1590478401598203509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +220,8 @@ MonoBehaviour:
   canSlideable: 0
   clipsForDamagingPlayer:
   - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
+  isThisZombiBullet: 0
+  clipsForDodgedPlayer: []
 --- !u!61 &4835035562384579341
 BoxCollider2D:
   m_ObjectHideFlags: 0

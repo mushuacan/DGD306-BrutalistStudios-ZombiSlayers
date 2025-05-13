@@ -52,7 +52,6 @@ public class Player_Attack : MonoBehaviour
         if (canAttack)
         {
             if (player_movement.animations) player_movement.player_animation.Attack();
-            player_movement.player_sounder.PlayAttackSound();
             canAttack = false;
             player_movement.action = Player_Movement.ActionOC.Attacking;
             player_UI.StartCastTimer(weapon.attackAnimationDuration);
@@ -63,6 +62,7 @@ public class Player_Attack : MonoBehaviour
 
     public void Attack()
     {
+        player_movement.player_sounder.PlayAttackSound();
         GameObject bullet = Instantiate(weapon.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
         bullet.GetComponent<PlayerBullet>().Settings(weapon);
         ArrangeAttackCooldown();

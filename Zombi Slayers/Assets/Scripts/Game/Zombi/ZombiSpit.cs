@@ -6,6 +6,7 @@ public class ZombiSpit : MonoBehaviour
     [SerializeField] private ZombiCharacter zombiChar;
     [SerializeField] private Transform platform;
     [SerializeField] private float rightCameraEdge;
+    [SerializeField] private AudioClip[] clips;
     private bool canSpit;
     private Tween spitTween;
 
@@ -35,6 +36,7 @@ public class ZombiSpit : MonoBehaviour
     {
         spitTween = DOVirtual.DelayedCall(zombiChar.zombi.attackDuration, () =>
         {
+            All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
             Spit();
         });
     }

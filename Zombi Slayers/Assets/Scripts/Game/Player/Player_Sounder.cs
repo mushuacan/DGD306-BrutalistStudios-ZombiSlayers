@@ -21,8 +21,15 @@ public class Player_Sounder : MonoBehaviour
 
     private void PlayFrom(AudioClip[] clips)
     {
-        int index = Random.Range(0, clips.Length);
-        audioSource.PlayOneShot(clips[index]);
+        if (clips.Length != 0)
+        {
+            int index = Random.Range(0, clips.Length);
+            audioSource.PlayOneShot(clips[index]);
+        }
+        else
+        {
+            Debug.Log("Null Ses gönderildi.");
+        }
     }
 
 
