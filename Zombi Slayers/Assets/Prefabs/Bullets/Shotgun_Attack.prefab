@@ -114,6 +114,7 @@ MonoBehaviour:
   - {fileID: 603547674695536468}
   - {fileID: 5489044983422354536}
   boxCollider: {fileID: 0}
+  WoodsAttackExplosion: {fileID: 0}
 --- !u!114 &6855738813859144162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +244,7 @@ MonoBehaviour:
   bulletsc:
   - {fileID: 0}
   boxCollider: {fileID: 0}
+  WoodsAttackExplosion: {fileID: 0}
 --- !u!114 &5489044983422354536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,6 +428,7 @@ MonoBehaviour:
   bulletsc:
   - {fileID: 0}
   boxCollider: {fileID: 0}
+  WoodsAttackExplosion: {fileID: 0}
 --- !u!114 &2461955504650419094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,6 +612,7 @@ MonoBehaviour:
   bulletsc:
   - {fileID: 0}
   boxCollider: {fileID: 0}
+  WoodsAttackExplosion: {fileID: 0}
 --- !u!114 &603547674695536468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -792,6 +796,7 @@ MonoBehaviour:
   bulletsc:
   - {fileID: 0}
   boxCollider: {fileID: 0}
+  WoodsAttackExplosion: {fileID: 0}
 --- !u!114 &8911042205994424335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -975,6 +980,7 @@ MonoBehaviour:
   bulletsc:
   - {fileID: 0}
   boxCollider: {fileID: 0}
+  WoodsAttackExplosion: {fileID: 0}
 --- !u!114 &2397460746673850834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,6 +1164,7 @@ MonoBehaviour:
   bulletsc:
   - {fileID: 0}
   boxCollider: {fileID: 0}
+  WoodsAttackExplosion: {fileID: 0}
 --- !u!114 &911388196560183367
 MonoBehaviour:
   m_ObjectHideFlags: 0

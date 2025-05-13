@@ -314,6 +314,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: dynamiteIgnite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841651920839482046, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: playerSlide.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: cfb671088a54b8141a6b50dc25fcac3b, type: 3}
@@ -324,7 +328,7 @@ PrefabInstance:
     - target: {fileID: 5980480940130164564, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: character
       value: 
-      objectReference: {fileID: 11400000, guid: e168c9dec4e8e754398fe625a4c4eabc, type: 2}
+      objectReference: {fileID: 11400000, guid: 85df758c50635804c922e490fb3b4306, type: 2}
     - target: {fileID: 9138159295395460147, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
