@@ -109,7 +109,7 @@ public class Envoriment_Movement : MonoBehaviour
             if (isMoving)
             {
                 transform.position = new Vector3(transform.position.x - (envorimentMovementSpeed * Time.deltaTime), transform.position.y, 5);
-                background.transform.position = (transform.position * 0.2f);
+                if (background != null) background.transform.position = (transform.position * 0.2f);
             }
         }
         if (MiniMapUI != null)

@@ -18,13 +18,13 @@ EditorBuildSettings:
     path: Assets/Scenes/EndlessRunner.unity
     guid: a5482b47c46017442a12fcb3cc890f9b
   - enabled: 1
-    path: Assets/Scenes/Test Level 3.unity
+    path: Assets/Scenes/Tests/Test Level 3.unity
     guid: c4819ee9d9fef4248b747ff3adce9ca3
   - enabled: 1
-    path: Assets/Scenes/Test Level 0.unity
+    path: Assets/Scenes/Tests/Test Level 0.unity
     guid: 43867c9e1057a1c4c962c2c718f4a713
   - enabled: 1
-    path: Assets/Scenes/Test Level 1.unity
+    path: Assets/Scenes/Tests/Test Level 1.unity
     guid: 9892f8bd241558c45b60d5b6a5073206
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 088f6425a6f274148b2ed01468aeb6a9, type: 3}
