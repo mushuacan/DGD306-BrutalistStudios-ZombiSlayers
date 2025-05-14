@@ -28,6 +28,12 @@ public class GameController : MonoBehaviour
             if (player2 != null)
                 player2.GetComponent<Player_Health>().OnPlayerDied += OnListenPlayerDied;
         }
+        else if (PlayerCount != 0)
+        {
+            player1 = FindAnyObjectByType<Player_Movement>();
+            if (player1 != null)
+                player1.GetComponent<Player_Health>().OnPlayerDied += OnListenPlayerDied;
+        }
     }
     void OnDestroy()
     {
@@ -36,7 +42,6 @@ public class GameController : MonoBehaviour
         if (player2 != null)
             player2.GetComponent<Player_Health>().OnPlayerDied -= OnListenPlayerDied;
     }
-    // Update is called once per frame
     void OnListenPlayerDied()
     {
         if (PlayerCount == 2)
@@ -58,7 +63,8 @@ public class GameController : MonoBehaviour
     private void StartTheGameFromScratch()
     {
         Debug.Log("Sahne baþtan baþlatýlýyor.");
-        DOVirtual.DelayedCall(2f, () => { TheReStart(); });
+        FindAnyObjectByType<Envoriment_Movement>().AllPlayersDied();
+        //DOVirtual.DelayedCall(2f, () => { TheReStart(); });
     }
     private void TheReStart()
     {

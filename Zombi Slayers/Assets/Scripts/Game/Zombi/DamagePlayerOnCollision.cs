@@ -7,7 +7,6 @@ public class DamagePlayerOnCollision : MonoBehaviour
     [Tooltip("For only bullets")]
     [SerializeField] private bool canSlideable;
     [SerializeField] private AudioClip[] clipsForDamagingPlayer;
-    [SerializeField] private bool isThisZombiBullet = false;
     [SerializeField] private AudioClip[] clipsForDodgedPlayer;
     private void OnTriggerEnter2D(Collider2D collision)
     {

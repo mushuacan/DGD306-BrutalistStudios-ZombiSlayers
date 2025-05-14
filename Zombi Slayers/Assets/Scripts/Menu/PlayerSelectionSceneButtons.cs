@@ -51,7 +51,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         p2_changed = false;
     }
 
-    public void Button_LoadScene(int scene)
+    public void Button_LoadScene(string scene)
     {
         SceneManager.LoadScene(scene);
     }
@@ -77,11 +77,11 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         {
             if (gameType == "EndlessRun")
             {
-                Button_LoadScene(3);
+                Button_LoadScene("EndlessRunner");
             }
             else
             {
-                Button_LoadScene(4);
+                Button_LoadScene("Level Menu");
             }
         }
     }

@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ButtonActions : MonoBehaviour
+public class MainMenuButtonActions : MonoBehaviour
 {
     #region Variables
     [Header("Menus")]
@@ -82,7 +82,7 @@ public class ButtonActions : MonoBehaviour
         //EventSystem.current.SetSelectedGameObject(fBO_Settings.gameObject);
     }
 
-    public void Button_LoadScene(int scene)
+    public void Button_LoadScene(string scene)
     {
         SceneManager.LoadScene(scene);
     }

@@ -6,6 +6,8 @@ public class Player_Movement : MonoBehaviour
 {
     #region Variables
 
+    public bool carryToDDOL;
+
     [Header("BUTTONS")]
     public bool openButtons;
     [SerializeField] public KeyCode moveUp_Button;
@@ -80,7 +82,7 @@ public class Player_Movement : MonoBehaviour
 
     private void Awake()
     {
-        CarryPlayerToDDOL();
+        if (carryToDDOL) CarryPlayerToDDOL();
     }
 
     public void CarryPlayerToDDOL()
@@ -118,8 +120,8 @@ public class Player_Movement : MonoBehaviour
     {
         if (inputs.startPressed)
         {
-            Debug.Log("Started basýldý");
-            FindAnyObjectByType<EscapeMenuManagerInGame>().OpenESCMenu();
+            //Debug.Log("Started basýldý");
+            FindAnyObjectByType<InGameMenuManager>().OpenESCMenu();
         }
     }
     private void CheckExit()

@@ -97,7 +97,13 @@ public class Envoriment_Movement : MonoBehaviour
             }
 
             float newXPosition = transform.position.x - (envorimentMovementSpeed * transitionDuration * 0.5f);
-            transform.DOMoveX(newXPosition, transitionDuration).SetEase(Ease.OutQuad); 
+
+            transform.DOMoveX(newXPosition, transitionDuration).SetEase(Ease.OutQuad).OnComplete(() => 
+            { 
+                GameSettings.Instance.settings["level"] = (int)GameSettings.Instance.settings["level"] + 1;
+                FindAnyObjectByType<InGameMenuManager>().OpenEndMenu();
+            });
+
             if (ScoreManager.Instance != null && ScoreManager.Instance.gameObject.activeInHierarchy)
             {
                 ScoreManager.Instance.StopAutoScore();
@@ -114,5 +120,14 @@ public class Envoriment_Movement : MonoBehaviour
         }
         if (MiniMapUI != null)
             MiniMapUI.UpdateSlider(finishLine.transform.position.x / finishLinePositionAtBeggining);
+    }
+
+    public void AllPlayersDied()
+    {
+        sessionEnded = true;
+        transform.DOMoveX(transform.position.x - envorimentMovementSpeed, 2).SetEase(Ease.OutQuad).OnComplete(() =>
+        {
+            FindAnyObjectByType<InGameMenuManager>().OpenEndMenu();
+        });
     }
 }

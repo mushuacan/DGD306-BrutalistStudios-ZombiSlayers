@@ -2,10 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EscapeMenuManagerInGame : MonoBehaviour
+public class InGameMenuManager : MonoBehaviour
 {
     public GameObject ESCmenu;
+    public GameObject endMenu;
 
+    void Start()
+    {
+        endMenu.SetActive(false);
+        ESCmenu.SetActive(false);
+    }
+    public void OpenEndMenu()
+    {
+        endMenu.SetActive(true);
+    }
     public void OpenESCMenu()
     {
         Time.timeScale = 0.0f;
