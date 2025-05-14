@@ -9,10 +9,17 @@ public class LevelSelectMenu : MonoBehaviour
 {
     [SerializeField] private Button[] levels;
     public int currentLevel;
+    public bool workWithCurrentLevel;
+    public int totalLevels;
 
     private void Start()
     {
-        currentLevel = (int)GameSettings.Instance.settings["level"] + 1;
+        if (workWithCurrentLevel)
+        {
+            currentLevel = (int)GameSettings.Instance.settings["level"] + 1;
+        }
+        else { currentLevel = totalLevels; }
+
 
         for (int i = 0; i < currentLevel; i++)
         {
@@ -24,7 +31,7 @@ public class LevelSelectMenu : MonoBehaviour
         }
 
 
-        EventSystem.current.SetSelectedGameObject(levels[0].gameObject);
+        EventSystem.current.SetSelectedGameObject(levels[currentLevel - 1].gameObject);
     }
 
     public void Button_LoadScene(string scene)

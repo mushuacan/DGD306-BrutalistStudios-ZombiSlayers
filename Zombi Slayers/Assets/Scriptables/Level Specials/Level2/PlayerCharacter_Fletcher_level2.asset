@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayerCharacter_Fletcher_level2
   m_EditorClassIdentifier: 
   characterName: Fletcher
-  health: 3
-  secondAbilityTimer: 1
+  health: 1
+  secondAbilityTimer: 0
   secondAbilitySpeed: 0.25
-  secondAbilityCooldown: 0.5
-  weapon: {fileID: 11400000, guid: b233062f2aac4c74bbccd37e01c81e43, type: 2}
+  secondAbilityCooldown: 100
+  weapon: {fileID: 11400000, guid: d740d4a3c978cf946998205f11ae71c4, type: 2}
   secondAbility: {fileID: 0}
   imaj: {fileID: 2800000, guid: 80acc8530661ea341bed0173307fa9e0, type: 3}
   spriter: {fileID: 21300000, guid: 80acc8530661ea341bed0173307fa9e0, type: 3}

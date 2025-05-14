@@ -52,8 +52,14 @@ public class Zombie_Health : MonoBehaviour
             }
             else
             {
+                if (damaj < 24)
+                {
+                    Destroy(collision.gameObject);
+                }
                 if (pusher != null)
+                {
                     pusher.PushBack(true, true);
+                }
             }
         }
     }

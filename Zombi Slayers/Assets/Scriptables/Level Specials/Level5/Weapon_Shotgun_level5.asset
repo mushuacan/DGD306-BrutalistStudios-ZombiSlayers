@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b02b847dd9e9334dbd365620b0c66c9, type: 3}
-  m_Name: Weapon_Shotgun_level1
+  m_Name: Weapon_Shotgun_level5
   m_EditorClassIdentifier: 
   weaponName: Shotgun
   damage: 10
-  attackDelay: 1
+  attackDelay: 0.3
   attackAnimationDuration: 0.25
   BulletDestroyTimer: 0.3
-  haveBullets: 0
-  haveLimitedBullets: 0
-  doesItReload: 0
-  bulletCountAtStart: 24
-  reloadTime: 0.5
+  haveBullets: 1
+  haveLimitedBullets: 1
+  doesItReload: 1
+  bulletCountAtStart: 6
+  reloadTime: 0.6
   bulletCountinOneReload: 2
   bulletSpeed: 12
   bulletBehavior: 1

@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Shotgun
   damage: 10
-  attackDelay: 0.25
-  attackAnimationDuration: 0.15
-  BulletDestroyTimer: 0.2
-  haveBullets: 1
+  attackDelay: 0.95
+  attackAnimationDuration: 0.25
+  BulletDestroyTimer: 0.3
+  haveBullets: 0
   haveLimitedBullets: 0
   doesItReload: 0
-  bulletCountAtStart: 12
-  reloadTime: 0.8
+  bulletCountAtStart: 24
+  reloadTime: 0.5
   bulletCountinOneReload: 2
-  bulletSpeed: 14
+  bulletSpeed: 12
   bulletBehavior: 1
   hitboxOffset: {x: 0, y: 0}
   hitboxSize: {x: 0, y: 0}
