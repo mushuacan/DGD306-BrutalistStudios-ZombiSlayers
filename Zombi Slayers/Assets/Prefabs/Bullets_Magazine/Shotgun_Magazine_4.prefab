@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3060510515097801180}
   - component: {fileID: 3927047333780315227}
   - component: {fileID: 33090728659558516}
+  - component: {fileID: 5286646187630977937}
   - component: {fileID: 7840189114818561971}
   m_Layer: 0
   m_Name: Shotgun_Magazine_4
@@ -65,6 +66,20 @@ MonoBehaviour:
   magazineType: 1
   clips:
   - {fileID: 8300000, guid: f1c15a7e8b8deff45b76274071cadf4e, type: 3}
+--- !u!114 &5286646187630977937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555471220647529321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae34467ba863b064f952149a80416d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteIfNoFletcher: 1
+  deleteIfNoWoods: 0
 --- !u!61 &7840189114818561971
 BoxCollider2D:
   m_ObjectHideFlags: 0

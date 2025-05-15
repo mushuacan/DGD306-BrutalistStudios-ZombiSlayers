@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3097172449106179103}
   - component: {fileID: 8116204623252740761}
   - component: {fileID: 4158115305077149351}
+  - component: {fileID: -158781246460358713}
   - component: {fileID: 3375778475196079147}
   - component: {fileID: 3129991936099847401}
   m_Layer: 0
@@ -66,6 +67,22 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 16540651f8aae6c47a02ec7e7a08ee10, type: 3}
   - {fileID: 8300000, guid: 35c297700b3771c4c80beac47826b624, type: 3}
+--- !u!114 &-158781246460358713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153640325359556647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae34467ba863b064f952149a80416d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteIfNoFletcher: 0
+  deleteIfNoWoods: 0
+  deleteIfSinglePlayer: 0
+  deleteIfNotSinglePlayer: 0
 --- !u!61 &3375778475196079147
 BoxCollider2D:
   m_ObjectHideFlags: 0

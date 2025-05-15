@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7017471153830193690}
   - component: {fileID: 4775080937154610488}
   - component: {fileID: -5763169253544715281}
+  - component: {fileID: 6303980768257446012}
   - component: {fileID: 5802316889921259578}
   m_Layer: 0
   m_Name: MedKit
@@ -145,6 +146,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snap: 0
   lane: 2
+--- !u!114 &6303980768257446012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7302740713525605029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae34467ba863b064f952149a80416d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteIfNoFletcher: 0
+  deleteIfNoWoods: 0
 --- !u!58 &5802316889921259578
 CircleCollider2D:
   m_ObjectHideFlags: 0

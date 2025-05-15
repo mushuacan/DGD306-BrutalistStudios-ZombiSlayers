@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2635368388138846178}
   - component: {fileID: 8495576673804247030}
   - component: {fileID: 4390098540505946188}
+  - component: {fileID: -8584412340009821664}
   - component: {fileID: 4584445579691408264}
   - component: {fileID: 324208396512592433}
   - component: {fileID: -1590478401598203509}
@@ -164,6 +165,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _laneFinder: {fileID: 8495576673804247030}
+--- !u!114 &-8584412340009821664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6729113846359408514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae34467ba863b064f952149a80416d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteIfNoFletcher: 0
+  deleteIfNoWoods: 0
 --- !u!114 &4584445579691408264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +235,6 @@ MonoBehaviour:
   canSlideable: 0
   clipsForDamagingPlayer:
   - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
-  isThisZombiBullet: 0
   clipsForDodgedPlayer: []
 --- !u!61 &4835035562384579341
 BoxCollider2D:

@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 3230454104735809029}
   - component: {fileID: 1288929832701480774}
   - component: {fileID: 1822636443104281034}
+  - component: {fileID: 930904992987040401}
   - component: {fileID: 457521630320467067}
   - component: {fileID: 4148959638789128644}
   - component: {fileID: 7765331287207966984}
@@ -303,6 +304,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.86, y: 1.59}
   m_EdgeRadius: 0
+--- !u!114 &930904992987040401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8562209942794333228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae34467ba863b064f952149a80416d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteIfNoFletcher: 0
+  deleteIfNoWoods: 0
 --- !u!114 &457521630320467067
 MonoBehaviour:
   m_ObjectHideFlags: 0

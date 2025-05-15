@@ -232,6 +232,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4772930382770501974, guid: f3705de74969550439ee9719182cf998, type: 3}
       propertyPath: level
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772930382770501974, guid: f3705de74969550439ee9719182cf998, type: 3}
+      propertyPath: ArrangePassability
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8063390866304264999, guid: f3705de74969550439ee9719182cf998, type: 3}
@@ -647,6 +651,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 916852764}
     m_Modifications:
+    - target: {fileID: -158781246460358713, guid: 9d5950ec1eeabc049bbc5a8747cabbaa, type: 3}
+      propertyPath: deleteIfNotSinglePlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3097172449106179103, guid: 9d5950ec1eeabc049bbc5a8747cabbaa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.605859
@@ -2239,6 +2247,10 @@ PrefabInstance:
     - target: {fileID: 5153640325359556647, guid: 4a7caffa3e39ff14daa3c0b8ec581469, type: 3}
       propertyPath: m_Name
       value: Box_Explosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097000714115256900, guid: 4a7caffa3e39ff14daa3c0b8ec581469, type: 3}
+      propertyPath: deleteIfSinglePlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8116204623252740761, guid: 4a7caffa3e39ff14daa3c0b8ec581469, type: 3}
       propertyPath: lane

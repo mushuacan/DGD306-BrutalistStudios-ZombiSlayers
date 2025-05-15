@@ -6,6 +6,8 @@ public class PassabilityChecker : MonoBehaviour
 {
     [SerializeField] private bool deleteIfNoFletcher;
     [SerializeField] private bool deleteIfNoWoods;
+    [SerializeField] private bool deleteIfSinglePlayer;
+    [SerializeField] private bool deleteIfNotSinglePlayer;
 
     // Start is called before the first frame update
     public void DestroyNoWoods()
@@ -15,5 +17,13 @@ public class PassabilityChecker : MonoBehaviour
     public void DestroyNoFletcher()
     {
         if (deleteIfNoFletcher) { Destroy(this.gameObject); }
+    }
+    public void DestroyIfSingleplayer()
+    {
+        if (deleteIfSinglePlayer) { Destroy(this.gameObject); }
+    }
+    public void DestroyIfNotSingleplayer()
+    {
+        if (deleteIfNotSinglePlayer) { Destroy(this.gameObject); }
     }
 }

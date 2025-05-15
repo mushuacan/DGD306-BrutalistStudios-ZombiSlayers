@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c627beb3b3023340a1d46ef7f8d8b6d, type: 3}
-  m_Name: PlayerCharacter_Fletcher_level3
+  m_Name: PlayerCharacter_Fletcher_tl3
   m_EditorClassIdentifier: 
   characterName: Fletcher
-  health: 1
+  health: 2
   secondAbilityTimer: 1
   secondAbilitySpeed: 0.25
-  secondAbilityCooldown: 3
-  weapon: {fileID: 11400000, guid: 3e63f3630cc6f3345a0ccdf938b33b18, type: 2}
+  secondAbilityCooldown: 2
+  weapon: {fileID: 11400000, guid: 11a6bc00e26bcdf408d6d9c03463c6c0, type: 2}
   secondAbility: {fileID: 0}
   imaj: {fileID: 2800000, guid: 80acc8530661ea341bed0173307fa9e0, type: 3}
   spriter: {fileID: 21300000, guid: 80acc8530661ea341bed0173307fa9e0, type: 3}

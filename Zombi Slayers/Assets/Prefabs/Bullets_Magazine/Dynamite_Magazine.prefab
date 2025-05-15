@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7063961452280844086}
   - component: {fileID: 610447785416877584}
   - component: {fileID: 7549590737601856471}
+  - component: {fileID: 8735378264284657272}
   - component: {fileID: 1088626550032691457}
   m_Layer: 0
   m_Name: Dynamite_Magazine
@@ -66,6 +67,20 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: f1c15a7e8b8deff45b76274071cadf4e, type: 3}
   - {fileID: 8300000, guid: 2f8bcd914c479e14489d1bc4279441ad, type: 3}
+--- !u!114 &8735378264284657272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253506991484801480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae34467ba863b064f952149a80416d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteIfNoFletcher: 0
+  deleteIfNoWoods: 1
 --- !u!61 &1088626550032691457
 BoxCollider2D:
   m_ObjectHideFlags: 0

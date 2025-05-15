@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b02b847dd9e9334dbd365620b0c66c9, type: 3}
-  m_Name: Weapon_Dynamite
+  m_Name: Weapon_Dynamite_tl3
   m_EditorClassIdentifier: 
   weaponName: Dynamite
   damage: 2500
@@ -20,7 +20,7 @@ MonoBehaviour:
   haveBullets: 1
   haveLimitedBullets: 1
   doesItReload: 0
-  bulletCountAtStart: 1
+  bulletCountAtStart: 2
   reloadTime: 0
   bulletCountinOneReload: 0
   bulletSpeed: 0
