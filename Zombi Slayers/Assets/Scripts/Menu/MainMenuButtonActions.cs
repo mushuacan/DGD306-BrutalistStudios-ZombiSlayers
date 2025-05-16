@@ -23,7 +23,8 @@ public class MainMenuButtonActions : MonoBehaviour
     public GameObject emrei;
     public GameObject hay;
     public GameObject everyone;
-
+    public GameObject gizem;
+    private bool gizemix;
 
 
     [Header("Other")]
@@ -49,6 +50,8 @@ public class MainMenuButtonActions : MonoBehaviour
 
 
         EventSystem.current.SetSelectedGameObject(fBO_MainMenu.gameObject);
+
+        if ((bool)GameSettings.Instance.settings["gizem"]) gizemix = true;
     }
 
 
@@ -130,6 +133,10 @@ public class MainMenuButtonActions : MonoBehaviour
         else
         {
             everyone.SetActive(false);
+        }
+        if (!mushu.activeSelf && !emrei.activeSelf && !hay.activeSelf && gizemix)
+        {
+            gizem.SetActive(true);
         }
     }
 

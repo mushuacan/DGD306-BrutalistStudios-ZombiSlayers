@@ -14,6 +14,7 @@ public class TutorialMenu : MonoBehaviour
         playerManager = FindAnyObjectByType<PlayerManager>();
         if (playerManager != null )
         {
+            GameSettings.Instance.settings["gizem"] = true;
             p1 = playerManager.players[0].GetComponent<Player_Inputs>();
             if (playerManager.playerCount == 2 )
                 p2 = playerManager.players[1].GetComponent<Player_Inputs>();

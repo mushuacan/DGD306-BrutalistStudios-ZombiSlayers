@@ -36,7 +36,7 @@ public class EndGameMenu : MonoBehaviour
     public void ButtonNext()
     {
         DOTween.KillAll();
-        SceneManager.LoadScene("level_" + ((int)GameSettings.Instance.settings["level"] + 1));
+        SceneManager.LoadScene("level_" + (FindAnyObjectByType<LevelMaker>().level + 1));
     }
     public void ButtonSelectLevel()
     {

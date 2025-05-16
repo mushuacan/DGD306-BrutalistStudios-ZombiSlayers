@@ -100,7 +100,8 @@ public class Envoriment_Movement : MonoBehaviour
 
             transform.DOMoveX(newXPosition, transitionDuration).SetEase(Ease.OutQuad).OnComplete(() => 
             { 
-                GameSettings.Instance.settings["level"] = (int)GameSettings.Instance.settings["level"] + 1;
+                if ((int)GameSettings.Instance.settings["level"] == FindAnyObjectByType<LevelMaker>().level - 1)
+                    GameSettings.Instance.settings["level"] = (int)GameSettings.Instance.settings["level"] + 1;
                 FindAnyObjectByType<InGameMenuManager>().OpenEndMenu(true);
             });
 

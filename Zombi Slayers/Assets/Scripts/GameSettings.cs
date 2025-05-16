@@ -37,6 +37,7 @@ public class GameSettings : MonoBehaviour
         settings.Add("animations", true);
         settings.Add("difficulty", "Medium");
         settings.Add("level", 0);
+        settings.Add("gizem", false);
 
         if (changeSettingsAsDown)
         {
