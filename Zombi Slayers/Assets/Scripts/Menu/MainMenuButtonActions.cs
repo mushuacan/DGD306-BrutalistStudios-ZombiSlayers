@@ -100,11 +100,9 @@ public class MainMenuButtonActions : MonoBehaviour
 
 
     #region CREDITS
-    public void Button_URL_mushuacan()
+    public void Button_Open_URL(string URL)
     {
-        // Burada istediðin URL'yi giriyorsun
-        string url = "https://mushuacan.itch.io/"; // Linki buraya yaz
-        Application.OpenURL(url);
+        Application.OpenURL(URL);
     }
 
     public void Button_Credits_Mushu()
