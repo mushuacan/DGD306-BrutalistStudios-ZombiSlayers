@@ -2229,7 +2229,7 @@ MonoBehaviour:
   - {fileID: 917694371}
   - {fileID: 1038493541}
   currentLevel: 0
-  workWithCurrentLevel: 0
+  workWithCurrentLevel: 1
   totalLevels: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

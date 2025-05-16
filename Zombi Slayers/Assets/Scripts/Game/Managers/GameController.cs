@@ -28,11 +28,14 @@ public class GameController : MonoBehaviour
             if (player2 != null)
                 player2.GetComponent<Player_Health>().OnPlayerDied += OnListenPlayerDied;
         }
-        else if (PlayerCount != 0)
+        else
         {
             player1 = FindAnyObjectByType<Player_Movement>();
             if (player1 != null)
+            {
+                PlayerCount = 1;
                 player1.GetComponent<Player_Health>().OnPlayerDied += OnListenPlayerDied;
+            }
         }
     }
     void OnDestroy()
@@ -48,23 +51,22 @@ public class GameController : MonoBehaviour
         {
             if (player1.state == Player_Movement.StateOC.Dead && player2.state == Player_Movement.StateOC.Dead)
             {
-                StartTheGameFromScratch();
+                AnnounceAllPlayersDied();
             }
         }
         if (PlayerCount == 1) 
         {
             if (player1.state == Player_Movement.StateOC.Dead)
             {
-                StartTheGameFromScratch();
+                AnnounceAllPlayersDied();
             }
         }
     }
 
-    private void StartTheGameFromScratch()
+    private void AnnounceAllPlayersDied()
     {
         Debug.Log("Sahne baþtan baþlatýlýyor.");
         FindAnyObjectByType<Envoriment_Movement>().AllPlayersDied();
-        //DOVirtual.DelayedCall(2f, () => { TheReStart(); });
     }
     private void TheReStart()
     {

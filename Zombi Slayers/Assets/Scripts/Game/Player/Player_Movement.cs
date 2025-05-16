@@ -165,6 +165,8 @@ public class Player_Movement : MonoBehaviour
             player.character = fixedPlayerCharacter;
         }
 
+        animations = (bool)GameSettings.Instance.settings["animations"];
+
         secondAbilityCooldown = 0f;
         FaoWind_StopJump = false;
 

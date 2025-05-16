@@ -9,9 +9,12 @@ using UnityEngine.UI;
 public class EndGameMenu : MonoBehaviour
 {
     [SerializeField] private Button restart, next;
+    public bool isItAWin;
     private void OnEnable()
     {
-        EventSystem.current.SetSelectedGameObject(next.gameObject);
+        if (isItAWin)
+            EventSystem.current.SetSelectedGameObject(next.gameObject);
+        else EventSystem.current.SetSelectedGameObject(restart.gameObject);
     }
     public void ButtonRestart()
     {

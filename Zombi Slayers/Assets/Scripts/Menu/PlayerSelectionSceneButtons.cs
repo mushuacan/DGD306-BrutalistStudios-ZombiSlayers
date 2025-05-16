@@ -10,6 +10,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     [Header("Deðiþkenler")]
     public int playerCount;
     public string gameType;
+    public float secondsToReady;
 
     [Header("Menüler")]
     public GameObject menu1;
@@ -28,12 +29,13 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     public GameObject player1, player2;
     public Player_Inputs player1_inputs, player2_inputs;
     public Player_Character player1_character, player2_character;
+    private float player1_timer, player2_timer;
 
     public RawImage player1_image, player2_image;
     public TextMeshProUGUI player1_text, player2_text, p1ReadyText, p2ReadyText;
 
     [Header("Booleanlar")]
-    private bool p1_changed, p2_changed, p1ready, p2ready;
+    private bool p1_changed, p2_changed, p1ready, p2ready, p1gettingReady, p2gettingReady;
 
     private void Start()
     {
@@ -89,12 +91,22 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     {
         if (player1_inputs.button0pressed)
         {
-            p1ready = true;
-            p1ReadyText.text = "Ready";
+            if (!p1gettingReady)
+            {
+                player1_timer = Time.timeSinceLevelLoad + secondsToReady;
+            }
+            if (player1_timer < Time.timeSinceLevelLoad)
+            {
+                p1ready = true;
+                p1ReadyText.text = "Ready";
+            }
+            p1gettingReady = true;
+            p1ReadyText.text = "Getting Ready in " + (player1_timer - Time.timeSinceLevelLoad).ToString("F1");
         }
         else
         {
             p1ready = false;
+            p1gettingReady = false;
             p1ReadyText.text = "Not Ready";
         }
     }
@@ -102,12 +114,22 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     {
         if (player2_inputs.button0pressed)
         {
-            p2ready = true;
-            p2ReadyText.text = "Ready";
+            if (!p2gettingReady)
+            {
+                player2_timer = Time.timeSinceLevelLoad + secondsToReady;
+            }
+            if (player2_timer < Time.timeSinceLevelLoad)
+            {
+                p2ready = true;
+                p2ReadyText.text = "Ready";
+            }
+            p2gettingReady = true;
+            p2ReadyText.text = "Getting Ready in " + (player2_timer - Time.timeSinceLevelLoad).ToString("F1");
         }
         else
         {
             p2ready = false;
+            p2gettingReady = false;
             p2ReadyText.text = "Not Ready";
         }
     }

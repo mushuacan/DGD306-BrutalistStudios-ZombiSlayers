@@ -12,8 +12,9 @@ public class InGameMenuManager : MonoBehaviour
         endMenu.SetActive(false);
         ESCmenu.SetActive(false);
     }
-    public void OpenEndMenu()
+    public void OpenEndMenu(bool becauseOfWin)
     {
+        endMenu.GetComponent<EndGameMenu>().isItAWin = becauseOfWin;
         endMenu.SetActive(true);
     }
     public void OpenESCMenu()
