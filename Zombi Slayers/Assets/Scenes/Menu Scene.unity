@@ -5267,6 +5267,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1739819212353439672, guid: 5900eb5e60978dc4b8dd25a6d9824044, type: 3}
+      propertyPath: startLevel
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739819212353439672, guid: 5900eb5e60978dc4b8dd25a6d9824044, type: 3}
       propertyPath: changeSettingsAsDown
       value: 1
       objectReference: {fileID: 0}
