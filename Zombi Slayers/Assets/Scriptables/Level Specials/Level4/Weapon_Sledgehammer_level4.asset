@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Sledgehammer
   damage: 80
-  attackDelay: 1.2
-  attackAnimationDuration: 0.65
+  attackDelay: 0.75
+  attackAnimationDuration: 0.5
   BulletDestroyTimer: 0.05
   haveBullets: 0
   haveLimitedBullets: 0
