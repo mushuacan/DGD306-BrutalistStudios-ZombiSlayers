@@ -513,7 +513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 380, y: -86}
+  m_AnchoredPosition: {x: 499, y: -60}
   m_SizeDelta: {x: 720.3, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &849655537
@@ -536,13 +536,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'If you thouch zombi, you lose medkit
-
-    and if you do not kill it, it
-    comes after you
-
-
-    Kill the zombies before they kill you'
+  m_text: "If you thouch zombi, \nYou lose medkit\nand if you dont kill it, \nit
+    comes after you\n\nKill the zombies before \nThey thouch and kill you.\nYou gatta
+    get ready for,\nOr there'll be zombi more."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -721,7 +717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -484, y: 357}
+  m_AnchoredPosition: {x: -411, y: 373}
   m_SizeDelta: {x: 719.2, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1357565509
@@ -744,7 +740,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Woods attackes with his sledgehammer to kill zombies and some destroy structures
+  m_text: 'Zombies comes but not matter,
+
+    Woods attack with sledgehammer,
+
+    Kills
+    them like a Brutal,
+
+    He even has a Brutalist Medal.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -778,7 +783,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -902,8 +907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -566, y: -285}
-  m_SizeDelta: {x: 449.2, y: 50}
+  m_AnchoredPosition: {x: -495, y: -300}
+  m_SizeDelta: {x: 538.6, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1980845769
 MonoBehaviour:
@@ -925,7 +930,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fletcher attackes with his shotgun to kill zombies
+  m_text: 'Fletcher has a shotgun,
+
+    Kills the zombies pam pam.
+
+    His hands
+    are not dirty,
+
+    But his gun is bloody.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -959,7 +971,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

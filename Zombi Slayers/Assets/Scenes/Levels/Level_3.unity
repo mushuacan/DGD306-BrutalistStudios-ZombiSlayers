@@ -433,7 +433,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: If you thouch this structure, you lose a medkit
+  m_text: "If you thouch this structure, \nYou lose a medkit\nYou cannot go further,\nIf
+    you lose all medkits."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -770,7 +771,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Woods can destroy yellow marked structures with his sledgehammer attack
+  m_text: 'Woods can destroy some obstacles,
+
+    But obstacle has to have yellow
+    tickes.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -976,12 +980,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fletcher''s second ability is sliding.
+  m_text: 'Fletcher''s ability is sliding.
 
-    Fletcher can slide structures
-    with holes
+    But there has to be a hole in.
 
-    or down the zombies. (he does not lose med kit)'
+    Or
+    he loses a medkit again,
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

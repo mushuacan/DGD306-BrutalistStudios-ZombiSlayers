@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae34467ba863b064f952149a80416d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteIfNoFletcher: 0
+  deleteIfNoFletcher: 1
   deleteIfNoWoods: 0
   deleteIfSinglePlayer: 0
   deleteIfNotSinglePlayer: 0
