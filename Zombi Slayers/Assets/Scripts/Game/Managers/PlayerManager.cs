@@ -119,6 +119,15 @@ public class PlayerManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (scene.name == "Player Selection Scene" && players.Count != 0)
+        {
+            foreach (var player in players)
+            {
+                Destroy(player);
+            }
+            Destroy(this.gameObject);
+        }
+
         ClearPlayers();
         levelMaker = FindObjectOfType<LevelMaker>();
         if (levelMaker != null)

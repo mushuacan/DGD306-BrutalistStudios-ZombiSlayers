@@ -89,52 +89,75 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     }
     private void ArrangePlayer1Ready()
     {
-        if (player1_inputs.button0pressed)
+        if (p1ready)
         {
-            if (!p1gettingReady)
+            if (player1_inputs.button1pressed)
             {
-                player1_timer = Time.timeSinceLevelLoad + secondsToReady;
+                p1ready = false;
             }
-            if (player1_timer < Time.timeSinceLevelLoad)
-            {
-                p1ready = true;
-                p1ReadyText.text = "Ready";
-            }
-            p1gettingReady = true;
-            p1ReadyText.text = "Getting Ready in " + (player1_timer - Time.timeSinceLevelLoad).ToString("F1");
         }
         else
         {
-            p1ready = false;
-            p1gettingReady = false;
-            p1ReadyText.text = "Not Ready";
+            if (player1_inputs.button0pressed)
+            {
+                if (!p1gettingReady)
+                {
+                    player1_timer = Time.timeSinceLevelLoad + secondsToReady;
+                }
+                if (player1_timer < Time.timeSinceLevelLoad)
+                {
+                    p1ready = true;
+                    p1ReadyText.text = "Ready";
+                    return;
+                }
+                p1gettingReady = true;
+                p1ReadyText.text = "Getting Ready in " + (player1_timer - Time.timeSinceLevelLoad).ToString("F1");
+            }
+            else
+            {
+                p1ready = false;
+                p1gettingReady = false;
+                p1ReadyText.text = "Not Ready";
+            }
         }
     }
     private void ArrangePlayer2Ready()
     {
-        if (player2_inputs.button0pressed)
+        if (p2ready)
         {
-            if (!p2gettingReady)
+            if (player2_inputs.button1pressed)
             {
-                player2_timer = Time.timeSinceLevelLoad + secondsToReady;
+                p2ready = false;
             }
-            if (player2_timer < Time.timeSinceLevelLoad)
-            {
-                p2ready = true;
-                p2ReadyText.text = "Ready";
-            }
-            p2gettingReady = true;
-            p2ReadyText.text = "Getting Ready in " + (player2_timer - Time.timeSinceLevelLoad).ToString("F1");
         }
         else
         {
-            p2ready = false;
-            p2gettingReady = false;
-            p2ReadyText.text = "Not Ready";
+            if (player2_inputs.button0pressed)
+            {
+                if (!p2gettingReady)
+                {
+                    player2_timer = Time.timeSinceLevelLoad + secondsToReady;
+                }
+                if (player2_timer < Time.timeSinceLevelLoad)
+                {
+                    p2ready = true;
+                    p2ReadyText.text = "Ready";
+                    return;
+                }
+                p2gettingReady = true;
+                p2ReadyText.text = "Getting Ready in " + (player2_timer - Time.timeSinceLevelLoad).ToString("F1");
+            }
+            else
+            {
+                p2ready = false;
+                p2gettingReady = false;
+                p2ReadyText.text = "Not Ready";
+            }
         }
     }
     private void ArrangePlayer1Selection()
     {
+        if (p1ready) return;
         if (player1_inputs.MovementValues.x > 0.5)
         {
             CharacterArranger(1, 1);
@@ -150,6 +173,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     }
     private void ArrangePlayer2Selection()
     {
+        if (p2ready) return;
         if (player2_inputs.MovementValues.x > 0.5)
         {
             CharacterArranger(2, 1);

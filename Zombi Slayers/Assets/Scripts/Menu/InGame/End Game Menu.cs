@@ -14,17 +14,17 @@ public class EndGameMenu : MonoBehaviour
     {
         if (isItAWin)
         {
-            next.gameObject.SetActive(true);
+            next.interactable = true;
             EventSystem.current.SetSelectedGameObject(next.gameObject);
         }
         else
         {
-            next.gameObject.SetActive(false);
+            next.interactable = false;
             EventSystem.current.SetSelectedGameObject(restart.gameObject);
             LevelMaker levelMaker = FindObjectOfType<LevelMaker>();
             if ((int)GameSettings.Instance.settings["level"] >= levelMaker.level)
             {
-                next.gameObject.SetActive(true);
+                next.interactable = true;
             }
         } 
     }

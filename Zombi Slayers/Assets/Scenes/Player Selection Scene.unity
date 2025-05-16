@@ -488,7 +488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCount: 0
   gameType: 
-  secondsToReady: 2
+  secondsToReady: 1
   menu1: {fileID: 2052479717}
   menu2: {fileID: 1028138902}
   Player1_Waiting: {fileID: 1155836674}
@@ -497,7 +497,7 @@ MonoBehaviour:
   Player2_Arrived: {fileID: 428422956}
   FirstSelectedButton: {fileID: 1646314967}
   PlayerInputManagerPrefab: {fileID: 5270426781868591942, guid: eaeec54c79c8d294b889839874757f53, type: 3}
-  playerManager: {fileID: 0}
+  playerManager: {fileID: 1813947874}
   player1: {fileID: 0}
   player2: {fileID: 0}
   player1_inputs: {fileID: 0}
