@@ -84,7 +84,7 @@ public class PlayerManager : MonoBehaviour
                 player.GetComponent<Player_Character>().character = Fletchers_all[level];
             }
         }
-        DOVirtual.DelayedCall(0.25f, ArrangeStarterPacks);
+        DOVirtual.DelayedCall(0.005f, ArrangeStarterPacks);
     }
     private void ArrangeStarterPacks()
     {
@@ -94,6 +94,7 @@ public class PlayerManager : MonoBehaviour
             player_Movement.isPlayingNow = true;
             player_Movement.StarterPack();
         }
+        Debug.Log("Starter Packs Arranged.");
     }
     private void ClearPlayers()
     {

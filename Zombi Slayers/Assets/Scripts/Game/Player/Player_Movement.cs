@@ -262,6 +262,7 @@ public class Player_Movement : MonoBehaviour
                 {
                     action = ActionOC.Normal;
                     secondAbilityCooldown = player.character.secondAbilityCooldown + Time.timeSinceLevelLoad;
+                    player_UI.StartSecondAbilityCooldown(player.character.secondAbilityCooldown);
                 });
             }
             else
@@ -270,6 +271,7 @@ public class Player_Movement : MonoBehaviour
                 {
                     action = ActionOC.Normal;
                     secondAbilityCooldown = player.character.secondAbilityCooldown + Time.timeSinceLevelLoad;
+                    player_UI.StartSecondAbilityCooldown(player.character.secondAbilityCooldown);
                 });
             }
         }
@@ -338,7 +340,7 @@ public class Player_Movement : MonoBehaviour
         if (player.character.characterName == "Fletcher")
         {
             player_sounder.PlaySlideSound();
-            player_UI.StartCooldown(player.character.secondAbilityTimer);
+            player_UI.StartCastTimer(player.character.secondAbilityTimer);
             player_health.Sliding(player.character.secondAbilityTimer);
         }
         if (player.character.characterName == "Woods")

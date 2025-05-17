@@ -37,6 +37,7 @@ public class Player_Attack : MonoBehaviour
             if (player.character.secondAbility.haveLimitedBullets)
             {
                 dynamiteAmmo = player.character.secondAbility.bulletCountAtStart;
+                player_UI.ArrangeSecondAbilityCounter(dynamiteAmmo, true);
             }
         }
 
@@ -76,7 +77,8 @@ public class Player_Attack : MonoBehaviour
         {
             if (player_movement.animations) player_movement.player_animation.SecondAbility();
             dynamiteAmmo--;
-            player_UI.StartCooldown(player.character.secondAbility.attackAnimationDuration);
+            player_UI.ArrangeSecondAbilityCounter(dynamiteAmmo, true);
+            player_UI.StartCastTimer(player.character.secondAbility.attackAnimationDuration);
             DOVirtual.DelayedCall(player.character.secondAbility.attackAnimationDuration, () =>
             Instantiate(player.character.secondAbility.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity));
         }
@@ -131,13 +133,13 @@ public class Player_Attack : MonoBehaviour
 
     private void SetDelay()
     {
-        player_UI.StartCooldown(player.character.weapon.attackDelay);
+        player_UI.StartWeaponCooldown(player.character.weapon.attackDelay);
         delay = player.character.weapon.attackDelay + Time.timeSinceLevelLoad;
     }
 
     private void Reload()
     {
-        player_UI.StartCooldown(player.character.weapon.reloadTime);
+        player_UI.StartWeaponCooldown(player.character.weapon.reloadTime);
         DOVirtual.DelayedCall(player.character.weapon.reloadTime, () => Reloaded());
         
     }
@@ -176,6 +178,7 @@ public class Player_Attack : MonoBehaviour
     public void TakeDynamite()
     {
         dynamiteAmmo++;
+        player_UI.ArrangeSecondAbilityCounter(dynamiteAmmo, true);
     }
 
     private void AmmoUI()

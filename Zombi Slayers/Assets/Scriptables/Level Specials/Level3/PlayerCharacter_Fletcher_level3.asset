@@ -21,3 +21,4 @@ MonoBehaviour:
   secondAbility: {fileID: 0}
   imaj: {fileID: 2800000, guid: 80acc8530661ea341bed0173307fa9e0, type: 3}
   spriter: {fileID: 21300000, guid: 80acc8530661ea341bed0173307fa9e0, type: 3}
+  secondAbilityIcon: {fileID: 21300000, guid: ee4d2db8a4a31944a8dcf0944cf6a1a2, type: 3}

@@ -38,7 +38,7 @@ public class Scriptable_Weapons : ScriptableObject
 
     [Header("Referances")]
     public GameObject bullet;
-    public Texture icon;
+    public Sprite icon;
 
     public enum bulletBehaviorTypes
     {

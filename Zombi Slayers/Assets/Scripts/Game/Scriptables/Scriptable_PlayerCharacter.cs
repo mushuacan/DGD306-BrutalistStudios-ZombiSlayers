@@ -13,4 +13,5 @@ public class Scriptable_PlayerCharacter : ScriptableObject
 
     public Texture imaj;
     public Sprite spriter;
+    public Sprite secondAbilityIcon;
 }

@@ -11,13 +11,11 @@ public class Player_UI : MonoBehaviour
 
     [Header("Referances")]
     [SerializeField] private Slider castTimer;
-    [SerializeField] private Slider coolDown;
-    [SerializeField] private RawImage weaponImage;
-    [SerializeField] private RawImage heart1;
-    [SerializeField] private RawImage heart2;
-    [SerializeField] private RawImage heart3;
-    [SerializeField] private RawImage heart4;
+    [SerializeField] private Image weaponCooldown, secondAbilityCooldown;
+    [SerializeField] private Image weaponImage, secondAbilityImage;
     [SerializeField] private TextMeshProUGUI ammoText;
+    [SerializeField] private TextMeshProUGUI secondAbilityCountText;
+    [SerializeField] private RawImage heart1, heart2, heart3, heart4;
 
 
     [Header("Referances")]
@@ -26,10 +24,43 @@ public class Player_UI : MonoBehaviour
     // Start is called before the first frame update
     public void StarterPack()
     {
-        castTimer.gameObject.SetActive(false);
-        coolDown.gameObject.SetActive(false);
         if (player.character.weapon.icon != null)
-            weaponImage.texture = player.character.weapon.icon;
+        {
+            weaponImage.gameObject.SetActive(true);
+            weaponImage.sprite = player.character.weapon.icon;
+        }
+        else
+        {
+            weaponImage.gameObject.SetActive(false);
+        }
+        if (player.character.secondAbility != null)
+        {
+            if (player.character.secondAbility.icon != null)
+            {
+                secondAbilityImage.gameObject.SetActive(true);
+                secondAbilityImage.sprite = player.character.secondAbility.icon;
+            }
+            else
+            {
+                secondAbilityImage.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            if (player.character.secondAbilityIcon != null)
+            {
+                secondAbilityImage.gameObject.SetActive(true);
+                secondAbilityImage.sprite = player.character.secondAbilityIcon;
+            }
+            else
+            {
+                secondAbilityImage.gameObject.SetActive(false);
+            }
+        }
+
+        castTimer.gameObject.SetActive(false);
+        weaponCooldown.fillAmount = 0;
+        secondAbilityCooldown.fillAmount = 0;
     }
 
     public void StartCastTimer(float time)
@@ -40,22 +71,34 @@ public class Player_UI : MonoBehaviour
         {
             castTimer.gameObject.SetActive(false);
             castTimer.value = 0;
-            weaponImage.DOFade(fadePower, fadeDuration);
         });
     }
 
-    public void StartCooldown(float time)
+    public void StartWeaponCooldown(float time)
     {
-        coolDown.gameObject.SetActive(true);
-        coolDown.value = 0;
-        coolDown.DOValue(1, time).SetEase(Ease.Linear).OnComplete(() =>
+        weaponImage.DOFade(fadePower, fadeDuration);
+        weaponCooldown.gameObject.SetActive(true);
+        weaponCooldown.fillAmount = 1;
+        weaponCooldown.DOFillAmount(0, time).SetEase(Ease.Linear).OnComplete(() =>
         {
-            coolDown.gameObject.SetActive(false);
-            coolDown.value = 0;
+            weaponCooldown.gameObject.SetActive(false);
+            weaponCooldown.fillAmount = 0;
             weaponImage.DOFade(1f, fadeDuration);
         });
     }
 
+    public void StartSecondAbilityCooldown(float time)
+    {
+        secondAbilityImage.DOFade(fadePower, fadeDuration);
+        secondAbilityCooldown.gameObject.SetActive(true);
+        secondAbilityCooldown.fillAmount = 1;
+        secondAbilityCooldown.DOFillAmount(0, time).SetEase(Ease.Linear).OnComplete(() =>
+        {
+            secondAbilityCooldown.gameObject.SetActive(false);
+            secondAbilityCooldown.fillAmount = 0;
+            secondAbilityImage.DOFade(1f, fadeDuration);
+        });
+    }
     public void ArrangeAmmoCounter(int currentAmmo, int totalAmmo, bool showIt, bool hasTotalAmmo)
     {
         if (showIt)
@@ -71,6 +114,13 @@ public class Player_UI : MonoBehaviour
         }
     }
 
+    public void ArrangeSecondAbilityCounter( int totalAmmo, bool showIt)
+    {
+        if (showIt)
+        {
+            secondAbilityCountText.text = (totalAmmo.ToString());
+        }
+    }
     public void ArrangeHearts(int hearts)
     {
         if (hearts > 0)
