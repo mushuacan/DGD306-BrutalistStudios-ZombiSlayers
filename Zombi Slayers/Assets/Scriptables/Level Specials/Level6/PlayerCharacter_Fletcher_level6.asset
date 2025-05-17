@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerCharacter_Fletcher_level6
   m_EditorClassIdentifier: 
   characterName: Fletcher
-  health: 2
+  health: 1
   secondAbilityTimer: 1
   secondAbilitySpeed: 0.25
   secondAbilityCooldown: 2
