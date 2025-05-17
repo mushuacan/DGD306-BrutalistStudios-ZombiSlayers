@@ -18,12 +18,8 @@ public class CreateExplosionWhileDying : MonoBehaviour
             }
         }
     }
-
-    private void OnDestroy()
+    public void Explode()
     {
-        if (Application.isPlaying)
-        {
-            Instantiate(_explosion, this.transform.position, Quaternion.identity);
-        }
+        Instantiate(_explosion, transform.position, Quaternion.identity);
     }
 }

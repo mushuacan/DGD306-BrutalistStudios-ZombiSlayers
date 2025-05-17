@@ -226,6 +226,7 @@ MonoBehaviour:
   zombiATBM: {fileID: 0}
   zombiChar: {fileID: 2635368388138846178}
   laner: {fileID: 8495576673804247030}
+  explosioner: {fileID: -1648446706728072271}
   pusher: {fileID: 4584445579691408264}
   clipsLowDamaj:
   - {fileID: 8300000, guid: 830fc9b87bd647b41a60cd0b34156909, type: 3}

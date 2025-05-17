@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Fletcher
   health: 1
-  secondAbilityTimer: 0.5
-  secondAbilitySpeed: 3
+  secondAbilityTimer: 1
+  secondAbilitySpeed: 0.3
   secondAbilityCooldown: 2
   weapon: {fileID: 11400000, guid: 51ea1e755e26f084fa0c5fae70cc4a12, type: 2}
   secondAbility: {fileID: 0}

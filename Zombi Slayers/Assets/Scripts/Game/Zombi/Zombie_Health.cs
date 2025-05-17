@@ -9,6 +9,7 @@ public class Zombie_Health : MonoBehaviour
     [SerializeField] private ZombiAtTheBack_Manager zombiATBM;
     [SerializeField] private ZombiCharacter zombiChar;
     [SerializeField] private LaneFinder laner;
+    [SerializeField] private CreateExplosionWhileDying explosioner;
     [SerializeField] private Zombi_Push pusher;
     [SerializeField] private AudioClip[] clipsLowDamaj;
     [SerializeField] private AudioClip[] clipsHighDamaj;
@@ -59,6 +60,10 @@ public class Zombie_Health : MonoBehaviour
             {
                 DOTween.Kill(transform);
                 ScoreManager.Instance.AddScore(killScore, "Zombi");
+                if(explosioner != null)
+                {
+                    explosioner.Explode();
+                }
                 Destroy(this.gameObject);
             }
             else

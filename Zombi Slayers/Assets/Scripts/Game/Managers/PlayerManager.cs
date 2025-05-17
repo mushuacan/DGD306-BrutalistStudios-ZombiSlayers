@@ -98,15 +98,20 @@ public class PlayerManager : MonoBehaviour
     }
     private void ClearPlayers()
     {
-        foreach (var player in players)
+        if (players != null && players.Count > 0)
         {
-            if (player.CompareTag("Untagged"))
+            foreach (var player in players)
             {
-                Destroy(player);
+                if (player != null && player.CompareTag("Untagged"))
+                {
+                    Destroy(player);
+                }
             }
         }
+
         PlayerCounter();
     }
+
 
     void OnEnable()
     {
@@ -120,13 +125,20 @@ public class PlayerManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Player Selection Scene" && players.Count != 0)
+        if (scene.name == "Player Selection Scene" && players.Count > 0)
         {
-            foreach (var player in players)
+            // Geçici liste yaparak null olmayanlarý güvenle sil
+            var validPlayers = players.FindAll(p => p != null);
+
+            foreach (var player in validPlayers)
             {
                 Destroy(player);
             }
-            Destroy(this.gameObject);
+
+            players.Clear();
+
+            // Kendi objeni biraz gecikmeyle sil (opsiyonel güvenlik)
+            Destroy(this.gameObject, 0.1f);
         }
 
         ClearPlayers();

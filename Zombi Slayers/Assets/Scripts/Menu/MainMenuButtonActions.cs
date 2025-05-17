@@ -10,6 +10,7 @@ public class MainMenuButtonActions : MonoBehaviour
     public GameObject mainMenu;
     public GameObject settingsMenu;
     public GameObject creditsMenu;
+    public GameObject levelOpener;
 
     [Header("fBO's")]
     // fBO = firstButtonOf...
@@ -52,6 +53,7 @@ public class MainMenuButtonActions : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(fBO_MainMenu.gameObject);
 
         if ((bool)GameSettings.Instance.settings["gizem"]) gizemix = true;
+        if ((bool)GameSettings.Instance.settings["gizem"]) levelOpener.SetActive(true);
     }
 
 
@@ -81,6 +83,13 @@ public class MainMenuButtonActions : MonoBehaviour
     {
         mainMenu.SetActive(false);
         settingsMenu.SetActive(true);
+
+        //EventSystem.current.SetSelectedGameObject(fBO_Settings.gameObject);
+    }
+
+    public void Button_OpenAllLevels()
+    {
+        GameSettings.Instance.settings["level"] = 9;
 
         //EventSystem.current.SetSelectedGameObject(fBO_Settings.gameObject);
     }

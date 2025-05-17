@@ -32,6 +32,7 @@ public class LevelSelectMenu : MonoBehaviour
 
 
         EventSystem.current.SetSelectedGameObject(levels[currentLevel - 1].gameObject);
+
     }
 
     public void Button_LoadScene(string scene)
