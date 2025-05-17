@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: bab944d07f007be40a583cc0ec6690b8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zombi_BOSS_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 340
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba337161a8366e42babcc6009f2da48
+      internalID: 674912955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 340
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1693204ae0a54b84b9699d78ebd185a5
+      internalID: 1594336978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 342
+        width: 34
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de073659580ff12488f9cd3fd256e63a
+      internalID: 1468933161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 349
+        width: 35
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6d8f368dba9584dbb2c8a4bc110600
+      internalID: -1217196310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 342
+        width: 31
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc60e5aae2ddf86418e2bb976215b783
+      internalID: 1248257396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 340
+        width: 37
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94defb20395c5f144be98c7a3928a9ed
+      internalID: -1038485887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 340
+        width: 30
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd431eeb07ee294cb294eb303173803
+      internalID: 1174243039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Spit_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 272
+        width: 31
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70940538e45b9b349b3212a7bcbe7ca9
+      internalID: 1564126531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Spit_2
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 272
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ed60c7529c91f4282471a7094de22e
+      internalID: 1866710068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Spit_3
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 271
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1665ff176a22bc4d84e3731890a9973
+      internalID: -1195600695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Spit_4
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 270
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c11b576c794d1f49acd8ac69eb9e583
+      internalID: -1186165664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Spit_5
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 271
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a262e61201f68749b52f8ab7e7a4980
+      internalID: 460999157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Die_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 188
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f56cd43a516a7478ce60ee6a84b1b0
+      internalID: -1650132228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Die_2
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 188
+        width: 40
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f703398f5fa5c77408d9a2438729d2ab
+      internalID: 1218169614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Die_3
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 189
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f05c07350267946876c8a18c94b290
+      internalID: -1557468650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Die_4
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 188
+        width: 64
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48c73ad100d6fb4fa106b8722fee514
+      internalID: -1338328202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Die_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 189
+        width: 62
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed2664065002f3479a020af12aba087
+      internalID: 740631659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Run_1
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 165
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ae7ded1a2ad564a9ad662ac838134d
+      internalID: -812173644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Run_2
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 165
+        width: 57
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1029af38122fe5448926b81ecccc164
+      internalID: 1704757568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Run_3
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 165
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bd7c9242b4e4b409d7d159b96187f9
+      internalID: 842605039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Run_4
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 165
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715c1f10ce086674dbc67215dcd33386
+      internalID: 1091594915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Run_5
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 167
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b4b173b24f3464bb24fcb65a555e4b
+      internalID: -2042704930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Die_6
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 149
+        width: 67
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439bc7c002cc1194282fad2c955e86f0
+      internalID: -1510858777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Die_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 149
+        width: 76
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a85ccf3adf6bb499ef3cf248d395b5
+      internalID: -896762450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombi_BOSS_Die_8
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 149
+        width: 79
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2501352343195234ba111d17baa59f35
+      internalID: 11385954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Zombi_BOSS_0: -1226409746
+      Zombi_BOSS_1: 1820319444
+      Zombi_BOSS_10: -292978982
+      Zombi_BOSS_18: -118790331
+      Zombi_BOSS_19: 1025763617
+      Zombi_BOSS_20: 1854052938
+      Zombi_BOSS_21: -349680497
+      Zombi_BOSS_22: 459245225
+      Zombi_BOSS_3: -2101784534
+      Zombi_BOSS_35: 1968992574
+      Zombi_BOSS_37: -1590212760
+      Zombi_BOSS_38: -1370109009
+      Zombi_BOSS_39: -1673814267
+      Zombi_BOSS_40: 774824351
+      Zombi_BOSS_41: -2138058225
+      Zombi_BOSS_42: 1975462964
+      Zombi_BOSS_43: 1997092068
+      Zombi_BOSS_44: 579030983
+      Zombi_BOSS_45: 1322895318
+      Zombi_BOSS_46: 19736638
+      Zombi_BOSS_47: 1873469771
+      Zombi_BOSS_48: 1491063418
+      Zombi_BOSS_49: -1996079508
+      Zombi_BOSS_50: -650017409
+      Zombi_BOSS_8: 502911385
+      Zombi_BOSS_Die_1: -1650132228
+      Zombi_BOSS_Die_2: 1218169614
+      Zombi_BOSS_Die_3: -1557468650
+      Zombi_BOSS_Die_4: -1338328202
+      Zombi_BOSS_Die_5: 740631659
+      Zombi_BOSS_Die_6: -1510858777
+      Zombi_BOSS_Die_7: -896762450
+      Zombi_BOSS_Die_8: 11385954
+      Zombi_BOSS_Jump_1: 674912955
+      Zombi_BOSS_Jump_2: 1594336978
+      Zombi_BOSS_Jump_3: 1468933161
+      Zombi_BOSS_Jump_4: -1217196310
+      Zombi_BOSS_Jump_5: 1248257396
+      Zombi_BOSS_Jump_6: 1174243039
+      Zombi_BOSS_Jump_7: -1038485887
+      Zombi_BOSS_Run_1: -812173644
+      Zombi_BOSS_Run_2: 1704757568
+      Zombi_BOSS_Run_3: 842605039
+      Zombi_BOSS_Run_4: 1091594915
+      Zombi_BOSS_Run_5: -2042704930
+      Zombi_BOSS_Spit_1: 1564126531
+      Zombi_BOSS_Spit_2: 1866710068
+      Zombi_BOSS_Spit_3: -1195600695
+      Zombi_BOSS_Spit_4: -1186165664
+      Zombi_BOSS_Spit_5: 460999157
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

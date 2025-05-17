@@ -12,9 +12,11 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
     public bool addZombiRandomly;
     public float newZombiDelay;
     private bool gameEnded;
+    public bool stopZombying;
 
     void Start()
     {
+        if (stopZombying) return;
         gameEnded = false;
         AddBackZombi(1);
         AddBackZombi(2);
@@ -33,6 +35,7 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
     public void AddBackZombi(int lane)
     {
         if (gameEnded) return;
+        if (stopZombying) return;
         GameObject zombiATB = Instantiate(zombiAtTheBackPrefab);
         zombiATB.transform.SetParent(gameObject.transform);
         int order = SetOrderOfZombi(lane, zombiATB);

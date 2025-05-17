@@ -31,7 +31,18 @@ public class Zombie_Health : MonoBehaviour
     {
         if (collision.CompareTag("Player_Bullet"))
         {
-            float damaj = collision.GetComponent<PlayerBullet>().damage;
+
+            PlayerBullet bullet = collision.GetComponent<PlayerBullet>();
+            float damaj = 0;
+            if (bullet != null)
+            {
+                damaj = bullet.damage;
+            }
+            else
+            {
+                Debug.LogWarning("Çarpan obje 'Player_Bullet' tag'ine sahip ama PlayerBullet scripti yok." + collision.name);
+                return;
+            }
             health -= damaj;
             if (All_Sounder.Instance != null)
             {
