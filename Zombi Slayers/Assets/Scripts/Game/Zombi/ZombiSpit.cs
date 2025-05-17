@@ -28,7 +28,7 @@ public class ZombiSpit : MonoBehaviour
         }
         else
         {
-            spitTween = DOVirtual.DelayedCall(0.3f, () => { WaitForSpit(); });
+            spitTween = DOVirtual.DelayedCall(0.3f, () => { WaitForSpit(); }).SetUpdate(UpdateType.Normal);
         }
     }
 
@@ -38,7 +38,7 @@ public class ZombiSpit : MonoBehaviour
         {
             All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
             Spit();
-        });
+        }).SetUpdate(UpdateType.Normal);
     }
 
     private void Spit()
@@ -55,7 +55,7 @@ public class ZombiSpit : MonoBehaviour
         spitTween = DOVirtual.DelayedCall(zombiChar.zombi.attackCooldown, () =>
         {
             SpitAnimation();
-        });
+        }).SetUpdate(UpdateType.Normal);
     }
 
     private void OnDestroy()
