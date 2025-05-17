@@ -16,6 +16,7 @@ public class SettingMenuActions : MonoBehaviour
     void Start()
     {
         toggleComponentSound.isOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
+        toggleComponentAnimation.isOn = (bool)GameSettings.Instance.settings["animations"];
     }
 
     private void OnEnable()
@@ -31,6 +32,7 @@ public class SettingMenuActions : MonoBehaviour
         scrollbar_SoundFXs.value = (float)GameSettings.Instance.settings["soundFXVolume"];
         scrollbar_Sounds.value = (float)GameSettings.Instance.settings["mainSoundsVolume"];
         toggleComponentSound.isOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
+        toggleComponentAnimation.isOn = (bool)GameSettings.Instance.settings["animations"];
         EventSystem.current.SetSelectedGameObject(toggleComponentSound.gameObject);
     }
 

@@ -54,6 +54,9 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private bool FaoWind_JumpedUp;
     public bool isPlayingNow;
     private GameObject DeadLocationer;
+    private bool exitedMenuNew;
+    private float exitedTime;
+    private Tween jumpTween;
 
     #endregion
 
@@ -101,10 +104,36 @@ public class Player_Movement : MonoBehaviour
             return;
         if (state == StateOC.Dead)
         {
+            if (jumpTween != null && jumpTween.IsActive() && jumpTween.IsPlaying())
+            {
+                transform.position = new Vector3(DeadLocationer.transform.position.x, transform.position.y, transform.position.z);
+                return;
+            }
             if (DeadLocationer != null) { transform.position = DeadLocationer.transform.position; }
             return;
         }
-        
+        if ( Time.timeScale == 0)
+        {
+            exitedTime = Time.timeSinceLevelLoad + 1f;
+            exitedMenuNew = true;
+            return;
+        }
+        if (exitedMenuNew)
+        {
+            if (inputs.button0pressed)
+            {
+                return;
+            }
+            else if (exitedTime < Time.timeSinceLevelLoad)
+            {
+                exitedMenuNew = false;
+            }
+            else
+            {
+                exitedMenuNew = false; 
+            }
+        }
+
         CheckIfDead();
         ArrangeJumping();
         ArrangeMovement();
@@ -293,9 +322,9 @@ public class Player_Movement : MonoBehaviour
         state = StateOC.Jumping;
         lane = lane - 1;
         player_sounder.PlayJumpSound();
-        transform.DOMoveY(jumpAnimationUpDistance + transform.position.y, (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.OutQuad).OnComplete(() =>
+        jumpTween = transform.DOMoveY(jumpAnimationUpDistance + transform.position.y, (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.OutQuad).OnComplete(() =>
         {
-            transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.InQuad).OnComplete(() =>
+            jumpTween = transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.InQuad).OnComplete(() =>
             {
                 player_sounder.PlayLandSound();
                 if (state == StateOC.EndGame) return;
@@ -309,9 +338,9 @@ public class Player_Movement : MonoBehaviour
         state = StateOC.Jumping;
         lane = lane + 1;
         player_sounder.PlayJumpSound();
-        transform.DOMoveY(jumpAnimationUpDistance + laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
+        jumpTween = transform.DOMoveY(jumpAnimationUpDistance + laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
         {
-            transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
+            jumpTween = transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
             {
                 player_sounder.PlayLandSound();
                 if (state == StateOC.EndGame) return;

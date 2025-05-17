@@ -17,6 +17,7 @@ public class Player_Animation : MonoBehaviour
     {
         if (player.character.spriter != null)
         {
+            animationer.runtimeAnimatorController = null;
             _spriteRenderer.sprite = player.character.spriter;
         }
         else
