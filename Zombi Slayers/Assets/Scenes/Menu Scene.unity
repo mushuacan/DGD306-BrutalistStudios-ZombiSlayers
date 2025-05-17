@@ -439,7 +439,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 17055489}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1553915086}
+        m_TargetAssemblyTypeName: MainMenuButtonActions, Assembly-CSharp
+        m_MethodName: Button_Open_URL
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: https://privnote.com/sB9UOqxO#79ZCf7dCl
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &17055489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,7 +932,7 @@ GameObject:
   - component: {fileID: 181341836}
   - component: {fileID: 181341835}
   m_Layer: 5
-  m_Name: Button_mushuacanURL
+  m_Name: Button_hayURL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -991,15 +1003,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1553915086}
-        m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
-        m_MethodName: Button_URL_mushuacan
-        m_Mode: 1
+        m_TargetAssemblyTypeName: MainMenuButtonActions, Assembly-CSharp
+        m_MethodName: Button_Open_URL
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: https://www.linkedin.com/in/hasanarif-yi%C4%9Fit-59261b287/
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &181341836
@@ -1497,7 +1509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: hay.itch.io
+  m_text: linkedin.hasan
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2916,7 +2928,7 @@ GameObject:
   - component: {fileID: 976996482}
   - component: {fileID: 976996481}
   m_Layer: 5
-  m_Name: Button_mushuacanURL
+  m_Name: Button_emreiURL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2987,15 +2999,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1553915086}
-        m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
-        m_MethodName: Button_URL_mushuacan
-        m_Mode: 1
+        m_TargetAssemblyTypeName: MainMenuButtonActions, Assembly-CSharp
+        m_MethodName: Button_Open_URL
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: https://www.linkedin.com/in/emre-ilhan-28394b282/
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &976996482
@@ -3501,7 +3513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1279725739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4663,7 +4675,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: emrei.itch.io
+  m_text: 'linkedin.emre
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5731,7 +5745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2055070768
 RectTransform:
   m_ObjectHideFlags: 0
