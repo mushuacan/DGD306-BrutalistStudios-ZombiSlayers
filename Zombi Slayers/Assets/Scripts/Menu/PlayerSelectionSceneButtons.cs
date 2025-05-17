@@ -29,13 +29,13 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     public GameObject player1, player2;
     public Player_Inputs player1_inputs, player2_inputs;
     public Player_Character player1_character, player2_character;
-    private float player1_timer, player2_timer;
+    private float player1_timer, player2_timer, outTimer;
 
     public RawImage player1_image, player2_image;
-    public TextMeshProUGUI player1_text, player2_text, p1ReadyText, p2ReadyText;
+    public TextMeshProUGUI player1_text, player2_text, p1ReadyText, p2ReadyText, outText;
 
     [Header("Booleanlar")]
-    private bool p1_changed, p2_changed, p1ready, p2ready, p1gettingReady, p2gettingReady;
+    private bool p1_changed, p2_changed, p1ready, p2ready, p1gettingReady, p2gettingReady, outTimerStarted;
 
     private void Start()
     {
@@ -71,6 +71,50 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
             ArrangePlayer2Ready();
         }
         CheckIfPlayersReady();
+        CheckIfPlayerWantsOut();
+    }
+
+    private void CheckIfPlayerWantsOut()
+    {
+        if (CheckPlayerOutInputs())
+        {
+            if (outTimerStarted)
+            {
+                outText.text = "Getting Out in " + (outTimer - Time.timeSinceLevelLoad).ToString("F1");
+                if (outTimer < Time.timeSinceLevelLoad)
+                {
+                    Button_LoadScene("Menu Scene");
+                }
+            }
+            else
+            {
+                outTimerStarted = true;
+            }
+        }
+        else
+        {
+            outText.text = "";
+            outTimer = Time.timeSinceLevelLoad + 2;
+            outTimerStarted = false;
+        }
+    }
+    private bool CheckPlayerOutInputs()
+    {
+        if (player1_inputs != null)
+        {
+            if (player1_inputs.button1pressed)
+            {
+                return true;
+            }
+        }
+        if (player2_inputs != null)
+        {
+            if (player2_inputs.button1pressed)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void CheckIfPlayersReady()
