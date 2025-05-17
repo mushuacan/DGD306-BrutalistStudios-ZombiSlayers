@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explosion: {fileID: 2818190531208682367, guid: 289720c8a6742fa4db1399672afb3883, type: 3}
   _willExplode: 1
-  _atXPosition: 3
+  _atXPosition: -3
 --- !u!114 &8495576673804247030
 MonoBehaviour:
   m_ObjectHideFlags: 0

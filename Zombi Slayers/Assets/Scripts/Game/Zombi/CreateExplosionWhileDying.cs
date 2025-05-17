@@ -14,6 +14,7 @@ public class CreateExplosionWhileDying : MonoBehaviour
         {
             if (transform.position.x < _atXPosition)
             {
+                Explode();
                 Destroy(gameObject);
             }
         }

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c627beb3b3023340a1d46ef7f8d8b6d, type: 3}
+  m_Name: PlayerCharacter_Fletcher_level9
+  m_EditorClassIdentifier: 
+  characterName: Fletcher
+  health: 2
+  secondAbilityTimer: 0.6
+  secondAbilitySpeed: 3
+  secondAbilityCooldown: 0.9
+  weapon: {fileID: 11400000, guid: 68b74c073e262f442a38238b2288213a, type: 2}
+  secondAbility: {fileID: 0}
+  imaj: {fileID: 2800000, guid: 80acc8530661ea341bed0173307fa9e0, type: 3}
+  spriter: {fileID: 21300000, guid: 80acc8530661ea341bed0173307fa9e0, type: 3}
+  secondAbilityIcon: {fileID: 21300000, guid: ee4d2db8a4a31944a8dcf0944cf6a1a2, type: 3}

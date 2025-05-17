@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b02b847dd9e9334dbd365620b0c66c9, type: 3}
+  m_Name: Weapon_Sledgehammer_level9
+  m_EditorClassIdentifier: 
+  weaponName: Sledgehammer
+  damage: 80
+  attackDelay: 0.75
+  attackAnimationDuration: 0.5
+  BulletDestroyTimer: 0.05
+  haveBullets: 0
+  haveLimitedBullets: 0
+  doesItReload: 0
+  bulletCountAtStart: 0
+  reloadTime: 0
+  bulletCountinOneReload: 0
+  bulletSpeed: 0
+  bulletBehavior: 0
+  hitboxOffset: {x: 0.5, y: 0}
+  hitboxSize: {x: 2.75, y: 2}
+  bullet: {fileID: 732497499613721441, guid: 38d659877cb261145b04cb722e794829, type: 3}
+  icon: {fileID: 21300000, guid: 81d476f97219c0547a61322c02287952, type: 3}

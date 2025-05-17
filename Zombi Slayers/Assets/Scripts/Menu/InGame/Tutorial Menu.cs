@@ -32,9 +32,12 @@ public class TutorialMenu : MonoBehaviour
         {
             if (p2 == null)
             {
-                if (!p1.button0pressed)
+                if(p1 != null)
                 {
-                    pressedAtBeggining = false;
+                    if (!p1.button0pressed)
+                    {
+                        pressedAtBeggining = false;
+                    }
                 }
             }
             else
