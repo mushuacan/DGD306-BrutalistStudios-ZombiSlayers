@@ -15,5 +15,9 @@ public class BoxExplosion : MonoBehaviour
         {
             collision.GetComponent<Player_Health>().GiveDamage();
         }
+        else
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
