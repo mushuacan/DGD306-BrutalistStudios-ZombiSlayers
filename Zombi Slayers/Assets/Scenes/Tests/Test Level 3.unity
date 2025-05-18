@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lane: 0
+  jumpArea: {fileID: 2652362576524537903, guid: 791fa89736ed4284a891c1332ac00b07, type: 3}
   animator: {fileID: 895981048}
   zatbmanager: {fileID: 1951390218}
 --- !u!114 &70677045
@@ -1310,8 +1311,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.5503144, g: 1, b: 0.67905927, a: 1}
+  m_Sprite: {fileID: 1091594915, guid: bab944d07f007be40a583cc0ec6690b8, type: 3}
+  m_Color: {r: 0.7452829, g: 1, b: 0.81837565, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2831,6 +2832,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.08
       objectReference: {fileID: 0}
+    - target: {fileID: 5566873213933320665, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: lane
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5747867530378948118, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: m_LocalPosition.y
       value: -4.12
@@ -2972,8 +2977,12 @@ PrefabInstance:
       value: -4.12
       objectReference: {fileID: 0}
     - target: {fileID: 8549973335393398814, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549973335393398814, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.08
+      value: -4.12
       objectReference: {fileID: 0}
     - target: {fileID: 8681179888625120540, guid: 17e66f99508c6dd4fbe4c068ce60087f, type: 3}
       propertyPath: m_LocalPosition.x

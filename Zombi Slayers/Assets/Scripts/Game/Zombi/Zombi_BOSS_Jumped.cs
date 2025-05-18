@@ -1,8 +1,4 @@
 using DG.Tweening;
-using DG.Tweening.Core.Easing;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class Zombi_BOSS_Jumped : MonoBehaviour
@@ -10,22 +6,8 @@ public class Zombi_BOSS_Jumped : MonoBehaviour
     public LaneFinder laneFinder;
     public int lane;
 
-    private void OnEnable()
-    {
-        Zombi_BOSS.JumpedEvent += Savrul;
-    }
-
-    private void OnDisable()
-    {
-        Zombi_BOSS.JumpedEvent -= Savrul;
-    }
-
     private void Start()
     {
-        if (laneFinder != null)
-        {
-            lane = laneFinder.lane;
-        }
     }
 
     private void ChangeLane(int laneToChange, float timer)
@@ -42,11 +24,11 @@ public class Zombi_BOSS_Jumped : MonoBehaviour
         DOTween.Kill(transform);
     }
 
-    private void Savrul(int bossesLane)
+    public void Savrul(int bossesLane)
     {
-        if (transform.position.x > 10 || transform.position.x < -10)
+        if (laneFinder != null)
         {
-            return;
+            lane = laneFinder.lane;
         }
         if (bossesLane == 1)
         {

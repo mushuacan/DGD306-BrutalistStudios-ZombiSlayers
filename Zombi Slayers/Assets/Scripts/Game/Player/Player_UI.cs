@@ -17,6 +17,7 @@ public class Player_UI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI ammoText;
     [SerializeField] private TextMeshProUGUI secondAbilityCountText;
     [SerializeField] private RawImage[] heartsArray;
+    [SerializeField] private Tween heartsTween;
 
 
     [Header("Referances")]
@@ -134,12 +135,12 @@ public class Player_UI : MonoBehaviour
             {
                 heartsArray[index].gameObject.SetActive(true);
                 heartsArray[index].transform.localScale = Vector3.zero; // Baþlangýçta küçültüyoruz
-                heartsArray[index].transform.DOScale(new Vector3(0.5f, 0.5f, 0), 0.3f) // Ýlk büyüme 0.6'a
+                heartsTween = heartsArray[index].transform.DOScale(new Vector3(0.5f, 0.5f, 0), 0.3f) // Ýlk büyüme 0.6'a
                     .SetEase(Ease.OutBack) // Daha yumuþak bir büyüme
                     .OnComplete(() =>
                     {
                         // Büyüme sonrasý fazla gittiði için biraz geri dönsün
-                        heartsArray[index].transform.DOScale(new Vector3(0.4f, 0.4f, 0), 0.2f)
+                        heartsTween = heartsArray[index].transform.DOScale(new Vector3(0.4f, 0.4f, 0), 0.2f)
                             .SetEase(Ease.InOutQuad); // Geri dönüþ animasyonu
                     });
             }
@@ -148,7 +149,7 @@ public class Player_UI : MonoBehaviour
         {
             if (heartsArray[index].gameObject.activeSelf)
             {
-                heartsArray[index].transform.DOScale(Vector3.zero, 0.3f)
+                heartsTween = heartsArray[index].transform.DOScale(Vector3.zero, 0.3f)
                     .OnKill(() => heartsArray[index].gameObject.SetActive(false)); // Küçülme efekti
             }
         }
@@ -156,6 +157,7 @@ public class Player_UI : MonoBehaviour
 
     public void ArrangeHearts(int hearts, bool withAnimation)
     {
+        heartsTween.Complete();
         for (int i = 0; i < heartsArray.Length; i++)
         {
             if (hearts >= i + 1)

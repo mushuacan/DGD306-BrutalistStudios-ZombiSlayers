@@ -1,12 +1,11 @@
 using UnityEngine;
 using DG.Tweening;
-using System;
 
 public class Zombi_BOSS : MonoBehaviour
 {
     private int currentActionIndex = 0;
     public int lane;
-    public static event Action<int> JumpedEvent;
+    [SerializeField] private GameObject jumpArea;
     [SerializeField] private Animator animator;
     [SerializeField] private ZombiAtTheBack_Manager zatbmanager;
 
@@ -87,7 +86,10 @@ public class Zombi_BOSS : MonoBehaviour
 
     public void Jumped()
     {
-        JumpedEvent?.Invoke(lane);
+        GameObject jumper = Instantiate(jumpArea);
+        Zombi_BOSS_JumpArea jumperArea = jumper.GetComponent<Zombi_BOSS_JumpArea>();
+        jumperArea.ArrangeBossLane(lane);
+        jumperArea.OpenTrigger();
         CameraShaker cameraShaker = Camera.main.GetComponent<CameraShaker>();
         if (cameraShaker != null)
         {

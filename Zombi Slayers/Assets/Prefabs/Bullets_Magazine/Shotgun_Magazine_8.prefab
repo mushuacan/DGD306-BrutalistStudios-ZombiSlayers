@@ -67,6 +67,7 @@ MonoBehaviour:
   magazineType: 1
   clips:
   - {fileID: 8300000, guid: 2f8bcd914c479e14489d1bc4279441ad, type: 3}
+  collider2d: {fileID: 7840189114818561971}
 --- !u!114 &6244735307919774062
 MonoBehaviour:
   m_ObjectHideFlags: 0
