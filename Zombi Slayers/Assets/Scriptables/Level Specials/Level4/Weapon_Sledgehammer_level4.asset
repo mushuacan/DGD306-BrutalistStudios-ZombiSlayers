@@ -28,4 +28,4 @@ MonoBehaviour:
   hitboxOffset: {x: 0.5, y: 0}
   hitboxSize: {x: 2.5, y: 2}
   bullet: {fileID: 732497499613721441, guid: 38d659877cb261145b04cb722e794829, type: 3}
-  icon: {fileID: 21300000, guid: 81d476f97219c0547a61322c02287952, type: 3}
+  icon: {fileID: 21300000, guid: 6a147cccc4982df409d04463f59cbf57, type: 3}
