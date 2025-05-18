@@ -12,6 +12,7 @@ TagManager:
   - Box
   - Supply
   - Zombi_Bullet
+  - Boss_Zombi_Bullet
   layers:
   - Default
   - TransparentFX

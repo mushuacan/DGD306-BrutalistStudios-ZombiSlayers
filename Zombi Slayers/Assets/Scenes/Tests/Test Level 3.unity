@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 70677042}
   - component: {fileID: 70677044}
   - component: {fileID: 70677045}
+  - component: {fileID: 70677047}
   - component: {fileID: 70677046}
   m_Layer: 0
   m_Name: Zombi_Boss_GODOMAN
@@ -141,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &70677042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +249,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.61, y: 5.02}
   m_EdgeRadius: 0
+--- !u!114 &70677047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70677041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a9c94bad5369e49b596e3df6fdca26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &136922330
 GameObject:
   m_ObjectHideFlags: 0

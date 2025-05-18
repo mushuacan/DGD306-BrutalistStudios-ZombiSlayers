@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 7007392636595786292}
   m_Layer: 0
   m_Name: Zombi_Boss_Spit
-  m_TagString: Zombi_Bullet
+  m_TagString: Boss_Zombi_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
