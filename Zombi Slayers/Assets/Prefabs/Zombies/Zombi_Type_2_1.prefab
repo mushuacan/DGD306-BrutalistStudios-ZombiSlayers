@@ -313,6 +313,7 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 0262b9b89e892ea46a870a33a5283b64, type: 3}
   - {fileID: 8300000, guid: 476858197532d9847ab740c8e4c05c7e, type: 3}
+  collider2d: {fileID: 4835035562384579341}
 --- !u!114 &-1590478401598203509
 MonoBehaviour:
   m_ObjectHideFlags: 0

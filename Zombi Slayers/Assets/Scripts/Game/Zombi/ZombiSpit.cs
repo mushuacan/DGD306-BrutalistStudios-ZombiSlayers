@@ -7,6 +7,7 @@ public class ZombiSpit : MonoBehaviour
     [SerializeField] private Transform platform;
     [SerializeField] private float rightCameraEdge;
     [SerializeField] private AudioClip[] clips;
+    [SerializeField] private Collider2D collider2d;
     private bool canSpit;
     private Tween spitTween;
 
@@ -43,6 +44,7 @@ public class ZombiSpit : MonoBehaviour
 
     private void Spit()
     {
+        if (!collider2d.enabled) { return; }
         GameObject projectile = Instantiate(zombiChar.zombi.projectilePrefab);
         projectile.transform.position = transform.position;
         projectile.GetComponent<ZombiBullet>().StartMoving();
