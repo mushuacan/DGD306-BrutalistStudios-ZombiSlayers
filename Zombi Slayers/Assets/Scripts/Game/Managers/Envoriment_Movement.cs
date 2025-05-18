@@ -61,6 +61,7 @@ public class Envoriment_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (background != null) background.transform.position = (transform.position * 0.2f);
         if (sessionEnded)
             return;
 
@@ -98,6 +99,7 @@ public class Envoriment_Movement : MonoBehaviour
 
             float newXPosition = transform.position.x - (envorimentMovementSpeed * transitionDuration * 0.5f);
 
+            background.transform.DOMoveX(newXPosition * 0.2f, transitionDuration).SetEase(Ease.OutQuad);
             transform.DOMoveX(newXPosition, transitionDuration).SetEase(Ease.OutQuad).OnComplete(() => 
             { 
                 if ((int)GameSettings.Instance.settings["level"] == FindAnyObjectByType<LevelMaker>().level - 1)
@@ -116,7 +118,6 @@ public class Envoriment_Movement : MonoBehaviour
             if (isMoving)
             {
                 transform.position = new Vector3(transform.position.x - (envorimentMovementSpeed * Time.deltaTime), transform.position.y, 5);
-                if (background != null) background.transform.position = (transform.position * 0.2f);
             }
         }
         if (MiniMapUI != null)

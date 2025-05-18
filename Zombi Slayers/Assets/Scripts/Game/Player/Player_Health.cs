@@ -94,12 +94,13 @@ public class Player_Health : MonoBehaviour
         if (set)
         {
             health = value;
+            player_UI.ArrangeHearts(health, false);
         }
         else
         {
             health += value;
+            player_UI.ArrangeHearts(health, true);
         }
-        player_UI.ArrangeHearts(health);
     }
 
     public void Sliding(float time)

@@ -56,6 +56,7 @@ public class Player_Attack : MonoBehaviour
             canAttack = false;
             player_movement.action = Player_Movement.ActionOC.Attacking;
             player_UI.StartCastTimer(weapon.attackAnimationDuration);
+            player_UI.WeaponUsing();
             DOVirtual.DelayedCall(weapon.attackAnimationDuration, () => Attack());
             
         }
@@ -139,6 +140,7 @@ public class Player_Attack : MonoBehaviour
 
     private void Reload()
     {
+        player_UI.WeaponUsing();
         player_UI.StartWeaponCooldown(player.character.weapon.reloadTime);
         DOVirtual.DelayedCall(player.character.weapon.reloadTime, () => Reloaded());
         

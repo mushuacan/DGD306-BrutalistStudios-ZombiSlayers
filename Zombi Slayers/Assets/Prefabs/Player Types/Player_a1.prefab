@@ -737,10 +737,11 @@ MonoBehaviour:
   secondAbilityImage: {fileID: 5044593705162450254}
   ammoText: {fileID: 8162824094727240741}
   secondAbilityCountText: {fileID: 3109709289617261752}
-  heart1: {fileID: 3408830344387554726}
-  heart2: {fileID: 5077606400375755555}
-  heart3: {fileID: 6457714482630851726}
-  heart4: {fileID: 4921505704176332786}
+  heartsArray:
+  - {fileID: 3408830344387554726}
+  - {fileID: 5077606400375755555}
+  - {fileID: 6457714482630851726}
+  - {fileID: 4921505704176332786}
   player: {fileID: 5980480940130164564}
 --- !u!114 &1365290559951769061
 MonoBehaviour:

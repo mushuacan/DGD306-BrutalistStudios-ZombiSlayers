@@ -283,6 +283,8 @@ public class Player_Movement : MonoBehaviour
         {
             action = ActionOC.SecondAbility;
 
+            player_UI.SecondAbilityUsing();
+
             SecondAbility();
 
             if (player.character.secondAbility == null)

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using System;
 
 public class Player_UI : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Player_UI : MonoBehaviour
     [SerializeField] private Image weaponImage, secondAbilityImage;
     [SerializeField] private TextMeshProUGUI ammoText;
     [SerializeField] private TextMeshProUGUI secondAbilityCountText;
-    [SerializeField] private RawImage heart1, heart2, heart3, heart4;
+    [SerializeField] private RawImage[] heartsArray;
 
 
     [Header("Referances")]
@@ -73,10 +74,12 @@ public class Player_UI : MonoBehaviour
             castTimer.value = 0;
         });
     }
-
+    public void WeaponUsing()
+    {
+        weaponImage.DOFade(fadePower, fadeDuration + 0.2f);
+    }
     public void StartWeaponCooldown(float time)
     {
-        weaponImage.DOFade(fadePower, fadeDuration);
         weaponCooldown.gameObject.SetActive(true);
         weaponCooldown.fillAmount = 1;
         weaponCooldown.DOFillAmount(0, time).SetEase(Ease.Linear).OnComplete(() =>
@@ -86,10 +89,12 @@ public class Player_UI : MonoBehaviour
             weaponImage.DOFade(1f, fadeDuration);
         });
     }
-
-    public void StartSecondAbilityCooldown(float time)
+    public void SecondAbilityUsing()
     {
         secondAbilityImage.DOFade(fadePower, fadeDuration);
+    }
+    public void StartSecondAbilityCooldown(float time)
+    {
         secondAbilityCooldown.gameObject.SetActive(true);
         secondAbilityCooldown.fillAmount = 1;
         secondAbilityCooldown.DOFillAmount(0, time).SetEase(Ease.Linear).OnComplete(() =>
@@ -121,39 +126,60 @@ public class Player_UI : MonoBehaviour
             secondAbilityCountText.text = (totalAmmo.ToString());
         }
     }
-    public void ArrangeHearts(int hearts)
+    private void ArrangeHeart(int index, bool activeness)
     {
-        if (hearts > 0)
+        if (activeness)
         {
-            heart1.gameObject.SetActive(true);
-        } else
-        {
-            heart1.gameObject.SetActive(false);
-        }
-        if (hearts > 1)
-        {
-            heart2.gameObject.SetActive(true);
-        }
-        else
-        {
-            heart2.gameObject.SetActive(false);
-        }
-        if (hearts > 2)
-        {
-            heart3.gameObject.SetActive(true);
+            if (!heartsArray[index].gameObject.activeSelf)
+            {
+                heartsArray[index].gameObject.SetActive(true);
+                heartsArray[index].transform.localScale = Vector3.zero; // Baþlangýçta küçültüyoruz
+                heartsArray[index].transform.DOScale(new Vector3(0.5f, 0.5f, 0), 0.3f) // Ýlk büyüme 0.6'a
+                    .SetEase(Ease.OutBack) // Daha yumuþak bir büyüme
+                    .OnComplete(() =>
+                    {
+                        // Büyüme sonrasý fazla gittiði için biraz geri dönsün
+                        heartsArray[index].transform.DOScale(new Vector3(0.4f, 0.4f, 0), 0.2f)
+                            .SetEase(Ease.InOutQuad); // Geri dönüþ animasyonu
+                    });
+            }
         }
         else
         {
-            heart3.gameObject.SetActive(false);
+            if (heartsArray[index].gameObject.activeSelf)
+            {
+                heartsArray[index].transform.DOScale(Vector3.zero, 0.3f)
+                    .OnKill(() => heartsArray[index].gameObject.SetActive(false)); // Küçülme efekti
+            }
         }
-        if (hearts > 3)
-        {
-            heart4.gameObject.SetActive(true);
-        }
-        else
-        {
-            heart4.gameObject.SetActive(false);
-        }
+    }
 
+    public void ArrangeHearts(int hearts, bool withAnimation)
+    {
+        for (int i = 0; i < heartsArray.Length; i++)
+        {
+            if (hearts >= i + 1)
+            {
+                if (withAnimation)
+                {
+                    ArrangeHeart(i, true);
+                }
+                else
+                {
+                    heartsArray[i].gameObject.SetActive(true);
+                }
+            }
+            else
+            {
+                if (withAnimation)
+                {
+                    ArrangeHeart(i, false);
+                }
+                else
+                {
+                    heartsArray[i].gameObject.SetActive(false);
+                }
+            }
+        }
     }
 }
