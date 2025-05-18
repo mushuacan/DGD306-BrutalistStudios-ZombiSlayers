@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 4823032724458310786}
   - component: {fileID: 3375778475196079147}
   - component: {fileID: 3129991936099847401}
+  - component: {fileID: 2083116321010169612}
   m_Layer: 0
   m_Name: Box_Projectile_8
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,6 +156,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2083116321010169612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153640325359556647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ca8c8ccfcc5994db569c70dcaf4f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laneFinder: {fileID: 8116204623252740761}
+  lane: 0
 --- !u!1 &8811864262548063546
 GameObject:
   m_ObjectHideFlags: 0

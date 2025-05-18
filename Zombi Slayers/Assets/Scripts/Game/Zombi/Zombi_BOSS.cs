@@ -1,11 +1,12 @@
 using UnityEngine;
 using DG.Tweening;
-using static Player_Movement;
+using System;
 
 public class Zombi_BOSS : MonoBehaviour
 {
     private int currentActionIndex = 0;
     public int lane;
+    public static event Action<int> JumpedEvent;
     [SerializeField] private Animator animator;
     [SerializeField] private ZombiAtTheBack_Manager zatbmanager;
 
@@ -40,13 +41,13 @@ public class Zombi_BOSS : MonoBehaviour
         switch (index)
         {
             case 0:
-                Spit();
+                ChangeFloor();
                 break;
             case 1:
-                ZombieBall();
+                Spit();
                 break;
             case 2:
-                ChangeFloor();
+                ZombieBall();
                 break;
             case 3:
                 RaiseSpikes();
@@ -86,6 +87,7 @@ public class Zombi_BOSS : MonoBehaviour
 
     public void Jumped()
     {
+        JumpedEvent?.Invoke(lane);
         CameraShaker cameraShaker = Camera.main.GetComponent<CameraShaker>();
         if (cameraShaker != null)
         {

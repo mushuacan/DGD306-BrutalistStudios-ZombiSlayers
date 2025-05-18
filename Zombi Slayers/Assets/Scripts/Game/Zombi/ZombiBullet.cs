@@ -39,7 +39,8 @@ public class ZombiBullet : MonoBehaviour
     {
         if (collision.CompareTag("Player_Bullet"))
         {
-            if (collision.GetComponent<PlayerBullet>().weaponName == "Sledgehammer")
+            var bullet = collision.GetComponent<PlayerBullet>();
+            if (bullet != null && bullet.weaponName == "Sledgehammer")
             {
                 DOTween.Kill(transform);
                 Destroy(this.gameObject);

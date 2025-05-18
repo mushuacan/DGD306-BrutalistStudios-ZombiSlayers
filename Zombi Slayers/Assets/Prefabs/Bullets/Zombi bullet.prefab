@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6749592042386495398}
   m_Layer: 0
   m_Name: Zombi bullet
-  m_TagString: Untagged
+  m_TagString: Zombi_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,6 +69,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: af568180de79fd14aba6ddf806145b8b, type: 3}
   - {fileID: 8300000, guid: 68da28abfc84e3146bab9d7a75c4a093, type: 3}
   - {fileID: 8300000, guid: 0d4ec578f5129e54ea7178558d6bc918, type: 3}
+  clipsForDodgedPlayer: []
 --- !u!58 &8435732557194212507
 CircleCollider2D:
   m_ObjectHideFlags: 0

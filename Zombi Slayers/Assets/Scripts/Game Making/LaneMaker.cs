@@ -17,6 +17,6 @@ public class LaneMaker : MonoBehaviour
 
     void SnapToNearestLaneX()
     {
-        transform.position = new Vector3(Mathf.Round(transform.position.x / 19.19f) * 19.19f, 0, 0);
+        transform.position = new Vector3(Mathf.Round(transform.position.x / 19.2f) * 19.2f, 0, 0);
     }
 }

@@ -9,6 +9,8 @@ TagManager:
   - Zombi
   - Platform
   - PlayerManager
+  - Box
+  - Supply
   layers:
   - Default
   - TransparentFX

@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7157062903740669135}
   m_Layer: 0
   m_Name: Zombi_Boss_ZombiBall
-  m_TagString: Untagged
+  m_TagString: Zombi_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isItTurning: 1
+  meltOnCollision: 0
+  hitOnCollision: 1
   moveDistance: 25
   moveDuration: 4
 --- !u!114 &7157062903740669135

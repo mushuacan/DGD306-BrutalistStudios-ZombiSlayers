@@ -97,9 +97,10 @@ GameObject:
   - component: {fileID: -5763169253544715281}
   - component: {fileID: 6303980768257446012}
   - component: {fileID: 5802316889921259578}
+  - component: {fileID: 637277003245972845}
   m_Layer: 0
   m_Name: MedKit
-  m_TagString: Untagged
+  m_TagString: Supply
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,6 +161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deleteIfNoFletcher: 0
   deleteIfNoWoods: 0
+  deleteIfSinglePlayer: 0
+  deleteIfNotSinglePlayer: 0
 --- !u!58 &5802316889921259578
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -195,3 +198,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.14}
   serializedVersion: 2
   m_Radius: 0.46
+--- !u!114 &637277003245972845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7302740713525605029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ca8c8ccfcc5994db569c70dcaf4f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laneFinder: {fileID: -5763169253544715281}
+  lane: 0

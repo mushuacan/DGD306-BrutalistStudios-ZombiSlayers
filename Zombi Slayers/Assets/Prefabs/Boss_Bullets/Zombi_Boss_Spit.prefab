@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 6874945909013327693}
   m_Layer: 0
   m_Name: Zombi_Boss_Spit
-  m_TagString: Untagged
+  m_TagString: Zombi_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,8 +167,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isItTurning: 0
-  moveDistance: 25
-  moveDuration: 4
+  meltOnCollision: 1
+  hitOnCollision: 0
+  moveDistance: 20
+  moveDuration: 3
 --- !u!114 &6874945909013327693
 MonoBehaviour:
   m_ObjectHideFlags: 0
