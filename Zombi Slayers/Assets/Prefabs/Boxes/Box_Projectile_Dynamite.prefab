@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insider: {fileID: 11400000, guid: 0621babe9c764804b830b5b5a01c6a8d, type: 2}
+  laneFinder: {fileID: 8116204623252740761}
   clips:
   - {fileID: 8300000, guid: 16540651f8aae6c47a02ec7e7a08ee10, type: 3}
   - {fileID: 8300000, guid: 35c297700b3771c4c80beac47826b624, type: 3}

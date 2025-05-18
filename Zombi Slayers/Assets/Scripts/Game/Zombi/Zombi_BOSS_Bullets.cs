@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Zombi_BOSS_Bullets : MonoBehaviour
 {
@@ -20,39 +21,56 @@ public class Zombi_BOSS_Bullets : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Obstacle") || collision.CompareTag("Zombi") || collision.CompareTag("Box") || collision.CompareTag("Supply") || collision.CompareTag("Zombi_Bullet"))
+        if (collision.CompareTag("Zombi_Bullet"))
+        {
+            Destroy(collision.gameObject);
+            return;
+        }
+        if (collision.CompareTag("Obstacle") || collision.CompareTag("Zombi") || collision.CompareTag("Box") || collision.CompareTag("Supply"))
         {
             if (meltOnCollision)
             {
-                // SpriteRenderer'ý hem kendisinde hem de child'larýnda ara
                 SpriteRenderer spriteRenderer = collision.GetComponentInChildren<SpriteRenderer>();
 
                 if (spriteRenderer != null)
                 {
-                    // DOTween Sequence: Animasyonlarý sýrayla çalýþtýr
+                    // Önce zombinin collision'ýný yok ediyoruz, böylece mermi içinden geçer.
+                    Collider2D zombiCollider = collision.GetComponent<Collider2D>();
+                    if (zombiCollider != null)
+                    {
+                        zombiCollider.enabled = false;  // Zombinin çarpýþma alanýný kapatýyoruz.
+                    }
+
                     Sequence seq = DOTween.Sequence();
+                    // Objeyi yeþile döndürme ve küçültme
+                    seq.Append(spriteRenderer.DOColor(Color.green, 0.5f).SetTarget(spriteRenderer));
+                    seq.Append(collision.transform.DOScale(new Vector3(1.4f, 0, 1f), 1f).SetTarget(collision.transform));
+                    seq.Join(collision.transform.DOMoveY(transform.position.y - 1, 1f).SetTarget(collision.transform));
 
-                    // 1. Yeþile dönüþ
-                    seq.Append(spriteRenderer.DOColor(Color.green, 1f));
-
-                    // 2. Eritme efekti: Þeffaf + Küçülme
-                    seq.Append(spriteRenderer.DOFade(0f, 0.5f)); // Þeffaflaþma
-
-                    seq.Join(collision.transform.DOScale(Vector3.zero, 0.5f)); // Küçülme
-
-                    // 3. Obje yok edilsin
                     seq.OnComplete(() =>
                     {
-                        DOTween.Kill(collision.transform); Destroy(collision.gameObject);
-                    }
-                );
+                        if (spriteRenderer != null)
+                        {
+                            DOTween.Kill(collision.transform);
+                        }
+                        // Yalnýzca animasyon tamamlandýysa objeyi yok et
+                        Destroy(collision.gameObject);
+                    });
                 }
+
             }
             else if (hitOnCollision)
             {
-                if (collision.CompareTag("Zombi_Bullet"))
+                DOTween.Kill(collision.transform);
+                if (collision.CompareTag("Zombi"))
                 {
+                    collision.GetComponent<Zombie_Health>().DamageZombi(15);
+                }
+                if (collision.CompareTag("Supply"))
+                {
+                    collision.DOKill(collision.transform);
                     Destroy(collision.gameObject);
+                    return;
                 }
 
                 Sequence jumpSeq = DOTween.Sequence();
@@ -62,7 +80,7 @@ public class Zombi_BOSS_Bullets : MonoBehaviour
 
                 // Y yönüne önce yukarý sonra aþaðý
                 jumpSeq.Append(collision.transform.DOMoveY(collision.transform.position.y + 1f, 0.5f).SetEase(Ease.OutQuad));
-                jumpSeq.Append(collision.transform.DOMoveY(collision.transform.position.y, 0.5f).SetEase(Ease.InQuad));
+                jumpSeq.Append(collision.transform.DOMoveY(LaneFinder.laneYPositions[collision.GetComponent<LaneFinder>().lane], 0.5f).SetEase(Ease.InQuad));
 
             }
         }

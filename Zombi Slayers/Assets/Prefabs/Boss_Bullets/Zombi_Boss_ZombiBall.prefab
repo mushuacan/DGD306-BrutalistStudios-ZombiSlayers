@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 378521204278384784}
   - component: {fileID: 1846928467293968257}
   - component: {fileID: 7157062903740669135}
+  - component: {fileID: 267983092322926282}
   m_Layer: 0
   m_Name: Zombi_Boss_ZombiBall
   m_TagString: Zombi_Bullet
@@ -169,8 +170,8 @@ MonoBehaviour:
   isItTurning: 1
   meltOnCollision: 0
   hitOnCollision: 1
-  moveDistance: 25
-  moveDuration: 4
+  moveDistance: 18
+  moveDuration: 3.5
 --- !u!114 &7157062903740669135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,3 +188,30 @@ MonoBehaviour:
   canSlideable: 0
   clipsForDamagingPlayer: []
   clipsForDodgedPlayer: []
+--- !u!50 &267983092322926282
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7887009602984680882}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

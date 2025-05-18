@@ -13,7 +13,7 @@ public class Zombi_Push : MonoBehaviour
         if ( movey )
         transform.DOMoveY(transform.position.y + 0.5f, 0.4f).SetEase(Ease.InOutQuad).OnComplete(() => 
         {
-            transform.DOMoveY(transform.position.y - 0.5f, 0.4f).SetEase(Ease.InOutQuad);
+            transform.DOMoveY(LaneFinder.laneYPositions[this.GetComponent<LaneFinder>().lane], 0.4f).SetEase(Ease.InOutQuad);
         });
     }
 }

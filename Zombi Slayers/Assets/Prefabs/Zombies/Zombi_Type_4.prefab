@@ -229,6 +229,8 @@ MonoBehaviour:
   laner: {fileID: 8495576673804247030}
   explosioner: {fileID: -1648446706728072271}
   pusher: {fileID: 4584445579691408264}
+  spriteRenderer:
+  - {fileID: 5001715593568527686}
   clipsLowDamaj:
   - {fileID: 8300000, guid: 830fc9b87bd647b41a60cd0b34156909, type: 3}
   - {fileID: 8300000, guid: 59408ec7c6f57e24dadf4d62d10e5ca6, type: 3}

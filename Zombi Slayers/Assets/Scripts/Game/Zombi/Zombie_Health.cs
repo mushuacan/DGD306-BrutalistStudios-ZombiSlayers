@@ -11,6 +11,7 @@ public class Zombie_Health : MonoBehaviour
     [SerializeField] private LaneFinder laner;
     [SerializeField] private CreateExplosionWhileDying explosioner;
     [SerializeField] private Zombi_Push pusher;
+    [SerializeField] private SpriteRenderer[] spriteRenderer;
     [SerializeField] private AudioClip[] clipsLowDamaj;
     [SerializeField] private AudioClip[] clipsHighDamaj;
 
@@ -58,13 +59,7 @@ public class Zombie_Health : MonoBehaviour
             }
             if (health <= 0)
             {
-                DOTween.Kill(transform);
-                ScoreManager.Instance.AddScore(killScore, "Zombi");
-                if(explosioner != null)
-                {
-                    explosioner.Explode();
-                }
-                Destroy(this.gameObject);
+                KillZombi();
             }
             else
             {
@@ -91,5 +86,30 @@ public class Zombie_Health : MonoBehaviour
             DOTween.Kill(transform);
             Destroy(this.gameObject);
         }
+    }
+    private void KillZombi()
+    {
+        ScoreManager.Instance.AddScore(killScore, "Zombi");
+
+        // Eðer explosioner varsa, patlama animasyonunu baþlat
+        if (explosioner != null)
+        {
+            explosioner.Explode();
+        }
+
+        // DOTween animasyonlarýný iptal et
+        DOTween.Kill(transform);
+        for (int i = 0; i < spriteRenderer.Length; i++)
+        {
+            DOTween.Kill(spriteRenderer[i]);
+        }
+
+        // Obje yok edilmeden önce animasyonlarý iptal et
+        Destroy(this.gameObject);
+    }
+
+    public void DamageZombi(int damaj)
+    {
+        health -= damaj;
     }
 }

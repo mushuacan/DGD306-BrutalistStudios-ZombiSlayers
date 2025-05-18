@@ -30,11 +30,16 @@ public class Zombi_BOSS_Jumped : MonoBehaviour
 
     private void ChangeLane(int laneToChange, float timer)
     {
+        laneFinder.lane = laneToChange;
         transform.DOMoveY(LaneFinder.laneYPositions[laneToChange], timer).SetEase(Ease.OutQuad).OnComplete(() => lane = laneToChange);
     }
     private void ChangeXPosition(float xPoz, float timer)
     {
         transform.DOMoveX(transform.position.x + xPoz, timer);
+    }
+    private void OnDestroy()
+    {
+        DOTween.Kill(transform);
     }
 
     private void Savrul(int bossesLane)
