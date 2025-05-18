@@ -169,6 +169,7 @@ public class Player_UI : MonoBehaviour
                 else
                 {
                     heartsArray[i].gameObject.SetActive(true);
+                    heartsArray[i].transform.DOScale(new Vector3(0.4f, 0.4f, 1), 0.2f);
                 }
             }
             else
@@ -180,6 +181,7 @@ public class Player_UI : MonoBehaviour
                 else
                 {
                     heartsArray[i].gameObject.SetActive(false);
+                    heartsArray[i].transform.DOScale(new Vector3(0.4f, 0.4f, 1), 0.2f);
                 }
             }
         }
