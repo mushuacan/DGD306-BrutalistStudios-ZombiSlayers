@@ -29,4 +29,8 @@ public class BoxExplosion : MonoBehaviour
 
         }
     }
+    private void OnDestroy()
+    {
+        DOTween.Kill(gameObject);
+    }
 }
