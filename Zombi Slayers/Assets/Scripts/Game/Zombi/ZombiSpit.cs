@@ -1,5 +1,7 @@
+// Yapay zekaya baþtan yazdýrýldý.
+
 using UnityEngine;
-using DG.Tweening;
+using System.Collections;
 
 public class ZombiSpit : MonoBehaviour
 {
@@ -8,60 +10,53 @@ public class ZombiSpit : MonoBehaviour
     [SerializeField] private float rightCameraEdge;
     [SerializeField] private AudioClip[] clips;
     [SerializeField] private Collider2D collider2d;
-    private bool canSpit;
-    private Tween spitTween;
 
+    private bool canSpit;
+    private Coroutine spitRoutine;
 
     void Start()
     {
-        canSpit = false;
-        if (zombiChar.zombi.zombiAttidue == Scriptable_Zombies.zombiAttidues.Spitting) canSpit = true;
-        WaitForSpit();
-    }
+        canSpit = zombiChar.zombi.zombiAttidue == Scriptable_Zombies.zombiAttidues.Spitting;
 
-    private void WaitForSpit()
-    {
-        if (!canSpit) return;
-
-        if (transform.position.x < rightCameraEdge)
+        if (canSpit)
         {
-            SpitAnimation();
-        }
-        else
-        {
-            spitTween = DOVirtual.DelayedCall(0.3f, () => { WaitForSpit(); }).SetUpdate(UpdateType.Normal);
+            spitRoutine = StartCoroutine(SpitLogic());
         }
     }
 
-    private void SpitAnimation()
+    private IEnumerator SpitLogic()
     {
-        spitTween = DOVirtual.DelayedCall(zombiChar.zombi.attackDuration, () =>
+        // Ekrana girene kadar bekle
+        yield return new WaitUntil(() => transform.position.x < rightCameraEdge);
+
+        // Sürekli saldýrý döngüsü
+        while (true)
         {
-            All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
-            Spit();
-        }).SetUpdate(UpdateType.Normal);
+            yield return new WaitForSeconds(zombiChar.zombi.attackDuration);
+
+            if (collider2d.enabled)
+            {
+                All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
+                Spit();
+            }
+
+            yield return new WaitForSeconds(zombiChar.zombi.attackCooldown);
+        }
     }
 
     private void Spit()
     {
-        if (!collider2d.enabled) { return; }
         GameObject projectile = Instantiate(zombiChar.zombi.projectilePrefab);
         projectile.transform.position = transform.position;
         projectile.GetComponent<ZombiBullet>().StartMoving();
         projectile.transform.SetParent(platform);
-        SpitCooldown();
-    }
-
-    private void SpitCooldown()
-    {
-        spitTween = DOVirtual.DelayedCall(zombiChar.zombi.attackCooldown, () =>
-        {
-            SpitAnimation();
-        }).SetUpdate(UpdateType.Normal);
     }
 
     private void OnDestroy()
     {
-        spitTween.Kill();
+        if (spitRoutine != null)
+        {
+            StopCoroutine(spitRoutine);
+        }
     }
 }
