@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &70677042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 33090728659558516, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
       propertyPath: magazineBulletCount
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2555471220647529321, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
       propertyPath: m_Name
@@ -4132,7 +4132,7 @@ PrefabInstance:
       objectReference: {fileID: 1951390218}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: isStoppedAtFirst
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: zombiStopDuration

@@ -47,6 +47,7 @@ public class Player_Attack : MonoBehaviour
 
         if (weapon.haveLimitedBullets)
             totalAmmo = weapon.bulletMagazineAtStart;
+        AmmoUI();
     }
 
     public void StartAttack()
@@ -184,7 +185,7 @@ public class Player_Attack : MonoBehaviour
     public void TakeMagazine(int magazines)
     {
         totalAmmo += magazines;
-        if ( totalAmmo == magazines)
+        if ( currentAmmo == 0)
         {
             Reload();
         }

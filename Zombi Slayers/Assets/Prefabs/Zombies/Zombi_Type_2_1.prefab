@@ -264,8 +264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae34467ba863b064f952149a80416d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteIfNoFletcher: 0
   deleteIfNoWoods: 0
+  deleteIfNoFletcher: 0
+  deleteIfNoDerrick: 0
+  deleteIfOnlyDerrick: 0
   deleteIfSinglePlayer: 0
   deleteIfNotSinglePlayer: 0
 --- !u!114 &324208396512592433
@@ -286,7 +288,7 @@ MonoBehaviour:
   zombiChar: {fileID: 5905445915708681430}
   laner: {fileID: 4087789420610649628}
   explosioner: {fileID: 0}
-  pusher: {fileID: 0}
+  pusher: {fileID: -5738385395052608075}
   spriteRenderer:
   - {fileID: 5912676876835241458}
   - {fileID: 1838270579972763850}
