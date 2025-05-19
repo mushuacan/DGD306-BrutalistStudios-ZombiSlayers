@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 6729113846359408514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0, y: -1.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -157,10 +157,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftCameraEdge: -10
+  killScore: 0
   zombiATBM: {fileID: 0}
   zombiChar: {fileID: 2635368388138846178}
   laner: {fileID: 8495576673804247030}
+  explosioner: {fileID: 0}
   pusher: {fileID: 4584445579691408264}
+  spriteRenderer: []
+  clipsLowDamaj: []
+  clipsHighDamaj: []
 --- !u!114 &-1590478401598203509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyOnCollision: 0
   canSlideable: 0
+  clipsForDamagingPlayer: []
+  clipsForDodgedPlayer: []
 --- !u!61 &4835035562384579341
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -84,6 +84,7 @@ MonoBehaviour:
   deleteIfNoWoods: 0
   deleteIfNoFletcher: 0
   deleteIfNoDerrick: 1
+  deleteIfOnlyDerrick: 0
   deleteIfSinglePlayer: 0
   deleteIfNotSinglePlayer: 0
 --- !u!61 &3375778475196079147

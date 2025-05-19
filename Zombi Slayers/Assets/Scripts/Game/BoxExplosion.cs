@@ -15,9 +15,18 @@ public class BoxExplosion : MonoBehaviour
         {
             collision.GetComponent<Player_Health>().GiveDamage();
         }
-        else
+        else if (collision.CompareTag("Obstacle") || collision.CompareTag("Box") || collision.CompareTag("Zombi") 
+            || collision.CompareTag("Zombi_Bullet") || collision.CompareTag("Supply") || collision.CompareTag("Player_Bullet"))
         {
+            DOTween.Kill(collision.gameObject);
+
+            foreach (Transform child in collision.transform)
+            {
+                DOTween.Kill(child.gameObject);
+            }
+
             Destroy(collision.gameObject);
+
         }
     }
 }

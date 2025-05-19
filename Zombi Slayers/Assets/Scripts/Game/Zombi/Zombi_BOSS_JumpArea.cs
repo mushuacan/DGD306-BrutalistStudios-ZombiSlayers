@@ -13,7 +13,7 @@ public class Zombi_BOSS_JumpArea : MonoBehaviour
     public void OpenTrigger()
     {
         collider2d.enabled = true; 
-        DOVirtual.DelayedCall(0.1f, () => Destroy(this.gameObject));
+        DOVirtual.DelayedCall(0.2f, () => Destroy(this.gameObject));
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

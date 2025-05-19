@@ -106,6 +106,8 @@ public class Zombie_Health : MonoBehaviour
         {
             DOTween.Kill(spriteRenderer[i]);
         }
+        DOTween.Kill(this.transform);
+        DOTween.Kill(GetComponentInChildren<Transform>());
 
         // Obje yok edilmeden önce animasyonlarý iptal et
         Destroy(this.gameObject);

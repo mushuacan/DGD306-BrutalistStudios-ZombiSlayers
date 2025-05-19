@@ -17,8 +17,8 @@ MonoBehaviour:
   secondAbilityTimer: 0
   secondAbilitySpeed: 0
   secondAbilityCooldown: 1.5
-  weapon: {fileID: 11400000, guid: 86b15ef5b5dc1384f953972b3be5335b, type: 2}
-  secondAbility: {fileID: 11400000, guid: 92fc0079819411d45932f2a8e54ba03e, type: 2}
+  weapon: {fileID: 11400000, guid: 25947e0d51005cb49a401c208d4c812b, type: 2}
+  secondAbility: {fileID: 11400000, guid: 328af170ae7d12b44a94dab54a0270d8, type: 2}
   imaj: {fileID: 2800000, guid: 458b989a10e3631449f55483352c8ad7, type: 3}
   spriter: {fileID: 21300000, guid: 458b989a10e3631449f55483352c8ad7, type: 3}
   secondAbilityIcon: {fileID: 0}

@@ -37,21 +37,22 @@ public class Zombi_BOSS_Bullets : MonoBehaviour
                     {
                         zombiCollider.enabled = false;  // Zombinin çarpýþma alanýný kapatýyoruz.
                     }
+                    spriteRenderer.DOColor(Color.green, 0.5f).SetTarget(spriteRenderer).SetLink(collision.gameObject);
+                }
 
-                    Sequence seq = DOTween.Sequence();
-                    // Objeyi yeþile döndürme ve küçültme
-                    seq.Append(spriteRenderer.DOColor(Color.green, 0.5f).SetTarget(spriteRenderer));
-                    seq.Append(collision.transform.DOScale(new Vector3(1.4f, 0, 1f), 1f).SetTarget(collision.transform));
-                    seq.Join(collision.transform.DOMoveY(transform.position.y - 1, 1f).SetTarget(collision.transform));
+                // Ýlk animasyon tamamlandýðýnda diðerlerini baþlat
+                if (collision != null && collision.transform != null)
+                {
+                    // Ölçek küçültme
+                    collision.transform.DOScale(new Vector3(1.4f, 0f, 1f), 1f).SetTarget(collision.transform).SetLink(collision.gameObject);
 
-                    seq.OnComplete(() =>
+                    collision.transform.DOMoveY(transform.position.y - 1, 1f).SetTarget(collision.transform).SetLink(collision.gameObject).OnComplete(() =>
                     {
-                        if (spriteRenderer != null)
+                        if (collision != null)
                         {
                             DOTween.Kill(collision.transform);
+                            Destroy(collision.gameObject);
                         }
-                        // Yalnýzca animasyon tamamlandýysa objeyi yok et
-                        Destroy(collision.gameObject);
                     });
                 }
 
@@ -68,16 +69,26 @@ public class Zombi_BOSS_Bullets : MonoBehaviour
                     collision.DOKill(collision.transform);
                     Destroy(collision.gameObject);
                     return;
+                }// X yönünde ileri git (paralel olarak)
+                if (collision != null && collision.transform != null)
+                {
+                    collision.transform.DOMoveX(collision.transform.position.x + 2, 1f)
+                        .SetLink(collision.gameObject);
                 }
 
-                Sequence jumpSeq = DOTween.Sequence();
+                if (collision != null && collision.transform != null)
+                {
+                    collision.transform.DOMoveY(collision.transform.position.y + 1f, 0.5f).SetEase(Ease.OutQuad).SetLink(collision.gameObject).OnComplete(() =>
+                        {
+                            if (collision != null && collision.transform != null)
+                            {
+                                float targetY = LaneFinder.laneYPositions[collision.GetComponent<LaneFinder>().lane];
 
-                // X yönüne git
-                collision.transform.DOMoveX(collision.transform.position.x + 2, 1f);
+                                collision.transform.DOMoveY(targetY, 0.5f).SetEase(Ease.InQuad).SetLink(collision.gameObject);
+                            }
+                        });
+                }
 
-                // Y yönüne önce yukarý sonra aþaðý
-                jumpSeq.Append(collision.transform.DOMoveY(collision.transform.position.y + 1f, 0.5f).SetEase(Ease.OutQuad));
-                jumpSeq.Append(collision.transform.DOMoveY(LaneFinder.laneYPositions[collision.GetComponent<LaneFinder>().lane], 0.5f).SetEase(Ease.InQuad));
 
             }
         }
@@ -86,7 +97,7 @@ public class Zombi_BOSS_Bullets : MonoBehaviour
     private void MoveObject()
     {
         transform.DOMoveX(transform.position.x + moveDistance, moveDuration)
-                 .SetEase(Ease.Linear)
+                 .SetEase(Ease.Linear).SetLink(gameObject)
                  .OnComplete(() =>
                  {
                      if (rotationTween != null && rotationTween.IsActive())
@@ -107,7 +118,7 @@ public class Zombi_BOSS_Bullets : MonoBehaviour
                 1f,                         // Her 1 saniyede bir tam tur
                 RotateMode.FastBeyond360)
                 .SetEase(Ease.Linear)
-                .SetLoops(-1, LoopType.Restart); // Sonsuz döngü
+                .SetLoops(-1, LoopType.Restart).SetLink(gameObject); // Sonsuz döngü
         }
     }
 }
