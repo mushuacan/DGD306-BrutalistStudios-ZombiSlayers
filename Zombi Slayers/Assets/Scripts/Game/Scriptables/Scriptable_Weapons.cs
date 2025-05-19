@@ -21,8 +21,10 @@ public class Scriptable_Weapons : ScriptableObject
     public bool haveLimitedBullets;
     [Tooltip("Silah ile reload atmak gerekiyor mu?")]
     public bool doesItReload;
-    [Tooltip("Oyun baþýnda kaç mermi ile baþlayacak?")]
-    public int bulletCountAtStart;
+    [Tooltip("Oyun baþýnda silahta kaç mermi ile baþlayacak?")]
+    public int bulletCountInGunAtStart;
+    [Tooltip("Oyun baþýnda cebinde kaç mermi ile baþlayacak?")]
+    public int bulletMagazineAtStart;
     [Tooltip("Silahýn þarjörü bitince kaç saniyede þarjör yenileyebilecek?")]
     public float reloadTime;
     [Tooltip("Bir þarjörde kaç mermi olacak?")]

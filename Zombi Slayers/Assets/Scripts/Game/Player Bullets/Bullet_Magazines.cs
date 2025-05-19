@@ -10,7 +10,8 @@ public class Bullet_Magazines : MonoBehaviour
     private enum MagazineTypes
     {
         Dynamite,
-        Shotgun
+        Shotgun,
+        Sniper
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +33,13 @@ public class Bullet_Magazines : MonoBehaviour
                     player_Attack.TakeMagazine(magazineBulletCount);
                     collider2d.enabled = false;
                     transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => Destroy(gameObject));
-                    Destroy(this.gameObject);
+                }
+                if (magazineType == MagazineTypes.Sniper && collision.GetComponent<Player_Character>().character.characterName == "Derrick")
+                {
+                    if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
+                    player_Attack.TakeMagazine(magazineBulletCount);
+                    collider2d.enabled = false;
+                    transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => Destroy(gameObject));
                 }
             }
         }

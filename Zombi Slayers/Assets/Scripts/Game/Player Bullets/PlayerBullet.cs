@@ -15,17 +15,20 @@ public class PlayerBullet : MonoBehaviour
         damage = weapon.damage;
         weaponName = weapon.weaponName;
 
+        //Fletcher's attack
         if (bulletsc != null )
         {
             BulletMaker(weapon);
         }
 
+        //Woods' attack
         if (weapon.hitboxSize != new Vector2(0, 0))
         {
             boxCollider.size = weapon.hitboxSize;
             boxCollider.offset = weapon.hitboxOffset;
         }
 
+        //Woods attack
         if (weaponName == "Sledgehammer")
         {
             Instantiate(WoodsAttackExplosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);

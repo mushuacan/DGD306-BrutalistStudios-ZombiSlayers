@@ -63,9 +63,12 @@ public class Zombie_Health : MonoBehaviour
             }
             else
             {
-                if (damaj < 24)
+                if (bullet.weaponName == "Shotgun")
                 {
-                    Destroy(collision.gameObject);
+                    if (damaj < 24)
+                    {
+                        Destroy(collision.gameObject);
+                    }
                 }
                 if (pusher != null)
                 {

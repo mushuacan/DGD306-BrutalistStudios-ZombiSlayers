@@ -24,11 +24,15 @@ public class Player_Attack : MonoBehaviour
 
         if (weapon.doesItReload)
         {
-            currentAmmo = weapon.bulletCountinOneReload;
+            currentAmmo = weapon.bulletCountInGunAtStart;
+            if (currentAmmo == 0)
+            {
+                canAttack = false;
+            }
         }
         else
         {
-            currentAmmo = weapon.bulletCountAtStart;
+            currentAmmo = weapon.bulletMagazineAtStart;
         }
 
 
@@ -36,13 +40,13 @@ public class Player_Attack : MonoBehaviour
         {
             if (player.character.secondAbility.haveLimitedBullets)
             {
-                dynamiteAmmo = player.character.secondAbility.bulletCountAtStart;
+                dynamiteAmmo = player.character.secondAbility.bulletMagazineAtStart;
                 player_UI.ArrangeSecondAbilityCounter(dynamiteAmmo, true);
             }
         }
 
         if (weapon.haveLimitedBullets)
-            totalAmmo = weapon.bulletCountAtStart;
+            totalAmmo = weapon.bulletMagazineAtStart;
     }
 
     public void StartAttack()
@@ -88,6 +92,15 @@ public class Player_Attack : MonoBehaviour
     {
         GameObject bullet = Instantiate(player.character.secondAbility.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
         bullet.GetComponent<WindEffectController>().ArrangeReferance(player_movement);
+    }
+    public void DerrickSecondAbility()
+    {
+        player_UI.StartCastTimer(player.character.secondAbility.attackAnimationDuration);
+        DOVirtual.DelayedCall(player.character.secondAbility.attackAnimationDuration, () =>
+        {
+            GameObject bullet = Instantiate(player.character.secondAbility.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
+            bullet.GetComponent<PlayerBullet>().Settings(player.character.secondAbility);
+        });
     }
     private void CheckAttackStatus()
     {

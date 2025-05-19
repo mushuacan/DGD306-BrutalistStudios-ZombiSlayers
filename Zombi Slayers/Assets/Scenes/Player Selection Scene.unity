@@ -2392,6 +2392,7 @@ MonoBehaviour:
   all_Characters:
   - {fileID: 11400000, guid: 2f5254bd959d7004588acd6e1ed882cc, type: 2}
   - {fileID: 11400000, guid: adb621d5e42cd034282239541a1e6747, type: 2}
+  - {fileID: 11400000, guid: 0cf1ffdebc44c534b9993afaebcb5e00, type: 2}
   Woods_all:
   - {fileID: 11400000, guid: 2f5254bd959d7004588acd6e1ed882cc, type: 2}
   - {fileID: 11400000, guid: 85df758c50635804c922e490fb3b4306, type: 2}
@@ -2418,6 +2419,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 168995a370176d2449ce1307a116d5ea, type: 2}
   - {fileID: 11400000, guid: c49a4108e152fa64c8f6b64a2613db17, type: 2}
   - {fileID: 11400000, guid: c49a4108e152fa64c8f6b64a2613db17, type: 2}
+  Derricks_all:
+  - {fileID: 11400000, guid: 0cf1ffdebc44c534b9993afaebcb5e00, type: 2}
+  - {fileID: 11400000, guid: 71398db99ac72574b85dc1004e92126f, type: 2}
+  - {fileID: 11400000, guid: 991f64da44d16f64e88908bc358f5f97, type: 2}
+  - {fileID: 11400000, guid: e4f3b72eab48a0f4897a4f4cecbd1050, type: 2}
+  - {fileID: 11400000, guid: b6f0c4da7cdc9674194605b6cbf4881b, type: 2}
+  - {fileID: 11400000, guid: 93a5c238fddc35f4f888fecfd3917fec, type: 2}
+  - {fileID: 11400000, guid: 0ece1817601064f4e9a94f6ea4d6e305, type: 2}
+  - {fileID: 11400000, guid: dee15dbcea4fcb04baee0e2984e7463b, type: 2}
+  - {fileID: 11400000, guid: 68280b46d539bea44a5b51b921aa0ee1, type: 2}
+  - {fileID: 11400000, guid: 47648ff1213bd764aa2b741720c5ad78, type: 2}
+  - {fileID: 11400000, guid: 9970dc11123ba134899665ec3c4f8228, type: 2}
+  - {fileID: 11400000, guid: 9970dc11123ba134899665ec3c4f8228, type: 2}
   players: []
   playerCount: 0
 --- !u!1 &1879501817

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PassabilityChecker : MonoBehaviour
 {
-    [SerializeField] private bool deleteIfNoFletcher;
     [SerializeField] private bool deleteIfNoWoods;
+    [SerializeField] private bool deleteIfNoFletcher;
+    [SerializeField] private bool deleteIfNoDerrick;
     [SerializeField] private bool deleteIfSinglePlayer;
     [SerializeField] private bool deleteIfNotSinglePlayer;
 
@@ -15,6 +16,10 @@ public class PassabilityChecker : MonoBehaviour
         if (deleteIfNoWoods) { Destroy(this.gameObject); }
     }
     public void DestroyNoFletcher()
+    {
+        if (deleteIfNoFletcher) { Destroy(this.gameObject); }
+    }
+    public void DestroyNoDerrick()
     {
         if (deleteIfNoFletcher) { Destroy(this.gameObject); }
     }

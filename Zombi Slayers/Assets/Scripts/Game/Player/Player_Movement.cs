@@ -383,6 +383,10 @@ public class Player_Movement : MonoBehaviour
         {
             player_attack.FaoSecondAbility();
         }
+        if (player.character.characterName == "Derrick")
+        {
+            player_attack.DerrickSecondAbility();
+        }
     }
 
     public void Die()

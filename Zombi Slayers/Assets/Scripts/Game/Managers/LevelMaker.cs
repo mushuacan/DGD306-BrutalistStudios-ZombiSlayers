@@ -8,12 +8,14 @@ public class LevelMaker : MonoBehaviour
     public bool ArrangePassability;
     private bool isFletcherIn;
     private bool isWoodsIn;
+    private bool isDerrickIn;
 
     // Chat GPT abim sað olsun (bir yazamadým aðzýný kýrdýðýmýnýný kodunu)
     private void Start()
     {
         isWoodsIn = false;
         isFletcherIn = false;
+        isDerrickIn = false;
 
         Player_Character[] players = FindObjectsOfType<Player_Character>();
         foreach (Player_Character player in players)
@@ -25,6 +27,10 @@ public class LevelMaker : MonoBehaviour
             if (player.character.characterName == "Woods")
             {
                 isWoodsIn = true;
+            }
+            if (player.character.characterName == "Derrick")
+            {
+                isDerrickIn = true;
             }
         }
 
@@ -38,6 +44,7 @@ public class LevelMaker : MonoBehaviour
             {
                 if (!isWoodsIn) obj.DestroyNoWoods();
                 if (!isFletcherIn) obj.DestroyNoFletcher();
+                if (!isDerrickIn) obj.DestroyNoDerrick();
                 if (players.Length == 1) obj.DestroyIfSingleplayer();
                 if (players.Length != 1) obj.DestroyIfNotSingleplayer();
             }

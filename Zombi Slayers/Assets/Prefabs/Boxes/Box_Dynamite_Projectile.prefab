@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 3097172449106179103}
   - component: {fileID: 8116204623252740761}
   - component: {fileID: 4158115305077149351}
-  - component: {fileID: 4823032724458310786}
+  - component: {fileID: 2953983263949390397}
   - component: {fileID: 3375778475196079147}
   - component: {fileID: 3129991936099847401}
-  - component: {fileID: 2083116321010169612}
+  - component: {fileID: 2399523988979424090}
   m_Layer: 0
-  m_Name: Box_Projectile_8
+  m_Name: Box_Dynamite_Projectile
   m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,12 +64,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974126067cfc8a84ba502677f1716a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  insider: {fileID: 11400000, guid: a537e12dfb574e349ac132d431cf288b, type: 2}
+  insider: {fileID: 11400000, guid: 0621babe9c764804b830b5b5a01c6a8d, type: 2}
   laneFinder: {fileID: 8116204623252740761}
   clips:
   - {fileID: 8300000, guid: 16540651f8aae6c47a02ec7e7a08ee10, type: 3}
   - {fileID: 8300000, guid: 35c297700b3771c4c80beac47826b624, type: 3}
---- !u!114 &4823032724458310786
+--- !u!114 &2953983263949390397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,8 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae34467ba863b064f952149a80416d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteIfNoFletcher: 1
-  deleteIfNoWoods: 0
+  deleteIfNoFletcher: 0
+  deleteIfNoWoods: 1
   deleteIfSinglePlayer: 0
   deleteIfNotSinglePlayer: 0
 --- !u!61 &3375778475196079147
@@ -157,7 +157,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2083116321010169612
+--- !u!114 &2399523988979424090
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,7 +244,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4429b8a52c4105e46974c0a309378e79, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8c09a610b26c4a4ea5ce7960f14cfd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

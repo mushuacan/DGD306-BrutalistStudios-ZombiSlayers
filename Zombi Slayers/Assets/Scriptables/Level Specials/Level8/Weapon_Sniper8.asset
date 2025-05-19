@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b02b847dd9e9334dbd365620b0c66c9, type: 3}
+  m_Name: Weapon_Sniper8
+  m_EditorClassIdentifier: 
+  weaponName: Sniper
+  damage: 200
+  attackDelay: 0.9
+  attackAnimationDuration: 0.025
+  BulletDestroyTimer: 0.15
+  haveBullets: 1
+  haveLimitedBullets: 1
+  doesItReload: 1
+  bulletCountInGunAtStart: 4
+  bulletMagazineAtStart: 0
+  reloadTime: 3
+  bulletCountinOneReload: 5
+  bulletSpeed: 100
+  bulletBehavior: 1
+  hitboxOffset: {x: 0, y: 0}
+  hitboxSize: {x: 0, y: 0}
+  bullet: {fileID: 732497499613721441, guid: 3ce4964c80aa1a044bfacbd940ff0561, type: 3}
+  icon: {fileID: 21300000, guid: 0fb2876cbbdf0224d9db99ff45794bd4, type: 3}

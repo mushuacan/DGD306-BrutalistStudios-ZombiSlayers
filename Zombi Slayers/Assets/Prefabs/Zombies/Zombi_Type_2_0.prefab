@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 4835035562384579341}
   - component: {fileID: 2106710375775333252}
   - component: {fileID: -420600889507563895}
+  - component: {fileID: -7109252946306498399}
   m_Layer: 0
   m_Name: Zombi_Type_2_0
   m_TagString: Zombi
@@ -417,3 +418,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laneFinder: {fileID: 4087789420610649628}
   lane: 0
+--- !u!114 &-7109252946306498399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6729113846359408514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b289e1a8989ffb4d99c36f7ed06c7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

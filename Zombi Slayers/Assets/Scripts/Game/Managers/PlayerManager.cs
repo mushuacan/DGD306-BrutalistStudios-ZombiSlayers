@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour
     public List<Scriptable_PlayerCharacter> all_Characters = new List<Scriptable_PlayerCharacter>();
     public List<Scriptable_PlayerCharacter> Woods_all = new List<Scriptable_PlayerCharacter>();
     public List<Scriptable_PlayerCharacter> Fletchers_all = new List<Scriptable_PlayerCharacter>();
+    public List<Scriptable_PlayerCharacter> Derricks_all = new List<Scriptable_PlayerCharacter>();
     public List<GameObject> players = new List<GameObject>();
 
     private LevelMaker levelMaker;
@@ -82,6 +83,10 @@ public class PlayerManager : MonoBehaviour
             if (charName == "Fletcher")
             {
                 player.GetComponent<Player_Character>().character = Fletchers_all[level];
+            }
+            if (charName == "Derrick")
+            {
+                player.GetComponent<Player_Character>().character = Derricks_all[level];
             }
         }
         DOVirtual.DelayedCall(0.005f, ArrangeStarterPacks);
