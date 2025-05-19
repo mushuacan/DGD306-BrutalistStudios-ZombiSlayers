@@ -1197,6 +1197,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4772930382770501974, guid: f3705de74969550439ee9719182cf998, type: 3}
+      propertyPath: zatbManager
+      value: 
+      objectReference: {fileID: 301834488}
+    - target: {fileID: 4772930382770501974, guid: f3705de74969550439ee9719182cf998, type: 3}
       propertyPath: ArrangePassability
       value: 1
       objectReference: {fileID: 0}
@@ -1317,6 +1321,10 @@ PrefabInstance:
     - target: {fileID: 7416418069056727170, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
       propertyPath: addZombiRandomly
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416418069056727170, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
+      propertyPath: stopZombyingIfOnlyDerrick
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7749142269565027212, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
       propertyPath: m_Name

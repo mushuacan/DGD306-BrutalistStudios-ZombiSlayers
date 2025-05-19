@@ -7,6 +7,7 @@ public class PassabilityChecker : MonoBehaviour
     [SerializeField] private bool deleteIfNoWoods;
     [SerializeField] private bool deleteIfNoFletcher;
     [SerializeField] private bool deleteIfNoDerrick;
+    [SerializeField] private bool deleteIfOnlyDerrick;
     [SerializeField] private bool deleteIfSinglePlayer;
     [SerializeField] private bool deleteIfNotSinglePlayer;
 
@@ -21,7 +22,11 @@ public class PassabilityChecker : MonoBehaviour
     }
     public void DestroyNoDerrick()
     {
-        if (deleteIfNoFletcher) { Destroy(this.gameObject); }
+        if (deleteIfNoDerrick) { Destroy(this.gameObject); }
+    }
+    public void DestroyIfOnlyDerrick()
+    {
+        if (deleteIfOnlyDerrick) { Destroy(this.gameObject); }
     }
     public void DestroyIfSingleplayer()
     {

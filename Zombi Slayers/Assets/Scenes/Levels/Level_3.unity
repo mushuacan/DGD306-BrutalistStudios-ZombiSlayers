@@ -585,6 +585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_3
       objectReference: {fileID: 0}
+    - target: {fileID: 6391350080499427724, guid: 73b95b1556142a246b5f4be1aa00ecd1, type: 3}
+      propertyPath: deleteIfOnlyDerrick
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6399835992064218676, guid: 73b95b1556142a246b5f4be1aa00ecd1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

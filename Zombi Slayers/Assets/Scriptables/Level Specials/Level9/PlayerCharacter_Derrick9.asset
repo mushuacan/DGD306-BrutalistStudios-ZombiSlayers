@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerCharacter_Derrick9
   m_EditorClassIdentifier: 
   characterName: Derrick
-  health: 1
+  health: 2
   secondAbilityTimer: 0
   secondAbilitySpeed: 0
   secondAbilityCooldown: 1.5

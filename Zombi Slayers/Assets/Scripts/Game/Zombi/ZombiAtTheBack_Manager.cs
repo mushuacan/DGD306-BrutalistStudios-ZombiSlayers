@@ -13,6 +13,7 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
     public float newZombiDelay;
     private bool gameEnded;
     public bool stopZombying;
+    public bool stopZombyingIfOnlyDerrick;
 
     void Start()
     {
@@ -23,6 +24,11 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
         AddBackZombi(3);
         if (addZombiRandomly) AddZombiRandomly(newZombiDelay);
 
+    }
+
+    public void StopIfOnlyDerrick()
+    {
+        if (stopZombyingIfOnlyDerrick) stopZombying = true;
     }
 
     private void AddZombiRandomly(float time)

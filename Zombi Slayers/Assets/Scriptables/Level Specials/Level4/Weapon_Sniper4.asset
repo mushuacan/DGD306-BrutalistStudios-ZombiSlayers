@@ -20,7 +20,7 @@ MonoBehaviour:
   haveBullets: 1
   haveLimitedBullets: 1
   doesItReload: 1
-  bulletCountInGunAtStart: 3
+  bulletCountInGunAtStart: 0
   bulletMagazineAtStart: 0
   reloadTime: 3
   bulletCountinOneReload: 5

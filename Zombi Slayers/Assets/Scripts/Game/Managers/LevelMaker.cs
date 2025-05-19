@@ -9,6 +9,7 @@ public class LevelMaker : MonoBehaviour
     private bool isFletcherIn;
     private bool isWoodsIn;
     private bool isDerrickIn;
+    [SerializeField] private ZombiAtTheBack_Manager zatbManager;
 
     // Chat GPT abim sað olsun (bir yazamadým aðzýný kýrdýðýmýnýný kodunu)
     private void Start()
@@ -45,8 +46,13 @@ public class LevelMaker : MonoBehaviour
                 if (!isWoodsIn) obj.DestroyNoWoods();
                 if (!isFletcherIn) obj.DestroyNoFletcher();
                 if (!isDerrickIn) obj.DestroyNoDerrick();
+                if (players.Length == 1 && isDerrickIn) obj.DestroyIfOnlyDerrick();
                 if (players.Length == 1) obj.DestroyIfSingleplayer();
                 if (players.Length != 1) obj.DestroyIfNotSingleplayer();
+            }
+            if (zatbManager != null)
+            {
+                zatbManager.StopIfOnlyDerrick();
             }
         }
     }
