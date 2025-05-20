@@ -14,14 +14,18 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
 
     [Header("Menüler")]
     public GameObject menu1;
+    public GameObject menu1_5;
     public GameObject menu2;
 
     [Header("Referanslar")]
+    public GameObject Player1_Prefab;
+    public GameObject Player2_Prefab;
     public GameObject Player1_Waiting;
     public GameObject Player1_Arrived;
     public GameObject Player2_Waiting;
     public GameObject Player2_Arrived;
-    public GameObject FirstSelectedButton;
+    public GameObject Menu1_SelectedButton;
+    public GameObject Menu2_SelectedButton;
     public GameObject PlayerInputManagerPrefab;
 
     public PlayerManager playerManager;
@@ -40,8 +44,9 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     private void Start()
     {
         menu1.SetActive(true);
+        menu1_5.SetActive(false);
         menu2.SetActive(false);
-        EventSystem.current.SetSelectedGameObject(FirstSelectedButton);
+        EventSystem.current.SetSelectedGameObject(Menu1_SelectedButton);
 
 
         Player1_Waiting.SetActive(true);
@@ -304,6 +309,13 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         SwitchMenus();
     }
 
+    public void Versus()
+    {
+        playerCount = 1;
+        gameType = "Versus";
+        SwitchMenus();
+    }
+
     public void ArrangePlayerUI(int players, GameObject PlayerManagerReferans)
     {
         playerManager = PlayerManagerReferans.GetComponent<PlayerManager>();
@@ -330,8 +342,31 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     private void SwitchMenus()
     {
         menu1.SetActive(false);
+        menu1_5.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(Menu2_SelectedButton);
+    }
+    public void BackToMenu1()
+    {
+        menu1.SetActive(true);
+        menu1_5.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(Menu1_SelectedButton);
+    }
+    public void OpenCharacterSelect()
+    {
         menu2.SetActive(true);
+        menu1_5.SetActive(false);
+    }
+    public void CreateDeviceDetecter()
+    {
         Instantiate(PlayerInputManagerPrefab);
     }
-
+    public void CreatePlayersWithKeyboard()
+    {
+        Instantiate(Player1_Prefab);
+        if (playerCount == 2)
+        {
+            Instantiate(Player2_Prefab);
+        }
+        playerManager.OnPlayerJoined();
+    }
 }

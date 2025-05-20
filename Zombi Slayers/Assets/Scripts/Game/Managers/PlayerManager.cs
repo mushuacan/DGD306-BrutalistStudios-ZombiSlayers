@@ -19,15 +19,24 @@ public class PlayerManager : MonoBehaviour
     private LevelMaker levelMaker;
 
     public int playerCount;
+    private static PlayerManager instance;
 
-    private void Start()
+    void Awake()
     {
-        DontDestroyOnLoad(this);
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject); // Zaten bir tane varsa yenisini yok et
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject); // Ýlk olaný sahne geçiþinde koru
     }
 
-    public void OnPlayerJoined(PlayerInput player)
+    public void OnPlayerJoined(PlayerInput player = null)
     {
-        Debug.Log("Oyuncu eklendi: " + player.name);
+        if (player != null)
+            Debug.Log("Oyuncu eklendi: " + player.name);
 
         PlayerCounter();
 
@@ -48,14 +57,16 @@ public class PlayerManager : MonoBehaviour
             }
             pssb.ArrangePlayerUI(playerCount, this.gameObject);
         }
-
-        player.GetComponent<Player_Movement>().animations = (bool)GameSettings.Instance.settings["animations"];
     }
 
     private void PlayerCounter()
     {
         players = GameObject.FindGameObjectsWithTag("Player").ToList();
         playerCount = players.Count;
+        foreach (GameObject player in players)
+        {
+            player.GetComponent<Player_Movement>().animations = (bool)GameSettings.Instance.settings["animations"];
+        }
     }
 
     public void NewLevelOpened(int level)

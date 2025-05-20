@@ -16,6 +16,87 @@ public class Player_Inputs : MonoBehaviour
     public Vector2 MovementValues;
     public PlayerInput playerInput;
 
+    public bool isItOnlyKeyboard;
+    public KeyCode UpKey;
+    public KeyCode DownKey;
+    public KeyCode RightKey;
+    public KeyCode LeftKey;
+    public KeyCode AttackKey;
+    public KeyCode SecondKey;
+    public KeyCode StartKey;
+    public KeyCode SelectKey;
+    private Vector2 MovementVector2;
+
+    private void Update()
+    {
+        if (isItOnlyKeyboard)
+        {
+            if (Input.GetKey(UpKey))
+            {
+                MovementVector2.y = 1;
+            }
+            else if (Input.GetKey(DownKey))
+            {
+                MovementVector2.y = -1;
+            }else
+            {
+                MovementVector2.y = 0;
+            }
+            if (Input.GetKey(LeftKey))
+            {
+                MovementVector2.x = -1;
+            }
+            else if (Input.GetKey(RightKey))
+            {
+                MovementVector2.x = 1;
+            }
+            else
+            {
+                MovementVector2.x = 0;
+            }
+
+            MovementValues = MovementVector2;
+
+            if (Input.GetKey(AttackKey))
+            {
+                button0pressed = true;
+            }
+            else
+            {
+                button0pressed = false;
+            }
+
+            if (Input.GetKey(SecondKey))
+            {
+                button1pressed = true;
+            }
+            else
+            {
+                button1pressed = false;
+            }
+
+
+            if (Input.GetKey(StartKey))
+            {
+                startPressed = true;
+            }
+            else
+            {
+                startPressed = false;
+            }
+
+            if (Input.GetKey(SelectKey))
+            {
+                sellectPressed = true;
+            }
+            else
+            {
+                sellectPressed = false;
+            }
+
+        }
+    }
+
     public void OnMovement(InputAction.CallbackContext context)
     {
         MovementValues = context.ReadValue<Vector2>();
@@ -122,22 +203,4 @@ public class Player_Inputs : MonoBehaviour
             rightShoulderPressed = false;
         }
     }
-
-    //void OnRightShoulder(InputAction.CallbackContext context)
-    //{
-    //    if (context.started)
-    //    {
-    //        Debug.Log("Button0 basýlmaya baþlandý");
-    //    }
-
-    //    if (context.performed)
-    //    {
-    //        Debug.Log("Button0 tamamlandý (tek basma gibi düþünebilirsin)");
-    //    }
-
-    //    if (context.canceled)
-    //    {
-    //        Debug.Log("Button0 býrakýldý");
-    //    }
-    //}
 }
