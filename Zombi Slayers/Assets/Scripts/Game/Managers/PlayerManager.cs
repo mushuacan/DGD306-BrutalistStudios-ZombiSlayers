@@ -19,17 +19,9 @@ public class PlayerManager : MonoBehaviour
     private LevelMaker levelMaker;
 
     public int playerCount;
-    private static PlayerManager instance;
 
-    void Awake()
+    void Start()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject); // Zaten bir tane varsa yenisini yok et
-            return;
-        }
-
-        instance = this;
         DontDestroyOnLoad(gameObject); // Ýlk olaný sahne geçiþinde koru
     }
 
