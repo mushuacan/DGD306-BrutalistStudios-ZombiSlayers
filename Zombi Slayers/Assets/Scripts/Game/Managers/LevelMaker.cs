@@ -50,7 +50,7 @@ public class LevelMaker : MonoBehaviour
                 if (players.Length == 1) obj.DestroyIfSingleplayer();
                 if (players.Length != 1) obj.DestroyIfNotSingleplayer();
             }
-            if (zatbManager != null)
+            if (zatbManager != null && players.Length == 1 && isDerrickIn)
             {
                 zatbManager.StopIfOnlyDerrick();
             }
