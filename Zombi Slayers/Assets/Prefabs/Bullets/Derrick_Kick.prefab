@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  weaponName: 
+  weaponName: Derrick Kick
   bulletsc: []
   boxCollider: {fileID: 5310655652545133225}
   WoodsAttackExplosion: {fileID: 0}

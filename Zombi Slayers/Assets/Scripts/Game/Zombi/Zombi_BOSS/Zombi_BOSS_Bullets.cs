@@ -69,7 +69,19 @@ public class Zombi_BOSS_Bullets : MonoBehaviour
                     collision.DOKill(collision.transform);
                     Destroy(collision.gameObject);
                     return;
-                }// X yönünde ileri git (paralel olarak)
+                }
+                if (collision.CompareTag("Obstacle"))
+                {
+                    Obstacle obstacle = collision.GetComponent<Obstacle>();
+                    if (obstacle != null && obstacle.isBreakable)
+                    {
+                        collision.DOKill(collision.transform);
+                        Destroy(collision.gameObject);
+                        return;
+                    }
+                }
+
+
                 if (collision != null && collision.transform != null)
                 {
                     collision.transform.DOMoveX(collision.transform.position.x + 2, 1f)

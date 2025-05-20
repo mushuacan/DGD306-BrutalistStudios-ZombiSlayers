@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class Obstacle : MonoBehaviour
@@ -33,6 +34,23 @@ public class Obstacle : MonoBehaviour
                     All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForObstacleDestr);
                 }
                 Destroy(this.gameObject);
+            }
+        }
+        if (!isBreakable && collision.CompareTag("Player_Bullet"))
+        {
+            if (collision.GetComponent<PlayerBullet>().weaponName == "Derrick Kick")
+            {
+                transform.DOMoveX(transform.position.x + 2, 1f).SetLink(gameObject);
+
+                transform.DOMoveY(transform.position.y + 1f, 0.5f).SetEase(Ease.OutQuad).SetLink(gameObject).OnComplete(() =>
+                {
+                    if (transform != null)
+                    {
+                        float targetY = LaneFinder.laneYPositions[GetComponent<LaneFinder>().lane];
+
+                        transform.DOMoveY(targetY, 0.5f).SetEase(Ease.InQuad).SetLink(gameObject);
+                    }
+                });
             }
         }
     }
