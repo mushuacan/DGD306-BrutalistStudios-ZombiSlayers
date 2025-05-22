@@ -1499,7 +1499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3584020385135154724, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
       propertyPath: deleteIfSinglePlayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3584020385135154724, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
       propertyPath: deleteIfNotSinglePlayer
@@ -2373,7 +2373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1984216432476618187, guid: 9f4252c74935ded4b89eb3b785ab3a14, type: 3}
       propertyPath: deleteIfOnlyDerrick
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3230454104735809029, guid: 9f4252c74935ded4b89eb3b785ab3a14, type: 3}
       propertyPath: m_LocalPosition.x

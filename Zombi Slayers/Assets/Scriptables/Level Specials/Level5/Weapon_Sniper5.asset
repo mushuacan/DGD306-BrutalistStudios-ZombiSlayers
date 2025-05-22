@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Sniper
   damage: 200
-  attackDelay: 0.9
+  attackDelay: 1
   attackAnimationDuration: 0.025
-  BulletDestroyTimer: 0.15
+  BulletDestroyTimer: 0.1125
   haveBullets: 1
   haveLimitedBullets: 1
   doesItReload: 1
-  bulletCountInGunAtStart: 0
-  bulletMagazineAtStart: 0
-  reloadTime: 3
-  bulletCountinOneReload: 5
+  bulletCountInGunAtStart: 2
+  bulletMagazineAtStart: 3
+  reloadTime: 4
+  bulletCountinOneReload: 4
   bulletSpeed: 100
   bulletBehavior: 1
   hitboxOffset: {x: 0, y: 0}

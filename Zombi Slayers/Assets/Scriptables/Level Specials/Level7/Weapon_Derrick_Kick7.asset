@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Derrick Kick
   damage: 5
-  attackDelay: 0.2
-  attackAnimationDuration: 0.15
-  BulletDestroyTimer: 0.35
+  attackDelay: 0.5
+  attackAnimationDuration: 0.25
+  BulletDestroyTimer: 0.15
   haveBullets: 0
   haveLimitedBullets: 0
   doesItReload: 0
-  bulletCountAtStart: 0
+  bulletCountInGunAtStart: 0
+  bulletMagazineAtStart: 0
   reloadTime: 0
   bulletCountinOneReload: 0
   bulletSpeed: 0

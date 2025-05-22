@@ -1324,7 +1324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7416418069056727170, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
       propertyPath: stopZombyingIfOnlyDerrick
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7749142269565027212, guid: 56a0654f50837924e9c067366e8c68be, type: 3}
       propertyPath: m_Name

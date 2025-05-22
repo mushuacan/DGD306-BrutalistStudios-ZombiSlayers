@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Shotgun
   damage: 10
-  attackDelay: 0.2
+  attackDelay: 0.3
   attackAnimationDuration: 0.2
   BulletDestroyTimer: 0.3
   haveBullets: 1

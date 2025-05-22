@@ -1385,7 +1385,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 33090728659558516, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
       propertyPath: magazineBulletCount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2555471220647529321, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
       propertyPath: m_Name
