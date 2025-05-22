@@ -212,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBreakable: 1
   isSlideable: 0
+  remaining: {fileID: 8562209942794333228, guid: f22f088ce27f1ed40bcd8f548e6b8a36, type: 3}
   clipsForPlayerDamaj:
   - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
   - {fileID: 8300000, guid: 4aa91225428d7014a87d4d00803f0704, type: 3}

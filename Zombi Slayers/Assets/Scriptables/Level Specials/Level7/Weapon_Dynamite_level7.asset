@@ -20,7 +20,8 @@ MonoBehaviour:
   haveBullets: 1
   haveLimitedBullets: 1
   doesItReload: 0
-  bulletCountAtStart: 0
+  bulletCountInGunAtStart: 0
+  bulletMagazineAtStart: 0
   reloadTime: 0
   bulletCountinOneReload: 0
   bulletSpeed: 0
@@ -28,4 +29,4 @@ MonoBehaviour:
   hitboxOffset: {x: 0, y: 0}
   hitboxSize: {x: 0, y: 0}
   bullet: {fileID: 732497499613721441, guid: 84a197de1bb4ec44389d988b88aba54e, type: 3}
-  icon: {fileID: 21300000, guid: 98e3747968a3f63478552bdbfc969a24, type: 3}
+  icon: {fileID: 21300000, guid: c1e540eba2a13ed4887dcc3d65eb7160, type: 3}

@@ -7,8 +7,15 @@ public class Obstacle : MonoBehaviour
     public bool isBreakable;
     public bool isSlideable;
 
+    public GameObject remaining;
+
     [SerializeField] private AudioClip[] clipsForPlayerDamaj;
     [SerializeField] private AudioClip[] clipsForObstacleDestr;
+
+    private void CreateRemaining()
+    {
+        Instantiate(remaining, transform.position, Quaternion.identity, transform.parent);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,6 +40,7 @@ public class Obstacle : MonoBehaviour
                 {
                     All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForObstacleDestr);
                 }
+                CreateRemaining();
                 Destroy(this.gameObject);
             }
         }
@@ -40,15 +48,15 @@ public class Obstacle : MonoBehaviour
         {
             if (collision.GetComponent<PlayerBullet>().weaponName == "Derrick Kick")
             {
-                transform.DOMoveX(transform.position.x + 2, 1f).SetLink(gameObject);
+                transform.DOMoveX(transform.position.x + 1f, 0.5f).SetEase(Ease.Linear).SetLink(gameObject);
 
-                transform.DOMoveY(transform.position.y + 1f, 0.5f).SetEase(Ease.OutQuad).SetLink(gameObject).OnComplete(() =>
+                transform.DOMoveY(transform.position.y + 0.5f, 0.25f).SetEase(Ease.OutQuad).SetLink(gameObject).OnComplete(() =>
                 {
                     if (transform != null)
                     {
                         float targetY = LaneFinder.laneYPositions[GetComponent<LaneFinder>().lane];
 
-                        transform.DOMoveY(targetY, 0.5f).SetEase(Ease.InQuad).SetLink(gameObject);
+                        transform.DOMoveY(targetY, 0.25f).SetEase(Ease.InQuad).SetLink(gameObject);
                     }
                 });
             }
