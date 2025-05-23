@@ -85,7 +85,8 @@ public class Player_Animation : MonoBehaviour
     {
         if (CheckIfControllerNull()) return;
         if (debugger) { Debug.Log("Attack"); }
-        animationer.Play("Attack", 0, 0f);
+        if ( player.character.characterName == "Woods")
+            animationer.Play("Attack", 0, 0f);
     }
     public void Jump()
     {
