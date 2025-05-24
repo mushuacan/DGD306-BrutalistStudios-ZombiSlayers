@@ -24,11 +24,12 @@ public class Player_Health : MonoBehaviour
     [SerializeField] public float undamageableDelay;
     [SerializeField] public bool isSliding;
 
+    private Sequence flashSequence;
+
     public void StarterPack()
     {
         ArrangeHealth(player.character.health, true);
         undamageableDelay = Time.timeSinceLevelLoad + undamageableDuration;
-        FlashEffect();
     }
     
     public void GiveDamage(bool slideBreaker = false)
@@ -53,7 +54,7 @@ public class Player_Health : MonoBehaviour
             else
             {
                 undamageableDelay = Time.timeSinceLevelLoad + undamageableDuration;
-                FlashEffect();
+                Flasher(Color.red); // kýrmýzý yandýrýp söndür
             }
         }
     }
@@ -64,24 +65,29 @@ public class Player_Health : MonoBehaviour
         {
             player_movement.player_sounder.PlayHealSound();
             ArrangeHealth(+1);
+            Flasher(Color.green); // yeþil yanýp söndür
         }
     }
-    private void FlashEffect()
+    // Bu metot chat gpt kullanýlarak yapýlmýþtýr.
+    private void Flasher(Color color)
     {
-        // Yanýp sönme efekti için DOTween kullanýyoruz
-        // 0.1 saniye boyunca alpha'yý 0'a düþürüp, sonra 0.1 saniyede tekrar 1 yapýyoruz
-        // Alpha'yý geri 1 yapýyoruz.
-        spriteRenderer.DOFade(undamageableImpulsePower, undamageableDuration/4).OnComplete(() =>
+        if (flashSequence != null && flashSequence.IsActive())
         {
-            spriteRenderer.DOFade(1f - undamageableImpulsePower, undamageableDuration / 4).OnComplete(() =>
-            {
-                spriteRenderer.DOFade(undamageableImpulsePower, undamageableDuration / 4).OnComplete(() =>
-                {
-                    spriteRenderer.DOFade(1f, undamageableDuration / 4);
-                });
-            }); 
-        });
+            flashSequence.Kill(); 
+        }
+
+        flashSequence = DOTween.Sequence();
+
+        Color originalColor = Color.white;
+        Color flashColor = color;
+
+        for (int i = 0; i < 4; i++)
+        {
+            flashSequence.Append(spriteRenderer.DOColor(flashColor, undamageableDuration / 8));
+            flashSequence.Append(spriteRenderer.DOColor(originalColor, undamageableDuration / 8));
+        }
     }
+
     private void DieEffect()
     {
 
