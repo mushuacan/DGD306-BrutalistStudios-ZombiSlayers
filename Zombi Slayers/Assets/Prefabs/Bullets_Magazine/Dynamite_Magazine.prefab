@@ -69,6 +69,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f1c15a7e8b8deff45b76274071cadf4e, type: 3}
   - {fileID: 8300000, guid: 2f8bcd914c479e14489d1bc4279441ad, type: 3}
   collider2d: {fileID: 1088626550032691457}
+  spriteRenderer: {fileID: 5433156484763890567}
 --- !u!114 &8735378264284657272
 MonoBehaviour:
   m_ObjectHideFlags: 0

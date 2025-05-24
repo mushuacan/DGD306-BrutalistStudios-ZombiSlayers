@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5760106462768121569}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.081, z: 0}
+  m_LocalPosition: {x: 0, y: 0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -213,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBreakable: 0
   isSlideable: 1
+  remaining: {fileID: 0}
   clipsForPlayerDamaj:
   - {fileID: 8300000, guid: c67e03e0a3426a641895d2d0690c3b9b, type: 3}
   - {fileID: 8300000, guid: 7c56891479d26054e93e3399a976fc23, type: 3}
@@ -271,7 +272,7 @@ Transform:
   m_GameObject: {fileID: 9016266065661366850}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.081, z: 0}
+  m_LocalPosition: {x: 0, y: 0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

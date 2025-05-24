@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider2d: {fileID: 5802316889921259578}
+  spriteRenderer: {fileID: 6760436623009678208}
 --- !u!114 &-5763169253544715281
 MonoBehaviour:
   m_ObjectHideFlags: 0

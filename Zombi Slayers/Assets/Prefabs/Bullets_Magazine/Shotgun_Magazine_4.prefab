@@ -68,6 +68,7 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: f1c15a7e8b8deff45b76274071cadf4e, type: 3}
   collider2d: {fileID: 7840189114818561971}
+  spriteRenderer: {fileID: 49423227773152678}
 --- !u!114 &5286646187630977937
 MonoBehaviour:
   m_ObjectHideFlags: 0
