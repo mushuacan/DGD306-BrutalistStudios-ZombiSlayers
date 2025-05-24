@@ -328,6 +328,7 @@ public class Player_Movement : MonoBehaviour
         {
             jumpTween = transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.InQuad).OnComplete(() =>
             {
+                if (animations) player_animation.EndJump();
                 player_sounder.PlayLandSound();
                 if (state == StateOC.EndGame) return;
                 if (state == StateOC.Dead) return;
@@ -344,6 +345,7 @@ public class Player_Movement : MonoBehaviour
         {
             jumpTween = transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
             {
+                if (animations) player_animation.EndJump();
                 player_sounder.PlayLandSound();
                 if (state == StateOC.EndGame) return;
                 if (state == StateOC.Dead) return;
