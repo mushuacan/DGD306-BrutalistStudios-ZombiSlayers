@@ -77,7 +77,8 @@ public class Player_UI : MonoBehaviour
     }
     public void WeaponUsing()
     {
-        weaponImage.DOFade(fadePower, fadeDuration + 0.2f);
+        weaponCooldown.fillAmount = 1;
+        //weaponImage.DOFade(fadePower, fadeDuration + 0.2f);
     }
     public void StartWeaponCooldown(float time)
     {
@@ -87,12 +88,13 @@ public class Player_UI : MonoBehaviour
         {
             weaponCooldown.gameObject.SetActive(false);
             weaponCooldown.fillAmount = 0;
-            weaponImage.DOFade(1f, fadeDuration);
+            //weaponImage.DOFade(1f, fadeDuration);
         });
     }
     public void SecondAbilityUsing()
     {
-        secondAbilityImage.DOFade(fadePower, fadeDuration);
+        secondAbilityCooldown.fillAmount = 1;
+        //secondAbilityImage.DOFade(fadePower, fadeDuration);
     }
     public void StartSecondAbilityCooldown(float time)
     {
@@ -102,7 +104,7 @@ public class Player_UI : MonoBehaviour
         {
             secondAbilityCooldown.gameObject.SetActive(false);
             secondAbilityCooldown.fillAmount = 0;
-            secondAbilityImage.DOFade(1f, fadeDuration);
+            //secondAbilityImage.DOFade(1f, fadeDuration);
         });
     }
     public void ArrangeAmmoCounter(int currentAmmo, int totalAmmo, bool showIt, bool hasTotalAmmo)
