@@ -34,7 +34,7 @@ public class Bullet_Magazines : MonoBehaviour
                     if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
                     player_Attack.TakeMagazine(magazineBulletCount);
                     collider2d.enabled = false;
-                    FlashAndDestroy(Color.green);
+                    FlashAndDestroy(Color.yellow);
                 }
                 if (magazineType == MagazineTypes.Sniper && collision.GetComponent<Player_Character>().character.characterName == "Derrick")
                 {
