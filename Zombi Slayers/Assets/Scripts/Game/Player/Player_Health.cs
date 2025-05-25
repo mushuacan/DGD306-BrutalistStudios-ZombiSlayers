@@ -30,6 +30,7 @@ public class Player_Health : MonoBehaviour
     {
         ArrangeHealth(player.character.health, true);
         undamageableDelay = Time.timeSinceLevelLoad + undamageableDuration;
+        Flasher(Color.grey);
     }
     
     public void GiveDamage(bool slideBreaker = false)

@@ -93,7 +93,7 @@ public class Player_Animation : MonoBehaviour
         if (CheckIfControllerNull()) return;
         if (debugger) { Debug.Log("Jump"); }
         animationer.SetBool("Jumped", true);
-        //animationer.Play("Jump", 0, 0f);
+        animationer.Play("Jump", 0, 0f);
     }
     public void EndJump()
     {
