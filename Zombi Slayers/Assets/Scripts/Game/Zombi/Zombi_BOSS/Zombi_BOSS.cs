@@ -28,9 +28,9 @@ public class Zombi_BOSS : MonoBehaviour
         sequence.SetUpdate(UpdateType.Normal); // Time.timeScale'e baðlý olur
 
         sequence.AppendCallback(() => PerformAction(currentActionIndex));
-        sequence.AppendInterval(2f); // Her hamle arasýnda 2 saniye bekle
+        sequence.AppendInterval(2); // Her hamle arasýnda 2 saniye bekle
         sequence.AppendCallback(() => {
-            currentActionIndex = (currentActionIndex + 1) % 4;
+            currentActionIndex = (currentActionIndex + 1) % 3;
             ExecuteNextAction();
         });
     }
@@ -47,9 +47,6 @@ public class Zombi_BOSS : MonoBehaviour
                 break;
             case 2:
                 ZombieBall();
-                break;
-            case 3:
-                RaiseSpikes();
                 break;
         }
     }

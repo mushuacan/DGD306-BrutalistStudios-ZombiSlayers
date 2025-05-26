@@ -171,7 +171,7 @@ MonoBehaviour:
   meltOnCollision: 0
   hitOnCollision: 1
   moveDistance: 18
-  moveDuration: 3.5
+  moveDuration: 2.5
 --- !u!114 &-8886501284318038513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBreakable: 0
   isSlideable: 0
+  remaining: {fileID: 0}
   clipsForPlayerDamaj: []
   clipsForObstacleDestr: []
 --- !u!50 &267983092322926282

@@ -10,6 +10,7 @@ public class Scriptable_PlayerCharacter : ScriptableObject
     public float secondAbilityCooldown;
     public Scriptable_Weapons weapon;
     public Scriptable_Weapons secondAbility;
+    public float animationSpeed = 1f;
 
     public Texture imaj;
     public Sprite spriter;

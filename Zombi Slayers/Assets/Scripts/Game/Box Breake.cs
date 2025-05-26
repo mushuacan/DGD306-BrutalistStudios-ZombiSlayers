@@ -22,6 +22,7 @@ public class BoxBreake : MonoBehaviour
 
             Vector3 pozisyon = new Vector3(transform.position.x, LaneFinder.laneYPositions[laneFinder.lane], transform.position.z);
 
+            if (insider != null)
             Instantiate(insider.prefab, pozisyon, transform.rotation, transform.parent);
             Destroy(this.gameObject);
         }

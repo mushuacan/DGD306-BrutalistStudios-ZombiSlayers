@@ -199,6 +199,8 @@ public class Player_Movement : MonoBehaviour
         secondAbilityCooldown = 0f;
         FaoWind_StopJump = false;
 
+        animationSpeed = player.character.animationSpeed;
+
         player_health.StarterPack();
         player_attack.StarterPack();
         player_UI.StarterPack();
