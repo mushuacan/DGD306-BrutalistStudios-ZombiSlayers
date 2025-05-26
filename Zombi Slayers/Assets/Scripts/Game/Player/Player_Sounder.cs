@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class Player_Sounder : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class Player_Sounder : MonoBehaviour
     [SerializeField] private AudioClip[] dynamiteIgnite;
 
 
-    private void PlayFrom(AudioClip[] clips)
+    private void PlayFrom(AudioClip[] clips, GameObject source = null)
     {
         if (clips.Length != 0)
         {
@@ -28,7 +29,7 @@ public class Player_Sounder : MonoBehaviour
         }
         else
         {
-            Debug.Log("Null Ses gönderildi.");
+            Debug.LogWarning($"[SoundManager] Null AudioClip received from: {source?.name ?? "Unknown"}");
         }
     }
 
@@ -37,7 +38,7 @@ public class Player_Sounder : MonoBehaviour
     {
         if (player.character.characterName == "Woods")
         {
-            PlayFrom(woodsAttack);
+            //PlayFrom(woodsAttack);
         }
         if (player.character.characterName == "Fletcher")
         {
@@ -70,10 +71,10 @@ public class Player_Sounder : MonoBehaviour
     }
     public void PlayJumpSound()
     {
-        PlayFrom(playerJump);
+        //PlayFrom(playerJump);
     }
     public void PlayLandSound()
     {
-        PlayFrom(playerLand);
+        //PlayFrom(playerLand);
     }
 }

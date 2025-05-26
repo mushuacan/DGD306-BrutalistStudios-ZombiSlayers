@@ -737,8 +737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5980480940130164564}
   audioSource: {fileID: 1907199552892290453}
-  woodsAttack:
-  - {fileID: 8300000, guid: afd0300f2af38ca4fba86c1851967993, type: 3}
+  woodsAttack: []
   fletchersAttack:
   - {fileID: 8300000, guid: 301dd8b2aa519284fbd7a7bfff8d700a, type: 3}
   - {fileID: 8300000, guid: 34f09246e3637194583911eee35cb619, type: 3}
@@ -757,10 +756,13 @@ MonoBehaviour:
   playerHeal:
   - {fileID: 8300000, guid: 1a1b088af49399146b098ad9ff623b50, type: 3}
   - {fileID: 8300000, guid: 1266e548045f7c646923d67fabfa6121, type: 3}
-  playerSlide: []
-  playerJump: []
+  playerSlide:
+  - {fileID: 8300000, guid: cfb671088a54b8141a6b50dc25fcac3b, type: 3}
+  playerJump:
+  - {fileID: 8300000, guid: 830fc9b87bd647b41a60cd0b34156909, type: 3}
   playerLand: []
-  dynamiteIgnite: []
+  dynamiteIgnite:
+  - {fileID: 8300000, guid: 52670d0d62b8c854590494ed587df74c, type: 3}
 --- !u!114 &-699912929371043157
 MonoBehaviour:
   m_ObjectHideFlags: 0
