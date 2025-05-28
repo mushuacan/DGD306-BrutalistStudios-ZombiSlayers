@@ -292,10 +292,7 @@ MonoBehaviour:
   spriteRenderer:
   - {fileID: 5912676876835241458}
   - {fileID: 1838270579972763850}
-  clipsLowDamaj:
-  - {fileID: 8300000, guid: cb05b80d58c1fd44a8f3988b845babbd, type: 3}
-  - {fileID: 8300000, guid: 184c283f810939844a5411790395edad, type: 3}
-  - {fileID: 8300000, guid: 830fc9b87bd647b41a60cd0b34156909, type: 3}
+  clipsLowDamaj: []
   clipsHighDamaj:
   - {fileID: 8300000, guid: 5baf2045e621f4a428b9c39b956d9fa4, type: 3}
 --- !u!114 &1624147991218554521

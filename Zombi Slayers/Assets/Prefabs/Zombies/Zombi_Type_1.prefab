@@ -217,12 +217,7 @@ MonoBehaviour:
   pusher: {fileID: 4584445579691408264}
   spriteRenderer:
   - {fileID: 5001715593568527686}
-  clipsLowDamaj:
-  - {fileID: 8300000, guid: 830fc9b87bd647b41a60cd0b34156909, type: 3}
-  - {fileID: 8300000, guid: 59408ec7c6f57e24dadf4d62d10e5ca6, type: 3}
-  - {fileID: 8300000, guid: 184c283f810939844a5411790395edad, type: 3}
-  - {fileID: 8300000, guid: 76c56fb65814dc347b14cc484dcfb26e, type: 3}
-  - {fileID: 8300000, guid: cb05b80d58c1fd44a8f3988b845babbd, type: 3}
+  clipsLowDamaj: []
   clipsHighDamaj:
   - {fileID: 8300000, guid: 66d536f87b9b0304b9bc4612829b6bd8, type: 3}
   - {fileID: 8300000, guid: bb85ec909ca57074e8c01dd52048949a, type: 3}
