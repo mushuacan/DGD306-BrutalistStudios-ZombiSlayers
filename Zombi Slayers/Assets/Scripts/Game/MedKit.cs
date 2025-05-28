@@ -17,7 +17,8 @@ public class MedKit : MonoBehaviour
                 {
                     playerHealth.TakeMedKit();
                     collider2d.enabled = false;
-                    FlashAndDestroy(Color.green);
+
+                    Destroy(gameObject); //FlashAndDestroy(Color.green);
                 }
             }
         }

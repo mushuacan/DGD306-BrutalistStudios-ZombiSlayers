@@ -27,21 +27,21 @@ public class Bullet_Magazines : MonoBehaviour
                 {
                     player_Attack.TakeDynamite();
                     collider2d.enabled = false;
-                    FlashAndDestroy(Color.green);
+                    Destroy(gameObject); // FlashAndDestroy(Color.green);
                 }
                 if (magazineType == MagazineTypes.Shotgun && collision.GetComponent<Player_Character>().character.characterName == "Fletcher")
                 {
                     if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
                     player_Attack.TakeMagazine(magazineBulletCount);
                     collider2d.enabled = false;
-                    FlashAndDestroy(Color.yellow);
+                    Destroy(gameObject); // FlashAndDestroy(Color.yellow);
                 }
                 if (magazineType == MagazineTypes.Sniper && collision.GetComponent<Player_Character>().character.characterName == "Derrick")
                 {
                     if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
                     player_Attack.TakeMagazine(magazineBulletCount);
                     collider2d.enabled = false;
-                    FlashAndDestroy(Color.green);
+                    Destroy(gameObject); // FlashAndDestroy(Color.green);
                 }
             }
         }
