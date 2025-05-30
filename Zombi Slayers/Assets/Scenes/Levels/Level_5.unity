@@ -248,7 +248,7 @@ RectTransform:
   m_GameObject: {fileID: 571828853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1.25, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1524678020}
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9de3d912d51682e45ba69d8e9cfe67ee, type: 3}
+  m_Texture: {fileID: 2800000, guid: 3f568db10fe60cd4a8f99ea58c8c06f8, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -320,7 +320,7 @@ RectTransform:
   m_GameObject: {fileID: 632762806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1.25, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1524678020}
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9de3d912d51682e45ba69d8e9cfe67ee, type: 3}
+  m_Texture: {fileID: 2800000, guid: 3f568db10fe60cd4a8f99ea58c8c06f8, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -629,8 +629,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Some levels are faster than the others.\n\nAnd avoding zombies is an option
-    \nbut it is not good if they are too much"
+  m_text: 'Some levels can be faster.
+
+
+    Do not avoid zombies and kill them all
+
+    Otherwise
+    they will follow
+
+    and close floor starting from the back'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -734,7 +741,7 @@ RectTransform:
   m_GameObject: {fileID: 2019937000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1.25, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1524678020}
@@ -764,7 +771,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9de3d912d51682e45ba69d8e9cfe67ee, type: 3}
+  m_Texture: {fileID: 2800000, guid: 3f568db10fe60cd4a8f99ea58c8c06f8, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

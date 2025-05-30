@@ -244,7 +244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: 222}
+  m_AnchoredPosition: {x: -260, y: 190}
   m_SizeDelta: {x: 748.1, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &189825679
@@ -267,14 +267,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You can collect Medkit
+  m_text: 'You can collect medkits,
 
-    Just with a one hit.
+    More medkit more health.
 
-    Don''t waste this
-    chance,
-
-    Zombies are not kidding'
+    You can collect
+    max 4 medkits'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -773,7 +771,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 505, y: -128}
-  m_SizeDelta: {x: 720.3, y: 50}
+  m_SizeDelta: {x: 837.6, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643916700
 MonoBehaviour:
@@ -795,14 +793,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You can not destroy this,
+  m_text: 'This obstacle is undestroyable and unslideable
 
-    Unless you have dynamite.
-
-    If you don''t
-    wanna lose,
-
-    You gatta pass from under flat.'
+    You need to pass other
+    floor to dodge this.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

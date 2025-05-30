@@ -311,8 +311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 511, y: -80}
-  m_SizeDelta: {x: 225, y: 250}
+  m_AnchoredPosition: {x: 511, y: -119}
+  m_SizeDelta: {x: 250, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &289410537
 MonoBehaviour:
@@ -395,7 +395,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -27, y: -100}
-  m_SizeDelta: {x: 175, y: 200}
+  m_SizeDelta: {x: 175, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &805928512
 MonoBehaviour:
@@ -562,14 +562,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This obstacle has no hole,
+  m_text: 'This obstacle is
 
-    So Fletcher can not roll.
+    Breakeable (with Woods attack)
 
-    But it
-    has yellow''n''dark lines,
-
-    So sledgehammer can take it down'
+    Unslideable
+    & unkickable'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -816,7 +814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -516, y: 110}
+  m_AnchoredPosition: {x: -516, y: 2}
   m_SizeDelta: {x: 671.4, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1918508986
@@ -839,14 +837,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Woods can take dynamites,
+  m_text: 'Woods second ability is dynamite.
 
-    Second ability ignites.
+    He can take dynamite and throw
+    it.
 
-    Woods scratch
-    and throws,
-
-    Dynamite explodes long rows.'
+    Dynamites can breake everything they hit'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1052,14 +1048,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This obstacle has a hole,
+  m_text: 'This obstacle is
 
-    So Fletcher can roll.
+    Unbreakeable (for Woods attack)
 
-    But it has red''n''white
-    lines,
+    Destroyable
+    with dynamite
 
-    So sledgehammer can''t take down'
+    Slideable (for Fletcher''s slide)
+
+    Pushable with Derricks
+    kick.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -260,7 +260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 334, y: -93.5}
+  m_AnchoredPosition: {x: 406, y: -85}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526106594
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9de3d912d51682e45ba69d8e9cfe67ee, type: 3}
+  m_Texture: {fileID: 2800000, guid: 3f568db10fe60cd4a8f99ea58c8c06f8, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -674,7 +674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -516, y: 110}
+  m_AnchoredPosition: {x: -516, y: 37}
   m_SizeDelta: {x: 671.4, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1918508986
@@ -697,8 +697,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You can find boxes \nand breake them.\nWhen boxes broke, \none item drop.\n\nTake
-    the item if you want,\nBut be carryful they let you wont."
+  m_text: 'Boxes has some special items in them.
+
+    You need to breake them to
+    take insider.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -881,7 +883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555, y: 64}
+  m_AnchoredPosition: {x: 532, y: 132}
   m_SizeDelta: {x: 671.4, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071562840
@@ -904,14 +906,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This creature over,
+  m_text: 'Some zombies spits,
 
-    Has some spittle.
+    You need to be careful
 
-    It splits a lot,
 
-    Your
-    head needs a cover'
+    Woods with his attack,
+
+    Derrick
+    with his kick can breake spit
+
+
+    & Fletcher can slide under spit'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
