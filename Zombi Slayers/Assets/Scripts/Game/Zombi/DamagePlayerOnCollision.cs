@@ -60,7 +60,7 @@ public class DamagePlayerOnCollision : MonoBehaviour
         if (animater == animate.zombi)
         {
             Debug.Log("Animationer play attack dedi");
-            animationer.Play("Attack", 0, 0f);
+            animationer.Play("Attack2", 0, 0f);
         }
     }
 }
