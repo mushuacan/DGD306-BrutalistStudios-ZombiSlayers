@@ -1,13 +1,21 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Rendering.UI;
 
 public class DamagePlayerOnCollision : MonoBehaviour
 {
     [SerializeField] private bool destroyOnCollision;
     [Tooltip("For only bullets")]
     [SerializeField] private bool canSlideable;
+    [SerializeField] private animate animater;
+    [SerializeField] private Animator animationer;
     [SerializeField] private AudioClip[] clipsForDamagingPlayer;
     [SerializeField] private AudioClip[] clipsForDodgedPlayer;
+
+    private enum animate {
+        none,
+        zombi
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -31,6 +39,8 @@ public class DamagePlayerOnCollision : MonoBehaviour
             {
                 if (All_Sounder.Instance != null && clipsForDamagingPlayer != null && clipsForDamagingPlayer.Length != 0 && !player_Health.isSliding) 
                     All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForDamagingPlayer);
+
+                Animater();
                 player_Health.GiveDamage();
 
                 if (destroyOnCollision)
@@ -39,6 +49,18 @@ public class DamagePlayerOnCollision : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
+        }
+    }
+    private void Animater()
+    {
+        Debug.Log("Animationer çalýþtý");
+        if (animationer == null) return;
+
+        Debug.Log("Animationer null'dan geçti");
+        if (animater == animate.zombi)
+        {
+            Debug.Log("Animationer play attack dedi");
+            animationer.Play("Attack", 0, 0f);
         }
     }
 }
