@@ -14,12 +14,10 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
 
     [Header("Menüler")]
     public GameObject menu1;
-    public GameObject menu1_5;
     public GameObject menu2;
 
     [Header("Referanslar")]
-    public GameObject Player1_Prefab;
-    public GameObject Player2_Prefab;
+    public GameObject PlayerWithArrowKeys_Prefab;
     public GameObject Player1_Waiting;
     public GameObject Player1_Arrived;
     public GameObject Player2_Waiting;
@@ -39,12 +37,14 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     public TextMeshProUGUI player1_text, player2_text, p1ReadyText, p2ReadyText, outText;
 
     [Header("Booleanlar")]
-    private bool p1_changed, p2_changed, p1ready, p2ready, p1gettingReady, p2gettingReady, outTimerStarted;
+    private bool p1_changed, p2_changed, p1ready, p2ready, p1gettingReady, p2gettingReady, outTimerStarted, createdPWithArrowKeys;
+    [Header("Tuþ Girdileri")]
+    private KeyCode[] buttons; // buttonsForSecondKeyboardPlayer
+
 
     private void Start()
     {
         menu1.SetActive(true);
-        menu1_5.SetActive(false);
         menu2.SetActive(false);
         EventSystem.current.SetSelectedGameObject(Menu1_SelectedButton);
 
@@ -56,6 +56,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
 
         p1_changed = false;
         p2_changed = false;
+        createdPWithArrowKeys = false;
     }
 
     public void Button_LoadScene(string scene)
@@ -77,6 +78,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         }
         CheckIfPlayersReady();
         CheckIfPlayerWantsOut();
+        CheckIfPlayerWithArrowJoins();
     }
 
     private void CheckIfPlayerWantsOut()
@@ -342,31 +344,38 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     private void SwitchMenus()
     {
         menu1.SetActive(false);
-        menu1_5.SetActive(true);
+        menu2.SetActive(true);
         EventSystem.current.SetSelectedGameObject(Menu2_SelectedButton);
+        GameObject PlayerDetecter = Instantiate(PlayerInputManagerPrefab);
     }
     public void BackToMenu1()
     {
         menu1.SetActive(true);
-        menu1_5.SetActive(false);
+        menu2.SetActive(false);
         EventSystem.current.SetSelectedGameObject(Menu1_SelectedButton);
     }
     public void OpenCharacterSelect()
     {
         menu2.SetActive(true);
-        menu1_5.SetActive(false);
+        menu1.SetActive(false);
     }
     public void CreateDeviceDetecter()
     {
         Instantiate(PlayerInputManagerPrefab);
     }
-    public void CreatePlayersWithKeyboard()
+    public void CreatePlayerWithKeyboard()
     {
-        Instantiate(Player1_Prefab);
-        if (playerCount == 2)
-        {
-            Instantiate(Player2_Prefab);
-        }
+        Instantiate(PlayerWithArrowKeys_Prefab);
         playerManager.OnPlayerJoined();
+    }
+    private void CheckIfPlayerWithArrowJoins()
+    {
+        if (createdPWithArrowKeys) return;
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            CreatePlayerWithKeyboard();
+            createdPWithArrowKeys = true;
+        }
     }
 }
