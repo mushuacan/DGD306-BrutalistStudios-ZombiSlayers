@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class LevelSelectMenu : MonoBehaviour
 {
     [SerializeField] private Button[] levels;
+    [SerializeField] private GameObject levelMenu;
+    [SerializeField] private GameObject exitMenu;
+    [SerializeField] private GameObject exitMenuFirstButton;
     public int currentLevel;
     public bool workWithCurrentLevel;
     public int totalLevels;
@@ -33,6 +36,27 @@ public class LevelSelectMenu : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(levels[currentLevel - 1].gameObject);
 
+    }
+
+    public void Button_OpenExitMenu()
+    {
+        levelMenu.SetActive(false);
+        exitMenu.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(exitMenuFirstButton.gameObject);
+    }
+    public void Button_CloseExitMenu()
+    {
+        levelMenu.SetActive(true);
+        exitMenu.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(levels[currentLevel - 1].gameObject);
+    }
+    public void Button_ExitGame()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 
     public void Button_LoadScene(string scene)

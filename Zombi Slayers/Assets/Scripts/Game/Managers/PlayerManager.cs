@@ -106,12 +106,15 @@ public class PlayerManager : MonoBehaviour
     }
     private void ClearPlayers()
     {
+        Debug.Log("Oyuncualr temizleniyor");
         if (players != null && players.Count > 0)
         {
             foreach (var player in players)
             {
+                Debug.Log("Oyunculara bakýlýyor " + player);
                 if (player != null && player.CompareTag("Untagged"))
                 {
+                    Debug.Log("Oyuncu silindi: "  + player);
                     Destroy(player);
                 }
             }

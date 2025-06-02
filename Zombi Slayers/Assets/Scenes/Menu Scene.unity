@@ -964,81 +964,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: fadeInDuration
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: fadeOutDuration
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: bossClip.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: gameClip.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: menuClip.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
       propertyPath: menu2Clip.Array.size
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: bossClip.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 7eabfe5185acab943ab48b72a3ffd019, type: 3}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: gameClip.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: b794b27371892b348a9bedc3cd36bcab, type: 3}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: gameClip.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: bcc2cdba4550e9a4faeb613fca29ad70, type: 3}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: gameClip.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: f697b159d0e87284998f4e726dfe006f, type: 3}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: gameClip.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 745e8ce0bd12c10499cfc2d6b752fe8a, type: 3}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: menuClip.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 0a72d00b19d4d46499ed90476a2e2062, type: 3}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: menuClip.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: d0c2b8987941ac542a77f0caf53e789f, type: 3}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: victoryClip.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: gameoverClip.Array.size
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
       propertyPath: menu2Clip.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: d0c2b8987941ac542a77f0caf53e789f, type: 3}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: victoryClip.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: ea6e383a19cb98848a07d96a67972cf8, type: 3}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: gameoverClip.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 7423575da5fac85409a2ff94b546c9d9, type: 3}
-    - target: {fileID: -8792206579948514963, guid: da84439a45986b94f97fd4902ad05893, type: 3}
-      propertyPath: gameoverClip.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: ee0d3faad37d83842b91870e345e488c, type: 3}
     - target: {fileID: 630290123730649188, guid: da84439a45986b94f97fd4902ad05893, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -101,7 +101,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         else
         {
             outText.text = "";
-            outTimer = Time.timeSinceLevelLoad + 2;
+            outTimer = Time.timeSinceLevelLoad + 1;
             outTimerStarted = false;
         }
     }
