@@ -29,9 +29,7 @@ public class All_Sounder : MonoBehaviour
             Debug.LogWarning("Clip boþ ya da null.");
             return;
         }
-
         int index = Random.Range(0, clip.Length);
         audioSource.PlayOneShot(clip[index]);
     }
-
 }
