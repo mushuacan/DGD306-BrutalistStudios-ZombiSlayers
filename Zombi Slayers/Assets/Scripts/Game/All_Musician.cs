@@ -14,6 +14,8 @@ public class All_Musician : MonoBehaviour
     public AudioClip[] menuClip;
     public AudioClip[] gameClip;
     public AudioClip[] bossClip;
+    public AudioClip[] victoryClip;
+    public AudioClip[] gameoverClip;
 
     public float fadeOutDuration = 1f;
     public float fadeInDuration = 0.3f;
@@ -33,7 +35,7 @@ public class All_Musician : MonoBehaviour
         }
     }
 
-    public void ChooseAndPlaySoundOf(AudioClip[] clips)
+    public void PlayMusicSmoothly(AudioClip[] clips)
     {
         if (clips == null || clips.Length == 0)
         {
@@ -53,7 +55,21 @@ public class All_Musician : MonoBehaviour
             audioSource.Play();
             DOTween.To(() => audioSource.volume, x => audioSource.volume = x, 1f, fadeInDuration);
         });
+    }
+    public void PlayMusicDirectly(AudioClip[] clips)
+    {
+        if (clips == null || clips.Length == 0)
+        {
+            Debug.LogWarning("Clip boþ ya da null.");
+            return;
+        }
 
+        int index = Random.Range(0, clips.Length);
+        AudioClip selectedClip = clips[index];
+
+        audioSource.Stop();
+        audioSource.clip = selectedClip;
+        audioSource.Play();
     }
 
     void OnEnable()
@@ -68,24 +84,33 @@ public class All_Musician : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Menu Scene" || scene.name == "Player Selection Scene" )
+        if (scene.name == "Menu Scene" || scene.name == "Player Selection Scene" || scene.name == "Level Menu")
         {
             if (lastClipName != "Menu Scene")
             {
                 lastClipName = "Menu Scene";
-                ChooseAndPlaySoundOf(menuClip);
+                PlayMusicSmoothly(menuClip);
             }
         }
         else if (scene.name == "Level_1" || scene.name == "Level_2" || scene.name == "Level_3" || scene.name == "Level_4" || scene.name == "Level_5" || 
             scene.name == "Level_6" || scene.name == "Level_7" || scene.name == "Level_8" || scene.name == "Level_9" || scene.name == "Test Level 3")
         {
             lastClipName = "Game";
-            ChooseAndPlaySoundOf(gameClip);
+            PlayMusicSmoothly(gameClip);
         }
         else if (scene.name == "Level_10")
         {
             lastClipName = "Game";
-            ChooseAndPlaySoundOf(bossClip);
+            PlayMusicSmoothly(bossClip);
         }
+    }
+
+    public void PlayMusicVictory()
+    {
+        PlayMusicSmoothly(victoryClip);
+    }
+    public void PlayMusicGameOver()
+    {
+        PlayMusicDirectly(gameoverClip);
     }
 }

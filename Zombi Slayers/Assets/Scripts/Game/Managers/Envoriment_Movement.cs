@@ -82,6 +82,8 @@ public class Envoriment_Movement : MonoBehaviour
         // If Game Ends
         if (finishLine.transform.position.x < FinishLinePosition)
         {
+            All_Musician.Instance.PlayMusicVictory();
+
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
             foreach (GameObject player in players)
@@ -126,6 +128,7 @@ public class Envoriment_Movement : MonoBehaviour
 
     public void AllPlayersDied()
     {
+        All_Musician.Instance.PlayMusicGameOver();
         sessionEnded = true;
         transform.DOMoveX(transform.position.x - envorimentMovementSpeed, 2).SetEase(Ease.OutQuad).OnComplete(() =>
         {
