@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: 59}
-  m_SizeDelta: {x: 180, y: 100}
+  m_AnchoredPosition: {x: 0, y: 60}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &226917979
 MonoBehaviour:
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: e19ad50160d1d7b4a9acc8c992560df9, type: 3}
+  m_Texture: {fileID: 2800000, guid: 975b612d788a8904a905af8f039a5319, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCount: 0
   gameType: 
-  secondsToReady: 1
+  secondsToReady: 0.5
   menu1: {fileID: 2052479717}
   menu2: {fileID: 1028138902}
   PlayerWithArrowKeys_Prefab: {fileID: 3317986187449348885, guid: a4b19d26016f5e34e90e07650e3c1991, type: 3}
@@ -1426,7 +1426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1028138903
 Transform:
   m_ObjectHideFlags: 0
@@ -2425,14 +2425,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 428422957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: 59}
-  m_SizeDelta: {x: 180, y: 100}
+  m_AnchoredPosition: {x: 0, y: 60}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667188228
 MonoBehaviour:
@@ -2454,7 +2454,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: e19ad50160d1d7b4a9acc8c992560df9, type: 3}
+  m_Texture: {fileID: 2800000, guid: 1e0755f363fa5bb41ae1348c4e4781da, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
