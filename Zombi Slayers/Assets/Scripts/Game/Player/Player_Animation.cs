@@ -11,6 +11,7 @@ public class Player_Animation : MonoBehaviour
     [SerializeField] private Animator animationer;
     [SerializeField] private RuntimeAnimatorController WoodsAnimator;
     [SerializeField] private RuntimeAnimatorController FletcherAnimator;
+    [SerializeField] private RuntimeAnimatorController DerrickAnimator;
     private bool debugger = false;
 
     public void StarterPack()
@@ -35,6 +36,10 @@ public class Player_Animation : MonoBehaviour
         else if (player.character.characterName == "Woods")
         {
             animationer.runtimeAnimatorController = WoodsAnimator;
+        }
+        else if (player.character.characterName == "Derrick")
+        {
+            animationer.runtimeAnimatorController = DerrickAnimator;
         }
     }
     private bool CheckIfControllerNull()
