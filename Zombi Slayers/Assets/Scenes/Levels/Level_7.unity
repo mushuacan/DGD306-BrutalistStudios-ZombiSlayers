@@ -1651,7 +1651,7 @@ PrefabInstance:
       objectReference: {fileID: 184536448}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: endDuration
-      value: 8.333333
+      value: 5.714286
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: edgeOfCamera
@@ -1663,23 +1663,23 @@ PrefabInstance:
       objectReference: {fileID: 301834488}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: zombiStopDuration
-      value: 5.2
+      value: 5.75
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: zombiStopPosition
-      value: 14.24
+      value: 18.0625
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: FinishLinePosition
-      value: 0.8640001
+      value: 1.8375001
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: transitionDuration
-      value: 0.72
+      value: 1.0500001
       objectReference: {fileID: 0}
     - target: {fileID: -8576334318801663801, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: envorimentMovementSpeed
-      value: 2.4
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 1480235922926477310, guid: 665e1d1ce124d6842b0fa484322c0418, type: 3}
       propertyPath: m_LocalPosition.x

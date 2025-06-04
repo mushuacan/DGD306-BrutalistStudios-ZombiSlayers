@@ -96,6 +96,7 @@ public class Player_Attack : MonoBehaviour
     }
     public void DerrickSecondAbility()
     {
+        if (player.character.secondAbility == null) return;
         player_UI.StartCastTimer(player.character.secondAbility.attackAnimationDuration);
         DOVirtual.DelayedCall(player.character.secondAbility.attackAnimationDuration, () =>
         {

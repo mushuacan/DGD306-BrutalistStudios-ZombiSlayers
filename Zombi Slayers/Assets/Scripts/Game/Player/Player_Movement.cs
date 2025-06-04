@@ -200,6 +200,7 @@ public class Player_Movement : MonoBehaviour
         FaoWind_StopJump = false;
 
         animationSpeed = player.character.animationSpeed;
+        movementSpeed = player.character.movementSpeed;
 
         player_health.StarterPack();
         player_attack.StarterPack();
