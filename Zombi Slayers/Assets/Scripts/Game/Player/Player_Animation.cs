@@ -85,6 +85,10 @@ public class Player_Animation : MonoBehaviour
         {
             animationer.Play("ThrowDynamite", 0, 0f);
         }
+        else if (player.character.characterName == "Derrick")
+        {
+            animationer.Play("Kick", 0, 0f);
+        }
     }
     public void Attack()
     {
