@@ -100,6 +100,7 @@ public class Player_Attack : MonoBehaviour
         player_UI.StartCastTimer(player.character.secondAbility.attackAnimationDuration);
         DOVirtual.DelayedCall(player.character.secondAbility.attackAnimationDuration, () =>
         {
+            if (player_movement.state == Player_Movement.StateOC.Dead) return;
             if (player_movement.animations) player_movement.player_animation.SecondAbility();
             GameObject bullet = Instantiate(player.character.secondAbility.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
             bullet.GetComponent<PlayerBullet>().Settings(player.character.secondAbility);
