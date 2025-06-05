@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3997355303487551357}
   - component: {fileID: 5001715593568527686}
+  - component: {fileID: 7305128080623770174}
+  - component: {fileID: 5399872993191889476}
   m_Layer: 0
   m_Name: Game Object
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1910540493715270475}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.311, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3f568db10fe60cd4a8f99ea58c8c06f8, type: 3}
-  m_Color: {r: 1, g: 0.7327044, b: 0.78406703, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4b226b250d192d44199f712fb7068fd4, type: 3}
+  m_Color: {r: 1, g: 0.8836478, b: 0.9058916, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,6 +86,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7305128080623770174
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910540493715270475}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 060e78c4e133c13458f7a94c8b2a3b62, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5399872993191889476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910540493715270475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e109f44a6acd64599e8ad956c1329f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spitter: {fileID: 0}
+  exploMaker: {fileID: -1648446706728072271}
 --- !u!1 &6729113846359408514
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,8 +190,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _explosion: {fileID: 2818190531208682367, guid: 289720c8a6742fa4db1399672afb3883, type: 3}
+  animationer: {fileID: 7305128080623770174}
+  healther: {fileID: 0}
   _willExplode: 1
   _atXPosition: -3
+  exploded: 0
 --- !u!114 &8495576673804247030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyOnCollision: 0
   canSlideable: 0
+  animater: 0
+  animationer: {fileID: 0}
   clipsForDamagingPlayer:
   - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
   clipsForDodgedPlayer: []

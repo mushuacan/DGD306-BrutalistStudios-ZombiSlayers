@@ -57,7 +57,7 @@ public class Zombie_Health : MonoBehaviour
                     All_Sounder.Instance.ChooseAndPlaySoundOf(clipsHighDamaj);
                 }
             }
-            if (bullet.weaponName == "Shotgun")
+            if (bullet.weaponName == "Shotgun" && !(health <= 0))
             {
                 if (damaj < 24)
                 {
@@ -117,5 +117,9 @@ public class Zombie_Health : MonoBehaviour
     public void DamageZombi(int damaj)
     {
         health -= damaj;
+        if (health <= 0)
+        {
+            KillZombi();
+        }
     }
 }
