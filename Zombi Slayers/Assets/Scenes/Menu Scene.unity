@@ -397,8 +397,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc06eb97e01a944388f961580218b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avoidanceRange: 150
-  offsetDistance: 50
+  avoidanceRange: 144
+  offsetDistance: 44
+  triggerCenter: {x: 1624, y: 666}
+  triggerRadius: 44
+  debugger: 0
 --- !u!222 &17055491
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3481,7 +3484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1279725739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5713,7 +5716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2055070768
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5794,11 +5797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1739819212353439672, guid: 5900eb5e60978dc4b8dd25a6d9824044, type: 3}
       propertyPath: startLevel
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1739819212353439672, guid: 5900eb5e60978dc4b8dd25a6d9824044, type: 3}
       propertyPath: MasterVolume
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1739819212353439672, guid: 5900eb5e60978dc4b8dd25a6d9824044, type: 3}
       propertyPath: initialAnimations

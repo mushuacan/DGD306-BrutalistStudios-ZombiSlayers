@@ -2,10 +2,16 @@ using UnityEngine;
 
 public class ButtonAvoidance : MonoBehaviour
 {
-    public float avoidanceRange = 100f;  // Fare ile buton arasýndaki mesafe eþiði
-    public float offsetDistance = 50f;   // Butonun kaçacaðý mesafe
+    public float avoidanceRange = 100f;   // Fare ile buton arasýndaki mesafe eþiði
+    public float offsetDistance = 50f;    // Butonun kaçacaðý mesafe
+
+    public Vector2 triggerCenter;         // Tetikleme merkezi (örneðin: 300, 300)
+    public float triggerRadius = 50f;     // Yarýçap (örneðin: 50)
 
     private RectTransform buttonRectTransform;
+    private bool hasTriggered = false;
+    private bool stop = false;
+    public bool debugger = false;
 
     void Start()
     {
@@ -14,19 +20,38 @@ public class ButtonAvoidance : MonoBehaviour
 
     void Update()
     {
+        if (stop) return;
         Vector3 mousePosition = Input.mousePosition;
-
-        // Fare ile buton arasýndaki mesafeyi hesapla
         float distance = Vector3.Distance(mousePosition, buttonRectTransform.position);
 
-        // Eðer fare butona yakýnsa buton kaçacak
+        // Buton kaçma davranýþý
         if (distance < avoidanceRange)
         {
-            Vector3 direction = (buttonRectTransform.position - mousePosition).normalized; // Fareye zýt yön
+            Vector3 direction = (buttonRectTransform.position - mousePosition).normalized;
             Vector3 newPosition = buttonRectTransform.position + direction * offsetDistance;
-
-            // Yeni pozisyonu aniden butona uygula
             buttonRectTransform.position = newPosition;
         }
+
+        // Tetikleme alanýna girdiðinde olay tetiklenir
+        if (!hasTriggered && IsInTriggerZone(buttonRectTransform.position))
+        {
+            hasTriggered = true;
+            TriggerSpecialEvent();
+        }
+    }
+
+    // Butonun belirtilen merkez ve yarýçap içindeki alanda olup olmadýðýný kontrol eder
+    bool IsInTriggerZone(Vector3 position)
+    {
+        float distanceToCenter = Vector2.Distance(new Vector2(position.x, position.y), triggerCenter);
+        if (debugger) Debug.Log("Mesafe:" + distanceToCenter);
+        return distanceToCenter <= triggerRadius;
+    }
+
+    // Olay tetiklendiðinde yapýlacak iþlemler
+    void TriggerSpecialEvent()
+    {
+        if (debugger) Debug.Log("Buton tetikleme alanýna girdi! Olay tetiklendi.");
+        stop = true;
     }
 }
