@@ -57,23 +57,24 @@ public class Zombie_Health : MonoBehaviour
                     All_Sounder.Instance.ChooseAndPlaySoundOf(clipsHighDamaj);
                 }
             }
+            if (bullet.weaponName == "Shotgun")
+            {
+                if (damaj < 24)
+                {
+                    Destroy(collision.gameObject);
+                }
+            }
+            if (bullet.weaponName == "iadeiZombiBullet")
+            {
+                Destroy(collision.gameObject);
+            }
+            if (pusher != null && bullet.weaponName == "Derrick Kick")
+            {
+                pusher.PushBack(true, true);
+            }
             if (health <= 0)
             {
                 KillZombi();
-            }
-            else
-            {
-                if (bullet.weaponName == "Shotgun")
-                {
-                    if (damaj < 24)
-                    {
-                        Destroy(collision.gameObject);
-                    }
-                }
-                if (pusher != null && bullet.weaponName == "Derrick Kick")
-                {
-                    pusher.PushBack(true, true);
-                }
             }
         }
     }
