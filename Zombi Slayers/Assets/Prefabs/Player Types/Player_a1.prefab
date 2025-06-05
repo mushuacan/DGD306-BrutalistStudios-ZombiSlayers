@@ -723,7 +723,7 @@ MonoBehaviour:
   animationer: {fileID: 707481971448680843}
   WoodsAnimator: {fileID: 9100000, guid: 4d99e4e235cf90848aba3f1bd3d494d0, type: 2}
   FletcherAnimator: {fileID: 9100000, guid: 7e9809ed5d17f134b9e4b07ab9135eda, type: 2}
-  DerrickAnimator: {fileID: 9100000, guid: 14c9859813859da49b32135e16ebc53f, type: 2}
+  DerrickAnimator: {fileID: 9100000, guid: cfb0b76d2e2a2ad43bd0e71fe2d9bc08, type: 2}
 --- !u!114 &3841651920839482046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1842,7 +1842,7 @@ Animator:
   m_GameObject: {fileID: 7448288215228003609}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4d99e4e235cf90848aba3f1bd3d494d0, type: 2}
+  m_Controller: {fileID: 9100000, guid: cfb0b76d2e2a2ad43bd0e71fe2d9bc08, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
