@@ -10,6 +10,7 @@ public class ZombiSpit : MonoBehaviour
     [SerializeField] private float rightCameraEdge;
     [SerializeField] private AudioClip[] clips;
     [SerializeField] private Collider2D collider2d;
+    [SerializeField] private Animator animationer;
 
     private bool canSpit;
     private Coroutine spitRoutine;
@@ -36,16 +37,16 @@ public class ZombiSpit : MonoBehaviour
 
             if (collider2d.enabled)
             {
-                All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
-                Spit();
+                animationer.Play("Spit", 0, 0f);
             }
 
             yield return new WaitForSeconds(zombiChar.zombi.attackCooldown);
         }
     }
 
-    private void Spit()
+    public void Spit()
     {
+        All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
         GameObject projectile = Instantiate(zombiChar.zombi.projectilePrefab);
         projectile.transform.position = transform.position;
         projectile.GetComponent<ZombiBullet>().StartMoving();
