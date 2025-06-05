@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Zombi_Normal
   m_EditorClassIdentifier: 
   zombieName: "S\u0131radan Zombi"
-  health: 40
+  health: 30
   canBeZombiATB: 1
   zombiAttidue: 0
+  attackDuration: 0
+  attackCooldown: 0
+  projectilePrefab: {fileID: 0}

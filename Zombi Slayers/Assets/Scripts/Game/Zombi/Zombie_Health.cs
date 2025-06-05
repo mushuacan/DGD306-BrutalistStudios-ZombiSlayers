@@ -70,10 +70,10 @@ public class Zombie_Health : MonoBehaviour
                         Destroy(collision.gameObject);
                     }
                 }
-                if (pusher != null)
-                {
-                    pusher.PushBack(true, true);
-                }
+                //if (pusher != null)
+                //{
+                //    pusher.PushBack(true, true);
+                //}
             }
         }
     }
