@@ -70,6 +70,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         {
             ArrangePlayer1Selection();
             ArrangePlayer1Ready();
+            CheckIfPlayerWithArrowJoins();
         }
         if (player2_inputs != null)
         {
@@ -78,7 +79,6 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         }
         CheckIfPlayersReady();
         CheckIfPlayerWantsOut();
-        CheckIfPlayerWithArrowJoins();
     }
 
     private void CheckIfPlayerWantsOut()
@@ -370,6 +370,8 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     }
     private void CheckIfPlayerWithArrowJoins()
     {
+        if (gameType != "Multiplayer") return;
+
         if (createdPWithArrowKeys) return;
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
