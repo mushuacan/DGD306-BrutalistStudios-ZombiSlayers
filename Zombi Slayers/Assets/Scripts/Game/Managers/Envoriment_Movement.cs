@@ -106,7 +106,9 @@ public class Envoriment_Movement : MonoBehaviour
             { 
                 if ((int)GameSettings.Instance.settings["level"] == FindAnyObjectByType<LevelMaker>().level - 1)
                     GameSettings.Instance.settings["level"] = (int)GameSettings.Instance.settings["level"] + 1;
-                FindAnyObjectByType<InGameMenuManager>().OpenEndMenu(true);
+                InGameMenuManager igmm = FindAnyObjectByType<InGameMenuManager>();
+                igmm.OpenEndImage(0f);
+                igmm.OpenEndMenu(true);
             });
 
             if (ScoreManager.Instance != null && ScoreManager.Instance.gameObject.activeInHierarchy)
@@ -130,9 +132,11 @@ public class Envoriment_Movement : MonoBehaviour
     {
         All_Musician.Instance.PlayMusicGameOver();
         sessionEnded = true;
+        InGameMenuManager igmm = FindAnyObjectByType<InGameMenuManager>();
+        igmm.OpenEndImage(finishLine.transform.position.x / finishLinePositionAtBeggining);
         transform.DOMoveX(transform.position.x - envorimentMovementSpeed, 2).SetEase(Ease.OutQuad).OnComplete(() =>
         {
-            FindAnyObjectByType<InGameMenuManager>().OpenEndMenu(false);
+            igmm.OpenEndMenu(false);
         });
     }
 }

@@ -6,11 +6,18 @@ public class InGameMenuManager : MonoBehaviour
 {
     public GameObject ESCmenu;
     public GameObject endMenu;
+    public GameObject endImage;
 
     void Start()
     {
         endMenu.SetActive(false);
         ESCmenu.SetActive(false);
+        endImage.SetActive(false);
+    }
+    public void OpenEndImage(float remained)
+    {
+        endImage.SetActive(true);
+        endImage.GetComponent<EndGameImage>().StartFlashEffect((1f-remained));
     }
     public void OpenEndMenu(bool becauseOfWin)
     {
