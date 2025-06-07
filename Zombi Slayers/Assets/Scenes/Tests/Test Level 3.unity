@@ -3428,7 +3428,7 @@ PrefabInstance:
     - target: {fileID: 5980480940130164564, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: character
       value: 
-      objectReference: {fileID: 11400000, guid: 3222a12eefb780e4a8703da445c77d4e, type: 2}
+      objectReference: {fileID: 11400000, guid: c49a4108e152fa64c8f6b64a2613db17, type: 2}
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: carryToDDOL
       value: 0

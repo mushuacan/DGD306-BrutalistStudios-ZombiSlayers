@@ -35,7 +35,7 @@ public class GameSettings : MonoBehaviour
         settings.Add("mainSoundsVolume", 1.0f);
         settings.Add("areVolumesOn", true);
         settings.Add("animations", true);
-        settings.Add("difficulty", "Medium");
+        settings.Add("difficulty", 0.5f); // 0 easy, 0.5 medium, 1 hard
         settings.Add("level", 0);
         settings.Add("gizem", false);
 
@@ -49,10 +49,10 @@ public class GameSettings : MonoBehaviour
     }
     private void Start()
     {
-        ApplySettings();
+        ApplySettingsToMixer();
     }
 
-    public void ApplySettings()
+    public void ApplySettingsToMixer()
     {
         Debug.Log("Sesler düzenlendi.");
         mixerManager.ApplySettingsToMixer();

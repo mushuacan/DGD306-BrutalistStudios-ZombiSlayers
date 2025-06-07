@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -7,6 +8,8 @@ using UnityEngine.UI;
 public class SettingMenuActions : MonoBehaviour
 {
     [Header("Settings")]
+    public Scrollbar scrollbar_Difficulty;
+    public TextMeshProUGUI difficultyText;
     public Scrollbar scrollbar_Sounds;
     public Scrollbar scrollbar_SoundFXs;
     public Scrollbar scrollbar_Music;
@@ -28,12 +31,14 @@ public class SettingMenuActions : MonoBehaviour
 
     public void SetValuesOfSettings()
     {
+        scrollbar_Difficulty.value = (float)GameSettings.Instance.settings["difficulty"];
         scrollbar_Music.value = (float)GameSettings.Instance.settings["musicVolume"];
         scrollbar_SoundFXs.value = (float)GameSettings.Instance.settings["soundFXVolume"];
         scrollbar_Sounds.value = (float)GameSettings.Instance.settings["mainSoundsVolume"];
         toggleComponentSound.isOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
         toggleComponentAnimation.isOn = (bool)GameSettings.Instance.settings["animations"];
         EventSystem.current.SetSelectedGameObject(toggleComponentSound.gameObject);
+        ArrangeDifficultyText();
     }
 
     public void Toggle_Sounds()
@@ -52,20 +57,25 @@ public class SettingMenuActions : MonoBehaviour
         ArrangeScrollbarsAblity();
     }
 
+    public void Scrollbar_Difficulty()
+    {
+        GameSettings.Instance.settings["difficulty"] = scrollbar_Difficulty.value;
+        ArrangeDifficultyText();
+    }
     public void Scrollbar_Sounds()
     {
         GameSettings.Instance.settings["mainSoundsVolume"] = scrollbar_Sounds.value;
-        GameSettings.Instance.ApplySettings();
+        GameSettings.Instance.ApplySettingsToMixer();
     }
     public void Scrollbar_SoundFXs()
     {
         GameSettings.Instance.settings["soundFXVolume"] = scrollbar_SoundFXs.value;
-        GameSettings.Instance.ApplySettings();
+        GameSettings.Instance.ApplySettingsToMixer();
     }
     public void Scrollbar_Musics()
     {
         GameSettings.Instance.settings["musicVolume"] = scrollbar_Music.value;
-        GameSettings.Instance.ApplySettings();
+        GameSettings.Instance.ApplySettingsToMixer();
     }
     public void ArrangeScrollbarsAblity()
     {
@@ -82,6 +92,26 @@ public class SettingMenuActions : MonoBehaviour
             scrollbar_Sounds.interactable = false;
             scrollbar_SoundFXs.interactable = false;
             scrollbar_Music.interactable = false;
+        }
+    }
+    public void ArrangeDifficultyText()
+    {
+        float difficulty = (float)GameSettings.Instance.settings["difficulty"];
+        if (difficulty == 0)
+        {
+            difficultyText.text = "Difficulty: Easy";
+        }
+        else if (difficulty == 0.5f)
+        {
+            difficultyText.text = "Difficulty: Medium";
+        }
+        else if (difficulty == 1)
+        {
+            difficultyText.text = "Difficulty: Hard";
+        }
+        else
+        {
+            difficultyText.text = "Difficulty: ?";
         }
     }
     #endregion

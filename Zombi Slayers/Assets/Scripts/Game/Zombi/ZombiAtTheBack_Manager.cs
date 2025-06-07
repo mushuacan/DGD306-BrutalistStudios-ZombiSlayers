@@ -14,9 +14,11 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
     private bool gameEnded;
     public bool stopZombying;
     public bool stopZombyingIfOnlyDerrick;
+    private int zombiAddedLastAt;
 
     void Start()
     {
+        zombiAddedLastAt = 0;
         if (stopZombying) return;
         gameEnded = false;
         AddBackZombi(1);
@@ -40,6 +42,7 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
 
     public void AddBackZombi(int lane)
     {
+        if (!IsDifficultyOkeyWithAddingNewZombi()) return;
         if (gameEnded) return;
         if (stopZombying) return;
         GameObject zombiATB = Instantiate(zombiAtTheBackPrefab);
@@ -93,5 +96,37 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
         int zombi = 0;
         zombi += zombiesInLane1.Count + zombiesInLane2.Count + zombiesInLane3.Count;
         return zombi;
+    }
+
+
+    public bool IsDifficultyOkeyWithAddingNewZombi()
+    {
+        zombiAddedLastAt++;
+        if ((float)GameSettings.Instance.settings["difficulty"] == 0f)
+        {
+            if (zombiAddedLastAt > 4)
+            {
+                zombiAddedLastAt = 0;
+                return true;
+            }
+            else return false;
+        }
+        else if ((float)GameSettings.Instance.settings["difficulty"] == 0.5f)
+        {
+            if (zombiAddedLastAt > 1)
+            {
+                zombiAddedLastAt = 0;
+                return true;
+            }
+            else return false;
+        }
+        else if ((float)GameSettings.Instance.settings["difficulty"] == 1f)
+        {
+            return true;
+        }
+        else
+        {
+            return true;
+        }
     }
 }
