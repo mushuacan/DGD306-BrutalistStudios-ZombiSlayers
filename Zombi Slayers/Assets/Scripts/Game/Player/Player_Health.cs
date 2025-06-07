@@ -35,6 +35,7 @@ public class Player_Health : MonoBehaviour
     
     public void GiveDamage(bool slideBreaker = false)
     {
+        if (health <= 0) return;
         if (isSliding)
         {
             if (!slideBreaker)
