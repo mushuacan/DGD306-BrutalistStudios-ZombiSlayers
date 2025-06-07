@@ -24,7 +24,7 @@ MonoBehaviour:
   bulletMagazineAtStart: 3
   reloadTime: 3
   bulletCountinOneReload: 5
-  bulletSpeed: 90
+  bulletSpeed: 0
   bulletBehavior: 1
   hitboxOffset: {x: 0, y: 0}
   hitboxSize: {x: 0, y: 0}

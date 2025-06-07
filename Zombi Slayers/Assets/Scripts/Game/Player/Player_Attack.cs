@@ -60,7 +60,7 @@ public class Player_Attack : MonoBehaviour
             if (player_movement.animations) player_movement.player_animation.Attack();
             canAttack = false;
             player_movement.action = Player_Movement.ActionOC.Attacking;
-            player_UI.StartCastTimer(weapon.attackAnimationDuration);
+            if(weapon.weaponName != "Sniper") player_UI.StartCastTimer(weapon.attackAnimationDuration);
             player_UI.WeaponUsing();
             DOVirtual.DelayedCall(weapon.attackAnimationDuration, () => Attack());
             
