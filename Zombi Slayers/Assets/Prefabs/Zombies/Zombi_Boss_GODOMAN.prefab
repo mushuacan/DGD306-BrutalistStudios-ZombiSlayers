@@ -81,6 +81,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyOnCollision: 0
   canSlideable: 0
+  animater: 0
+  animationer: {fileID: 0}
   clipsForDamagingPlayer: []
   clipsForDodgedPlayer: []
 --- !u!114 &4204215076261136224

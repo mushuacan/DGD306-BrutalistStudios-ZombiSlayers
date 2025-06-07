@@ -8,6 +8,7 @@ public class Zombi_BOSS : MonoBehaviour
     [SerializeField] private GameObject jumpArea;
     [SerializeField] private Animator animator;
     [SerializeField] private ZombiAtTheBack_Manager zatbmanager;
+    [SerializeField] private Envoriment_Movement envoriment_Movement;
 
     private void Awake()
     {
@@ -24,6 +25,11 @@ public class Zombi_BOSS : MonoBehaviour
 
     private void ExecuteNextAction()
     {
+        if (envoriment_Movement.sessionEnded == true)
+        {
+            animator.SetTrigger("Stand");
+            return;
+        }
         Sequence sequence = DOTween.Sequence();
         sequence.SetUpdate(UpdateType.Normal); // Time.timeScale'e baðlý olur
 

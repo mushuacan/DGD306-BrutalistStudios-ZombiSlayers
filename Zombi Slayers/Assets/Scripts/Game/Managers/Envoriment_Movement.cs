@@ -26,7 +26,7 @@ public class Envoriment_Movement : MonoBehaviour
     [SerializeField] private float endDuration;
     [SerializeField] private float zombiStopDuration;
     [SerializeField] private float zombiStopPosition;
-    private bool sessionEnded;
+    public bool sessionEnded;
     private bool zombiSessionEnded;
     private float finishLinePositionAtBeggining;
 
