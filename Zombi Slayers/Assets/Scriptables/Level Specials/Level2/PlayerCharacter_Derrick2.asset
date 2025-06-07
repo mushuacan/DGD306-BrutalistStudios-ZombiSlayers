@@ -16,7 +16,7 @@ MonoBehaviour:
   health: 1
   secondAbilityTimer: 0
   secondAbilitySpeed: 0
-  secondAbilityCooldown: 1.5
+  secondAbilityCooldown: 2
   weapon: {fileID: 11400000, guid: 6ae5ccd30101dd944bd13a2a232f54f3, type: 2}
   secondAbility: {fileID: 11400000, guid: 44d7c65e92fb40445ad26c075a877a7a, type: 2}
   animationSpeed: 0.96

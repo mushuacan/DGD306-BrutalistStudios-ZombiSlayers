@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Derrick Kick
   damage: 5
-  attackDelay: 0.5
+  attackDelay: 1
   attackAnimationDuration: 0.25
   BulletDestroyTimer: 0.15
   haveBullets: 0

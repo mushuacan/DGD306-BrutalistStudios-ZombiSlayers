@@ -48,7 +48,7 @@ public class Obstacle : MonoBehaviour
         {
             if (collision.GetComponent<PlayerBullet>().weaponName == "Derrick Kick")
             {
-                transform.DOMoveX(transform.position.x + 1f, 0.5f).SetEase(Ease.Linear).SetLink(gameObject);
+                transform.DOMoveX(transform.position.x + 2f, 0.5f).SetEase(Ease.Linear).SetLink(gameObject);
 
                 transform.DOMoveY(transform.position.y + 0.5f, 0.25f).SetEase(Ease.OutQuad).SetLink(gameObject).OnComplete(() =>
                 {

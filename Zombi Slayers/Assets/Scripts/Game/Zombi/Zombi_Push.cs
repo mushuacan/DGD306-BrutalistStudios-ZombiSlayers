@@ -8,7 +8,7 @@ public class Zombi_Push : MonoBehaviour
     public void PushBack(bool movex, bool movey)
     {
         if ( movex )
-        transform.DOMoveX(transform.position.x + 1, 0.8f).SetEase(Ease.Linear);
+        transform.DOMoveX(transform.position.x + 2, 0.8f).SetEase(Ease.Linear);
         
         if ( movey )
         transform.DOMoveY(transform.position.y + 0.5f, 0.4f).SetEase(Ease.InOutQuad).OnComplete(() => 
