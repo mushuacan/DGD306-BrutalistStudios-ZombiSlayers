@@ -159,6 +159,19 @@ public class PlayerManager : MonoBehaviour
             NewLevelOpened(levelMaker.level);
         }
     }
+
+    public void KillAllPlayers()
+    {
+        foreach (var player in players)
+        {
+            Player_Health player_Health = player.GetComponent<Player_Health>();
+            if (player_Health != null)
+            {
+                player_Health.KillYourself();
+            }
+        }
+    }
+
     //public void NewSceneLoaded()
     //{
     //    ClearPlayers();

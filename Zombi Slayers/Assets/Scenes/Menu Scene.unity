@@ -709,6 +709,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 2862975702020555095, guid: 7044ca0efea78694b92e81d5d9d9b389, type: 3}
+      propertyPath: showExitButton
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3019070389013663328, guid: 7044ca0efea78694b92e81d5d9d9b389, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.6

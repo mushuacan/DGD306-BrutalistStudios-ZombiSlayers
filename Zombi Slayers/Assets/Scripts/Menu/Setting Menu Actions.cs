@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingMenuActions : MonoBehaviour
@@ -15,6 +16,10 @@ public class SettingMenuActions : MonoBehaviour
     public Scrollbar scrollbar_Music;
     public Toggle toggleComponentSound;
     public Toggle toggleComponentAnimation;
+
+
+    public bool showExitButton = true;
+    public GameObject exitButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +42,7 @@ public class SettingMenuActions : MonoBehaviour
         scrollbar_Sounds.value = (float)GameSettings.Instance.settings["mainSoundsVolume"];
         toggleComponentSound.isOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
         toggleComponentAnimation.isOn = (bool)GameSettings.Instance.settings["animations"];
+        exitButton.SetActive(showExitButton);
         EventSystem.current.SetSelectedGameObject(toggleComponentSound.gameObject);
         ArrangeDifficultyText();
     }
@@ -76,6 +82,11 @@ public class SettingMenuActions : MonoBehaviour
     {
         GameSettings.Instance.settings["musicVolume"] = scrollbar_Music.value;
         GameSettings.Instance.ApplySettingsToMixer();
+    }
+    public void Button_exit()
+    {
+        PlayerManager pm = FindAnyObjectByType<PlayerManager>();
+        pm.KillAllPlayers();
     }
     public void ArrangeScrollbarsAblity()
     {

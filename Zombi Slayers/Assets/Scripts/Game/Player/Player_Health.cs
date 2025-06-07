@@ -120,4 +120,12 @@ public class Player_Health : MonoBehaviour
             player_movement.player_animation.SecondAbility(false);
         });
     }
+
+    public void KillYourself()
+    {
+        health = 0;
+        player_movement.player_sounder.PlayDeathSound();
+        this.gameObject.GetComponent<Player_Movement>().Die();
+        DieEffect();
+    }
 }
