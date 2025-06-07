@@ -34,7 +34,7 @@ public class PlayerBullet : MonoBehaviour
             Instantiate(WoodsAttackExplosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         }
 
-        DOVirtual.DelayedCall(weapon.BulletDestroyTimer, () => Destroy(this.gameObject));
+        DOVirtual.DelayedCall(weapon.BulletDestroyTimer, () => Destroy(this.gameObject)).SetUpdate(false);
     }
 
     public void BulletMaker(Scriptable_Weapons weapon)
