@@ -11,32 +11,33 @@ public class EndGameImage : MonoBehaviour
         if (sucsess < 0.25f)
         {
             background.sprite = backgroundSprite[0];
+            FlashEffect(1f, 0.5f, 0.5f, 1.5f);
         }
         else if (sucsess < 0.63f)
         {
             background.sprite = backgroundSprite[1];
+            FlashEffect(0.9f, 1f, 0.25f, 1f);
         }
         else if (sucsess < 0.98f)
         {
             background.sprite = backgroundSprite[2];
+            FlashEffect(0.9f, 1f, 0.25f, 1f);
         }
         else
         {
             background.sprite = backgroundSprite[3];
+            FlashEffect(0.9f, 0.5f, 0.25f, 1f);
         }
-        FlashEffect();
     }
 
-    private void FlashEffect()
+    private void FlashEffect(float powerOfImage, float powerTimer, float powerOfRemaining, float remainingTimer)
     {
-        // Önce alfa deðerini 1'e çýkar, sonra 0.25'e indir
-        background.DOFade(0.9f, 1f) // Alfa'yý 1.0 yap, 0.1 saniyede
+        //background.color = Color.white;
+        background.DOFade(powerOfImage, powerTimer).SetEase(Ease.OutQuad) //0.9f, 1f
             .OnComplete(() =>
             {
-                background.DOFade(0.25f, 1f).OnComplete(() =>
-                {
-
-                });
+                background.DOColor(Color.black, remainingTimer);
+                background.DOFade(powerOfRemaining, remainingTimer).SetEase(Ease.InQuad); //0.25f, 1f
             });
     }
 }

@@ -101,13 +101,13 @@ public class Envoriment_Movement : MonoBehaviour
 
             float newXPosition = transform.position.x - (envorimentMovementSpeed * transitionDuration * 0.5f);
 
+            InGameMenuManager igmm = FindAnyObjectByType<InGameMenuManager>();
+            igmm.OpenEndImage(0f);
             background.transform.DOMoveX(newXPosition * 0.2f, transitionDuration).SetEase(Ease.OutQuad);
             transform.DOMoveX(newXPosition, transitionDuration).SetEase(Ease.OutQuad).OnComplete(() => 
             { 
                 if ((int)GameSettings.Instance.settings["level"] == FindAnyObjectByType<LevelMaker>().level - 1)
                     GameSettings.Instance.settings["level"] = (int)GameSettings.Instance.settings["level"] + 1;
-                InGameMenuManager igmm = FindAnyObjectByType<InGameMenuManager>();
-                igmm.OpenEndImage(0f);
                 igmm.OpenEndMenu(true);
             });
 
