@@ -45,6 +45,7 @@ public class PlayerManager : MonoBehaviour
             {
                 players[playerCount - 1].tag = "Untagged";
                 players[playerCount - 1].name = "Player Unneeded";
+                Destroy(players[playerCount - 1]);
                 PlayerCounter();
             }
             pssb.ArrangePlayerUI(playerCount, this.gameObject);

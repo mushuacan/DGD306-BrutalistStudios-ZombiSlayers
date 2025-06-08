@@ -3,7 +3,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
+using UnityEngine.InputSystem;
+
 
 public class PlayerSelectionSceneButtons : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     public GameObject menu1;
     public GameObject menu2;
 
-    [Header("Referanslar")]
+    [Header("Referans-ý Menüsel")]
     public GameObject PlayerWithArrowKeys_Prefab;
     public GameObject Player1_Waiting;
     public GameObject Player1_Arrived;
@@ -24,17 +25,24 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     public GameObject Player2_Arrived;
     public GameObject Menu1_SelectedButton;
     public GameObject Menu2_SelectedButton;
-    public GameObject PlayerInputManagerPrefab;
 
+
+    [Header("Referans-ý Prefab")]
+    public GameObject PlayerInputManagerPrefab;
     public PlayerManager playerManager;
 
-    public GameObject player1, player2;
+    [Header("Referans-ý player")]
+    public GameObject player1;
+    public GameObject player2;
     public Player_Inputs player1_inputs, player2_inputs;
     public Player_Character player1_character, player2_character;
     private float player1_timer, player2_timer, outTimer;
 
-    public RawImage player1_image, player2_image;
-    public TextMeshProUGUI player1_text, player2_text, p1ReadyText, p2ReadyText, outText;
+    [Header("Referans-ý Menüsel Faktörs")]
+    public RawImage player1_image;
+    public RawImage player2_image;
+    public TextMeshProUGUI player1_text, player2_text, p1ReadyText, p2ReadyText, p1infoText, p2infoText ,outText;
+    private string player1_device, player2_device;
 
     [Header("Booleanlar")]
     private bool p1_changed, p2_changed, p1ready, p2ready, p1gettingReady, p2gettingReady, outTimerStarted, createdPWithArrowKeys;
@@ -48,6 +56,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         menu2.SetActive(false);
         EventSystem.current.SetSelectedGameObject(Menu1_SelectedButton);
 
+        //playerManager = FindAnyObjectByType<PlayerManager>();
 
         Player1_Waiting.SetActive(true);
         Player1_Arrived.SetActive(false);
@@ -329,9 +338,21 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
             player1 = GameObject.Find("Player 1");
             player1_character = player1.GetComponent<Player_Character>();
             player1_character.character = playerManager.all_Characters[0];
-            player1_inputs = player1.GetComponent<Player_Inputs>();
+            player1_inputs = player1.GetComponent<Player_Inputs>(); 
+            
+            if (player1_inputs.isItOnlyKeyboard)
+            {
+                player1_device = "Keyboard With Arrow Keys";
+            }
+            else
+            {
+                player1_device = player1_inputs.playerInput.devices[0].displayName;
+                Debug.Log("Player 1 input device: " + player1_device);
+            }
+
+            ArrangePlayerUIofHintButtons(p1infoText, player1_device);
         }
-        if(players > 1)
+        if (players > 1)
         {
             Player2_Waiting.SetActive(false);
             Player2_Arrived.SetActive(true);
@@ -339,8 +360,39 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
             player2_character = player2.GetComponent<Player_Character>();
             player2_character.character = playerManager.all_Characters[0];
             player2_inputs = player2.GetComponent<Player_Inputs>();
+
+            if (player2_inputs.isItOnlyKeyboard)
+            {
+                player2_device = "Keyboard With Arrow Keys";
+                Debug.Log("Player 2 input device: " + player2_device);
+            }
+            else
+            {
+                player2_device = player2_inputs.playerInput.devices[0].displayName;
+                Debug.Log("Player 2 input device: " + player2_device);
+            }
+            ArrangePlayerUIofHintButtons(p2infoText, player2_device);
         }
     }
+
+    private void ArrangePlayerUIofHintButtons(TextMeshProUGUI textbox, string device)
+    {
+        string texter = "";
+        if (device == "Keyboard")
+        {
+            texter = "V for ready\r\nB for out\r\nA D for choosing character";
+        }
+        else if (device == "Keyboard With Arrow Keys")
+        {
+            texter = "1 for ready\r\n2 for out\r\n<- -> for choosing character";
+        }
+        else
+        {
+            texter = "A for ready\r\nB for out\r\n<- -> for choosing character";
+        }
+        textbox.text = texter;
+    }
+
     private void SwitchMenus()
     {
         menu1.SetActive(false);
@@ -365,7 +417,8 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
     }
     public void CreatePlayerWithKeyboard()
     {
-        Instantiate(PlayerWithArrowKeys_Prefab);
+        GameObject createdPlayer = Instantiate(PlayerWithArrowKeys_Prefab);
+        PlayerInput player = createdPlayer.GetComponent<PlayerInput>();
         playerManager.OnPlayerJoined();
     }
     private void CheckIfPlayerWithArrowJoins()
