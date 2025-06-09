@@ -93,6 +93,7 @@ public class Zombie_Health : MonoBehaviour
     }
     private void KillZombi()
     {
+        if (ScoreManager.Instance != null)
         ScoreManager.Instance.AddScore(killScore, "Zombi");
 
         // Eðer explosioner varsa, patlama animasyonunu baþlat
