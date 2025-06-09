@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Sniper
   damage: 200
-  attackDelay: 5
+  attackDelay: 3
   attackAnimationDuration: 0.025
   BulletDestroyTimer: 0.15
   haveBullets: 0

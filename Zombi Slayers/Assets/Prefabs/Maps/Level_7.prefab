@@ -3515,6 +3515,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4905483115755115333}
     m_Modifications:
+    - target: {fileID: 33090728659558516, guid: 2abc45f5371af71478660a4baf7cd9de, type: 3}
+      propertyPath: magazineBulletCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2555471220647529321, guid: 2abc45f5371af71478660a4baf7cd9de, type: 3}
       propertyPath: m_Name
       value: Shotgun_Magazine_8
@@ -6883,6 +6887,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4905483115755115333}
     m_Modifications:
+    - target: {fileID: 33090728659558516, guid: 2abc45f5371af71478660a4baf7cd9de, type: 3}
+      propertyPath: magazineBulletCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2555471220647529321, guid: 2abc45f5371af71478660a4baf7cd9de, type: 3}
       propertyPath: m_Name
       value: Shotgun_Magazine_8 (1)

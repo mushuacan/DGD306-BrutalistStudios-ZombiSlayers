@@ -21,8 +21,8 @@ MonoBehaviour:
   haveLimitedBullets: 1
   doesItReload: 1
   bulletCountInGunAtStart: 2
-  bulletMagazineAtStart: 8
-  reloadTime: 0.6
+  bulletMagazineAtStart: 2
+  reloadTime: 1
   bulletCountinOneReload: 2
   bulletSpeed: 12
   bulletBehavior: 1

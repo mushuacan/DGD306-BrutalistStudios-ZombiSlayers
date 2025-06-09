@@ -22,7 +22,7 @@ MonoBehaviour:
   doesItReload: 1
   bulletCountInGunAtStart: 2
   bulletMagazineAtStart: 24
-  reloadTime: 0.4
+  reloadTime: 0.65
   bulletCountinOneReload: 2
   bulletSpeed: 12
   bulletBehavior: 1
