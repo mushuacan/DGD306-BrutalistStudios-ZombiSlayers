@@ -46,7 +46,28 @@ public class Player_Attack : MonoBehaviour
         }
 
         if (weapon.haveLimitedBullets)
+        {
             totalAmmo = weapon.bulletMagazineAtStart;
+
+            if ((float)GameSettings.Instance.settings["difficulty"] == 0f)
+            {
+                if (player.character.characterName == "Fletcher")
+                {
+                    totalAmmo += 4;
+                }
+                totalAmmo += 4;
+            }
+
+            if ((float)GameSettings.Instance.settings["difficulty"] == 0.5f)
+            {
+                if (player.character.characterName == "Fletcher")
+                {
+                    totalAmmo += 2;
+                }
+                totalAmmo += 2;
+            }
+
+        }
         AmmoUI();
     }
 
@@ -62,7 +83,14 @@ public class Player_Attack : MonoBehaviour
             player_movement.action = Player_Movement.ActionOC.Attacking;
             if(weapon.weaponName != "Sniper") player_UI.StartCastTimer(weapon.attackAnimationDuration);
             player_UI.WeaponUsing();
-            DOVirtual.DelayedCall(weapon.attackAnimationDuration, () => Attack());
+
+            // Bu denklem için uðraþtým biraz ancak istediðim þeyi yapamadým. Sonra da bu denklemi yapay zekadan istedim ve þak diye verdi.
+            // Bence artýk matematik bilmenin ya da bilmemenin bir önemi kalmadý. Yapay zekadan neyi nasýl isteyeceðini bilmek gerek sadece, tabi bu bencesi yani.
+            // Burdaki kodun iþlevi de bu arada eðer oyun modunun zorluðu kolay (0) ise vuruþ süresi 0.75x oluyor, ha yok zor (1) ise 1x 'te (normal süresi kadar) sürüyor.
+            float difficulty = (float)GameSettings.Instance.settings["difficulty"];
+            float animationDuration = 0.25f * difficulty + 0.75f;
+
+            DOVirtual.DelayedCall(weapon.attackAnimationDuration * animationDuration, () => Attack());
             
         }
     }
@@ -152,15 +180,24 @@ public class Player_Attack : MonoBehaviour
 
     private void SetDelay()
     {
-        player_UI.StartWeaponCooldown(player.character.weapon.attackDelay);
-        delay = player.character.weapon.attackDelay + Time.timeSinceLevelLoad;
+        float difficulty = (float)GameSettings.Instance.settings["difficulty"];
+        float animationDuration = 0.25f * difficulty + 0.75f;
+        float calculatedAttackDelay = player.character.weapon.attackDelay * animationDuration;
+        Debug.Log("Vuruþ süresi: " + calculatedAttackDelay);
+
+        player_UI.StartWeaponCooldown(calculatedAttackDelay);
+        delay = calculatedAttackDelay + Time.timeSinceLevelLoad;
     }
 
     private void Reload()
     {
+        float difficulty = (float)GameSettings.Instance.settings["difficulty"];
+        float animationDuration = 0.25f * difficulty + 0.75f;
+        float calculatedAttackDelay = player.character.weapon.reloadTime * animationDuration;
+
         player_UI.WeaponUsing();
-        player_UI.StartWeaponCooldown(player.character.weapon.reloadTime);
-        DOVirtual.DelayedCall(player.character.weapon.reloadTime, () => Reloaded());
+        player_UI.StartWeaponCooldown(calculatedAttackDelay);
+        DOVirtual.DelayedCall(calculatedAttackDelay, () => Reloaded());
         
     }
     private void Reloaded()

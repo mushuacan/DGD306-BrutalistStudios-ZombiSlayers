@@ -27,47 +27,28 @@ public class Bullet_Magazines : MonoBehaviour
                 {
                     player_Attack.TakeDynamite();
                     collider2d.enabled = false;
-                    Destroy(gameObject); // FlashAndDestroy(Color.green);
+                    Destroy(gameObject); 
                 }
+                float easyness = (float)GameSettings.Instance.settings["difficulty"];
                 if (magazineType == MagazineTypes.Shotgun && collision.GetComponent<Player_Character>().character.characterName == "Fletcher")
                 {
                     if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
+                    if (easyness == 0) magazineBulletCount += 4;
+                    if (easyness == 0.5f) magazineBulletCount += 2;
                     player_Attack.TakeMagazine(magazineBulletCount);
                     collider2d.enabled = false;
-                    Destroy(gameObject); // FlashAndDestroy(Color.yellow);
+                    Destroy(gameObject); 
                 }
                 if (magazineType == MagazineTypes.Sniper && collision.GetComponent<Player_Character>().character.characterName == "Derrick")
                 {
                     if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
+                    if (easyness == 0) magazineBulletCount += 2;
+                    if (easyness == 0.5f) magazineBulletCount += 1;
                     player_Attack.TakeMagazine(magazineBulletCount);
                     collider2d.enabled = false;
-                    Destroy(gameObject); // FlashAndDestroy(Color.green);
+                    Destroy(gameObject); 
                 }
             }
         }
-    }
-    // Bu metot chat gpt kullanýlarak yapýlmýþtýr.
-    private void FlashAndDestroy(Color color)
-    {
-        if (flashSequence != null && flashSequence.IsActive())
-        {
-            flashSequence.Kill();
-        }
-
-        flashSequence = DOTween.Sequence();
-
-        Color originalColor = Color.white;
-        Color flashColor = color;
-
-        for (int i = 0; i < 2; i++)
-        {
-            flashSequence.Append(spriteRenderer.DOColor(flashColor, 0.8f / 4));
-            flashSequence.Append(spriteRenderer.DOColor(originalColor, 0.8f / 4));
-        }
-
-        flashSequence.OnComplete(() =>
-        {
-            Destroy(gameObject);
-        });
     }
 }

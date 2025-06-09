@@ -15,36 +15,14 @@ public class MedKit : MonoBehaviour
             {
                 if (playerHealth.health < 4 && playerHealth.health != 0)
                 {
+                    if ((float)GameSettings.Instance.settings["difficulty"] == 0 && playerHealth.health == 1)
+                        playerHealth.TakeMedKit();
                     playerHealth.TakeMedKit();
                     collider2d.enabled = false;
 
-                    Destroy(gameObject); //FlashAndDestroy(Color.green);
+                    Destroy(gameObject);
                 }
             }
         }
-    }
-    // Bu metot chat gpt kullanýlarak yapýlmýþtýr.
-    private void FlashAndDestroy(Color color)
-    {
-        if (flashSequence != null && flashSequence.IsActive())
-        {
-            flashSequence.Kill();
-        }
-
-        flashSequence = DOTween.Sequence();
-
-        Color originalColor = Color.white;
-        Color flashColor = color;
-
-        for (int i = 0; i < 2; i++)
-        {
-            flashSequence.Append(spriteRenderer.DOColor(flashColor, 0.8f / 4));
-            flashSequence.Append(spriteRenderer.DOColor(originalColor, 0.8f / 4));
-        }
-
-        flashSequence.OnComplete(() =>
-        {
-            Destroy(gameObject);
-        });
     }
 }
