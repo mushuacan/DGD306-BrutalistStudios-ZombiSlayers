@@ -9,6 +9,7 @@ public class Player_Animation : MonoBehaviour
     [SerializeField] private Player_Character player;
     [SerializeField] private Player_Movement player_movement;
     [SerializeField] private Animator animationer;
+    [SerializeField] private Animator muzzleflasher;
     [SerializeField] private RuntimeAnimatorController WoodsAnimator;
     [SerializeField] private RuntimeAnimatorController FletcherAnimator;
     [SerializeField] private RuntimeAnimatorController DerrickAnimator;
@@ -96,6 +97,15 @@ public class Player_Animation : MonoBehaviour
         if (debugger) { Debug.Log("Attack"); }
         if ( player.character.characterName == "Woods")
             animationer.Play("Attack", 0, 0f);
+    }
+    public void Attacked()
+    {
+        if (CheckIfControllerNull()) return;
+        if (player.character.characterName == "Fletcher")
+            muzzleflasher.Play("Fletcher_Muzzleflash2", 0, 0f);
+
+        if (player.character.characterName == "Derrick")
+            muzzleflasher.Play("Derrick_Muzzleflash2", 0, 0f);
     }
     public void Jump()
     {

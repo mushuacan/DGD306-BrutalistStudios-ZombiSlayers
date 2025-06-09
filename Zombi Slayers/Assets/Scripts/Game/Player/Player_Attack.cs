@@ -69,6 +69,7 @@ public class Player_Attack : MonoBehaviour
 
     public void Attack()
     {
+        if (player_movement.animations) player_movement.player_animation.Attacked();
         player_movement.player_sounder.PlayAttackSound();
         GameObject bullet = Instantiate(weapon.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
         bullet.GetComponent<PlayerBullet>().Settings(weapon);
