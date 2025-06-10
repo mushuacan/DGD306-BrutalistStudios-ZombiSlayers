@@ -36,6 +36,7 @@ public class GameSettings : MonoBehaviour
         settings.Add("areVolumesOn", true);
         settings.Add("animations", true);
         settings.Add("difficulty", 1f); // 0 easy, 0.5 medium, 1 hard
+        settings.Add("warningers", 0.25f); // 0 0,25 0,5 0,75 1
         settings.Add("level", 0);
         settings.Add("gizem", false);
 

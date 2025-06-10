@@ -9,8 +9,10 @@ using UnityEngine.UI;
 public class SettingMenuActions : MonoBehaviour
 {
     [Header("Settings")]
-    public Scrollbar scrollbar_Difficulty;
     public TextMeshProUGUI difficultyText;
+    public TextMeshProUGUI warningerText;
+    public Scrollbar scrollbar_Warningers;
+    public Scrollbar scrollbar_Difficulty;
     public Scrollbar scrollbar_Sounds;
     public Scrollbar scrollbar_SoundFXs;
     public Scrollbar scrollbar_Music;
@@ -37,6 +39,7 @@ public class SettingMenuActions : MonoBehaviour
     public void SetValuesOfSettings()
     {
         scrollbar_Difficulty.value = (float)GameSettings.Instance.settings["difficulty"];
+        scrollbar_Warningers.value = (float)GameSettings.Instance.settings["warningers"];
         scrollbar_Music.value = (float)GameSettings.Instance.settings["musicVolume"];
         scrollbar_SoundFXs.value = (float)GameSettings.Instance.settings["soundFXVolume"];
         scrollbar_Sounds.value = (float)GameSettings.Instance.settings["mainSoundsVolume"];
@@ -45,6 +48,7 @@ public class SettingMenuActions : MonoBehaviour
         exitButton.SetActive(showExitButton);
         EventSystem.current.SetSelectedGameObject(scrollbar_Difficulty.gameObject);
         ArrangeDifficultyText();
+        ArrangeWarningersText();
     }
 
     public void Toggle_Sounds()
@@ -62,11 +66,15 @@ public class SettingMenuActions : MonoBehaviour
 
         ArrangeScrollbarsAblity();
     }
-
     public void Scrollbar_Difficulty()
     {
         GameSettings.Instance.settings["difficulty"] = scrollbar_Difficulty.value;
         ArrangeDifficultyText();
+    }
+    public void Scrollbar_Warningers()
+    {
+        GameSettings.Instance.settings["warningers"] = scrollbar_Warningers.value;
+        ArrangeWarningersText();
     }
     public void Scrollbar_Sounds()
     {
@@ -123,6 +131,34 @@ public class SettingMenuActions : MonoBehaviour
         else
         {
             difficultyText.text = "Difficulty: ?";
+        }
+    }
+    public void ArrangeWarningersText()
+    {
+        float warningers = (float)GameSettings.Instance.settings["warningers"];
+        if (warningers == 0)
+        {
+            warningerText.text = "Waner: Nothing";
+        }
+        else if (warningers == 0.25)
+        {
+            warningerText.text = "Waner: Bullets";
+        }
+        else if (warningers == 0.5f)
+        {
+            warningerText.text = "Waner: Bullets & Zombi's";
+        }
+        else if (warningers == 0.75f)
+        {
+            warningerText.text = "Waner: Bullets & Supplies";
+        }
+        else if (warningers == 1)
+        {
+            warningerText.text = "Waner: All";
+        }
+        else
+        {
+            warningerText.text = "Waner: ?";
         }
     }
     #endregion

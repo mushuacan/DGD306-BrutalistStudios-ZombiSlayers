@@ -854,8 +854,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9df7f335178f41a448f6585b9f3f6e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollbar_Difficulty: {fileID: 6431681975541757892}
   difficultyText: {fileID: 6320896082351600879}
+  warningerText: {fileID: 6749497694563384176}
+  scrollbar_Warningers: {fileID: 6594165739335146580}
+  scrollbar_Difficulty: {fileID: 6431681975541757892}
   scrollbar_Sounds: {fileID: 49373296151845731}
   scrollbar_SoundFXs: {fileID: 391775665763574248}
   scrollbar_Music: {fileID: 4626263145278233800}
@@ -1119,15 +1121,15 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7304181743831765943}
   m_HandleRect: {fileID: 7676220247823640178}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 0.125
-  m_NumberOfSteps: 4
+  m_NumberOfSteps: 5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2862975702020555095}
         m_TargetAssemblyTypeName: SettingMenuActions, Assembly-CSharp
-        m_MethodName: Scrollbar_Difficulty
+        m_MethodName: Scrollbar_Warningers
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

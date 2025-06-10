@@ -189,6 +189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restart: {fileID: 6084466643977120527}
   next: {fileID: 1717464856615942010}
+  nextImage: {fileID: 2215347804137082542}
+  nextText: {fileID: 632738981361834358}
   isItAWin: 0
 --- !u!1 &4081463295117677967
 GameObject:
@@ -330,7 +332,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Select Level
+  m_text: 'Levels
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 748685f0c2b7ec24a930528e9162f596, type: 2}
   m_sharedMaterial: {fileID: 7355929391213509322, guid: 748685f0c2b7ec24a930528e9162f596, type: 2}

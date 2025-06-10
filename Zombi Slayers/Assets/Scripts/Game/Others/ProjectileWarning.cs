@@ -9,6 +9,11 @@ public class ProjectileWarning : MonoBehaviour
     public GameObject bulleter;
     public GameObject zombier;
 
+    private bool supply;
+    private bool obstacle;
+    private bool bullet;
+    private bool zombi;
+    private float warningersValue;
 
     private void Start()
     {
@@ -18,21 +23,75 @@ public class ProjectileWarning : MonoBehaviour
         zombier.SetActive(false);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ((float)GameSettings.Instance.settings["warningers"] == warningersValue)
+        {
+            return;
+        }
+        else
+        {
+            warningersValue = (float)GameSettings.Instance.settings["warningers"];
+        }
+        if (warningersValue == 0f)
+        {
+            supply = false;
+            obstacle = false;
+            bullet = false;
+            zombi = false;
+        }
+        else if (warningersValue == 0.25f)
+        {
+            supply = false;
+            obstacle = false;
+            bullet = true;
+            zombi = false;
+        }
+        else if (warningersValue == 0.5f)
+        {
+            supply = false;
+            obstacle = false;
+            bullet = true;
+            zombi = true;
+        }
+        else if (warningersValue == 0.75f)
+        {
+            supply = true;
+            obstacle = false;
+            bullet = true;
+            zombi = false;
+        }
+        else if (warningersValue == 1)
+        {
+            supply = true;
+            obstacle = true;
+            bullet = true;
+            zombi = true;
+        }
+        else
+        {
+            supply = false;
+            obstacle = false;
+            bullet = false;
+            zombi = false;
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Supply"))
+        if (collision.CompareTag("Supply") && supply)
         {
             supplyer.SetActive(true);
         }
-        if (collision.CompareTag("Obstacle"))
+        if (collision.CompareTag("Obstacle") && obstacle)
         {
             obstacler.SetActive(true);
         }
-        if (collision.CompareTag("Zombi_Bullet"))
+        if (collision.CompareTag("Zombi_Bullet") && bullet)
         {
             bulleter.SetActive(true);
         }
-        if (collision.CompareTag("Zombi"))
+        if (collision.CompareTag("Zombi") && zombi)
         {
             zombier.SetActive(true);
         }
