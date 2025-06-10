@@ -95,7 +95,7 @@ public class Player_Health : MonoBehaviour
     {
 
         OnPlayerDied?.Invoke(); // Event'i çaðýr
-        spriteRenderer.DOFade(undamageableImpulsePower, undamageableDuration / 2);
+        //spriteRenderer.DOFade(undamageableImpulsePower, undamageableDuration / 2);
     }
 
     private void ArrangeHealth(int value, bool set = false)
