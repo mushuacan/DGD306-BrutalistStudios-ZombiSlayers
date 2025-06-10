@@ -16,7 +16,7 @@ public class SettingMenuActions : MonoBehaviour
     public Scrollbar scrollbar_Music;
     public Toggle toggleComponentSound;
     public Toggle toggleComponentAnimation;
-
+    public bool areTogglesOn;
 
     public bool showExitButton = true;
     public GameObject exitButton;
@@ -43,7 +43,7 @@ public class SettingMenuActions : MonoBehaviour
         toggleComponentSound.isOn = (bool)GameSettings.Instance.settings["areVolumesOn"];
         toggleComponentAnimation.isOn = (bool)GameSettings.Instance.settings["animations"];
         exitButton.SetActive(showExitButton);
-        EventSystem.current.SetSelectedGameObject(toggleComponentSound.gameObject);
+        EventSystem.current.SetSelectedGameObject(scrollbar_Difficulty.gameObject);
         ArrangeDifficultyText();
     }
 
