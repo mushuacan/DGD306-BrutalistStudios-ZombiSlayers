@@ -51,6 +51,10 @@ MonoBehaviour:
   bulletsc: []
   boxCollider: {fileID: 5310655652545133225}
   WoodsAttackExplosion: {fileID: 732497499613721441, guid: 4802ea58ab47b4d4dadc5105c92898ee, type: 3}
+  clipsofHits:
+  - {fileID: 8300000, guid: 66d536f87b9b0304b9bc4612829b6bd8, type: 3}
+  - {fileID: 8300000, guid: bb85ec909ca57074e8c01dd52048949a, type: 3}
+  - {fileID: 8300000, guid: af331cabc3cbe8f49a0142dcfe21e7f2, type: 3}
 --- !u!114 &5332011600028865957
 MonoBehaviour:
   m_ObjectHideFlags: 0

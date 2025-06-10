@@ -46,17 +46,6 @@ public class Zombie_Health : MonoBehaviour
                 return;
             }
             health -= damaj;
-            if (All_Sounder.Instance != null)
-            {
-                if (damaj < 24)
-                {
-                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsLowDamaj);
-                }
-                else
-                {
-                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsHighDamaj);
-                }
-            }
             if (bullet.weaponName == "Shotgun" && !(health <= 0))
             {
                 if (damaj < 24)

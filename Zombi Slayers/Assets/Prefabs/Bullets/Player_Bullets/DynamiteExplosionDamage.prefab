@@ -56,8 +56,7 @@ MonoBehaviour:
   - Obstacle
   - Zombi
   audioClips:
-  - {fileID: 8300000, guid: 7c39d7e2273a4774ca283eaf53e05f19, type: 3}
-  - {fileID: 8300000, guid: e724e36aca551e14b86b299cd3aadb52, type: 3}
+  - {fileID: 8300000, guid: 176c95e329933aa4db53343d611204de, type: 3}
 --- !u!61 &5310655652545133225
 BoxCollider2D:
   m_ObjectHideFlags: 0

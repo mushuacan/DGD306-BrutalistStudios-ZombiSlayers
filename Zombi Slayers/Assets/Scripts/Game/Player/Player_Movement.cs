@@ -326,13 +326,11 @@ public class Player_Movement : MonoBehaviour
     {
         state = StateOC.Jumping;
         lane = lane - 1;
-        player_sounder.PlayJumpSound();
         jumpTween = transform.DOMoveY(jumpAnimationUpDistance + transform.position.y, (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.OutQuad).OnComplete(() =>
         {
             jumpTween = transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.InQuad).OnComplete(() =>
             {
                 if (animations) player_animation.EndJump();
-                player_sounder.PlayLandSound();
                 if (state == StateOC.EndGame) return;
                 if (state == StateOC.Dead) return;
                 state = StateOC.Running;
@@ -343,13 +341,11 @@ public class Player_Movement : MonoBehaviour
     {
         state = StateOC.Jumping;
         lane = lane + 1;
-        player_sounder.PlayJumpSound();
         jumpTween = transform.DOMoveY(jumpAnimationUpDistance + laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.8f).SetEase(Ease.OutQuad).OnComplete(() =>
         {
             jumpTween = transform.DOMoveY(laneYPoz[lane], (jumpAnimationDuration / animationSpeed) * 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
             {
                 if (animations) player_animation.EndJump();
-                player_sounder.PlayLandSound();
                 if (state == StateOC.EndGame) return;
                 if (state == StateOC.Dead) return;
                 state = StateOC.Running;

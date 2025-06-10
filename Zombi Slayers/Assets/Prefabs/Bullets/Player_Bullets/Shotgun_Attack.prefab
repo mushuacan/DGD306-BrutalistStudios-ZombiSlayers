@@ -110,6 +110,9 @@ MonoBehaviour:
   - {fileID: 5489044983422354536}
   boxCollider: {fileID: 0}
   WoodsAttackExplosion: {fileID: 0}
+  clipsofHits:
+  - {fileID: 8300000, guid: 830fc9b87bd647b41a60cd0b34156909, type: 3}
+  - {fileID: 8300000, guid: 184c283f810939844a5411790395edad, type: 3}
 --- !u!114 &6855738813859144162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +328,7 @@ MonoBehaviour:
   - {fileID: 0}
   boxCollider: {fileID: 0}
   WoodsAttackExplosion: {fileID: 0}
+  clipsofHits: []
 --- !u!114 &5489044983422354536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,6 +514,7 @@ MonoBehaviour:
   - {fileID: 0}
   boxCollider: {fileID: 0}
   WoodsAttackExplosion: {fileID: 0}
+  clipsofHits: []
 --- !u!114 &2461955504650419094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,6 +821,7 @@ MonoBehaviour:
   - {fileID: 0}
   boxCollider: {fileID: 0}
   WoodsAttackExplosion: {fileID: 0}
+  clipsofHits: []
 --- !u!114 &603547674695536468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,6 +1175,7 @@ MonoBehaviour:
   - {fileID: 0}
   boxCollider: {fileID: 0}
   WoodsAttackExplosion: {fileID: 0}
+  clipsofHits: []
 --- !u!114 &8911042205994424335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1522,6 +1529,7 @@ MonoBehaviour:
   - {fileID: 0}
   boxCollider: {fileID: 0}
   WoodsAttackExplosion: {fileID: 0}
+  clipsofHits: []
 --- !u!114 &2397460746673850834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,6 +1715,7 @@ MonoBehaviour:
   - {fileID: 0}
   boxCollider: {fileID: 0}
   WoodsAttackExplosion: {fileID: 0}
+  clipsofHits: []
 --- !u!114 &911388196560183367
 MonoBehaviour:
   m_ObjectHideFlags: 0

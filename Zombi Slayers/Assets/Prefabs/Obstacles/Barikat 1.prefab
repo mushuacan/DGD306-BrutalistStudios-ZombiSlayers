@@ -299,11 +299,12 @@ MonoBehaviour:
   isSlideable: 1
   remaining: {fileID: 8562209942794333228, guid: 7d57025a51286124a9341dda0f6b59a1, type: 3}
   clipsForPlayerDamaj:
-  - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
-  - {fileID: 8300000, guid: 4aa91225428d7014a87d4d00803f0704, type: 3}
+  - {fileID: 8300000, guid: 00ddcda8d75201b45a23292a1fac9b8d, type: 3}
+  - {fileID: 8300000, guid: 97e9f063b565c684ab27796dd8eeabfd, type: 3}
   clipsForObstacleDestr:
-  - {fileID: 8300000, guid: 0b3d39e197f4bf84087e797e40584941, type: 3}
-  - {fileID: 8300000, guid: 5a62943a17d05e34ab60968c83366d65, type: 3}
+  - {fileID: 8300000, guid: 51c396dd61a27a94bbc29823667dd14b, type: 3}
+  - {fileID: 8300000, guid: 99cd438e163093a47802bcc1d9fe2ca0, type: 3}
+  - {fileID: 8300000, guid: 289f3edc56237274d84f59a83bb87244, type: 3}
 --- !u!50 &7765331287207966984
 Rigidbody2D:
   serializedVersion: 4

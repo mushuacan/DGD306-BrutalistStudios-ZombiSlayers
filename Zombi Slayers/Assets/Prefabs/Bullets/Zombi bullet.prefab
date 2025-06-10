@@ -72,7 +72,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: af568180de79fd14aba6ddf806145b8b, type: 3}
   - {fileID: 8300000, guid: 68da28abfc84e3146bab9d7a75c4a093, type: 3}
   - {fileID: 8300000, guid: 0d4ec578f5129e54ea7178558d6bc918, type: 3}
-  clipsForDodgedPlayer: []
+  clipsForDodgedPlayer:
+  - {fileID: 8300000, guid: e0ff201e6e6d5754cae046c05d657ed5, type: 3}
+  - {fileID: 8300000, guid: 76be59e0486680347aec5fc6e4a7fc53, type: 3}
 --- !u!58 &8435732557194212507
 CircleCollider2D:
   m_ObjectHideFlags: 0

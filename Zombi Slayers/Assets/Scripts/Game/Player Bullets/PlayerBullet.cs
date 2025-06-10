@@ -10,6 +10,7 @@ public class PlayerBullet : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private GameObject WoodsAttackExplosion;
 
+    [SerializeField] private AudioClip[] clipsofHits;
     public void Settings(Scriptable_Weapons weapon)
     {
         damage = weapon.damage;
@@ -46,6 +47,17 @@ public class PlayerBullet : MonoBehaviour
                 bullet.isBulletMove = true;
                 bullet.bulletSpeed = weapon.bulletSpeed;
                 bullet.GetComponent<PlayerBullet>().damage = damage;
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Zombi"))
+        {
+            if (All_Sounder.Instance != null && clipsofHits.Length != 0)
+            {
+                All_Sounder.Instance.ChooseAndPlaySoundOf(clipsofHits);
             }
         }
     }

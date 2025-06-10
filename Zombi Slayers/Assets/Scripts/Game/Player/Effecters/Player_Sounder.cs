@@ -11,13 +11,14 @@ public class Player_Sounder : MonoBehaviour
     [SerializeField] private AudioClip[] woodsAttack;
     [SerializeField] private AudioClip[] fletchersAttack;
     [SerializeField] private AudioClip[] fletchersReloads;
+    [SerializeField] private AudioClip[] derricksAttack;
+    [SerializeField] private AudioClip[] derricksReloads;
     [SerializeField] private AudioClip[] playerDeath;
     [SerializeField] private AudioClip[] playerHurt;
     [SerializeField] private AudioClip[] playerHeal;
     [SerializeField] private AudioClip[] playerSlide;
-    [SerializeField] private AudioClip[] playerJump;
-    [SerializeField] private AudioClip[] playerLand;
     [SerializeField] private AudioClip[] dynamiteIgnite;
+    [SerializeField] private AudioClip[] slideDodge;
 
 
     private void PlayFrom(AudioClip[] clips, GameObject source = null)
@@ -38,16 +39,27 @@ public class Player_Sounder : MonoBehaviour
     {
         if (player.character.characterName == "Woods")
         {
-            //PlayFrom(woodsAttack);
+            PlayFrom(woodsAttack);
         }
-        if (player.character.characterName == "Fletcher")
+        else if (player.character.characterName == "Fletcher")
         {
             PlayFrom(fletchersAttack);
+        }
+        else if (player.character.characterName == "Derrick")
+        {
+            PlayFrom(derricksAttack);
         }
     }
     public void PlayFletchersReload()
     {
-        PlayFrom(fletchersReloads);
+        if (player.character.characterName == "Fletcher")
+        {
+            PlayFrom(fletchersReloads);
+        }
+        else if (player.character.characterName == "Derrick")
+        {
+            PlayFrom(derricksReloads);
+        }
     }
     public void PlayDeathSound()
     {
@@ -69,12 +81,8 @@ public class Player_Sounder : MonoBehaviour
     {
         PlayFrom(dynamiteIgnite);
     }
-    public void PlayJumpSound()
+    public void PlaySlideDodge()
     {
-        //PlayFrom(playerJump);
-    }
-    public void PlayLandSound()
-    {
-        //PlayFrom(playerLand);
+        PlayFrom(slideDodge);
     }
 }
