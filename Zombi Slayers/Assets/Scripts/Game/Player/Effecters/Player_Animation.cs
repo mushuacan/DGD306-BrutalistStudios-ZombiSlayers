@@ -59,7 +59,7 @@ public class Player_Animation : MonoBehaviour
         if (CheckIfControllerNull()) return;
 
         if (debugger) { Debug.Log("Walk"); }
-        animationer.SetBool("IsRunning", false);
+        animationer.SetBool("IsRunning", true);
     }
     public void Run()
     {
