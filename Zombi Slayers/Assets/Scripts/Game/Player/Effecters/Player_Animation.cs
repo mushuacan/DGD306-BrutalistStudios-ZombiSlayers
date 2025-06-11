@@ -111,8 +111,34 @@ public class Player_Animation : MonoBehaviour
     {
         if (CheckIfControllerNull()) return;
         if (debugger) { Debug.Log("Jump"); }
+        if (StopJump()) return;
         animationer.SetBool("Jumped", true);
         animationer.Play("Jump", 0, 0f);
+    }
+    private bool StopJump()
+    {
+        if (player.character.characterName == "Woods")
+        {
+            if (player_movement.action != Player_Movement.ActionOC.Normal)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            if (player_movement.action == Player_Movement.ActionOC.SecondAbility)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
     public void EndJump()
     {

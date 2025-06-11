@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 120}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2457012596335727034
@@ -786,14 +786,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 66160cf489aecaf4b90d4d684e3e2b1e, type: 3}
   playerSlide:
   - {fileID: 8300000, guid: cfb671088a54b8141a6b50dc25fcac3b, type: 3}
-  playerJump:
-  - {fileID: 8300000, guid: c76ccbadba0c35a46a1cc280a99057b6, type: 3}
-  playerLand:
-  - {fileID: 8300000, guid: c76ccbadba0c35a46a1cc280a99057b6, type: 3}
-  - {fileID: 8300000, guid: 63c9d1b5416cb754399c060c2bcc96c5, type: 3}
-  - {fileID: 8300000, guid: 3d9cc621879b1c44c99caffc7c937e33, type: 3}
   dynamiteIgnite:
   - {fileID: 8300000, guid: 52670d0d62b8c854590494ed587df74c, type: 3}
+  slideDodge: []
 --- !u!114 &-699912929371043157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1589,7 +1584,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 18
   m_TargetDisplay: 0
 --- !u!114 &2369197389122708412
 MonoBehaviour:
@@ -1851,7 +1846,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 458b989a10e3631449f55483352c8ad7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c58db846512b984ab5bb426e9232378, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
