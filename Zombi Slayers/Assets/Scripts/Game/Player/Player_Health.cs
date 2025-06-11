@@ -56,8 +56,11 @@ public class Player_Health : MonoBehaviour
             }
             else
             {
-                undamageableDelay = Time.timeSinceLevelLoad + undamageableDuration;
-                Flasher(Color.red); // kýrmýzý yandýrýp söndür
+                float difficulty = (float)GameSettings.Instance.settings["difficulty"]; 
+                float animationDuration = -0.6f * difficulty + 1.6f;
+
+                undamageableDelay = Time.timeSinceLevelLoad + undamageableDuration * animationDuration;
+                Flasher(Color.red, animationDuration); // kýrmýzý yandýrýp söndür
             }
         }
     }
@@ -72,7 +75,7 @@ public class Player_Health : MonoBehaviour
         }
     }
     // Bu metot chat gpt kullanýlarak yapýlmýþtýr.
-    private void Flasher(Color color)
+    private void Flasher(Color color, float animationDuration = 1f)
     {
         if (flashSequence != null && flashSequence.IsActive())
         {
@@ -86,8 +89,8 @@ public class Player_Health : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
-            flashSequence.Append(spriteRenderer.DOColor(flashColor, undamageableDuration / 8));
-            flashSequence.Append(spriteRenderer.DOColor(originalColor, undamageableDuration / 8));
+            flashSequence.Append(spriteRenderer.DOColor(flashColor, undamageableDuration * animationDuration / 8));
+            flashSequence.Append(spriteRenderer.DOColor(originalColor, undamageableDuration * animationDuration / 8));
         }
     }
 
