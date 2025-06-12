@@ -1,3 +1,4 @@
+using DG.Tweening.Core.Easing;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -64,7 +65,7 @@ public class ProjectileWarning : MonoBehaviour
         else if (warningersValue == 1)
         {
             supply = true;
-            obstacle = true;
+            obstacle = false;
             bullet = true;
             zombi = true;
         }
@@ -91,7 +92,7 @@ public class ProjectileWarning : MonoBehaviour
         {
             bulleter.SetActive(true);
         }
-        if (collision.CompareTag("Zombi") && zombi)
+        if (collision.CompareTag("Zombi") && collision.GetComponent<ZombiTheRunner>() != null && zombi)
         {
             zombier.SetActive(true);
         }

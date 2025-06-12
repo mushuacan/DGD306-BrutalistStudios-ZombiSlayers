@@ -45,6 +45,11 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
         if (!IsDifficultyOkeyWithAddingNewZombi()) return;
         if (gameEnded) return;
         if (stopZombying) return;
+
+        if (lane == 1 && zombiesInLane1.Count > 12) return;
+        if (lane == 2 && zombiesInLane2.Count > 12) return;
+        if (lane == 3 && zombiesInLane3.Count > 12) return;
+
         GameObject zombiATB = Instantiate(zombiAtTheBackPrefab);
         zombiATB.transform.SetParent(gameObject.transform);
         int order = SetOrderOfZombi(lane, zombiATB);
@@ -104,7 +109,7 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
         zombiAddedLastAt++;
         if ((float)GameSettings.Instance.settings["difficulty"] == 0f)
         {
-            if (zombiAddedLastAt > 4)
+            if (zombiAddedLastAt > 1)
             {
                 zombiAddedLastAt = 0;
                 return true;
@@ -113,7 +118,7 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
         }
         else if ((float)GameSettings.Instance.settings["difficulty"] == 0.5f)
         {
-            if (zombiAddedLastAt > 1)
+            if (zombiAddedLastAt > 0)
             {
                 zombiAddedLastAt = 0;
                 return true;
