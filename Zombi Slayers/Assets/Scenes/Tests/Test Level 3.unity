@@ -3392,7 +3392,7 @@ PrefabInstance:
     - target: {fileID: 707481971448680843, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: cfb0b76d2e2a2ad43bd0e71fe2d9bc08, type: 2}
+      objectReference: {fileID: 9100000, guid: 4d99e4e235cf90848aba3f1bd3d494d0, type: 2}
     - target: {fileID: 1759442453393457561, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.65
@@ -3440,7 +3440,7 @@ PrefabInstance:
     - target: {fileID: 5980480940130164564, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: character
       value: 
-      objectReference: {fileID: 11400000, guid: 9970dc11123ba134899665ec3c4f8228, type: 2}
+      objectReference: {fileID: 11400000, guid: 3222a12eefb780e4a8703da445c77d4e, type: 2}
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: carryToDDOL
       value: 0

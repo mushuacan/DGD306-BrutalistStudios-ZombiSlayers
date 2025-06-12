@@ -681,6 +681,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cfb671088a54b8141a6b50dc25fcac3b, type: 3}
   dynamiteIgnite:
   - {fileID: 8300000, guid: 52670d0d62b8c854590494ed587df74c, type: 3}
+  slideDodge: []
 --- !u!114 &-699912929371043157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,7 +814,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.8, y: 2}
   m_Direction: 0
 --- !u!50 &2379561613210452848
 Rigidbody2D:

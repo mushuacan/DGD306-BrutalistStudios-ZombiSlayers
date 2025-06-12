@@ -12,7 +12,6 @@ public class GameSettings : MonoBehaviour
     [Header("Changes")]
     [SerializeField] private bool changeSettingsAsDown;
     [SerializeField] private int startLevel = 0;
-    [SerializeField] private bool initialAnimations;
     [SerializeField] private bool Volumes;
     [SerializeField] private float MasterVolume;
 
@@ -42,7 +41,6 @@ public class GameSettings : MonoBehaviour
 
         if (changeSettingsAsDown)
         {
-            settings["animations"] = initialAnimations;
             settings["areVolumesOn"] = Volumes;
             settings["mainSoundsVolume"] = MasterVolume;
             settings["level"] = startLevel;

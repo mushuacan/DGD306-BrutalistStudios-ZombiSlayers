@@ -11,22 +11,22 @@ public class EndGameImage : MonoBehaviour
         if (sucsess < 0.25f)
         {
             background.sprite = backgroundSprite[0];
-            FlashEffect(1f, 0.5f, 0.5f, 1.5f);
+            FlashEffect(1f, 0.5f, 0.875f, 1.5f);
         }
         else if (sucsess < 0.63f)
         {
             background.sprite = backgroundSprite[1];
-            FlashEffect(0.9f, 1f, 0.25f, 1f);
+            FlashEffect(0.9f, 1f, 0.75f, 1f);
         }
         else if (sucsess < 0.98f)
         {
             background.sprite = backgroundSprite[2];
-            FlashEffect(0.9f, 1f, 0.25f, 1f);
+            FlashEffect(0.9f, 1f, 0.75f, 1f);
         }
         else
         {
             background.sprite = backgroundSprite[3];
-            FlashEffect(0.9f, 0.5f, 0.25f, 1f);
+            FlashEffect(0.9f, 0.5f, 0.75f, 1f);
         }
     }
 
