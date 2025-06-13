@@ -8,6 +8,7 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
     public List<GameObject> zombiesInLane1;
     public List<GameObject> zombiesInLane2;
     public List<GameObject> zombiesInLane3;
+    public GameObject[] zombiLanes;
 
     public bool addZombiRandomly;
     public float newZombiDelay;
@@ -16,14 +17,19 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
     public bool stopZombyingIfOnlyDerrick;
     private int zombiAddedLastAt;
 
+
+    public float spaceBetweenZombis;
+    public float leftCameraBorder;
+    public float lanePositioningDuration;
+
     void Start()
     {
         zombiAddedLastAt = 0;
         if (stopZombying) return;
         gameEnded = false;
-        AddBackZombi(1);
-        AddBackZombi(2);
-        AddBackZombi(3);
+        AddBackZombi(1, false);
+        AddBackZombi(2, false);
+        AddBackZombi(3, false);
         if (addZombiRandomly) AddZombiRandomly(newZombiDelay);
 
     }
@@ -40,9 +46,9 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
         DOVirtual.DelayedCall(time, () => { AddZombiRandomly(time); });
     }
 
-    public void AddBackZombi(int lane)
+    public void AddBackZombi(int lane, bool checkForHardness = true)
     {
-        if (!IsDifficultyOkeyWithAddingNewZombi()) return;
+        if (checkForHardness) if (!IsDifficultyOkeyWithAddingNewZombi()) return;
         if (gameEnded) return;
         if (stopZombying) return;
 
@@ -51,26 +57,30 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
         if (lane == 3 && zombiesInLane3.Count > 12) return;
 
         GameObject zombiATB = Instantiate(zombiAtTheBackPrefab);
-        zombiATB.transform.SetParent(gameObject.transform);
+        zombiATB.transform.SetParent(zombiLanes[lane].transform);
         int order = SetOrderOfZombi(lane, zombiATB);
-        zombiATB.GetComponent<ZombiAtTheBack>().SetPosition(lane, order);
+        zombiATB.GetComponent<ZombiAtTheBack>().SetPosition(lane, order, zombiLanes[lane].transform.position.x);
+        SetPositionOfLaner(lane);
+    }
+
+    public void SetPositionOfLaner(int lane)
+    {
+        //myTween.Kill();
+        int Counter = 0;
+        if (lane == 1) { Counter = zombiesInLane1.Count; }
+        if (lane == 2) { Counter = zombiesInLane2.Count; }
+        if (lane == 3) { Counter = zombiesInLane3.Count; }
+        float orderPosition = leftCameraBorder + Counter * spaceBetweenZombis;
+        zombiLanes[lane].transform.DOMoveX(orderPosition, lanePositioningDuration).SetEase(Ease.OutQuad);
     }
 
     public void EndGame(float movementSpeed, float transitionDuration)
     {
         gameEnded = true;
-        foreach (GameObject obje in zombiesInLane1)
-        {
-            obje.GetComponent<ZombiAtTheBack>().EndGame(movementSpeed, transitionDuration);
-        }
-        foreach (GameObject obje in zombiesInLane2)
-        {
-            obje.GetComponent<ZombiAtTheBack>().EndGame(movementSpeed, transitionDuration);
-        }
-        foreach (GameObject obje in zombiesInLane3)
-        {
-            obje.GetComponent<ZombiAtTheBack>().EndGame(movementSpeed, transitionDuration);
-        }
+        float xPosition = transform.position.x - (movementSpeed / 2) * transitionDuration;
+        zombiLanes[1].transform.DOMoveX(xPosition, transitionDuration).SetEase(Ease.InOutQuad);
+        zombiLanes[2].transform.DOMoveX(xPosition, transitionDuration).SetEase(Ease.InOutQuad);
+        zombiLanes[3].transform.DOMoveX(xPosition, transitionDuration).SetEase(Ease.InOutQuad);
     }
 
     private int SetOrderOfZombi(int lane, GameObject zombiATB)
