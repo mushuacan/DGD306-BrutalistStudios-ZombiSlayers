@@ -59,5 +59,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level_10.unity
     guid: 726abf6de1367344db2c60e4989622c8
+  - enabled: 1
+    path: Assets/Scenes/Menu/Game End Credits.unity
+    guid: f76471bd439cd7d4b88a52d4defbe951
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 088f6425a6f274148b2ed01468aeb6a9, type: 3}

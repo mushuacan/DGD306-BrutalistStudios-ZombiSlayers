@@ -64,7 +64,15 @@ public class EndGameMenu : MonoBehaviour
     public void ButtonNext()
     {
         DOTween.KillAll();
-        SceneManager.LoadScene("level_" + (FindAnyObjectByType<LevelMaker>().level + 1));
+        int level = FindAnyObjectByType<LevelMaker>().level;
+        if (level == 10)
+        {
+            SceneManager.LoadScene("Game End Credits");
+        }
+        else
+        {
+            SceneManager.LoadScene("level_" + (level + 1));
+        }
     }
     public void ButtonSelectLevel()
     {
