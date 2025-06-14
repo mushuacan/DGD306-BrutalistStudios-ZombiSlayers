@@ -25,16 +25,18 @@ public class Zombi_BOSS : MonoBehaviour
 
     private void ExecuteNextAction()
     {
+        float difficulty = (float)GameSettings.Instance.settings["difficulty"];
+        float timer = 2 + (1 - difficulty) * 2;
         if (envoriment_Movement.sessionEnded == true)
         {
             animator.SetTrigger("Stand");
             return;
         }
         Sequence sequence = DOTween.Sequence();
-        sequence.SetUpdate(UpdateType.Normal); // Time.timeScale'e baðlý olur
+        sequence.SetUpdate(UpdateType.Normal);
 
         sequence.AppendCallback(() => PerformAction(currentActionIndex));
-        sequence.AppendInterval(2); // Her hamle arasýnda 2 saniye bekle
+        sequence.AppendInterval(timer);
         sequence.AppendCallback(() => {
             currentActionIndex = (currentActionIndex + 1) % 3;
             ExecuteNextAction();

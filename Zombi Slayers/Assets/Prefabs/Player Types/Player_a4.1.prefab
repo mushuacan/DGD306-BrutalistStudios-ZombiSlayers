@@ -718,6 +718,8 @@ MonoBehaviour:
   player_UI: {fileID: 3710495823981931815}
   player: {fileID: 5980480940130164564}
   player_movement: {fileID: 7107904711815955177}
+  KillZone: {fileID: 6466166351721443462, guid: c6a204e681601864f97479aa9dd5abd9, type: 3}
+  KillZoneScriptable: {fileID: 11400000, guid: d736628c2c98d024a9fd10de8e88bdf8, type: 2}
   delay: 0
   canAttack: 0
   currentAmmo: 0

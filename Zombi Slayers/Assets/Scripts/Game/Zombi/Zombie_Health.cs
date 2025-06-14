@@ -33,9 +33,15 @@ public class Zombie_Health : MonoBehaviour
     {
         if (collision.CompareTag("Player_Bullet"))
         {
-
             PlayerBullet bullet = collision.GetComponent<PlayerBullet>();
             float damaj = 0;
+
+
+            if (bullet.weaponName == "KillZone")
+            {
+                KillZombi();
+                return;
+            }
             if (bullet != null)
             {
                 damaj = bullet.damage;

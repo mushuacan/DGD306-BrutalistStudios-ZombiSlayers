@@ -377,7 +377,6 @@ public class Player_Movement : MonoBehaviour
         }
         if (player.character.characterName == "Woods")
         {
-            player_sounder.PlayIgniteSound();
             player_attack.WoodsSecondAbility();
         }
         if (player.character.characterName == "Fao")

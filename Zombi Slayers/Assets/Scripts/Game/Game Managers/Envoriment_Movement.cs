@@ -121,7 +121,9 @@ public class Envoriment_Movement : MonoBehaviour
         {
             if (isMoving)
             {
-                transform.position = new Vector3(transform.position.x - (envorimentMovementSpeed * Time.deltaTime), transform.position.y, 5);
+                float difficulty = (float)GameSettings.Instance.settings["difficulty"];
+                float speed = envorimentMovementSpeed * (0.2f * difficulty + 0.8f);
+                transform.position = new Vector3(transform.position.x - (speed * Time.deltaTime), transform.position.y, 5);
             }
         }
         if (MiniMapUI != null)

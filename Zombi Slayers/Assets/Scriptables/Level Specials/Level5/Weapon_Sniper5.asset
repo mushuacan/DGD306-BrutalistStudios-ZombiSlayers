@@ -22,8 +22,8 @@ MonoBehaviour:
   doesItReload: 1
   bulletCountInGunAtStart: 2
   bulletMagazineAtStart: 3
-  reloadTime: 4
-  bulletCountinOneReload: 4
+  reloadTime: 5
+  bulletCountinOneReload: 5
   bulletSpeed: 0
   bulletBehavior: 1
   hitboxOffset: {x: 0, y: 0}

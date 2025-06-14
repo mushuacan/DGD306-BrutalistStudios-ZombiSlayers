@@ -42,8 +42,10 @@ public class ZombiAtTheBack_Manager : MonoBehaviour
     private void AddZombiRandomly(float time)
     {
         if (gameEnded) return;
-        AddBackZombi(Random.Range(1,4));
-        DOVirtual.DelayedCall(time, () => { AddZombiRandomly(time); });
+        AddBackZombi(Random.Range(1,4)); 
+        DOVirtual.DelayedCall(time, () => { AddZombiRandomly(time); })
+                .SetUpdate(false); // false => scaled time kullan, yani oyun durduðunda dur
+
     }
 
     public void AddBackZombi(int lane, bool checkForHardness = true)

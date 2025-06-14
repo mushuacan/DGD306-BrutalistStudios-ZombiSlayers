@@ -7,6 +7,8 @@ public class Player_Attack : MonoBehaviour
     [SerializeField] private Player_UI player_UI;
     [SerializeField] private Player_Character player;
     [SerializeField] private Player_Movement player_movement;
+    [SerializeField] private GameObject KillZone;
+    [SerializeField] private Scriptable_Weapons KillZoneScriptable;
     private Scriptable_Weapons weapon;
 
     [Header("Gizli deðiþkenler")]
@@ -99,6 +101,8 @@ public class Player_Attack : MonoBehaviour
     {
         if (player_movement.animations) player_movement.player_animation.Attacked();
         player_movement.player_sounder.PlayAttackSound();
+        GameObject KillZonePrefab = Instantiate(KillZone, new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z), Quaternion.identity);
+        KillZonePrefab.GetComponent<PlayerBullet>().Settings(KillZoneScriptable);
         GameObject bullet = Instantiate(weapon.bullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
         bullet.GetComponent<PlayerBullet>().Settings(weapon);
         ArrangeAttackCooldown();
@@ -108,10 +112,12 @@ public class Player_Attack : MonoBehaviour
 
     public void WoodsSecondAbility()
     {
+        if (player.character.secondAbility == null) return;
         if (dynamiteAmmo > 0)
         {
             if (player_movement.animations) player_movement.player_animation.SecondAbility();
             dynamiteAmmo--;
+            player_movement.player_sounder.PlayIgniteSound();
             player_UI.ArrangeSecondAbilityCounter(dynamiteAmmo, true);
             player_UI.StartCastTimer(player.character.secondAbility.attackAnimationDuration);
             DOVirtual.DelayedCall(player.character.secondAbility.attackAnimationDuration, () =>

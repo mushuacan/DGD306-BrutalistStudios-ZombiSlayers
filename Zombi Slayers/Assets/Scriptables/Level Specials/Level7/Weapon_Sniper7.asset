@@ -21,7 +21,7 @@ MonoBehaviour:
   haveLimitedBullets: 1
   doesItReload: 1
   bulletCountInGunAtStart: 3
-  bulletMagazineAtStart: 0
+  bulletMagazineAtStart: 3
   reloadTime: 3
   bulletCountinOneReload: 5
   bulletSpeed: 0
