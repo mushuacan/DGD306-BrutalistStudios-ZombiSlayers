@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1475841747
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3f568db10fe60cd4a8f99ea58c8c06f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -155,8 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaceBetweenZombis: 1.072
-  leftCameraBorder: -10
-  zombiSpeedComesFromBack: 2
+  resim: {fileID: 2801228559116736522}
 --- !u!114 &1739709130683786365
 MonoBehaviour:
   m_ObjectHideFlags: 0

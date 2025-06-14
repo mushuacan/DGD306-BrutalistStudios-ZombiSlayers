@@ -50,3 +50,33 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3133568515
+    locked: 0
+  - name: Obstacles
+    uniqueID: 1546333877
+    locked: 0
+  - name: Boxes
+    uniqueID: 1297687815
+    locked: 0
+  - name: PowerUps
+    uniqueID: 1226953513
+    locked: 0
+  - name: Zombies
+    uniqueID: 1475841747
+    locked: 0
+  - name: Players
+    uniqueID: 2747229799
+    locked: 0
+  - name: Bullets
+    uniqueID: 633834247
+    locked: 0
+  - name: Obstacles 3d
+    uniqueID: 372170763
+    locked: 0
+  - name: Bosses
+    uniqueID: 3625421755
+    locked: 0
+  - name: UI
+    uniqueID: 934064129
+    locked: 0

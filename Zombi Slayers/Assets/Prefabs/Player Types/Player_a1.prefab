@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 7802529104928322445}
   - component: {fileID: 6457714482630851726}
   m_Layer: 5
-  m_Name: Kalp (3)
+  m_Name: Medkit 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 3381079973294003076}
   - component: {fileID: 5077606400375755555}
   m_Layer: 5
-  m_Name: Kalp (2)
+  m_Name: Medkit 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -454,8 +454,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1547737497
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d0fd84f0a296d8c4f868c79ba17c1a10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1240,7 +1240,7 @@ GameObject:
   - component: {fileID: 6470589659481521759}
   - component: {fileID: 4921505704176332786}
   m_Layer: 5
-  m_Name: Kalp (4)
+  m_Name: Medkit 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1423,7 +1423,7 @@ GameObject:
   - component: {fileID: 4509025536500758649}
   - component: {fileID: 3408830344387554726}
   m_Layer: 5
-  m_Name: Kalp (1)
+  m_Name: Medkit 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1749,7 +1749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6505921596206930204}
   m_Layer: 0
-  m_Name: Kalpler
+  m_Name: Medkitler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1845,8 +1845,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1547737497
+  m_SortingLayer: 6
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 2c58db846512b984ab5bb426e9232378, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
