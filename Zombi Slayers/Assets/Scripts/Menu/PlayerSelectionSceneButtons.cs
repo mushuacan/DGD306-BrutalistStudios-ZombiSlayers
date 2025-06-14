@@ -109,7 +109,7 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         }
         else
         {
-            outText.text = "";
+            outText.text = "Attack for Ready\r\nSecond Ability for Out";
             outTimer = Time.timeSinceLevelLoad + 1;
             outTimerStarted = false;
         }
@@ -380,15 +380,15 @@ public class PlayerSelectionSceneButtons : MonoBehaviour
         string texter = "";
         if (device == "Keyboard")
         {
-            texter = "V for ready\r\nB for out\r\nA D for choosing character";
+            texter = "V for attack\r\nB for Second Ability\r\nW, A, S, D for Moving";
         }
         else if (device == "Keyboard With Arrow Keys")
         {
-            texter = "1 for ready\r\n2 for out\r\n<- -> for choosing character";
+            texter = "1 for attack\r\n2 for Second Ability\r\n<- -> for Moving";
         }
         else
         {
-            texter = "A for ready\r\nB for out\r\n<- -> for choosing character";
+            texter = "A for attack\r\nB for Second Ability\r\n<- -> for Moving";
         }
         textbox.text = texter;
     }

@@ -27,7 +27,7 @@ public class Obstacle : MonoBehaviour
             }
             if (All_Sounder.Instance != null && clipsForPlayerDamaj != null && clipsForPlayerDamaj.Length != 0 && collision.GetComponent<Player_Health>().health > 1)
             {
-                All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForPlayerDamaj);
+                All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForPlayerDamaj, "Player Took Damaj", false);
             }
             collision.GetComponent<Player_Health>().GiveDamage(!isSlideable);
         }
@@ -38,7 +38,7 @@ public class Obstacle : MonoBehaviour
             {
                 if (All_Sounder.Instance != null && clipsForObstacleDestr != null && clipsForObstacleDestr.Length != 0)
                 {
-                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForObstacleDestr);
+                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForObstacleDestr, "Obstacle Destroyed", false);
                 }
                 CreateRemaining();
                 Destroy(this.gameObject);

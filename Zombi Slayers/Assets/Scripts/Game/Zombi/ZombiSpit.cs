@@ -46,7 +46,7 @@ public class ZombiSpit : MonoBehaviour
 
     public void Spit()
     {
-        All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
+        All_Sounder.Instance.ChooseAndPlaySoundOf(clips, "Spit", true);
         GameObject projectile = Instantiate(zombiChar.zombi.projectilePrefab);
         projectile.transform.position = transform.position;
         projectile.GetComponent<ZombiBullet>().StartMoving();

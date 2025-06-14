@@ -32,7 +32,7 @@ public class Bullet_Magazines : MonoBehaviour
                 float easyness = (float)GameSettings.Instance.settings["difficulty"];
                 if (magazineType == MagazineTypes.Shotgun && collision.GetComponent<Player_Character>().character.characterName == "Fletcher")
                 {
-                    if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
+                    if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips, "Fletcher Take Bullet", false);
                     if (easyness == 0) magazineBulletCount += 2;
                     if (easyness == 0.5f) magazineBulletCount += 1;
                     player_Attack.TakeMagazine(magazineBulletCount);
@@ -41,7 +41,7 @@ public class Bullet_Magazines : MonoBehaviour
                 }
                 if (magazineType == MagazineTypes.Sniper && collision.GetComponent<Player_Character>().character.characterName == "Derrick")
                 {
-                    if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
+                    if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips, "Derrick Take Bullet", false);
                     if (easyness == 0) magazineBulletCount += 2;
                     if (easyness == 0.5f) magazineBulletCount += 1;
                     player_Attack.TakeMagazine(magazineBulletCount);

@@ -57,7 +57,7 @@ public class PlayerBullet : MonoBehaviour
         {
             if (All_Sounder.Instance != null && clipsofHits.Length != 0)
             {
-                All_Sounder.Instance.ChooseAndPlaySoundOf(clipsofHits);
+                All_Sounder.Instance.ChooseAndPlaySoundOf(clipsofHits, "Player Bullet Hit" + weaponName, true);
             }
         }
     }

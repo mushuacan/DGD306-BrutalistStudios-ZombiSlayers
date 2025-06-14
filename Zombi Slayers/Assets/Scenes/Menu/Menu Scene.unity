@@ -2408,7 +2408,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 244, y: 244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834853960
 MonoBehaviour:
@@ -2430,9 +2430,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 626d66cf585857e4a8d3c92fefc006f5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7df01d563345ff442afb1d0649ca3d55, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3388,7 +3388,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 59849bd24e00a3e478da2ac90a9147a1, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3538,7 +3538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: M. Sua Can
+  m_text: Mu. Sua Can
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 748685f0c2b7ec24a930528e9162f596, type: 2}
   m_sharedMaterial: {fileID: 7355929391213509322, guid: 748685f0c2b7ec24a930528e9162f596, type: 2}
@@ -4317,7 +4317,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: ce18a64b4d29b7243919c7a636c84def, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5726,7 +5726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2055070768
 RectTransform:
   m_ObjectHideFlags: 0

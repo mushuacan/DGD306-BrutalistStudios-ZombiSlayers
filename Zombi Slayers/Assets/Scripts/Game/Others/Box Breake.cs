@@ -33,7 +33,7 @@ public class BoxBreake : MonoBehaviour
     {
         isTriggered = true;
 
-        if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips);
+        if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips, "Box break", false);
 
         Vector3 pozisyon = new Vector3(transform.position.x, LaneFinder.laneYPositions[laneFinder.lane], transform.position.z);
 

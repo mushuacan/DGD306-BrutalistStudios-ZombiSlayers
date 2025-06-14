@@ -30,7 +30,7 @@ public class DamagePlayerOnCollision : MonoBehaviour
             if (player_Health.isSliding)
             {
                 if (All_Sounder.Instance != null && clipsForDodgedPlayer != null && clipsForDodgedPlayer.Length != 0)
-                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForDodgedPlayer);
+                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForDodgedPlayer, "Fletcher Slide dodged Zombi's spit", false);
                 return;
             }
 
@@ -38,7 +38,7 @@ public class DamagePlayerOnCollision : MonoBehaviour
             if (player_Health.undamageableDelay < Time.timeSinceLevelLoad)
             {
                 if (All_Sounder.Instance != null && clipsForDamagingPlayer != null && clipsForDamagingPlayer.Length != 0 && !player_Health.isSliding) 
-                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForDamagingPlayer);
+                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForDamagingPlayer, "Player Took damage by Zombi", false);
 
                 Animater();
                 player_Health.GiveDamage();
