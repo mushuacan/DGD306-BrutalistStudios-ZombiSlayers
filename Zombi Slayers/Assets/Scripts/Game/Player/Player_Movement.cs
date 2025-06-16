@@ -27,6 +27,9 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private Player_Health player_health;
     [SerializeField] private Scriptable_PlayerCharacter fixedPlayerCharacter;
     [SerializeField] private GameObject DeadLocation;
+    [SerializeField] private SpriteRenderer characterSprite;
+    [SerializeField] private SpriteRenderer muzzleFlashSprite;
+    [SerializeField] private Canvas playerUI;
     private GameObject platform;
 
     [Header("Playground Settings")]
@@ -100,6 +103,7 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ArrangeSortingLayer();
         if (!isPlayingNow)
             return;
         if (state == StateOC.Dead)
@@ -164,6 +168,14 @@ public class Player_Movement : MonoBehaviour
 #endif
         }
     }
+    private void ArrangeSortingLayer()
+    {
+        int layer = (int)(transform.position.x * 100);
+        characterSprite.sortingOrder = layer;
+        muzzleFlashSprite.sortingOrder = layer;
+        playerUI.sortingOrder = layer;
+    }
+
     private void CheckIfGameRuns()
     {
         ZombiAtTheBack_Manager zatbm = FindObjectOfType<ZombiAtTheBack_Manager>();

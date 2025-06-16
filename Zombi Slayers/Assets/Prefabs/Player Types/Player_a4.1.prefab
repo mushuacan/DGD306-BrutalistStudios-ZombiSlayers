@@ -604,6 +604,9 @@ MonoBehaviour:
   player_health: {fileID: -699912929371043157}
   fixedPlayerCharacter: {fileID: 11400000, guid: 3222a12eefb780e4a8703da445c77d4e, type: 2}
   DeadLocation: {fileID: 7531642678922765294, guid: cfb9f37e3f2c042419136ea131b0b475, type: 3}
+  characterSprite: {fileID: 1879536380549187296}
+  muzzleFlashSprite: {fileID: 3570536736554970467}
+  playerUI: {fileID: 1369606992052357588}
   movementSpeed: 4
   leftBoundary: -8
   rightBoundary: 5
@@ -1405,7 +1408,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: -1547737497
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!114 &2369197389122708412
 MonoBehaviour:
