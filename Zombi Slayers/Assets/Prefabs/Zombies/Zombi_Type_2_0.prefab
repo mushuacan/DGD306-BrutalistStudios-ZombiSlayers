@@ -284,8 +284,8 @@ MonoBehaviour:
   animater: 0
   animationer: {fileID: 0}
   clipsForDamagingPlayer:
-  - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
-  - {fileID: 8300000, guid: c67e03e0a3426a641895d2d0690c3b9b, type: 3}
+  - {fileID: 8300000, guid: 00ddcda8d75201b45a23292a1fac9b8d, type: 3}
+  - {fileID: 8300000, guid: c1a1b8ef2d1404346a5d76de68766ffe, type: 3}
   clipsForDodgedPlayer: []
 --- !u!61 &4835035562384579341
 BoxCollider2D:

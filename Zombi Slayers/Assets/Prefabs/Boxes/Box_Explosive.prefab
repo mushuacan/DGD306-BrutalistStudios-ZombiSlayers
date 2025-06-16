@@ -67,7 +67,7 @@ MonoBehaviour:
   insider: {fileID: 11400000, guid: 5e7f1157d4e96384bae99b91de7bb0ee, type: 2}
   laneFinder: {fileID: 8116204623252740761}
   clips:
-  - {fileID: 8300000, guid: 646fb8f99ff31e747a9e5f028b672d7a, type: 3}
+  - {fileID: 8300000, guid: 176c95e329933aa4db53343d611204de, type: 3}
 --- !u!114 &6097000714115256900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1297687815
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c8c09a610b26c4a4ea5ce7960f14cfd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

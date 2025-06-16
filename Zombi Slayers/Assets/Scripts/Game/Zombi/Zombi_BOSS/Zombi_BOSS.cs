@@ -9,7 +9,7 @@ public class Zombi_BOSS : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private ZombiAtTheBack_Manager zatbmanager;
     [SerializeField] private Envoriment_Movement envoriment_Movement;
-
+    [SerializeField] private AudioClip[] clipsForDamagingPlayer;
     private void Awake()
     {
         if (zatbmanager != null)
@@ -103,6 +103,27 @@ public class Zombi_BOSS : MonoBehaviour
         else
         {
             Debug.LogWarning("Zombi Boss'un sarsýntýsý için gereken CameraShaker script'i halihazýrdaki sahnede bulunmamakta.");
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Player_Movement pMove = collision.GetComponent<Player_Movement>();
+            Player_Health player_Health = collision.GetComponent<Player_Health>();
+
+            if (pMove.state == Player_Movement.StateOC.Dead)
+            {
+                return;
+            }
+
+            if (player_Health.undamageableDelay < Time.timeSinceLevelLoad)
+            {
+                if (All_Sounder.Instance != null && clipsForDamagingPlayer != null && clipsForDamagingPlayer.Length != 0 && !player_Health.isSliding)
+                    All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForDamagingPlayer, "Player Took damage by Zombi", false);
+                player_Health.GiveDamage();
+            }
         }
     }
 }

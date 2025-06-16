@@ -194,6 +194,8 @@ MonoBehaviour:
   _willExplode: 1
   _atXPosition: -3
   exploded: 0
+  clips:
+  - {fileID: 8300000, guid: 176c95e329933aa4db53343d611204de, type: 3}
 --- !u!114 &8495576673804247030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +296,8 @@ MonoBehaviour:
   animater: 0
   animationer: {fileID: 0}
   clipsForDamagingPlayer:
-  - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
+  - {fileID: 8300000, guid: 7dfacd7b8fa97d940aaa040535999571, type: 3}
+  - {fileID: 8300000, guid: 3cac0f0892cba984a908387f1f92a5ba, type: 3}
   clipsForDodgedPlayer: []
 --- !u!61 &4835035562384579341
 BoxCollider2D:

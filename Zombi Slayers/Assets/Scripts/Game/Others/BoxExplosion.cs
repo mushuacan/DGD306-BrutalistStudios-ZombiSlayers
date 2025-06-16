@@ -10,6 +10,7 @@ public class BoxExplosion : MonoBehaviour
     private void OnEnable()
     {
         Instantiate(explosionAnimationer, transform.position, Quaternion.identity);
+
         DOVirtual.DelayedCall(0.25f, () => Destroy(gameObject));
     }
     private void OnTriggerEnter2D(Collider2D collision)

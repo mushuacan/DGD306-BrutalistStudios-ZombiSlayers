@@ -261,7 +261,9 @@ MonoBehaviour:
   animater: 1
   animationer: {fileID: 7675167067700823169}
   clipsForDamagingPlayer:
-  - {fileID: 8300000, guid: 75f4a0f9d1b188f4db521179fe87cb2f, type: 3}
+  - {fileID: 8300000, guid: 00ddcda8d75201b45a23292a1fac9b8d, type: 3}
+  - {fileID: 8300000, guid: 7dfacd7b8fa97d940aaa040535999571, type: 3}
+  - {fileID: 8300000, guid: 3cac0f0892cba984a908387f1f92a5ba, type: 3}
   clipsForDodgedPlayer: []
 --- !u!114 &5241598053593211744
 MonoBehaviour:

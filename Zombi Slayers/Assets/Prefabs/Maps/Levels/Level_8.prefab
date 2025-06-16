@@ -925,7 +925,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 372170763
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 80b73930485db8946b0a05eb1781cec3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2092,7 +2092,6 @@ Transform:
   - {fileID: 6884557399042533572}
   - {fileID: 3039557546425169661}
   - {fileID: 4579838313412291511}
-  - {fileID: 2994441954222298769}
   - {fileID: 4871538670277187871}
   - {fileID: 6975747276049738582}
   - {fileID: 8206655599118889299}
@@ -2749,8 +2748,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6760436623009678208, guid: 2f51003b1a5c5d54eaa3ee3b5cedc288, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760436623009678208, guid: 2f51003b1a5c5d54eaa3ee3b5cedc288, type: 3}
       propertyPath: m_SortingOrder
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760436623009678208, guid: 2f51003b1a5c5d54eaa3ee3b5cedc288, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -845713763
       objectReference: {fileID: 0}
     - target: {fileID: 7017471153830193690, guid: 2f51003b1a5c5d54eaa3ee3b5cedc288, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3024,13 +3031,21 @@ PrefabInstance:
       propertyPath: magazineBulletCount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 49423227773152678, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 49423227773152678, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -845713763
+      objectReference: {fileID: 0}
     - target: {fileID: 2555471220647529321, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
       propertyPath: m_Name
       value: Sniper_Magazine
       objectReference: {fileID: 0}
     - target: {fileID: 3060510515097801180, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 159.30946
+      value: 158.476
       objectReference: {fileID: 0}
     - target: {fileID: 3060510515097801180, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3213,72 +3228,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3230454104735809029, guid: 9f4252c74935ded4b89eb3b785ab3a14, type: 3}
   m_PrefabInstance: {fileID: 354538415736958943}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &385768000743581844
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8492030804782405135}
-    m_Modifications:
-    - target: {fileID: 457521630320467067, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: lane
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3230454104735809029, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 241.42978
-      objectReference: {fileID: 0}
-    - target: {fileID: 3230454104735809029, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 3230454104735809029, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3230454104735809029, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3230454104735809029, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3230454104735809029, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3230454104735809029, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3230454104735809029, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3230454104735809029, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3230454104735809029, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562209942794333228, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-      propertyPath: m_Name
-      value: Barikat 1 (4)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
---- !u!4 &2994441954222298769 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3230454104735809029, guid: 9497734cc5fc2a54aab5f92f247e3b47, type: 3}
-  m_PrefabInstance: {fileID: 385768000743581844}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &388114437241107311
 PrefabInstance:
@@ -6129,8 +6078,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5433156484763890567, guid: e973855076e9e804fb1fcea4887d6202, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433156484763890567, guid: e973855076e9e804fb1fcea4887d6202, type: 3}
       propertyPath: m_SortingOrder
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433156484763890567, guid: e973855076e9e804fb1fcea4887d6202, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -845713763
       objectReference: {fileID: 0}
     - target: {fileID: 7063961452280844086, guid: e973855076e9e804fb1fcea4887d6202, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8760,7 +8717,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3097172449106179103, guid: f863b46f3edccba478f7ed14b5ea8318, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 158.40005
+      value: 158.064
       objectReference: {fileID: 0}
     - target: {fileID: 3097172449106179103, guid: f863b46f3edccba478f7ed14b5ea8318, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11814,6 +11771,14 @@ PrefabInstance:
       propertyPath: magazineBulletCount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 49423227773152678, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 49423227773152678, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -845713763
+      objectReference: {fileID: 0}
     - target: {fileID: 2555471220647529321, guid: 902713fd2e0633a44883418b10eae6c7, type: 3}
       propertyPath: m_Name
       value: Sniper_Magazine (1)
@@ -13117,8 +13082,16 @@ PrefabInstance:
       value: Box_Empty (8)
       objectReference: {fileID: 0}
     - target: {fileID: 7321092806842346562, guid: 7d4434ab5b794ce42b6e9f3e8db818e2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321092806842346562, guid: 7d4434ab5b794ce42b6e9f3e8db818e2, type: 3}
       propertyPath: m_SortingOrder
       value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321092806842346562, guid: 7d4434ab5b794ce42b6e9f3e8db818e2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -845713763
       objectReference: {fileID: 0}
     - target: {fileID: 8116204623252740761, guid: 7d4434ab5b794ce42b6e9f3e8db818e2, type: 3}
       propertyPath: lane

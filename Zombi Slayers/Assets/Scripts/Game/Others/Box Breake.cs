@@ -14,8 +14,13 @@ public class BoxBreake : MonoBehaviour
     {
         if (isTriggered) return; // Eðer zaten tetiklendiyse, iþlemi durdur
 
-        if (collision.CompareTag("Player_Bullet"))
+        if (collision.CompareTag("Player_Bullet") && collision.GetComponent<PlayerBullet>().weaponName != "iadeiZombiBullet")
         {
+            string weoName = collision.GetComponent<PlayerBullet>().weaponName;
+            if (weoName == "iadeiZombiBullet" && weoName == "KillZone")
+            {
+                return;
+            }
             Breake();
         }
         else if (collision.CompareTag("Player"))

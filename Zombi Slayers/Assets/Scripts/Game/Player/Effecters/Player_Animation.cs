@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -71,7 +72,7 @@ public class Player_Animation : MonoBehaviour
     {
         if (CheckIfControllerNull()) return;
         animationer.Play("Death", 0, 0f);
-
+        animationer.SetBool("IsSliding", false);
         if (debugger) { Debug.Log("Death"); }
     }
     public void SecondAbility(bool boolean = false)

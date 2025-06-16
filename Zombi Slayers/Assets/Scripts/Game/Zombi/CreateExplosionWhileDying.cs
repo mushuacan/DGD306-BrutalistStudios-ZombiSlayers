@@ -9,6 +9,7 @@ public class CreateExplosionWhileDying : MonoBehaviour
     [SerializeField] private bool _willExplode;
     [SerializeField] private float _atXPosition;
     [SerializeField] private bool exploded;
+    [SerializeField] private AudioClip[] clips;
 
     private void Update()
     {
@@ -27,6 +28,7 @@ public class CreateExplosionWhileDying : MonoBehaviour
     }
     public void Explode()
     {
+        if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips, "Zombi Explosion", true);
         Instantiate(_explosion, transform.position, Quaternion.identity);
     }
     public void DestroyGameObject()

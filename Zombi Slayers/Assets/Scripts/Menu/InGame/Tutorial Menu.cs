@@ -7,6 +7,7 @@ public class TutorialMenu : MonoBehaviour
     private PlayerManager playerManager;
     private Player_Inputs p1, p2;
     private bool pressedAtBeggining;
+    private float waitStartTime;
     void Start()
     {
         pressedAtBeggining = true;
@@ -22,6 +23,15 @@ public class TutorialMenu : MonoBehaviour
         else
         {
             p1 = FindAnyObjectByType<Player_Inputs>();
+        }
+
+        if ((int)GameSettings.Instance.settings["level"] == FindAnyObjectByType<LevelMaker>().level - 1)
+        {
+            if ((bool)GameSettings.Instance.settings["isThisLevelNew"])
+            {
+                waitStartTime = Time.realtimeSinceStartup + 2f;
+                GameSettings.Instance.settings["isThisLevelNew"] = false;
+            }
         }
     }
 
@@ -50,20 +60,23 @@ public class TutorialMenu : MonoBehaviour
         }
         else
         {
-            if (p2 == null)
+            if (waitStartTime < Time.realtimeSinceStartup)
             {
-                if (p1.button0pressed )
+                if (p2 == null)
                 {
-                    Time.timeScale = 1.0f;
-                    Destroy(gameObject);
+                    if (p1.button0pressed)
+                    {
+                        Time.timeScale = 1.0f;
+                        Destroy(gameObject);
+                    }
                 }
-            }
-            else
-            {
-                if (p1.button0pressed || p2.button0pressed)
+                else
                 {
-                    Time.timeScale = 1.0f;
-                    Destroy(gameObject);
+                    if (p1.button0pressed || p2.button0pressed)
+                    {
+                        Time.timeScale = 1.0f;
+                        Destroy(gameObject);
+                    }
                 }
             }
         }

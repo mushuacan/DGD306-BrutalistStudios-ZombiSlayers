@@ -138,27 +138,27 @@ public class SettingMenuActions : MonoBehaviour
         float warningers = (float)GameSettings.Instance.settings["warningers"];
         if (warningers == 0)
         {
-            warningerText.text = "Waner: Nothing";
+            warningerText.text = "Warner: Nothing";
         }
         else if (warningers == 0.25)
         {
-            warningerText.text = "Waner: Bullets";
+            warningerText.text = "Warner: Bullets";
         }
         else if (warningers == 0.5f)
         {
-            warningerText.text = "Waner: Bullets & Zombi's";
+            warningerText.text = "Warner: Bullets & Zombi's";
         }
         else if (warningers == 0.75f)
         {
-            warningerText.text = "Waner: Bullets & Supplies";
+            warningerText.text = "Warner: Bullets & Supplies";
         }
         else if (warningers == 1)
         {
-            warningerText.text = "Waner: All";
+            warningerText.text = "Warner: All";
         }
         else
         {
-            warningerText.text = "Waner: ?";
+            warningerText.text = "Warner: ?";
         }
     }
     #endregion

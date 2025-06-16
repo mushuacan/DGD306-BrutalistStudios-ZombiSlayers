@@ -3366,7 +3366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6097000714115256900, guid: 4a7caffa3e39ff14daa3c0b8ec581469, type: 3}
       propertyPath: deleteIfSinglePlayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8116204623252740761, guid: 4a7caffa3e39ff14daa3c0b8ec581469, type: 3}
       propertyPath: lane

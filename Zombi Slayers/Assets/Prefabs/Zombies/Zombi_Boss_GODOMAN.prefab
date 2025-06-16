@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5181679296707853137}
   - component: {fileID: 7324120465889348379}
   - component: {fileID: 5352785012098436464}
-  - component: {fileID: 8415725254056442902}
   - component: {fileID: 4204215076261136224}
   - component: {fileID: 7116839746110323080}
   m_Layer: 0
@@ -68,24 +67,10 @@ MonoBehaviour:
   animator: {fileID: 4790144683060958806}
   zatbmanager: {fileID: 0}
   envoriment_Movement: {fileID: 0}
---- !u!114 &8415725254056442902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023428649228514094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e131df85caff38d479eae502dd4128fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyOnCollision: 0
-  canSlideable: 0
-  animater: 0
-  animationer: {fileID: 0}
-  clipsForDamagingPlayer: []
-  clipsForDodgedPlayer: []
+  clipsForDamagingPlayer:
+  - {fileID: 8300000, guid: 3f3539a11749bd44aad9f82fb3dd095c, type: 3}
+  - {fileID: 8300000, guid: 3cac0f0892cba984a908387f1f92a5ba, type: 3}
+  - {fileID: 8300000, guid: b47148eaaec664240b6cc6ab6dccc3bd, type: 3}
 --- !u!114 &4204215076261136224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +115,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.82}
+  m_Offset: {x: -1.0700812, y: 1.8199999}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -141,7 +126,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.61, y: 5.02}
+  m_Size: {x: 3.750163, y: 5.02}
   m_EdgeRadius: 0
 --- !u!1 &2779618141461865549
 GameObject:
@@ -216,7 +201,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -669545541
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 53114c919550bb84a8418734add6f279, type: 3}
   m_Color: {r: 0.7452829, g: 1, b: 0.81837565, a: 1}
