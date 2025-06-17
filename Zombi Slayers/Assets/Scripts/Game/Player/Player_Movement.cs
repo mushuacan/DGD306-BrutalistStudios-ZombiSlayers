@@ -172,8 +172,8 @@ public class Player_Movement : MonoBehaviour
     {
         int layer = (int)(transform.position.x * 100);
         characterSprite.sortingOrder = layer;
-        muzzleFlashSprite.sortingOrder = layer;
-        playerUI.sortingOrder = layer;
+        muzzleFlashSprite.sortingOrder = layer + 100;
+        playerUI.sortingOrder = layer + 5;
     }
 
     private void CheckIfGameRuns()
