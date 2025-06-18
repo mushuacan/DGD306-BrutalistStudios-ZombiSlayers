@@ -8,6 +8,8 @@ public class Zombi_BOSS_Jumped : MonoBehaviour
 
     private void Start()
     {
+        laneFinder.SnapTheLane();
+        lane = laneFinder.lane;
     }
 
     private void ChangeLane(int laneToChange, float timer)

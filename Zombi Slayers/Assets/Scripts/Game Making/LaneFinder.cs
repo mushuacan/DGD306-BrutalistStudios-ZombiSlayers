@@ -17,6 +17,11 @@ public class LaneFinder : MonoBehaviour
         if (snap) { /*_*/ }
     }
 
+    public void SnapTheLane()
+    {
+        SnapToNearestLaneY();
+    }
+
     void SnapToNearestLaneY()
     {
         float closestY = laneYPositions[0]; // Baþlangýçta ilk deðeri alýyoruz

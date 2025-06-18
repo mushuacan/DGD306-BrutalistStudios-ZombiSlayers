@@ -54,7 +54,11 @@ MonoBehaviour:
   - {fileID: 6649666006727022811}
   boxCollider: {fileID: 4779884331754075496}
   WoodsAttackExplosion: {fileID: 0}
-  clipsofHits: []
+  clipsofHits:
+  - {fileID: 8300000, guid: 2e33f37060fd4744c8b16683ff3c49e0, type: 3}
+  - {fileID: 8300000, guid: af568180de79fd14aba6ddf806145b8b, type: 3}
+  - {fileID: 8300000, guid: 68da28abfc84e3146bab9d7a75c4a093, type: 3}
+  - {fileID: 8300000, guid: 0d4ec578f5129e54ea7178558d6bc918, type: 3}
 --- !u!114 &6649666006727022811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +120,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.49629414, y: 0.064132154}
+  m_Offset: {x: -0.49629414, y: 0.29835218}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9342268, y: 0.15812361}
+  m_Size: {x: 1.9342268, y: 0.62656367}
   m_EdgeRadius: 0
 --- !u!1 &7732115304589569679
 GameObject:
@@ -200,7 +204,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 633834247
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: efcd6d38026f9014fb68b7ba47ff1e26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

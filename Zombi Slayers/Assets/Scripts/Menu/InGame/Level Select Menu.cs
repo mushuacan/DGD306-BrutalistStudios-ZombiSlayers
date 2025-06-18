@@ -33,9 +33,12 @@ public class LevelSelectMenu : MonoBehaviour
             levels[i].interactable = false;
         }
 
-
         EventSystem.current.SetSelectedGameObject(levels[currentLevel - 1].gameObject);
 
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            EventSystem.current.SetSelectedGameObject(levels[0].gameObject);
+        }
     }
 
     public void Button_OpenExitMenu()
