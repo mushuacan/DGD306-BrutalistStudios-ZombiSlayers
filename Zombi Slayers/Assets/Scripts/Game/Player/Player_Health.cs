@@ -17,6 +17,7 @@ public class Player_Health : MonoBehaviour
     [SerializeField] private Player_UI player_UI;
     [SerializeField] private Player_Character player;
     [SerializeField] private Player_Movement player_movement;
+    [SerializeField] private GameObject bloodParticle;
 
 
     [Header("(private variables)")]
@@ -47,6 +48,7 @@ public class Player_Health : MonoBehaviour
         if (undamageableDelay < Time.timeSinceLevelLoad)
         {
             ArrangeHealth(-1);
+            CreateBloodParticles();
 
             if (health <= 0)
             {
@@ -63,6 +65,11 @@ public class Player_Health : MonoBehaviour
                 Flasher(Color.red, animationDuration); // kýrmýzý yandýrýp söndür
             }
         }
+    }
+
+    private void CreateBloodParticles()
+    {
+        Instantiate(bloodParticle, transform.position, Quaternion.identity);
     }
 
     public void TakeMedKit()

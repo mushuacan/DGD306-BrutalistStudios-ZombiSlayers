@@ -703,6 +703,7 @@ MonoBehaviour:
   player_UI: {fileID: 3710495823981931815}
   player: {fileID: 5980480940130164564}
   player_movement: {fileID: 7107904711815955177}
+  bloodParticle: {fileID: 347622219387273672, guid: 0cb9dceba365c8045a5892d6f4f59a68, type: 3}
   health: 0
   undamageableDelay: 0
   isSliding: 0

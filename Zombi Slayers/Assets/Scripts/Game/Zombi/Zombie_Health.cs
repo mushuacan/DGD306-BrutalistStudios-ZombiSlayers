@@ -10,6 +10,7 @@ public class Zombie_Health : MonoBehaviour
     [SerializeField] private ZombiCharacter zombiChar;
     [SerializeField] private LaneFinder laner;
     [SerializeField] private CreateExplosionWhileDying explosioner;
+    [SerializeField] private GameObject bloodParticles;
     [SerializeField] private Zombi_Push pusher;
     [SerializeField] private SpriteRenderer[] spriteRenderer;
     [SerializeField] private AudioClip[] clipsLowDamaj;
@@ -96,6 +97,8 @@ public class Zombie_Health : MonoBehaviour
         {
             explosioner.Explode();
         }
+
+        Instantiate(bloodParticles, transform.position, Quaternion.identity);
 
         // DOTween animasyonlarýný iptal et
         DOTween.Kill(transform);

@@ -240,6 +240,7 @@ MonoBehaviour:
   zombiChar: {fileID: 5905445915708681430}
   laner: {fileID: 4087789420610649628}
   explosioner: {fileID: 0}
+  bloodParticles: {fileID: 347622219387273672, guid: 0cb9dceba365c8045a5892d6f4f59a68, type: 3}
   pusher: {fileID: -5738385395052608075}
   spriteRenderer:
   - {fileID: 8765056891630523545}
