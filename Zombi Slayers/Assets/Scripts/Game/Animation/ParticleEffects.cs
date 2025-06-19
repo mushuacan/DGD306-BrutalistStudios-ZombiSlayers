@@ -5,14 +5,16 @@ public class ParticleEffects : MonoBehaviour
 {
     public float deathTimer = 3f;
     public ParticleSystem[] particles;
-
+    public bool platformaYasla;
     private void OnEnable()
     {
-
-        GameObject parentObj = GameObject.FindWithTag("Platform");
-        if (parentObj != null)
+        if (platformaYasla)
         {
-            transform.SetParent(parentObj.transform);
+            GameObject parentObj = GameObject.FindWithTag("Platform");
+            if (parentObj != null)
+            {
+                transform.SetParent(parentObj.transform);
+            }
         }
 
         foreach (var particle in particles)

@@ -607,6 +607,7 @@ MonoBehaviour:
   characterSprite: {fileID: 1879536380549187296}
   muzzleFlashSprite: {fileID: 3570536736554970467}
   playerUI: {fileID: 1369606992052357588}
+  platform: {fileID: 0}
   movementSpeed: 4
   leftBoundary: -8
   rightBoundary: 5
@@ -704,9 +705,11 @@ MonoBehaviour:
   player: {fileID: 5980480940130164564}
   player_movement: {fileID: 7107904711815955177}
   bloodParticle: {fileID: 347622219387273672, guid: 0cb9dceba365c8045a5892d6f4f59a68, type: 3}
+  buffParticle: {fileID: 347622219387273672, guid: bf9ab7074ff6c0d46a4c665c638b9478, type: 3}
   health: 0
   undamageableDelay: 0
   isSliding: 0
+  immortalCheat: 0
 --- !u!114 &4902290981955062725
 MonoBehaviour:
   m_ObjectHideFlags: 0

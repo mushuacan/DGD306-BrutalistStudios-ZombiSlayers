@@ -52,6 +52,7 @@ MonoBehaviour:
   - {fileID: 6165834978391149830}
   - {fileID: 8717855025497862827}
   - {fileID: 3353416530902738236}
+  platformaYasla: 1
 --- !u!1 &3494628369477624557
 GameObject:
   m_ObjectHideFlags: 0
