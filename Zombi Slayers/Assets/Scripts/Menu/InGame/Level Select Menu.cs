@@ -23,20 +23,33 @@ public class LevelSelectMenu : MonoBehaviour
         }
         else { currentLevel = totalLevels; }
 
+        if (levels == null || levels.Length == 0)
+        {
+            Debug.LogWarning("Level listesi boþ veya null.");
+            return;
+        }
 
-        for (int i = 0; i < currentLevel; i++)
+        int safeLevel = Mathf.Clamp(currentLevel, 0, levels.Length); // Aþmamasý garanti
+
+        for (int i = 0; i < safeLevel; i++)
         {
             levels[i].interactable = true;
         }
-        for (int i = currentLevel; i < levels.Length; i++)
+        for (int i = safeLevel; i < levels.Length; i++)
         {
             levels[i].interactable = false;
         }
 
-        EventSystem.current.SetSelectedGameObject(levels[currentLevel - 1].gameObject);
 
-        if (EventSystem.current.currentSelectedGameObject == null)
+        int index = currentLevel - 1;
+
+        if (index >= 0 && index < levels.Length)
         {
+            EventSystem.current.SetSelectedGameObject(levels[index].gameObject);
+        }
+        else if (levels.Length > 0)
+        {
+            // Eðer geçerli index yoksa, ilk elementi seç
             EventSystem.current.SetSelectedGameObject(levels[0].gameObject);
         }
     }
