@@ -238,6 +238,7 @@ MonoBehaviour:
   explosioner: {fileID: 0}
   bloodParticles: {fileID: 347622219387273672, guid: 0cb9dceba365c8045a5892d6f4f59a68, type: 3}
   pusher: {fileID: 4584445579691408264}
+  remaining: {fileID: 3168523198898427156, guid: 5186bc236017eec498d5b7100ec4ef31, type: 3}
   spriteRenderer:
   - {fileID: 5001715593568527686}
   clipsLowDamaj: []
