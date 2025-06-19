@@ -8,6 +8,7 @@ public class BoxBreake : MonoBehaviour
     private bool isTriggered = false;
 
     [SerializeField] private LaneFinder laneFinder;
+    [SerializeField] private GameObject breakeParticle;
     [SerializeField] private AudioClip[] clips;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +42,7 @@ public class BoxBreake : MonoBehaviour
         if (All_Sounder.Instance != null && clips.Length != 0) All_Sounder.Instance.ChooseAndPlaySoundOf(clips, "Box break", true);
 
         Vector3 pozisyon = new Vector3(transform.position.x, LaneFinder.laneYPositions[laneFinder.lane], transform.position.z);
+        Instantiate(breakeParticle, transform.position, Quaternion.identity);
 
         if (insider != null)
             Instantiate(insider.prefab, pozisyon, transform.rotation, transform.parent);

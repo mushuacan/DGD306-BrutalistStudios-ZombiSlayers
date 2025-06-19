@@ -30,7 +30,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private SpriteRenderer characterSprite;
     [SerializeField] private SpriteRenderer muzzleFlashSprite;
     [SerializeField] private Canvas playerUI;
-    private GameObject platform;
+    public GameObject platform;
 
     [Header("Playground Settings")]
     [SerializeField] private float movementSpeed;
@@ -100,6 +100,50 @@ public class Player_Movement : MonoBehaviour
     {
         CheckIfGameRuns();
     }
+    private void CheckIfGameRuns()
+    {
+        ZombiAtTheBack_Manager zatbm = FindObjectOfType<ZombiAtTheBack_Manager>();
+        if (zatbm != null)
+        {
+            isPlayingNow = true;
+            StarterPack();
+        }
+        else
+        {
+            isPlayingNow = false;
+        }
+    }
+    public void StarterPack()
+    {
+        state = StateOC.Running;
+        action = ActionOC.Normal;
+
+        laneYPoz = LaneFinder.laneYPositions;
+
+        transform.position = new Vector2(startPositionX, laneYPoz[lane]);
+
+        platform = GameObject.FindWithTag("Platform");
+
+        if (player.character == null)
+        {
+            player.character = fixedPlayerCharacter;
+        }
+
+        animations = (bool)GameSettings.Instance.settings["animations"];
+
+        secondAbilityCooldown = 0f;
+        FaoWind_StopJump = false;
+
+        animationSpeed = player.character.animationSpeed;
+        movementSpeed = player.character.movementSpeed;
+
+        player_health.StarterPack();
+        player_attack.StarterPack();
+        player_UI.StarterPack();
+        player_animation.StarterPack();
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -174,50 +218,6 @@ public class Player_Movement : MonoBehaviour
         characterSprite.sortingOrder = layer;
         muzzleFlashSprite.sortingOrder = layer + 100;
         playerUI.sortingOrder = layer + 5;
-    }
-
-    private void CheckIfGameRuns()
-    {
-        ZombiAtTheBack_Manager zatbm = FindObjectOfType<ZombiAtTheBack_Manager>();
-        if (zatbm != null)
-        {
-            isPlayingNow = true;
-            StarterPack();
-        }
-        else
-        {
-            isPlayingNow = false;
-        }
-    }
-
-    public void StarterPack()
-    {
-        state = StateOC.Running;
-        action = ActionOC.Normal;
-
-        laneYPoz = LaneFinder.laneYPositions;
-
-        transform.position = new Vector2(startPositionX, laneYPoz[lane]);
-
-        platform = GameObject.FindWithTag("Platform");
-
-        if (player.character == null)
-        {
-            player.character = fixedPlayerCharacter;
-        }
-
-        animations = (bool)GameSettings.Instance.settings["animations"];
-
-        secondAbilityCooldown = 0f;
-        FaoWind_StopJump = false;
-
-        animationSpeed = player.character.animationSpeed;
-        movementSpeed = player.character.movementSpeed;
-
-        player_health.StarterPack();
-        player_attack.StarterPack();
-        player_UI.StarterPack();
-        player_animation.StarterPack();
     }
 
     private void ArrangeJumping()
@@ -320,6 +320,10 @@ public class Player_Movement : MonoBehaviour
                     player_UI.StartSecondAbilityCooldown(player.character.secondAbilityCooldown);
                 });
             }
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            player_health.immortalCheat ^= true;
         }
     }
 

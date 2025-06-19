@@ -11,13 +11,14 @@ public class PlayerBullet : MonoBehaviour
     [SerializeField] private GameObject WoodsAttackExplosion;
 
     [SerializeField] private AudioClip[] clipsofHits;
+    private Tween destroyTween;
     public void Settings(Scriptable_Weapons weapon)
     {
         damage = weapon.damage;
         weaponName = weapon.weaponName;
 
         //Fletcher's attack
-        if (bulletsc != null )
+        if (bulletsc != null)
         {
             BulletMaker(weapon);
         }
@@ -35,7 +36,13 @@ public class PlayerBullet : MonoBehaviour
             Instantiate(WoodsAttackExplosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         }
 
-        DOVirtual.DelayedCall(weapon.BulletDestroyTimer, () => Destroy(this.gameObject)).SetUpdate(false);
+        destroyTween = DOVirtual.DelayedCall(weapon.BulletDestroyTimer, () =>
+        {
+            if (gameObject != null)
+            {
+                Destroy(gameObject);
+            }
+        }).SetUpdate(false);
     }
 
     public void BulletMaker(Scriptable_Weapons weapon)
@@ -60,5 +67,10 @@ public class PlayerBullet : MonoBehaviour
                 All_Sounder.Instance.ChooseAndPlaySoundOf(clipsofHits, "Player Bullet Hit" + weaponName, true);
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        destroyTween.Kill();
     }
 }

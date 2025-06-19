@@ -24,6 +24,7 @@ public class Player_Health : MonoBehaviour
     [SerializeField] public int health;
     [SerializeField] public float undamageableDelay;
     [SerializeField] public bool isSliding;
+    public bool immortalCheat;
 
     private Sequence flashSequence;
 
@@ -47,6 +48,7 @@ public class Player_Health : MonoBehaviour
         }
         if (undamageableDelay < Time.timeSinceLevelLoad)
         {
+            if (!immortalCheat)
             ArrangeHealth(-1);
             CreateBloodParticles();
 

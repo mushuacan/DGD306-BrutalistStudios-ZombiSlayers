@@ -66,6 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   insider: {fileID: 11400000, guid: 0621babe9c764804b830b5b5a01c6a8d, type: 2}
   laneFinder: {fileID: 8116204623252740761}
+  breakeParticle: {fileID: 347622219387273672, guid: 7da43523dda3b9347afd1a22e8a89ed3, type: 3}
   clips:
   - {fileID: 8300000, guid: 16540651f8aae6c47a02ec7e7a08ee10, type: 3}
   - {fileID: 8300000, guid: 35c297700b3771c4c80beac47826b624, type: 3}
@@ -244,7 +245,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1297687815
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c8c09a610b26c4a4ea5ce7960f14cfd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

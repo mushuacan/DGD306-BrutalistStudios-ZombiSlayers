@@ -8,6 +8,7 @@ public class Obstacle : MonoBehaviour
     public bool isSlideable;
 
     public GameObject remaining;
+    public GameObject obstacleParticles;
 
     [SerializeField] private AudioClip[] clipsForPlayerDamaj;
     [SerializeField] private AudioClip[] clipsForObstacleDestr;
@@ -40,6 +41,8 @@ public class Obstacle : MonoBehaviour
                 {
                     All_Sounder.Instance.ChooseAndPlaySoundOf(clipsForObstacleDestr, "Obstacle Destroyed", false);
                 }
+                if (obstacleParticles != null)
+                Instantiate(obstacleParticles, transform.position, Quaternion.identity);
                 CreateRemaining();
                 Destroy(this.gameObject);
             }

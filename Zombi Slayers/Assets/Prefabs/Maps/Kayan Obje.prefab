@@ -45,9 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishLine: {fileID: 0}
+  background: {fileID: 0}
   zombiManager: {fileID: 0}
   MiniMapUI: {fileID: 0}
-  stopButton: 113
+  stopButton: 111
   isStopable: 1
   isStoppedAtFirst: 0
   envorimentMovementSpeed: 3.2
@@ -57,3 +58,4 @@ MonoBehaviour:
   endDuration: 6.25
   zombiStopDuration: 5.6
   zombiStopPosition: 16.96
+  sessionEnded: 0
