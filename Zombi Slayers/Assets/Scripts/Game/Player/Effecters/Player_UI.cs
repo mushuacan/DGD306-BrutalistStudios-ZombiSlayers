@@ -137,12 +137,12 @@ public class Player_UI : MonoBehaviour
             {
                 heartsArray[index].gameObject.SetActive(true);
                 heartsArray[index].transform.localScale = Vector3.zero; // Baþlangýçta küçültüyoruz
-                heartsTween = heartsArray[index].transform.DOScale(new Vector3(0.5f, 0.5f, 0), 0.3f) // Ýlk büyüme 0.6'a
+                heartsTween = heartsArray[index].transform.DOScale(new Vector3(1.2f, 1.2f, 1f), 0.3f) // Ýlk büyüme 0.6'a
                     .SetEase(Ease.OutBack) // Daha yumuþak bir büyüme
                     .OnComplete(() =>
                     {
                         // Büyüme sonrasý fazla gittiði için biraz geri dönsün
-                        heartsTween = heartsArray[index].transform.DOScale(new Vector3(0.4f, 0.4f, 0), 0.2f)
+                        heartsTween = heartsArray[index].transform.DOScale(new Vector3(1f, 1f, 1f), 0.2f)
                             .SetEase(Ease.InOutQuad); // Geri dönüþ animasyonu
                     });
             }
@@ -171,7 +171,7 @@ public class Player_UI : MonoBehaviour
                 else
                 {
                     heartsArray[i].gameObject.SetActive(true);
-                    heartsArray[i].transform.DOScale(new Vector3(0.4f, 0.4f, 1), 0.2f);
+                    heartsArray[i].transform.DOScale(new Vector3(1, 1, 1), 0.2f);
                 }
             }
             else
@@ -183,7 +183,7 @@ public class Player_UI : MonoBehaviour
                 else
                 {
                     heartsArray[i].gameObject.SetActive(false);
-                    heartsArray[i].transform.DOScale(new Vector3(0.4f, 0.4f, 1), 0.2f);
+                    heartsArray[i].transform.DOScale(new Vector3(1, 1, 1), 0.2f);
                 }
             }
         }
