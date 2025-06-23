@@ -66,6 +66,7 @@ public class Player_Animation : MonoBehaviour
     {
         if (CheckIfControllerNull()) return;
         if (debugger) { Debug.Log("Run"); }
+        animationer.speed = player_movement.animationSpeed + ((player_movement.platform.GetComponent<Envoriment_Movement>().envorimentMovementSpeed / 3) - 1);
         animationer.SetBool("IsRunning", true);
     }
     public void Death()
@@ -82,14 +83,17 @@ public class Player_Animation : MonoBehaviour
         if (debugger) { Debug.Log("ThrowDynamite"); }
         if(player.character.characterName == "Fletcher")
         {
+            animationer.speed = player_movement.animationSpeed;
             animationer.SetBool("IsSliding", boolean);
         }
         else if (player.character.characterName == "Woods")
         {
+            animationer.speed = player_movement.animationSpeed;
             animationer.Play("ThrowDynamite", 0, 0f);
         }
         else if (player.character.characterName == "Derrick")
         {
+            animationer.speed = player_movement.animationSpeed;
             animationer.Play("Kick", 0, 0f);
         }
     }
@@ -114,6 +118,7 @@ public class Player_Animation : MonoBehaviour
         if (CheckIfControllerNull()) return;
         if (debugger) { Debug.Log("Jump"); }
         if (StopJump()) return;
+        animationer.speed = player_movement.animationSpeed + DifficultyAnimationArrangements();
         animationer.SetBool("Jumped", true);
         animationer.Play("Jump", 0, 0f);
     }
@@ -159,5 +164,11 @@ public class Player_Animation : MonoBehaviour
         if (CheckIfControllerNull()) return;
         if (debugger) { Debug.Log("Jump_2"); }
         animationer.Play("Jump_2", 0, 0f);
+    }
+
+    private float DifficultyAnimationArrangements()
+    {
+        float diff = (float)GameSettings.Instance.settings["difficulty"];
+        return 0.25f * (1 - diff);
     }
 }

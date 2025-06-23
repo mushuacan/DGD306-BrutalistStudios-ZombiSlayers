@@ -39,7 +39,7 @@ public class Player_Movement : MonoBehaviour
 
     [Header("Animation Settings")]
     [SerializeField] public bool animations;
-    [SerializeField] private float animationSpeed;
+    [SerializeField] public float animationSpeed;
     [SerializeField] private float jumpAnimationDuration;
     [SerializeField] private float jumpAnimationUpDistance;
 
