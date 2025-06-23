@@ -7,6 +7,8 @@ public class ZombiTheRunner : MonoBehaviour
     [SerializeField] private float _atXPosition;
     [SerializeField] private bool _running;
     [SerializeField] private float speed;
+    [SerializeField] private Animator animationer;
+    [SerializeField] private SpriteRenderer spriter;
 
     private void Start()
     {
@@ -18,6 +20,8 @@ public class ZombiTheRunner : MonoBehaviour
         if (transform.position.x < _atXPosition)
         {
             _running = true;
+            animationer.SetTrigger("Run");
+            spriter.flipX = true;
         }
         if (_running)
         {

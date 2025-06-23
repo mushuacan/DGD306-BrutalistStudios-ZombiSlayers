@@ -1,0 +1,9 @@
+Zombi tip 1: Düz duran zombi
+Zombi tip 2_0: ekrana girince tüküren zombi
+Zombi tip 2_1: ekrana girmeden tüküren zombi
+Zombi tip 3: Fao testi zombisi
+Zombi tip 4: Patlayan zombi
+Zombi tip 5_0: yavaşımtırak koşan zombi
+Zombi tip 5_1: orta hızda koşan zombi
+Zombi tip 5_2: hızlımtırak koşan zombi
+Zombi tip 6: Boss zombiden kaçan zombi
