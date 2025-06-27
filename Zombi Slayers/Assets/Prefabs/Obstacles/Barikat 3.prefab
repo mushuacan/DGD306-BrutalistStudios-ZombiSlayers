@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6921370485043032904}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -212,7 +212,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBreakable: 1
   isSlideable: 0
-  remaining: {fileID: 8562209942794333228, guid: f22f088ce27f1ed40bcd8f548e6b8a36, type: 3}
   obstacleParticles: {fileID: 347622219387273672, guid: 1cdfe5d1aaa401844b2e5b071c8c3109, type: 3}
   clipsForPlayerDamaj:
   - {fileID: 8300000, guid: 00ddcda8d75201b45a23292a1fac9b8d, type: 3}

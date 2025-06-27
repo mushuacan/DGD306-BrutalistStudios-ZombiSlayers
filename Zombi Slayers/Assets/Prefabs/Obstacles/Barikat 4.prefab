@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1546333877
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 09159c8b0f126ab43a494df77b1f7790, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -213,6 +213,7 @@ MonoBehaviour:
   isBreakable: 0
   isSlideable: 0
   remaining: {fileID: 0}
+  obstacleParticles: {fileID: 347622219387273672, guid: 1cdfe5d1aaa401844b2e5b071c8c3109, type: 3}
   clipsForPlayerDamaj:
   - {fileID: 8300000, guid: b47148eaaec664240b6cc6ab6dccc3bd, type: 3}
   - {fileID: 8300000, guid: 3f3539a11749bd44aad9f82fb3dd095c, type: 3}

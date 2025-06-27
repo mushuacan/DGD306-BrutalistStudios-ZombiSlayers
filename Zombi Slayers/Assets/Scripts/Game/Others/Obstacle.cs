@@ -7,16 +7,10 @@ public class Obstacle : MonoBehaviour
     public bool isBreakable;
     public bool isSlideable;
 
-    public GameObject remaining;
     public GameObject obstacleParticles;
 
     [SerializeField] private AudioClip[] clipsForPlayerDamaj;
     [SerializeField] private AudioClip[] clipsForObstacleDestr;
-
-    private void CreateRemaining()
-    {
-        Instantiate(remaining, transform.position, Quaternion.identity, transform.parent);
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -43,7 +37,6 @@ public class Obstacle : MonoBehaviour
                 }
                 if (obstacleParticles != null)
                 Instantiate(obstacleParticles, transform.position, Quaternion.identity);
-                CreateRemaining();
                 Destroy(this.gameObject);
             }
         }
