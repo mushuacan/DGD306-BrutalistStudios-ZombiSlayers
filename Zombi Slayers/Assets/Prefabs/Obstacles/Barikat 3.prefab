@@ -212,7 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBreakable: 1
   isSlideable: 0
-  obstacleParticles: {fileID: 347622219387273672, guid: 1cdfe5d1aaa401844b2e5b071c8c3109, type: 3}
+  obstacleParticles: {fileID: 347622219387273672, guid: 7da43523dda3b9347afd1a22e8a89ed3, type: 3}
   clipsForPlayerDamaj:
   - {fileID: 8300000, guid: 00ddcda8d75201b45a23292a1fac9b8d, type: 3}
   - {fileID: 8300000, guid: 97e9f063b565c684ab27796dd8eeabfd, type: 3}

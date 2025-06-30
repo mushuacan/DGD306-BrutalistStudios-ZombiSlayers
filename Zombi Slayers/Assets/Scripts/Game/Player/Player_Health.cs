@@ -18,7 +18,6 @@ public class Player_Health : MonoBehaviour
     [SerializeField] private Player_Character player;
     [SerializeField] private Player_Movement player_movement;
     [SerializeField] private GameObject bloodParticle;
-    [SerializeField] private GameObject buffParticle;
 
 
     [Header("(private variables)")]
@@ -74,17 +73,12 @@ public class Player_Health : MonoBehaviour
     {
         Instantiate(bloodParticle, transform.position, Quaternion.identity);
     }
-    private void CreateBuffParticles()
-    {
-        Instantiate(buffParticle, transform.position, Quaternion.identity, transform);
-    }
 
     public void TakeMedKit()
     {
         if (health >= 1)
         {
             player_movement.player_sounder.PlayHealSound();
-            CreateBuffParticles();
             ArrangeHealth(+1);
             Flasher(Color.green); // yeþil yanýp söndür
         }
