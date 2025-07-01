@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: Derrick Kick
   damage: 5
   attackDelay: 1
-  attackAnimationDuration: 0.4
+  attackAnimationDuration: 0.05
   BulletDestroyTimer: 0.15
   haveBullets: 0
   haveLimitedBullets: 0

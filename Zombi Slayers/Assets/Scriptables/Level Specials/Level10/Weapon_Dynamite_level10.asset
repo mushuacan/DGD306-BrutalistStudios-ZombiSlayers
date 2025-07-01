@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Dynamite
   damage: 2500
-  attackDelay: 0.5
-  attackAnimationDuration: 0.75
+  attackDelay: 2
+  attackAnimationDuration: 0.5
   BulletDestroyTimer: 0.5
   haveBullets: 1
   haveLimitedBullets: 1
