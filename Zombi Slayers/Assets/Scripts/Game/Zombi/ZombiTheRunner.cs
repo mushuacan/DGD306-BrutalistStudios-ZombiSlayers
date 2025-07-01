@@ -6,6 +6,7 @@ public class ZombiTheRunner : MonoBehaviour
 {
     [SerializeField] private float _atXPosition;
     [SerializeField] private bool _running;
+    [SerializeField] private bool _runningFromBoss;
     [SerializeField] private float speed;
     [SerializeField] private Animator animationer;
     [SerializeField] private SpriteRenderer spriter;
@@ -21,7 +22,7 @@ public class ZombiTheRunner : MonoBehaviour
         {
             _running = true;
             animationer.SetTrigger("Run");
-            spriter.flipX = true;
+            spriter.flipX = _runningFromBoss;
         }
         if (_running)
         {

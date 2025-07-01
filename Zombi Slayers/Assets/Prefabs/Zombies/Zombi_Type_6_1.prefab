@@ -203,6 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _atXPosition: 2
   _running: 0
+  _runningFromBoss: 1
   speed: -2.75
   animationer: {fileID: 7675167067700823169}
   spriter: {fileID: 5001715593568527686}

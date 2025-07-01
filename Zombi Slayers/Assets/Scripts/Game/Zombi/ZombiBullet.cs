@@ -6,6 +6,8 @@ public class ZombiBullet : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float leftCameraEdge;
     [SerializeField] private GameObject iadeiBullet;
+    [SerializeField] private GameObject particle;
+    [SerializeField] private Transform particleTransformer;
     [SerializeField] private AudioClip[] iadeClips;
     private bool move;
 
@@ -49,6 +51,7 @@ public class ZombiBullet : MonoBehaviour
                 {
                     Instantiate(iadeiBullet, transform.position, Quaternion.identity);
                 }
+                Instantiate(particle, particleTransformer.position, Quaternion.identity);
                 DOTween.Kill(transform);
                 Destroy(this.gameObject);
             }

@@ -51,6 +51,8 @@ MonoBehaviour:
   speed: 8
   leftCameraEdge: -10
   iadeiBullet: {fileID: 6682983608065558887, guid: ce270e0c64d8b594ea1138573d3c1e6e, type: 3}
+  particle: {fileID: 347622219387273672, guid: fb6688248424d5c4c87e2eb14d81742d, type: 3}
+  particleTransformer: {fileID: 7896659541571948872}
   iadeClips:
   - {fileID: 8300000, guid: c76ccbadba0c35a46a1cc280a99057b6, type: 3}
   - {fileID: 8300000, guid: 63c9d1b5416cb754399c060c2bcc96c5, type: 3}

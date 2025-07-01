@@ -204,6 +204,8 @@ MonoBehaviour:
   _atXPosition: 12
   _running: 0
   speed: 2.25
+  animationer: {fileID: 7675167067700823169}
+  spriter: {fileID: 5001715593568527686}
 --- !u!114 &-8584412340009821664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,7 +256,6 @@ MonoBehaviour:
   explosioner: {fileID: 0}
   bloodParticles: {fileID: 347622219387273672, guid: 0cb9dceba365c8045a5892d6f4f59a68, type: 3}
   pusher: {fileID: 4584445579691408264}
-  remaining: {fileID: 3168523198898427156, guid: 5186bc236017eec498d5b7100ec4ef31, type: 3}
   spriteRenderer:
   - {fileID: 5001715593568527686}
   clipsLowDamaj: []
