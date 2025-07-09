@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spaceBetweenZombis: 1.072
   resim: {fileID: 2801228559116736522}
+  animationer: {fileID: 7107002593752157780}
 --- !u!114 &1739709130683786365
 MonoBehaviour:
   m_ObjectHideFlags: 0

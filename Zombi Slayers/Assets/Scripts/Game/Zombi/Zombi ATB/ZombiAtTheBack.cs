@@ -7,6 +7,13 @@ public class ZombiAtTheBack : MonoBehaviour
     public SpriteRenderer resim;
     private float[] laneYPoz = { -24f, -4.12f, -1.08f, 1.96f };
 
+    public Animator animationer;
+
+    public void Start()
+    {
+        animationer.SetTrigger("Run");
+    }
+
     public void SetPosition(int lane, int order, float lanerXPosition)
     {
         float orderPosition = lanerXPosition - order * spaceBetweenZombis;

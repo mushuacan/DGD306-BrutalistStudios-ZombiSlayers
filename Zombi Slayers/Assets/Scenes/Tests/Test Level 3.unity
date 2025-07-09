@@ -1641,6 +1641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1396002217}
   - component: {fileID: 1396002219}
+  - component: {fileID: 1396002221}
   - component: {fileID: 1396002216}
   - component: {fileID: 1396002215}
   - component: {fileID: 1396002218}
@@ -1882,6 +1883,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1396002221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396002214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a4eb10b24a42f47bdfc58b2067dba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  follow: 0
+  xOffset: 5
+  fixedY: 0
+  fixedZ: -10
 --- !u!1001 &1420358714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4024,15 +4041,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1759442453393457561, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1759442453393457561, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1759442453393457561, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1759442453393457561, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4061,6 +4078,14 @@ PrefabInstance:
     - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: carryToDDOL
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: movementSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107904711815955177, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
+      propertyPath: rightBoundary
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 9138159295395460147, guid: e43b659c07cc0c348aa94a26f28b0ffa, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5423,5 +5448,5 @@ SceneRoots:
   - {fileID: 9102098952197088008}
   - {fileID: 614598747}
   - {fileID: 2134008136}
-  - {fileID: 2094874306457094193}
   - {fileID: 1970025381}
+  - {fileID: 2094874306457094193}
